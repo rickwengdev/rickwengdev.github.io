@@ -90,7 +90,7 @@ const projects = ref([
     statusType: 'info',
     stack: ['Vue 3', 'Node.js', 'Discord.js', 'MariaDB'],
     github: 'https://github.com/rickwengdev/Saori',
-    demo: ''
+    demo: 'https://saori-483222.web.app'
   },
   {
     id: 3,
