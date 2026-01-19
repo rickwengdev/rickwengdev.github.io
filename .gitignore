@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.bundle/
+vendor/
+
+# Build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-rss.js && vite build", 
     "preview": "vite preview"
   },
   "dependencies": {
+    "feed": "^5.2.0",
     "naive-ui": "^2.43.2",
     "vfonts": "^0.0.3",
     "vue": "^3.5.24",

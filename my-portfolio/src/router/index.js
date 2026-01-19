@@ -1,19 +1,23 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-// 注意：GitHub Pages 建議使用 createWebHashHistory，可以避免 404 問題
 
 import Home from '../views/Home.vue';
 import Projects from '../views/Projects.vue';
-import Blog from '../views/Blog.vue'; // 假設你也沿用了 Blog.vue 並做了類似的清理
+import Blog from '../views/Blog.vue';
+import BlogPost from '../views/BlogPost.vue';
 
 const routes = [
   { path: '/', component: Home },
   { path: '/projects', component: Projects },
   { path: '/blog', component: Blog },
+  { path: '/blog/:id', component: BlogPost }
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(), // 使用 Hash 模式 (#/projects)
+  history: createWebHashHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  }
 });
 
 export default router;

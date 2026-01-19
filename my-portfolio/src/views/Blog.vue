@@ -5,7 +5,13 @@
         <template #title>Technical Blog</template>
         <template #subtitle>Thoughts, tutorials, and dev logs.</template>
         <template #extra>
-          <n-button size="small" secondary>
+          <n-button 
+            size="small" 
+            secondary 
+            tag="a" 
+            href="/rss.xml" 
+            target="_blank"
+          >
             <template #icon>
               <span style="margin-right: 4px;">📡</span>
             </template>
@@ -19,17 +25,16 @@
 
     <div class="content-section">
       <n-list hoverable clickable bordered>
-        <n-list-item v-for="post in posts" :key="post.id" @click="handlePostClick(post.id)">
+        <n-list-item v-for="post in posts" :key="post.id" @click="goToPost(post.id)">
           
           <template #prefix>
             <div class="emoji-icon">{{ post.emoji }}</div>
           </template>
 
           <n-thing :title="post.title" :title-extra="post.date">
-            
             <template #description>
               <n-space size="small" style="margin-top: 4px;">
-                <n-tag v-for="tag in post.tags" :key="tag" :type="getTagType(tag)" size="small" round>
+                <n-tag v-for="tag in post.tags" :key="tag" :type="getTagType(tag)" size="small" round :bordered="false">
                   {{ tag }}
                 </n-tag>
               </n-space>
@@ -41,60 +46,21 @@
           </n-thing>
         </n-list-item>
       </n-list>
-
-      <div class="load-more">
-        <n-button text type="primary">Load More Archives</n-button>
-      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { 
   NPageHeader, NButton, NList, NListItem, NThing, NTag, NSpace, NDivider 
 } from 'naive-ui';
+// 引入資料庫
+import { blogPosts } from '../data/posts';
 
 const router = useRouter();
+const posts = blogPosts;
 
-// 模擬部落格文章數據
-const posts = ref([
-  {
-    id: 1,
-    title: 'Building a Portfolio with Vue 3 & Naive UI',
-    date: '2026-01-18',
-    emoji: '🎨',
-    tags: ['Frontend', 'Vue 3'],
-    excerpt: 'How I rebuilt my personal site using Vite, removing legacy code, and deploying to GitHub Pages with Actions.'
-  },
-  {
-    id: 2,
-    title: 'Deploying Node.js Apps to Google Cloud Run',
-    date: '2026-01-10',
-    emoji: '☁️',
-    tags: ['DevOps', 'GCP'],
-    excerpt: 'A step-by-step guide to containerizing a Node.js application and setting up CI/CD pipelines.'
-  },
-  {
-    id: 3,
-    title: 'Understanding Docker Multi-stage Builds',
-    date: '2025-12-24',
-    emoji: '🐳',
-    tags: ['Docker', 'Backend'],
-    excerpt: 'Optimizing your container images size and security by separating build and runtime environments.'
-  },
-  {
-    id: 4,
-    title: 'Refactoring Spaghetti Code: A Case Study',
-    date: '2025-11-15',
-    emoji: '🍝',
-    tags: ['Refactoring', 'Architecture'],
-    excerpt: 'Lessons learned from cleaning up a legacy project and implementing better design patterns.'
-  }
-]);
-
-// 簡單的標籤顏色邏輯
 const getTagType = (tag) => {
   const map = {
     'Frontend': 'success',
@@ -106,10 +72,8 @@ const getTagType = (tag) => {
   return map[tag] || 'default';
 };
 
-const handlePostClick = (id) => {
-  // 這裡之後可以連接到實際的文章詳情頁面，例如：/blog/:id
-  console.log(`Clicked post ${id}`);
-  // router.push(`/blog/${id}`); 
+const goToPost = (id) => {
+  router.push(`/blog/${id}`);
 };
 </script>
 
@@ -140,10 +104,5 @@ const handlePostClick = (id) => {
   color: #aaa;
   font-size: 0.95rem;
   line-height: 1.6;
-}
-
-.load-more {
-  margin-top: 30px;
-  text-align: center;
 }
 </style>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Rick Weng's Blog</title>
+        <link>https://rickwengdev.github.io/</link>
+        <description>Full Stack Developer | Tesla Investor | Pro Crypto</description>
+        <lastBuildDate>Mon, 19 Jan 2026 12:27:32 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <language>en</language>
+        <image>
+            <title>Rick Weng's Blog</title>
+            <url>https://rickwengdev.github.io//avatar.jpg</url>
+            <link>https://rickwengdev.github.io/</link>
+        </image>
+        <copyright>All rights reserved 2026, Rick Weng</copyright>
+        <item>
+            <title><![CDATA[Building a Portfolio with Vue 3 & Naive UI]]></title>
+            <link>https://rickwengdev.github.io//#/blog/1</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io//#/blog/1</guid>
+            <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[How I rebuilt my personal site using Vite, removing legacy code, and deploying to GitHub Pages with Actions.]]></description>
+            <content:encoded><![CDATA[
+      <p>Building a portfolio is a rite of passage for every developer. I decided to use <strong>Vue 3</strong> and <strong>Naive UI</strong> because of their clean aesthetic and composition API support.</p>
+      <h3>Why Naive UI?</h3>
+      <p>Naive UI provides over 80 components that are customizable and work seamlessly with Vue 3. The dark mode support is also fantastic out of the box.</p>
+      <h3>The Migration</h3>
+      <p>Moving from a legacy layout to this new structure involved breaking down the monolithic App.vue into smaller, reusable components like <code>Projects.vue</code> and <code>Blog.vue</code>.</p>
+    ]]></content:encoded>
+            <author>chain.dev.rick@proton.me (Rick Weng)</author>
+        </item>
+        <item>
+            <title><![CDATA[Deploying Node.js Apps to Google Cloud Run]]></title>
+            <link>https://rickwengdev.github.io//#/blog/2</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io//#/blog/2</guid>
+            <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[A step-by-step guide to containerizing a Node.js application and setting up CI/CD pipelines.]]></description>
+            <content:encoded><![CDATA[
+      <p>Cloud Run is amazing because it abstracts away the infrastructure. You just give it a container, and it runs.</p>
+      <h3>Dockerfile Best Practices</h3>
+      <pre><code>FROM node:18-alpine
+WORKDIR /app
+COPY . .
+RUN npm ci --only=production
+CMD ["node", "server.js"]</code></pre>
+      <p>Using <code>alpine</code> images keeps the build size small and deployment fast.</p>
+    ]]></content:encoded>
+            <author>chain.dev.rick@proton.me (Rick Weng)</author>
+        </item>
+        <item>
+            <title><![CDATA[Understanding Docker Multi-stage Builds]]></title>
+            <link>https://rickwengdev.github.io//#/blog/3</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io//#/blog/3</guid>
+            <pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Optimizing your container images size and security by separating build and runtime environments.]]></description>
+            <content:encoded><![CDATA[<p>Coming soon...</p>]]></content:encoded>
+            <author>chain.dev.rick@proton.me (Rick Weng)</author>
+        </item>
+        <item>
+            <title><![CDATA[Refactoring Spaghetti Code: A Case Study]]></title>
+            <link>https://rickwengdev.github.io//#/blog/4</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io//#/blog/4</guid>
+            <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lessons learned from cleaning up a legacy project and implementing better design patterns.]]></description>
+            <content:encoded><![CDATA[<p>Coming soon...</p>]]></content:encoded>
+            <author>chain.dev.rick@proton.me (Rick Weng)</author>
+        </item>
+    </channel>
+</rss>
