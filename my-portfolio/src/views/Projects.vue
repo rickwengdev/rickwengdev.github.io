@@ -86,8 +86,8 @@ const projects = ref([
     icon: '🤖',
     timeline: 'Dec 2022 - Present',
     description: 'A full-stack Discord Bot with a web management dashboard.',
-    status: 'Stable',
-    statusType: 'info',
+    status: 'Live',
+    statusType: 'success',
     stack: ['Vue 3', 'Node.js', 'Discord.js', 'MariaDB'],
     github: 'https://github.com/rickwengdev/Saori',
     demo: 'https://saori-483222.web.app'
