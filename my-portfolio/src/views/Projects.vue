@@ -100,9 +100,9 @@ const projects = ref([
     description: 'Self-training AI assistant with web interface featuring advanced context management.',
     status: 'Dev',
     statusType: 'warning',
-    stack: ['Vue 3', 'Node.js', 'Gemini API'],
+    stack: ['Vue 3', 'Node.js', 'Gemini API', 'AI Agent', 'RAG'],
     github: 'https://github.com/rickwengdev/Lilith',
-    demo: ''
+    demo: 'https://lilith-390477456083.asia-east1.run.app'
   },
   {
     id: 4,
