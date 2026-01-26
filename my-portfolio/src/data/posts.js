@@ -48,7 +48,7 @@ export const blogPosts = [
 
       <img src="/images/posts/1/credit-cards.jpg" alt="Credit Cards" style="width: 100%;" loading="lazy" />
       
-      <div style="background-color: #D3D3D3; padding: 12px; border-radius: 8px; margin-top: 20px;">
+      <div style="background-color: #aaa; padding: 12px; border-radius: 8px; margin-top: 20px;">
         <small>⚠️ 免責聲明：本文純屬經驗分享，不構成稅務或投資建議。相關法規變動頻繁，請自行查核最新資訊。</small>
       </div>
     `
