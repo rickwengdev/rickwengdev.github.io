@@ -4,7 +4,7 @@
         <title>Rick Weng's Blog</title>
         <link>https://rickwengdev.github.io/</link>
         <description>Full Stack Developer | Tesla Investor | Pro Crypto</description>
-        <lastBuildDate>Mon, 26 Jan 2026 17:34:35 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Jan 2026 06:33:22 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>en</language>
@@ -19,7 +19,7 @@
             <link>https://rickwengdev.github.io//#/blog/1</link>
             <guid isPermaLink="false">https://rickwengdev.github.io//#/blog/1</guid>
             <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[人不在美國也能辦美卡？這篇文章完整記錄了我如何透過 CAA 代辦申請 ITIN，並透過雲端方式累積 FICO 信用分數，成功拿下第一張美國信用卡(Capital One)。]]></description>
+            <description><![CDATA[人不在美國也能辦美卡？這篇文章記錄我如何透過 CAA 代辦申請 ITIN，成功拿下第一張美國信用卡(Capital One)。]]></description>
             <content:encoded><![CDATA[
       <p>對於許多非美國居民（Non-Resident Alien, NRA）來說，美國信用卡的高額開卡禮（Sub）與靈活的點數系統（MR/UR points）是信用卡界的頂配。但苦於沒有 SSN 與美國地址，不過我們還有 <strong>ITIN</strong>。</p>
       

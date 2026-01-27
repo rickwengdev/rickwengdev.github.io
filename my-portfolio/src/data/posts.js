@@ -5,7 +5,7 @@ export const blogPosts = [
     date: '2026-01-26',
     emoji: '🇺🇸',
     tags: ['Finance', 'ITIN', 'Credit Cards'],
-    excerpt: '人不在美國也能辦美卡？這篇文章完整記錄了我如何透過 CAA 代辦申請 ITIN，並透過雲端方式累積 FICO 信用分數，成功拿下第一張美國信用卡(Capital One)。',
+    excerpt: '人不在美國也能辦美卡？這篇文章記錄我如何透過 CAA 代辦申請 ITIN，成功拿下第一張美國信用卡(Capital One)。',
     content: `
       <p>對於許多非美國居民（Non-Resident Alien, NRA）來說，美國信用卡的高額開卡禮（Sub）與靈活的點數系統（MR/UR points）是信用卡界的頂配。但苦於沒有 SSN 與美國地址，不過我們還有 <strong>ITIN</strong>。</p>
       
