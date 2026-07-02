@@ -18,7 +18,7 @@
 
           <div class="nav-actions">
             <LanguageSwitcher />
-            <a href="mailto:chain.dev.rick@proton.me" class="nav-cta">{{ t('nav.contact') }}</a>
+            <a href="mailto:office@theprism.ltd" class="nav-cta">{{ t('nav.contact') }}</a>
             <button
               class="menu-toggle"
               type="button"
@@ -49,7 +49,7 @@
           <div class="mobile-lang">
             <LanguageSwitcher />
           </div>
-          <a href="mailto:chain.dev.rick@proton.me" class="mobile-nav-cta" @click="menuOpen = false">
+          <a href="mailto:office@theprism.ltd" class="mobile-nav-cta" @click="menuOpen = false">
             {{ t('nav.contact') }}
           </a>
         </nav>
@@ -68,7 +68,7 @@
             <span>&copy; {{ new Date().getFullYear() }} Rick</span>
             <div class="footer-links">
               <a href="https://github.com/chaindevrick" target="_blank">{{ t('nav.github') }}</a>
-              <a href="mailto:chain.dev.rick@proton.me">{{ t('footer.email') }}</a>
+              <a href="mailto:office@theprism.ltd">{{ t('footer.email') }}</a>
               <a href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank">{{ t('footer.schedule') }}</a>
             </div>
           </div>

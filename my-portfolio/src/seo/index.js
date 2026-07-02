@@ -1,8 +1,20 @@
 import { getBlogPosts } from '../data/posts/index.js';
-
-export const SITE_URL = 'https://chaindevrick.github.io';
-const DEFAULT_IMAGE = `${SITE_URL}/avatar.jpg`;
-const SITE_NAME = 'Rick';
+import { tm } from '../i18n/index.js';
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_IMAGE,
+  buildPersonJsonLd,
+  buildWebsiteJsonLd,
+  buildBlogPostingJsonLd,
+  buildBlogJsonLd,
+  buildBreadcrumbJsonLd,
+  buildModelLabSeriesJsonLd,
+  buildItemListJsonLd,
+  wrapJsonLd,
+  pageUrl,
+  extractModelLabNumber,
+} from './schema.js';
 
 function upsertMeta(attr, key, content) {
   if (!content) return;
@@ -15,7 +27,11 @@ function upsertMeta(attr, key, content) {
   el.setAttribute('content', content);
 }
 
-function upsertLink(rel, href) {
+function removeMeta(attr, key) {
+  document.querySelector(`meta[${attr}="${key}"]`)?.remove();
+}
+
+function upsertLink(rel, href, extra = {}) {
   let el = document.querySelector(`link[rel="${rel}"]`);
   if (!el) {
     el = document.createElement('link');
@@ -23,6 +39,9 @@ function upsertLink(rel, href) {
     document.head.appendChild(el);
   }
   el.setAttribute('href', href);
+  Object.entries(extra).forEach(([name, value]) => {
+    if (value) el.setAttribute(name, value);
+  });
 }
 
 function upsertJsonLd(data) {
@@ -41,23 +60,29 @@ function removeJsonLd() {
   document.getElementById('site-json-ld')?.remove();
 }
 
+export { SITE_URL, SITE_NAME, DEFAULT_IMAGE, pageUrl };
+
 export function applySeo({
   title,
   description,
   path = '/',
   type = 'website',
   image,
+  keywords,
+  article,
   jsonLd,
   noindex = false,
 }) {
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  const url = `${SITE_URL}${normalizedPath === '/' ? '' : normalizedPath}`;
+  const url = pageUrl(path);
   const img = image || DEFAULT_IMAGE;
+  const keywordContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   document.title = title;
 
   upsertMeta('name', 'description', description);
-  upsertMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow');
+  upsertMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large');
+  if (keywordContent) upsertMeta('name', 'keywords', keywordContent);
+  else removeMeta('name', 'keywords');
 
   upsertMeta('property', 'og:title', title);
   upsertMeta('property', 'og:description', description);
@@ -73,51 +98,27 @@ export function applySeo({
 
   upsertLink('canonical', url);
 
+  if (article) {
+    upsertMeta('property', 'article:published_time', article.publishedTime);
+    upsertMeta('property', 'article:modified_time', article.modifiedTime ?? article.publishedTime);
+    upsertMeta('property', 'article:author', article.author ?? 'Rick');
+    if (article.section) upsertMeta('property', 'article:section', article.section);
+    document.querySelectorAll('meta[property="article:tag"]').forEach((el) => el.remove());
+    for (const tag of article.tags ?? []) {
+      const el = document.createElement('meta');
+      el.setAttribute('property', 'article:tag');
+      el.setAttribute('content', tag);
+      document.head.appendChild(el);
+    }
+  } else {
+    ['article:published_time', 'article:modified_time', 'article:author', 'article:section'].forEach((key) =>
+      removeMeta('property', key)
+    );
+    document.querySelectorAll('meta[property="article:tag"]').forEach((el) => el.remove());
+  }
+
   if (jsonLd) upsertJsonLd(jsonLd);
   else removeJsonLd();
-}
-
-function buildHomeJsonLd(t) {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebSite',
-        name: SITE_NAME,
-        url: SITE_URL,
-        description: t('seo.home.description'),
-      },
-      {
-        '@type': 'Person',
-        name: 'Rick',
-        url: SITE_URL,
-        jobTitle: 'Founder & CEO',
-        image: DEFAULT_IMAGE,
-        sameAs: ['https://github.com/chaindevrick'],
-        worksFor: [
-          { '@type': 'Organization', name: 'Kura Finance LLC', url: 'https://kura-finance.com' },
-          { '@type': 'Organization', name: 'Prism Capital LLC', url: 'https://theprism.ltd' },
-        ],
-      },
-    ],
-  };
-}
-
-function buildBlogPostingJsonLd(post) {
-  const url = `${SITE_URL}/blog/${post.id}`;
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Person', name: 'Rick', url: SITE_URL },
-    publisher: { '@type': 'Person', name: 'Rick' },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    url,
-    image: DEFAULT_IMAGE,
-  };
 }
 
 export function updateSeoForRoute(route, locale, t) {
@@ -134,7 +135,27 @@ export function updateSeoForRoute(route, locale, t) {
         description: post.excerpt,
         path: `/blog/${post.id}`,
         type: 'article',
-        jsonLd: buildBlogPostingJsonLd(post),
+        keywords: post.keywords ?? post.tags,
+        article: {
+          publishedTime: post.date,
+          modifiedTime: post.modified ?? post.date,
+          tags: post.tags,
+          section: post.category,
+        },
+        jsonLd: wrapJsonLd(
+          [
+            buildPersonJsonLd(),
+            buildBlogPostingJsonLd({ ...post, locale }),
+            buildBreadcrumbJsonLd([
+              { name: t('nav.home'), path: '/' },
+              { name: t('nav.blog'), path: '/blog' },
+              { name: post.title, path: `/blog/${post.id}` },
+            ]),
+            post.modelLabNumber || extractModelLabNumber(post.title)
+              ? buildModelLabSeriesJsonLd(getBlogPosts(locale))
+              : null,
+          ].filter(Boolean)
+        ),
       });
       return;
     }
@@ -149,10 +170,57 @@ export function updateSeoForRoute(route, locale, t) {
   }
 
   const seoKey = route.meta?.seoKey || 'home';
+  const posts = getBlogPosts(locale);
+
+  if (seoKey === 'home') {
+    applySeo({
+      title: t('seo.home.title'),
+      description: t('seo.home.description'),
+      path: route.path,
+      keywords: tm('seo.home.keywords'),
+      jsonLd: wrapJsonLd([
+        buildWebsiteJsonLd(t('seo.home.description')),
+        buildPersonJsonLd(),
+      ]),
+    });
+    return;
+  }
+
+  if (seoKey === 'blog') {
+    applySeo({
+      title: t('seo.blog.title'),
+      description: t('seo.blog.description'),
+      path: route.path,
+      keywords: tm('seo.blog.keywords'),
+      jsonLd: wrapJsonLd(
+        [
+          buildBlogJsonLd(posts),
+          buildItemListJsonLd(posts),
+          buildModelLabSeriesJsonLd(posts),
+          buildBreadcrumbJsonLd([
+            { name: t('nav.home'), path: '/' },
+            { name: t('nav.blog'), path: '/blog' },
+          ]),
+        ].filter(Boolean)
+      ),
+    });
+    return;
+  }
+
   applySeo({
     title: t(`seo.${seoKey}.title`),
     description: t(`seo.${seoKey}.description`),
     path: route.path,
-    jsonLd: seoKey === 'home' ? buildHomeJsonLd(t) : undefined,
+    keywords: tm(`seo.${seoKey}.keywords`),
+    jsonLd:
+      seoKey === 'experience'
+        ? wrapJsonLd([
+            buildPersonJsonLd(),
+            buildBreadcrumbJsonLd([
+              { name: t('nav.home'), path: '/' },
+              { name: t('nav.experience'), path: '/experience' },
+            ]),
+          ])
+        : undefined,
   });
 }

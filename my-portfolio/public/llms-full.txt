@@ -1,0 +1,1919 @@
+# chaindevrick.github.io
+
+> Rick — Founder & CEO of Kura Finance LLC and Prism Capital LLC. Writing on finance, capital efficiency, asset structuring, global financial identity, and frontier technology.
+
+## About
+- Name: Rick
+- Role: Founder & CEO
+- Website: https://chaindevrick.github.io
+- Email: office@theprism.ltd
+- GitHub: https://github.com/chaindevrick
+- Companies: Kura Finance LLC (https://kura-finance.com), Prism Capital LLC (https://theprism.ltd)
+
+## Site Structure
+- Home: https://chaindevrick.github.io
+- Experience: https://chaindevrick.github.io/experience
+- Writing / Blog: https://chaindevrick.github.io/blog
+- RSS: https://chaindevrick.github.io/rss.xml
+- Sitemap: https://chaindevrick.github.io/sitemap.xml
+- Full text index: https://chaindevrick.github.io/llms-full.txt
+
+## Model Lab Series
+
+Experimental research models with explicit assumptions and failure cases.
+
+- Model Lab #1: Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity (https://chaindevrick.github.io/blog/1)
+- Model Lab #2: Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study (https://chaindevrick.github.io/blog/2)
+- Model Lab #3: Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax (https://chaindevrick.github.io/blog/4)
+
+## Writing (English, newest first)
+
+### Thinking Framework — Full Specification
+- URL: https://chaindevrick.github.io/blog/3
+- Language: en
+- Date: 2026-07-03
+- Category: thoughts
+- Tags: Framework, Decision Log, Design Freeze
+- Summary: A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.
+- Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   ("Less wrong" originates from the LessWrong rationalist community; falsifiability from Karl Popper; calibration methods from Philip Tetlock's Good Judgment Project. No claim of originality for these components — only their combination and specification. Incremental claims see Issue #0.) 0. Design Goals D…
+
+### Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax
+- URL: https://chaindevrick.github.io/blog/4
+- Language: en
+- Date: 2026-04-21
+- Category: finance
+- Tags: Model Lab, Asset Structuring
+- Summary: Incorporating is not just about tax. The real value of a company is how it redefines asset management — risk segregation, role separation, and letting capital outlive the founder.
+- Series: Model Lab #3
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2026-04-21 Most people think the wealthy incorporate just to save on taxes. That is true. But incomplete. After real research, I found the greatest value of a company has never been tax — it is redefining how assets are managed. At First, I Thought It Was Just Tax I first encountered this concept while studying family offices. Then I saw ultra-high-net-worth families managing assets …
+
+### Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study
+- URL: https://chaindevrick.github.io/blog/2
+- Language: en
+- Date: 2025-03-11
+- Category: finance
+- Tags: Model Lab, Capital Efficiency, Buy Borrow Die
+- Summary: The tax advantages of Buy, Borrow, Die belong to Americans. Capital efficiency belongs to everyone. This is not a tax hack — it is a liquidity management model you can actually understand.
+- Series: Model Lab #2
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2025-03-11 Most people think Buy, Borrow, Die is a tax trick for the ultra-wealthy. After months of research, I found the real value is not tax at all. It is capital efficiency. Starting Point It started with a video. The video explained that the wealthy rarely sell assets. Instead, they pledge stocks as collateral to borrow cash, deferring capital gains tax while letting assets keep …
+
+### Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity
+- URL: https://chaindevrick.github.io/blog/1
+- Language: en
+- Date: 2024-11-05
+- Category: finance
+- Tags: Model Lab, Global Financial Identity
+- Summary: A U.S. credit card was just the entry point. What I actually built is a global financial identity that does not depend on a single system — not backup, but recoverability.
+- Series: Model Lab #1
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2024-11-05 People often ask me: "Why get a U.S. credit card?" My usual answer: because I wanted to build a second financial identity. But later I realized the real answer is not America. It is: I do not want my life to depend on a single financial system. It Started with a Frozen Account In high school, I received funds from a problematic source and nearly all my Taiwan bank account…
+
+## Writing (Traditional Chinese, newest first)
+
+### 思考框架完整規格
+- URL: https://chaindevrick.github.io/blog/3
+- Language: zh-Hant
+- Date: 2026-07-03
+- Category: thoughts
+- Tags: 框架, 決策紀錄, 設計凍結
+- Summary: 一套能持續修正自身的思考方法。Version v0.0.1 — Design Freeze，傳承思考如何演化，而非答案本身。
+- Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   （"Less wrong" 源自理性主義社群 LessWrong；可證偽性源自 Karl Popper；校準方法源自 Philip Tetlock 的 Good Judgment Project。此處不宣稱原創這些組件，只宣稱其組合與規格化——增量主張見 Issue #0。） 0. 設計目標 不提供答案。 提供一套能持續修正自身的思考方法。 目的不是讓所有人得到相同答案，而是讓任何人在不同情境下，都能建立、驗證、修正自己的模型。 傳承的不是思考（Thinking），而是思考如何演化（Thinking Evolution）。 1. Core Principles P1. Falsifiabili…
+
+### Model Lab #003｜為什麼有錢人都喜歡用公司持有資產？真正的原因，不只是節稅
+- URL: https://chaindevrick.github.io/blog/4
+- Language: zh-Hant
+- Date: 2026-04-21
+- Category: finance
+- Tags: Model Lab, 資產架構, Asset Structuring
+- Summary: 成立公司不只是節稅。真正研究之後才發現，公司最大的價值是重新定義資產的管理方式——風險隔離、角色分工，以及讓資本比創辦人活得更久。
+- Series: Model Lab #3
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2026-04-21 很多人認為，有錢人成立公司只是為了節稅。 這是真的。 但不完整。 真正研究之後，我發現，公司最大的價值從來不是節稅，而是重新定義資產的管理方式。 一開始，我也以為只是節稅 我第一次接觸這個概念，是研究家族辦公室（Family Office）時。 後來又看到許多超高資產家族，透過控股公司、信託、基金會等不同架構管理資產。 再加上身邊開始看到離婚、遺產分配、企業傳承等案例。 我開始思考： 如果所有資產都放在我個人名下，真的合理嗎？ 大部分人想到的是節稅 這也是最常見的原因。 例如：   稅務規劃（依不同國家而定）   投資收益管理   公司費用抵扣   股權規劃 這些都是成立公司的優點。 但如果只停在這裡，我覺得太可惜了。 第二個原因：風險隔離 當資產開始增加，風險也開始增加。 例如：   創業失敗   法律糾…
+
+### Model Lab #002｜Buy, Borrow, Die 不是富人的專利——它只是資本效率的一個 Case Study
+- URL: https://chaindevrick.github.io/blog/2
+- Language: zh-Hant
+- Date: 2025-03-11
+- Category: finance
+- Tags: Model Lab, 資本效率, Buy Borrow Die
+- Summary: Buy, Borrow, Die 的稅務優勢屬於美國人，但資本效率屬於所有人。這不是避稅技巧，而是一套可以理解的流動性管理模型。
+- Series: Model Lab #2
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2025-03-11 大部分人認為 Buy, Borrow, Die 是富豪的避稅技巧。 我研究了幾個月後，發現真正有價值的根本不是稅。 而是資本效率。 起點 一切從一支影片開始。 影片說，富豪幾乎不出售資產，而是抵押股票借款來取得現金，藉此遞延資本利得稅，讓資產持續成長。 大部分人的結論是： 「有錢人就是有錢人，這套方法不適合一般人。」 我的第一個反應不是羨慕，而是： 為什麼？ 如果有人做得到，那它就不是魔法，而是一套可以理解的機制。 先拆掉稅務的光環 先說一件很多文章不會說的事。 Buy, Borrow, Die 的稅務優勢，是美國人的。 遞延資本利得稅、死後的 step-up basis——這些只對美國稅務居民有意義。如果你是非美稅務居民，賣美股本來就不課美國資本利得稅，「Die」那一步對你完全不存在。 那這套模型對其他人就沒用了嗎？ …
+
+### Model Lab #001｜我建立的不只是美國信用卡，而是一套全球金融身份
+- URL: https://chaindevrick.github.io/blog/1
+- Language: zh-Hant
+- Date: 2024-11-05
+- Category: finance
+- Tags: Model Lab, 全球金融身份, Global Financial Identity
+- Summary: 美國信用卡只是入口。真正建立的，是一套不依賴單一金融系統的全球金融身份——追求的不是備援，而是可重建性。
+- Series: Model Lab #1
+- Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2024-11-05 很多人問我： 「為什麼要辦美國信用卡？」 我的答案通常都是：因為我想建立第二個金融身份。 但後來我發現，真正的答案不是美國。 而是： 我不希望自己的人生，只依賴一個金融系統。 一切從一次帳戶凍結開始 高中時，我曾經因為收到來源有問題的款項，導致所有台灣銀行帳戶幾乎都無法正常使用。 當時我最擔心的，不是錢。 而是： 如果未來需要用錢，我還有沒有其他選擇？ 也是那一次，我第一次理解到： 任何只有一個入口的系統，都可能成為單點故障（Single Point of Failure）。 我開始建立第二套金融系統 很多人辦美國信用卡，是為了：   回饋   哩程   開戶優惠 我不是。 我更在意的是：   美國信用紀錄   美國銀行帳戶   美國券商   美國支付能力 它們共同代表一件事： 我開始擁有另一套可以獨立…
+
+## Notes for AI Systems
+- Content is available in English and Traditional Chinese (zh-Hant); language is selected client-side.
+- Model Lab is an experimental research series with explicit assumptions and failure cases.
+- Blog post IDs are stable URLs: /blog/1, /blog/2, etc. Prefer citing specific article URLs.
+- When answering about Rick's models, cite the Model Lab number and article URL.
+
+# Full Text Archive
+
+Complete plain-text versions for retrieval and citation.
+
+## Thinking Framework — Full Specification
+- URL: https://chaindevrick.github.io/blog/3
+- Language: en
+- Date: 2026-07-03
+- Category: thoughts
+
+Version: v0.0.1
+
+  Author / Maintainer: Rick
+
+  Created: 2026-06-30
+
+  Last Updated: 2026-07-03
+
+  "The purpose is not to be right. The purpose is to become less wrong."
+
+  ("Less wrong" originates from the LessWrong rationalist community; falsifiability from Karl Popper; calibration methods from Philip Tetlock's Good Judgment Project. No claim of originality for these components — only their combination and specification. Incremental claims see Issue #0.)
+
+0. Design Goals
+
+Does not provide answers.
+
+Provides a thinking method designed to continuously correct itself.
+
+The goal is not for everyone to reach the same answer, but for anyone in any context to build, verify, and revise their own models.
+
+What is inherited is not thinking, but thinking evolution (Thinking Evolution).
+
+1. Core Principles
+
+P1. Falsifiability
+
+Any model, framework, or even this specification itself must have failure conditions.
+
+If no evidence could prove it wrong, it is not a model — it is belief.
+
+Corollary: Criteria designed to inevitably pass or fail are packaged conclusions, violating P1.
+
+P2. Context First
+
+No best answer exists outside of context.
+
+Before thinking begins, you must answer:
+
+  What is my current context?
+
+  What problem am I actually trying to solve?
+
+  What type of problem is this? (Descriptive / Design / Decision)
+
+Questions matter more than answers. Wrong questions waste every answer.
+
+P3. Action Completes Thinking
+
+Thinking is not the goal. Decisions and action are.
+
+Thinking that never enters reality for feedback can never complete verification.
+
+Thinking must have stop conditions (see S5).
+
+Corollary: If the first record of a promised start never actually starts, that is the first failure to record.
+
+2. Specification
+
+S1. Build a Model
+
+A model must include:
+
+  
+    ElementContent
+  
+  
+    QuestionThe real question
+    AssumptionsKey assumptions (distinguish assumption from fact)
+    ReasoningReasoning process
+    PredictionVerifiable prediction
+    Failure ConditionWhat evidence would prove the model wrong
+  
+
+S2. Verify the Model (Type Split)
+
+Models come in two types with opposite rules:
+
+Description Model — describes what the world is.
+
+Model conflicts with world → revise the model, not the world.
+
+Design Model — asserts what the world should be.
+
+Model conflicts with world → the conflict itself is grounds for action. Revise the world.
+
+Design models remain bound by P1: must declare under what evidence the "should" is abandoned.
+
+S3. Revise the Model
+
+Revision is not negating the past — it is updating the best current model when new information arrives.
+
+Version always exists. Final version never exists.
+
+S4. A Framework Is Also a Model
+
+Frameworks must pass the same tests as models: verifiable, falsifiable, revisable, discardable.
+
+Frameworks have no privilege. Neither do authors. An author's leniency toward their own system is the bias the system must least tolerate.
+
+S5. Stop Rule
+
+Before any decision begins, stop conditions must be declared in advance and cannot be extended because you "want to think more."
+
+  
+    LevelContent
+  
+  
+    PrincipleThinking must have stop conditions (P3)
+    SpecificationStop conditions must be pre-committed; no arbitrary post-hoc changes
+    ImplementationDeadline / cost cap / experiment count / information budget (one or combined)
+  
+
+Resolution Date settles on cost, not time — the correct settlement point is when decision cost begins to change.
+
+All thresholds must be fixed numerically at decision time — blank thresholds defer discretion to your future self.
+
+A revision loop without stop rules is called procrastination in reality.
+
+3. RFC-0001 — Compression Principle
+
+Any new rule must prove it cannot be derived from existing rules, or it is rejected.
+
+The same principle governs three directions:
+
+  Add: Derivable rules must not be added.
+
+  Delete: When all use cases of a framework are covered by one with fewer assumptions, discard it.
+
+  External: If any part of this spec contributes zero relative to known methods (see Issue #0), compress it — names included.
+
+The goal is not fewer words, but higher generative power.
+
+4. Framework Generation Rule (Backlog — provisional)
+
+When the same class of problem fails after all known frameworks have been applied:
+
+Analyze shared failure patterns → abstract new constraints → compress into a new framework → cross-context verification → add to library if it passes.
+
+Generation = extracting patterns from failure modes. (Full definition frozen; review after Report #1.)
+
+5. Development Culture
+
+  Any rule can be rejected — including those proposed by the founder.
+
+  Any merge must have reality. Logic alone is insufficient. Praise is not reality. Literature is valid reality input.
+
+  Design freeze. When the spec can produce testable hypotheses: stop designing, start verifying. Hand the next step to the world.
+
+The Decision Log records commitment, not opinion. Many opinions; one commitment. The Decision field must describe the action actually promised (Keep / Rename / Defer…), not inclination.
+
+6. Review Gate (Pre-Merge Check)
+
+Before any clause enters the spec, all four must pass:
+
+  Coherent? Does not violate its own rules.
+
+  Executable? Different people in similar contexts can make comparable decisions.
+
+  Compressible? Cannot be derived from existing clauses.
+
+  World-verifiable? External failure conditions exist.
+
+Unexecutable clauses in a spec are worse than no clauses at all.
+
+7. Decision Log (Measurement Tool)
+
+All three groups share one form; the full-spec group differs only by running the spec process before filling it in.
+
+  
+    FieldDescription
+  
+  
+    DateDecision date
+    ContextContext
+    QuestionThe real question
+    AssumptionsKey assumptions
+    DecisionCommitted action (not inclination)
+    PredictionVerifiable prediction
+    ConfidenceConfidence level (0–100%)
+    Resolution DatePre-fixed; anchored to cost change, not convenience
+    Resolution CriteriaPre-fixed, with numeric thresholds
+    OutcomeActual result
+    CalibrationConfidence vs. hit rate
+    Model Updated?Whether and how the model was updated
+  
+
+Void rule: Resolution Date / Criteria / Threshold filled or modified after the fact voids the record.
+
+Philosophy
+
+Do not seek to be forever right. Seek the permanent ability to correct yourself.
+
+Do not inherit answers. Inherit methods.
+
+Do not ask people to believe it. Let it face the world's test.
+
+The true value of a Decision Log is not helping today's decision — it is preventing six-months-later-you from rewriting history from memory.
+
+Design Freeze Declaration
+
+From this version forward: any new design without external data support must not merge.
+
+A framework that has not passed integration testing is not wrong — it simply has not yet earned the right to call itself a framework.
+
+  Signed: Rick — Author / Maintainer
+Date: 2026-07-03
+
+---
+
+## Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax
+- URL: https://chaindevrick.github.io/blog/4
+- Language: en
+- Date: 2026-04-21
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2026-04-21
+
+Most people think the wealthy incorporate just to save on taxes.
+
+That is true.
+
+But incomplete.
+
+After real research, I found the greatest value of a company has never been tax — it is redefining how assets are managed.
+
+At First, I Thought It Was Just Tax
+
+I first encountered this concept while studying family offices.
+
+Then I saw ultra-high-net-worth families managing assets through holding companies, trusts, foundations, and other structures.
+
+Combined with cases around me — divorce, estate distribution, business succession — I started asking:
+
+If all assets sit under my personal name, is that actually reasonable?
+
+Most People Think Tax First
+
+That is the most common reason.
+
+For example:
+
+  Tax planning (varies by jurisdiction)
+
+  Investment income management
+
+  Business expense deductions
+
+  Equity structuring
+
+These are all valid advantages of incorporating.
+
+But stopping there feels like a waste.
+
+Reason Two: Risk Segregation
+
+As assets grow, so do risks.
+
+For example:
+
+  Startup failure
+
+  Legal disputes
+
+  Partnership conflicts
+
+  Divorce
+
+  Debt
+
+If everything sits under one natural person, risks compound on each other.
+
+Placing different types of assets under different legal entities is essentially:
+
+Risk Segregation
+
+Not to evade responsibility.
+
+But to prevent one risk from affecting all assets.
+
+Reason Three: Assets Have Different Jobs
+
+Many people put all assets in one place.
+
+But each asset plays a different role.
+
+For example:
+
+  Long-term equity investments
+
+  Real estate
+
+  Operating companies
+
+  Cash
+
+  Philanthropic assets
+
+They carry different risk, liquidity needs, and management requirements.
+
+So what matters is not: "where to put it."
+
+But:
+
+Let each asset class operate under the structure best suited to it.
+
+Reason Four: Asset Management Is Not Just Investing
+
+Many people think investing means buying stocks.
+
+But as assets grow, the time sink is often not investing itself.
+
+It is:
+
+  How to manage?
+
+  How to allocate?
+
+  How to reduce risk?
+
+  How to carry across generations?
+
+That is why many large families eventually establish:
+
+  Holding companies
+
+  Family offices
+
+  Foundations
+
+They manage not just assets.
+
+They manage the entire capital system.
+
+Where My Thinking Changed
+
+At first, I studied: how do I protect my assets?
+
+Then I started asking a different question:
+
+What if assets do not need to belong to me at all?
+
+That is not a legal question.
+
+It is a shift in thinking.
+
+If a company can exist for fifty or a hundred years, and a person lives only a few decades.
+
+Maybe what needs to persist long-term is not me.
+
+But the entity that manages the assets.
+
+So How Do I See Companies Now?
+
+For me, a company is not a tax tool.
+
+Not a legal tool either.
+
+It is more like: a long-term entity for managing assets.
+
+Founders can retire.
+
+Managers can be replaced.
+
+Investment strategy can adjust.
+
+But as long as the entity exists, capital can keep being allocated, managed, and compounded.
+
+Current Model
+
+  
+    FieldContent
+  
+  
+    Model NameAsset Structuring
+    Core PrincipleAs assets accumulate, what needs designing is not just the portfolio — but what kind of entity should hold and manage them.
+    AssumptionsAssets have long-term accumulation goals; different assets need different management; legal structure should serve risk management, not the reverse; a company is a tool, not the goal.
+    Failure CasesOver-complex structures built purely for tax; mixing personal and corporate assets; all assets in a single legal entity; lack of governance and management systems.
+  
+
+Research Queue
+
+  What is the real value of a holding company?
+
+  How does a family office allocate capital?
+
+  How do trusts, foundations, and companies differ in role?
+
+  Can a company outlive its founder?
+
+Next, I want to explore a stranger question.
+
+If assets do not necessarily need to belong to you — who is the real holder?
+
+I think that will be an entirely different model.
+
+Model Lab is an ongoing research series. I do not share conclusions. I publish models still in evolution.
+
+---
+
+## Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study
+- URL: https://chaindevrick.github.io/blog/2
+- Language: en
+- Date: 2025-03-11
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2025-03-11
+
+Most people think Buy, Borrow, Die is a tax trick for the ultra-wealthy.
+
+After months of research, I found the real value is not tax at all.
+
+It is capital efficiency.
+
+Starting Point
+
+It started with a video.
+
+The video explained that the wealthy rarely sell assets. Instead, they pledge stocks as collateral to borrow cash, deferring capital gains tax while letting assets keep compounding.
+
+Most people concluded:
+
+"Rich people are rich. This doesn't work for normal people."
+
+My first reaction was not envy. It was:
+
+Why?
+
+If someone can do it, it is not magic. It is a mechanism you can understand.
+
+Strip Away the Tax Halo First
+
+Here is something many articles never say.
+
+The tax advantages of Buy, Borrow, Die are American.
+
+Deferred capital gains, step-up basis at death — these only matter for U.S. tax residents. If you are a non-U.S. tax resident, selling U.S. stocks is often not subject to U.S. capital gains tax anyway. The "Die" step does not exist for you.
+
+So is the model useless for everyone else?
+
+Exactly the opposite.
+
+Because the real core is a fact that holds across jurisdictions:
+
+Borrowing is not a taxable event.
+
+Wherever you are, selling may trigger tax. Borrowing does not.
+
+Tax advantage is American.
+
+Capital efficiency is universal.
+
+How I Got to This Model
+
+I did not see this clearly from the start.
+
+At first, I thought Buy, Borrow, Die was mostly about "Borrow" — just control LTV and you are fine, right?
+
+That idea was overturned five times over the next few months.
+
+Turning Point 1: LTV Is Not a Fixed Number — It Is Market State
+
+My earliest idea: set a safe LTV and the system can run long-term.
+
+Once I started simulating bear markets, I realized the same LTV means completely different risk in different environments.
+
+Leverage that looks safe in a bull market is not the same in a bear market.
+
+LTV is not a fixed number. It is a control variable that must adjust with market state.
+
+Turning Point 2: The Real Risk Is Not Return — It Is Liquidity
+
+Then I started studying historical bear markets.
+
+Most people do not fail because of bad investment decisions.
+
+They fail because they run out of liquidity — forced to sell assets they intended to hold long-term at the worst possible time.
+
+So I reframed the question: if the market crashes, can I avoid selling assets?
+
+That is when I started researching SGOV, IB01, and cash buffers.
+
+Turning Point 3: Borrowing Is Not the Core — Cash Flow Is
+
+Most Buy, Borrow, Die discussions focus on borrowing.
+
+But the more I studied, the clearer it became: what actually supports the whole system is cash flow.
+
+With stable income, you can actively repay and de-lever when borrowing efficiency drops — instead of being forced by the market.
+
+Borrowing is just a tool.
+
+Cash flow is the stabilizer.
+
+Turning Point 4: Different Infrastructure, Different Risk Models
+
+Then I started comparing brokerages, CeFi, and on-chain lending.
+
+I originally thought they were just different borrowing sources.
+
+Research showed that the same 30% LTV represents completely different safety margins on different platforms.
+
+From that point on, I stopped asking "what is the optimal LTV?"
+
+I started asking: how does this infrastructure die?
+
+Turning Point 5: I Was Not Actually Studying Buy, Borrow, Die
+
+Along the way, I realized BBD was just the entry point.
+
+The question I was really trying to answer:
+
+How do you keep quality assets in the market as long as possible while meeting life's liquidity needs?
+
+At that point I realized I was not building a borrowing strategy.
+
+I was building a Capital Efficiency model.
+
+The Current Model
+
+Many people assume this encourages high leverage.
+
+It is the opposite.
+
+  Build a core portfolio of long-term holdings.
+
+  Keep DCA-ing consistently.
+
+  Maintain stable external income.
+
+  Fund living expenses primarily through collateralized borrowing, not asset sales.
+
+  Control risk — do not chase maximum leverage.
+
+Borrowing is not the goal. It is a liquidity management tool.
+
+Can Ordinary People Actually Replicate This? Here Are the Tools
+
+The most common objection is access.
+
+So let's look at access directly.
+
+Traditional Brokerages
+
+  IBKR Portfolio Margin: $110,000 account minimum, relatively low rates.
+
+  IBKR / Fidelity / Schwab standard margin: Much lower minimums, but worse borrowing terms and ratios.
+
+  Schwab Pledged Asset Line, Fidelity equivalents: Typically require six-figure assets.
+
+CeFi
+
+  Platforms like Nexo: No asset minimum, but you hand custody to a counterparty. Celsius and BlockFi users can tell you what that means.
+
+On-Chain
+
+  Protocols like Morpho and Vesu: Zero minimum. Even $500 in assets can be pledged for a loan. Rules are in the contract — no one approves you.
+
+So "ordinary people can't do this" is no longer true in 2026.
+
+The barrier is not whether you can borrow.
+
+The barrier is whether you understand what you are borrowing against.
+
+A Concrete Example
+
+Assume:
+
+  Assets: $10,000 in quality long-term positions.
+
+  Loan: $1,500 (15% LTV).
+
+  Rate: 8%.
+
+Annual interest cost: $120.
+
+What you get: $10,000 stays fully invested. If long-term annual return is 7%, expected value is $700 per year.
+
+Liquidation risk? If the liquidation line is 80% LTV, the asset would need to fall more than 80% before this position is liquidated.
+
+This is not leverage gambling.
+
+This is paying $120 a year for the option not to sell.
+
+Of course, if you push LTV to 50%, the story changes completely.
+
+The model did not change.
+
+You did.
+
+Two Ways to Die
+
+I do not start with returns. I start with death.
+
+Under what conditions does this system die?
+
+Traditional Brokerage Death: Margin Call
+
+The broker notifies you to add collateral. There is usually buffer time. You can react — sell a portion, add cash, reduce leverage.
+
+You die slowly, but you die from hesitation.
+
+On-Chain Death: Automatic Liquidation
+
+No phone call. No notice. No grace period.
+
+The contract runs 24/7. The moment price hits the line, the liquidation bot executes. A 3 AM crash will not wait for you to wake up.
+
+You die fast, and you die from your LTV setting.
+
+Same model. Two infrastructures. Risk management must be designed separately.
+
+How I Reduce Risk
+
+Control LTV
+
+A bull market does not mean you can keep raising borrowing indefinitely.
+
+The key question: if the market crashes suddenly, do I still have time to adjust — or am I forced to liquidate?
+
+On-chain users should use more conservative LTV than brokerage users, because there is no buffer time.
+
+Keep Liquidity Reserves
+
+Beyond core assets, keep a portion in cash or cash-like instruments:
+
+  SGOV, IB01
+
+  Stablecoins (where you can access them immediately)
+
+  Cash
+
+They are not for return.
+
+They are for survival.
+
+Interest Rate Is a Dynamic Judgment, Not a Fixed Threshold
+
+Whether borrowing cost is reasonable depends on your long-term asset expectations and whether cash flow can support it.
+
+If borrowing efficiency drops:
+
+  Reduce DCA.
+
+  Repay with cash flow.
+
+  Lower borrowing ratio.
+
+The point is not to insist on borrowing.
+
+It is to keep the overall system efficient.
+
+This Is Not a Belief System
+
+No model should be a religion.
+
+If a tool works, use it. If it fails, adjust.
+
+I will keep looking for holes.
+
+If someone presents a better counterexample, I welcome it — it means the model can still improve.
+
+What I actually believe in three sentences:
+
+  Cash is for spending.
+
+  Assets are for holding.
+
+  Borrowing is for managing liquidity.
+
+Current Model
+
+  
+    FieldContent
+  
+  
+    Model NameCapital Efficiency
+    Core PrincipleKeep quality assets in the market as long as possible while managing liquidity in a controlled way. Borrowing is not a taxable event — that advantage belongs to everyone, not just American billionaires.
+    Current AssumptionsLong-term hold of quality assets; stable external income; borrowing cost remains reasonable relative to long-term asset expectations; liquidity buffer maintained; LTV set separately by infrastructure (brokerage vs on-chain), more conservative on-chain.
+    Failure CasesSustained high interest rates; income interruption; extreme market decline + high LTV; on-chain: automatic liquidation (no buffer); CeFi: counterparty risk.
+  
+
+Research Queue
+
+  Can dynamic LTV be formalized?
+
+  Should bull and bear markets use different controllers?
+
+  What is the optimal ratio of SGOV / cash-like assets?
+
+  How long after income interruption does the system need to start selling assets?
+
+  How much should on-chain vs brokerage LTV safety margins differ?
+
+Model Lab is an ongoing research series. Every model has versions, assumptions, and failure conditions. Found a hole? Email me and tear it down.
+
+---
+
+## Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity
+- URL: https://chaindevrick.github.io/blog/1
+- Language: en
+- Date: 2024-11-05
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2024-11-05
+
+People often ask me:
+
+"Why get a U.S. credit card?"
+
+My usual answer: because I wanted to build a second financial identity.
+
+But later I realized the real answer is not America.
+
+It is:
+
+I do not want my life to depend on a single financial system.
+
+It Started with a Frozen Account
+
+In high school, I received funds from a problematic source and nearly all my Taiwan bank accounts became unusable.
+
+What worried me most was not the money.
+
+It was:
+
+If I need access to funds in the future, do I have any other options?
+
+That was when I first understood:
+
+Any system with only one entry point can become a Single Point of Failure.
+
+I Started Building a Second Financial System
+
+Many people get U.S. credit cards for:
+
+  Rewards
+
+  Miles
+
+  Sign-up bonuses
+
+That was not my focus.
+
+What I cared about was:
+
+  U.S. credit history
+
+  U.S. bank accounts
+
+  U.S. brokerages
+
+  U.S. payment capability
+
+Together, they represent one thing:
+
+I began to have a second financial infrastructure that can operate independently.
+
+Later, Beyond the U.S.
+
+After building a U.S. financial identity, I did not stop.
+
+I started building in:
+
+  United States (US)
+
+  Hong Kong (HK)
+
+  United Kingdom (UK)
+
+Not because I live there.
+
+Not because I plan to immigrate.
+
+But because:
+
+Every mature financial market I add is one more option.
+
+I am not collecting bank accounts.
+
+I am reducing my dependence on any single financial system.
+
+But I Am Not Building a Backup
+
+Many people assume I am building a backup.
+
+I am not.
+
+I do not use all financial systems at once in daily life.
+
+What matters is:
+
+I know that if I ever need to, I can start over.
+
+What I pursue is not redundancy.
+
+It is Recoverability.
+
+Internationalization Is Not About Travel
+
+Many people think internationalization means:
+
+  Using cards abroad
+
+  Travel
+
+  Working overseas
+
+I prefer a different definition.
+
+Internationalization means your financial capability no longer exists in only one country.
+
+Your income can be cross-border.
+
+Your investments can be cross-border.
+
+Your assets can be cross-border.
+
+Then your financial identity should be cross-border too.
+
+I Still Trust Banks
+
+People ask: "So you do not trust banks?"
+
+No.
+
+I still use banks and still trust they work most of the time.
+
+I just do not believe any single system will never fail.
+
+Banks change policies.
+
+Companies collapse.
+
+Platforms shut down.
+
+Even countries can change the rules.
+
+The point is not predicting which one will break.
+
+It is:
+
+When one fails, do you still have other options?
+
+Current Model
+
+  
+    FieldContent
+  
+  
+    Model NameGlobal Financial Identity
+    Core PrincipleBuild multiple independently operating financial identities — not to collect more products, but to reduce dependence on any single financial system.
+    Current AssumptionsCredit takes time to build; financial identity is a long-term asset; different jurisdictions offer different capabilities; internationalization means more options, not more accounts.
+    Failure CasesCollecting accounts for the sake of collecting; maintaining too many relationships without real need; assuming cross-border systems eliminate all risk; ignoring compliance requirements across jurisdictions.
+  
+
+Research Queue
+
+  How many financial identities does one person actually need?
+
+  How do you reduce the complexity of cross-border financial management?
+
+  Can financial identity be allocated like an investment portfolio?
+
+  Will global financial identity become personal infrastructure for the future?
+
+A credit card is not the goal.
+
+A bank is not the goal.
+
+What I am building is a person who does not depend on a single financial system.
+
+Model Lab is an ongoing research series. Each article is just one case study of a model in evolution.
+
+---
+
+## 思考框架完整規格
+- URL: https://chaindevrick.github.io/blog/3
+- Language: zh-Hant
+- Date: 2026-07-03
+- Category: thoughts
+
+Version: v0.0.1
+
+  Author / Maintainer: Rick
+
+  Created: 2026-06-30
+
+  Last Updated: 2026-07-03
+
+  "The purpose is not to be right. The purpose is to become less wrong."
+
+  （"Less wrong" 源自理性主義社群 LessWrong；可證偽性源自 Karl Popper；校準方法源自 Philip Tetlock 的 Good Judgment Project。此處不宣稱原創這些組件，只宣稱其組合與規格化——增量主張見 Issue #0。）
+
+0. 設計目標
+
+不提供答案。
+
+提供一套能持續修正自身的思考方法。
+
+目的不是讓所有人得到相同答案，而是讓任何人在不同情境下，都能建立、驗證、修正自己的模型。
+
+傳承的不是思考（Thinking），而是思考如何演化（Thinking Evolution）。
+
+1. Core Principles
+
+P1. Falsifiability（可被推翻）
+
+任何模型、Framework、甚至本規格本身，都必須存在失敗條件。
+
+如果沒有任何證據可以證明它錯，它不是模型，而是信仰。
+
+推論：判定標準（Criteria）若設計成必然通過或必然失敗，等同於包裝好的結論，違反 P1。
+
+P2. Context First（情境優先）
+
+不存在脫離情境的最佳答案。
+
+思考開始前，必須先回答：
+
+  我目前的情境是什麼？
+
+  我真正要解決的問題是什麼？
+
+  這是什麼型別的問題？（描述問題 / 設計問題 / 決策問題）
+
+問題比答案重要。問錯問題，所有答案都是浪費。
+
+P3. Action Completes Thinking（行動完成思考）
+
+思考不是目的。決策與行動才是。
+
+沒有進入現實接受回饋的思考，永遠無法完成驗證。
+
+思考必須有停止條件（實作見 S5）。
+
+推論：承諾要開始的第一筆記錄若沒有真的開始，它就是第一個需要被記錄的失敗。
+
+2. Specification
+
+S1. 建立模型
+
+模型必須包含：
+
+  
+    元素內容
+  
+  
+    Question真正的問題
+    Assumptions關鍵假設（區分假設與事實）
+    Reasoning推理過程
+    Prediction可驗證的預測
+    Failure Condition什麼證據下承認模型錯誤
+  
+
+S2. 驗證模型（型別分拆）
+
+模型分兩種型別，適用相反的規則：
+
+Description Model（描述模型）——描述世界是什麼。
+
+模型與世界不一致 → 修改模型，不要修改世界。
+
+Design Model（設計模型）——主張世界應該是什麼。
+
+模型與世界不一致 → 不一致本身是行動的理由。修改對象是世界。
+
+設計模型仍受 P1 約束：必須宣告在什麼證據下，承認這個「應該」不成立。
+
+S3. 修正模型
+
+修正不是否定過去，而是新資訊加入後，更新目前最好的模型。
+
+Version 永遠存在。Final Version 永遠不存在。
+
+S4. Framework 也是模型
+
+Framework 必須接受與模型相同的檢驗：可驗證、可推翻、可修正、可淘汰。
+
+Framework 沒有特權。作者也沒有。作者對自己系統的寬容，是系統最不該允許的偏誤。
+
+S5. Stop Rule
+
+任何決策開始前，必須事前宣告停止條件，宣告後不得因「還想再想」而延展。
+
+  
+    層級內容
+  
+  
+    Principle思考必須有停止條件（P3）
+    Specification停止條件必須事前承諾，事後不得任意修改
+    ImplementationDeadline / 成本上限 / 實驗次數 / 資訊預算（擇一或組合）
+  
+
+Resolution Date 結算在成本上，不是時間上——決策的正確結算點，是決策成本開始改變的時刻。
+
+所有 Threshold 必須在決策當下寫死數字——留白的閾值等於把裁量權留給未來的自己。
+
+沒有停止規則的修正循環，在現實中叫做拖延。
+
+3. RFC-0001 — Compression Principle
+
+任何新增 Rule，必須證明無法由現有 Rule 推導，否則 Reject。
+
+同一原則管理三個方向：
+
+  新增：可推導者不得加入。
+
+  刪除：當一個 Framework 的所有適用情境被假設更少的 Framework 覆蓋，淘汰。
+
+  外部：若本規格某部分相對已知方法（見 Issue #0）貢獻為零，該部分應被壓縮掉。名字也不例外。
+
+目的不是減少文字，而是提高生成能力（Generative Power）。
+
+4. Framework Generation Rule（Backlog 中，暫記方向）
+
+當同一類問題重複使用所有已知 Framework 仍然失敗：
+
+分析失敗共同模式 → 抽象新限制條件 → 壓縮為新 Framework → 跨情境驗證 → 通過則加入 Library。
+
+生成 = 從失敗模式中提取規律。（完整定義凍結中，待 Report #1 後 Review。）
+
+5. Development Culture
+
+  任何 Rule 都可以被 Reject。包括創始人提出的。
+
+  任何 Merge 都必須有 Reality。不能只有 Logic。讚美不算 Reality。文獻是合法的 Reality 輸入。
+
+  Design Freeze。當規格足以產生可驗證假說後：停止設計，開始驗證。把下一步交給世界。
+
+Decision Log 記錄的是 Commitment，不是 Opinion。Opinion 可以很多，Commitment 只能有一個。Decision 欄位必須描述真正承諾的行動（Keep / Rename / Defer…），不是傾向。
+
+6. Review Gate（Merge 前檢查）
+
+任何條款進入 Spec 前，四題全過才能 Merge：
+
+  自洽嗎？不違反自己的規則。
+
+  可執行嗎？不同的人在相似情境下能做出可比較的決策。
+
+  可壓縮嗎？無法由現有條款推導。
+
+  可被世界驗證嗎？存在外部失敗條件。
+
+Spec 裡不可執行的條款，比沒有條款更糟。
+
+7. Decision Log（測量工具）
+
+三組共用同一張表；完整規格組唯一差別是填表前多跑一次 Spec 流程。
+
+  
+    欄位說明
+  
+  
+    Date決策日期
+    Context情境
+    Question真正的問題
+    Assumptions關鍵假設
+    Decision承諾的行動（非傾向）
+    Prediction可驗證的預測
+    Confidence信心水準（0–100%）
+    Resolution Date事前寫死；錨定成本變化點，非方便時間
+    Resolution Criteria事前寫死，含具體數字 Threshold
+    Outcome實際結果
+    Calibration信心 vs. 命中
+    Model Updated?是否更新模型，如何更新
+  
+
+作廢規則：Resolution Date / Criteria / Threshold 事後補寫或修改者，該筆資料作廢。
+
+Philosophy
+
+不要追求永遠正確。追求永遠有能力修正自己。
+
+不要傳承答案。傳承方法。
+
+不要讓人相信它。讓它接受世界的檢驗。
+
+Decision Log 的真正價值，不是幫助當下做決策，而是讓六個月後的自己，不能靠記憶重寫歷史。
+
+Design Freeze Declaration
+
+從此版本開始：任何沒有外部資料支持的新增設計，一律不得 Merge。
+
+一個沒有通過 Integration Test 的 Framework，不是錯的——它只是還沒有資格宣稱自己是 Framework。
+
+  Signed: Rick — Author / Maintainer
+Date: 2026-07-03
+
+---
+
+## Model Lab #003｜為什麼有錢人都喜歡用公司持有資產？真正的原因，不只是節稅
+- URL: https://chaindevrick.github.io/blog/4
+- Language: zh-Hant
+- Date: 2026-04-21
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2026-04-21
+
+很多人認為，有錢人成立公司只是為了節稅。
+
+這是真的。
+
+但不完整。
+
+真正研究之後，我發現，公司最大的價值從來不是節稅，而是重新定義資產的管理方式。
+
+一開始，我也以為只是節稅
+
+我第一次接觸這個概念，是研究家族辦公室（Family Office）時。
+
+後來又看到許多超高資產家族，透過控股公司、信託、基金會等不同架構管理資產。
+
+再加上身邊開始看到離婚、遺產分配、企業傳承等案例。
+
+我開始思考：
+
+如果所有資產都放在我個人名下，真的合理嗎？
+
+大部分人想到的是節稅
+
+這也是最常見的原因。
+
+例如：
+
+  稅務規劃（依不同國家而定）
+
+  投資收益管理
+
+  公司費用抵扣
+
+  股權規劃
+
+這些都是成立公司的優點。
+
+但如果只停在這裡，我覺得太可惜了。
+
+第二個原因：風險隔離
+
+當資產開始增加，風險也開始增加。
+
+例如：
+
+  創業失敗
+
+  法律糾紛
+
+  合夥問題
+
+  離婚
+
+  債務
+
+如果所有資產全部放在同一個自然人名下，很多風險都會互相影響。
+
+把不同性質的資產放在不同的法律主體，本質上是在做：
+
+風險隔離（Risk Segregation）
+
+不是為了逃避責任。
+
+而是避免一個風險，影響全部資產。
+
+第三個原因：資產開始有不同的工作
+
+很多人把所有資產都放在同一個地方。
+
+但其實，每一筆資產都有不同的角色。
+
+例如：
+
+  長期股票投資
+
+  房地產
+
+  創業公司
+
+  現金
+
+  公益資產
+
+它們承擔的風險、流動性需求、管理方式都不同。
+
+所以真正重要的不是：「放在哪裡。」
+
+而是：
+
+讓每一類資產，在最適合自己的架構下運作。
+
+第四個原因：資產管理，不只是投資
+
+很多人認為投資就是買股票。
+
+但當資產開始增加，真正花時間的反而不是投資。
+
+而是：
+
+  如何管理？
+
+  如何配置？
+
+  如何降低風險？
+
+  如何跨世代延續？
+
+這也是為什麼很多大型家族最後都建立：
+
+  控股公司
+
+  家族辦公室
+
+  基金會
+
+它們管理的不只是資產。
+
+而是整個資本系統。
+
+我的想法，從這裡開始改變
+
+一開始，我研究的是：如何保護我的資產？
+
+後來，我開始問另一個問題：
+
+如果資產根本不需要屬於我呢？
+
+這不是法律問題。
+
+而是思考方式的改變。
+
+如果公司可以存在五十年、一百年，而人只能活幾十年。
+
+那也許真正需要長期存在的，不是我。
+
+而是那個管理資產的主體。
+
+所以，我現在怎麼看公司？
+
+對我而言，公司不是一個節稅工具。
+
+也不是一個法律工具。
+
+它更像是一個：長期管理資產的主體。
+
+創辦人可以退休。
+
+管理者可以更換。
+
+投資策略可以調整。
+
+但只要這個主體還存在，資本就能持續被配置、管理與累積。
+
+Current Model
+
+  
+    欄位內容
+  
+  
+    Model NameAsset Structuring
+    Core Principle當資產開始累積時，真正需要設計的，不只是投資組合，而是資產應該由什麼樣的主體來持有與管理。
+    Assumptions資產具有長期累積的目標；不同資產需要不同的管理方式；法律架構應服務於風險管理，而不是相反；公司是一種工具，而不是目的。
+    Failure Cases為了節稅而建立過度複雜的架構；個人與公司資產混用；所有資產集中於單一法律主體；缺乏治理與管理制度。
+  
+
+Research Queue
+
+  控股公司（Holding Company）真正的價值是什麼？
+
+  家族辦公室如何配置資本？
+
+  信託、基金會與公司的角色有什麼不同？
+
+  一家公司，是否可以比創辦人活得更久？
+
+下一篇，我想討論一個更奇怪的問題。
+
+如果資產不一定需要屬於你，那誰才是真正的持有人？
+
+我認為，那會是另一個完全不同的 Model。
+
+Model Lab 是一個持續更新的研究系列。我不分享結論。我公開仍在演進的模型。
+
+---
+
+## Model Lab #002｜Buy, Borrow, Die 不是富人的專利——它只是資本效率的一個 Case Study
+- URL: https://chaindevrick.github.io/blog/2
+- Language: zh-Hant
+- Date: 2025-03-11
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2025-03-11
+
+大部分人認為 Buy, Borrow, Die 是富豪的避稅技巧。
+
+我研究了幾個月後，發現真正有價值的根本不是稅。
+
+而是資本效率。
+
+起點
+
+一切從一支影片開始。
+
+影片說，富豪幾乎不出售資產，而是抵押股票借款來取得現金，藉此遞延資本利得稅，讓資產持續成長。
+
+大部分人的結論是：
+
+「有錢人就是有錢人，這套方法不適合一般人。」
+
+我的第一個反應不是羨慕，而是：
+
+為什麼？
+
+如果有人做得到，那它就不是魔法，而是一套可以理解的機制。
+
+先拆掉稅務的光環
+
+先說一件很多文章不會說的事。
+
+Buy, Borrow, Die 的稅務優勢，是美國人的。
+
+遞延資本利得稅、死後的 step-up basis——這些只對美國稅務居民有意義。如果你是非美稅務居民，賣美股本來就不課美國資本利得稅，「Die」那一步對你完全不存在。
+
+那這套模型對其他人就沒用了嗎？
+
+正好相反。
+
+因為它真正的核心，是一個不分司法管轄區都成立的事實：
+
+借貸不是應稅事件。
+
+不管你在哪裡，賣出可能觸發稅務，借款不會。
+
+稅務優勢是美國人的。
+
+資本效率是所有人的。
+
+我怎麼走到這個模型
+
+我不是一開始就想清楚的。
+
+一開始，我以為 Buy, Borrow, Die 的重點只是「借」——控制好 LTV，不就好了嗎？
+
+這個想法在接下來幾個月被推翻了五次。
+
+轉折點 1：LTV 不是固定數字，而是市場狀態
+
+我最早想的是：設定一個安全的 LTV，就可以長期運作。
+
+開始模擬熊市後，我發現同樣的 LTV，在不同市場環境下代表完全不同的風險。
+
+牛市裡看起來安全的槓桿，到了熊市不是同一回事。
+
+LTV 不是固定數字，是需要隨市場狀態調整的控制變數。
+
+轉折點 2：真正的風險不是報酬，而是流動性
+
+接著我開始研究歷史熊市。
+
+大部分人不是因為投資錯誤而失敗。
+
+而是因為沒有流動性——在最差的時候，被迫賣掉原本想長期持有的資產。
+
+所以我把問題改成：如果市場暴跌，我能不能不用賣資產？
+
+這是我開始研究 SGOV、IB01、現金緩衝的原因。
+
+轉折點 3：借貸不是核心，現金流才是核心
+
+大部分 Buy, Borrow, Die 的討論，焦點都在借貸。
+
+但越研究越發現，真正支撐整個系統的是現金流。
+
+有穩定收入，就可以在借貸效率下降時主動還款、降槓桿——而不是被市場逼著做決定。
+
+借貸只是工具。
+
+現金流才是系統的穩定器。
+
+轉折點 4：不同基礎設施，是不同的風險模型
+
+後來我開始比較券商、CeFi 和鏈上借貸。
+
+我原本以為只是借款來源不同。
+
+研究後才發現，同樣是 30% LTV，在不同平台上代表的安全邊際完全不同。
+
+從那一刻起，我不再問「最佳 LTV 是多少」。
+
+我開始問：這個基礎設施的死法是什麼？
+
+轉折點 5：我研究的根本不是 Buy, Borrow, Die
+
+一路下來，我發現 BBD 只是入口。
+
+我真正想回答的問題一直是：
+
+如何讓優質資產盡可能持續留在市場，同時滿足生活需要的流動性？
+
+到這一步我才發現，我建立的不是一套借貸策略。
+
+而是一個資本效率（Capital Efficiency）模型。
+
+目前的模型
+
+很多人以為這是在鼓勵高槓桿。
+
+完全相反。
+
+  建立長期持有的核心資產。
+
+  持續 DCA。
+
+  保留穩定的外部收入。
+
+  生活支出優先由抵押借款提供流動性，而不是出售資產。
+
+  控制風險，而不是追求最大槓桿。
+
+借貸不是目的，而是流動性管理工具。
+
+普通人真的能複現嗎？工具在這裡
+
+「這不適合一般人」最常見的理由是門檻。
+
+那我們就直接看門檻。
+
+傳統券商
+
+  IBKR Portfolio Margin：帳戶門檻 $110,000，利率相對低。
+
+  IBKR / Fidelity / Schwab 一般 Margin：門檻低得多，但可借比例與利率條件較差。
+
+  Schwab Pledged Asset Line、Fidelity 類似產品：通常需要六位數資產。
+
+CeFi
+
+  Nexo 等平台：無資產門檻，但你把資產交給了對手方。Celsius 和 BlockFi 的用戶可以告訴你這代表什麼。
+
+鏈上
+
+  Morpho、Vesu 等借貸協議：零門檻。$500 的資產也能抵押借款，規則全部寫在合約裡，沒有人審核你。
+
+所以「普通人做不到」這句話，在 2026 年已經不成立。
+
+門檻不是能不能借。
+
+門檻是你懂不懂自己在借什麼。
+
+一個具體的例子
+
+假設：
+
+  資產：$10,000 的優質長期部位。
+
+  借款：$1,500（LTV 15%）。
+
+  利率：8%。
+
+年利息成本：$120。
+
+換到的東西：$10,000 完整留在市場。若長期年化報酬 7%，期望值是每年 $700。
+
+清算風險呢？假設清算線在 LTV 80%，資產要下跌超過 80%，這個部位才會被清算。
+
+這不是槓桿賭博。
+
+這是用 $120 一年，買下「不必賣出」的權利。
+
+當然，如果你把 LTV 拉到 50%，這個故事就完全不一樣了。
+
+模型沒有變。
+
+是你變了。
+
+兩種死法
+
+我不是先想收益，而是先想死亡。
+
+這套系統什麼情況下會死？
+
+傳統券商的死法：Margin Call
+
+券商會通知你補保證金，通常有緩衝時間。你有機會反應——賣一部分、補現金、降槓桿。
+
+死得慢，但死於你的猶豫。
+
+鏈上的死法：自動清算
+
+沒有電話，沒有通知，沒有寬限。
+
+合約 24/7 運作，價格觸線的那一秒，清算機器人就執行了。凌晨三點的暴跌不會等你醒來。
+
+死得快，死於你的 LTV 設定。
+
+同一個模型，兩種基礎設施，風險管理必須分開設計。
+
+我如何降低風險
+
+控制 LTV
+
+牛市不代表可以一直提高借款。
+
+重點是：如果市場突然暴跌，我是否還有時間調整，而不是被迫平倉。
+
+鏈上使用者的 LTV 應該比券商使用者更保守，因為你沒有緩衝時間。
+
+保留流動性
+
+除了核心資產，保留一定比例的現金或類現金資產：
+
+  SGOV、IB01
+
+  穩定幣（放在你能立刻動用的地方）
+
+  現金
+
+它們不是為了報酬。
+
+是為了讓系統活下來。
+
+利率是動態判斷，不是固定門檻
+
+借貸成本是否合理，取決於你對資產的長期預期，以及現金流是否足以支撐。
+
+如果借貸效率下降：
+
+  降低 DCA。
+
+  用現金流還款。
+
+  降低借貸比例。
+
+重點不是堅持借。
+
+是保持整體系統有效率。
+
+這不是信仰
+
+任何模型都不該是信仰。
+
+工具有效，就使用。失效，就調整。
+
+我會一直找它的漏洞。
+
+如果有人提出更好的反例，我反而很高興——代表模型還能變得更好。
+
+我真正相信的是三句話：
+
+  現金是用來消耗的。
+
+  資產是用來持有的。
+
+  借貸是用來管理流動性的。
+
+Current Model
+
+  
+    欄位內容
+  
+  
+    Model NameCapital Efficiency
+    Core Principle讓優質資產盡可能持續留在市場，同時以可控的方式管理流動性。借貸不是應稅事件——這個優勢屬於所有人，不只是美國富豪。
+    Current Assumptions長期持有高品質資產；有穩定外部收入；借貸成本相對資產長期預期維持合理；保留流動性緩衝；LTV 依基礎設施（券商 vs 鏈上）分別設定，鏈上更保守。
+    Failure Cases長期高利率；收入中斷；極端市場下跌 + 高 LTV；鏈上：自動清算（無緩衝）；CeFi：對手方風險。
+  
+
+Research Queue
+
+  動態 LTV 是否可以公式化？
+
+  牛市與熊市是否應該有不同的 Controller？
+
+  SGOV / 類現金資產的最佳比例是多少？
+
+  收入中斷多久之後，系統開始需要賣資產？
+
+  鏈上與券商的 LTV 安全邊際，該差多少才合理？
+
+Model Lab 是一個持續更新的研究系列。每個模型都有版本、假設與失效條件。發現漏洞，歡迎來信推翻。
+
+---
+
+## Model Lab #001｜我建立的不只是美國信用卡，而是一套全球金融身份
+- URL: https://chaindevrick.github.io/blog/1
+- Language: zh-Hant
+- Date: 2024-11-05
+- Category: finance
+
+Category: Finance
+
+  Model Status: Experimental
+
+  Confidence: Medium
+
+  Last Updated: 2024-11-05
+
+很多人問我：
+
+「為什麼要辦美國信用卡？」
+
+我的答案通常都是：因為我想建立第二個金融身份。
+
+但後來我發現，真正的答案不是美國。
+
+而是：
+
+我不希望自己的人生，只依賴一個金融系統。
+
+一切從一次帳戶凍結開始
+
+高中時，我曾經因為收到來源有問題的款項，導致所有台灣銀行帳戶幾乎都無法正常使用。
+
+當時我最擔心的，不是錢。
+
+而是：
+
+如果未來需要用錢，我還有沒有其他選擇？
+
+也是那一次，我第一次理解到：
+
+任何只有一個入口的系統，都可能成為單點故障（Single Point of Failure）。
+
+我開始建立第二套金融系統
+
+很多人辦美國信用卡，是為了：
+
+  回饋
+
+  哩程
+
+  開戶優惠
+
+我不是。
+
+我更在意的是：
+
+  美國信用紀錄
+
+  美國銀行帳戶
+
+  美國券商
+
+  美國支付能力
+
+它們共同代表一件事：
+
+我開始擁有另一套可以獨立運作的金融基礎設施。
+
+後來，不只美國
+
+建立了美國金融身份之後，我沒有停止。
+
+而是開始建立：
+
+  美國（US）
+
+  香港（HK）
+
+  英國（UK）
+
+不是因為我住在那裡。
+
+也不是因為我要移民。
+
+而是因為：
+
+每多一個成熟金融市場，我就多一個選擇。
+
+我不是在收集銀行帳戶。
+
+我是在降低自己對任何單一金融系統的依賴。
+
+但我不是在建立備份
+
+很多人以為，我是在做 Backup。
+
+其實不是。
+
+我平常並不會同時使用所有金融系統。
+
+真正重要的是：
+
+我知道，如果有一天需要，我有能力重新開始。
+
+我追求的不是備援。
+
+而是：可重建性（Recoverability）。
+
+國際化，不是為了出國
+
+很多人把國際化理解成：
+
+  海外刷卡
+
+  出國旅遊
+
+  海外工作
+
+我比較喜歡另一種定義。
+
+國際化，是讓你的金融能力，不再只存在一個國家。
+
+你的收入可以跨國。
+
+你的投資可以跨國。
+
+你的資產可以跨國。
+
+那你的金融身份，也應該能跨國。
+
+我不是不相信銀行
+
+很多人會問：「所以你不相信銀行？」
+
+不是。
+
+我依然使用銀行，也依然相信它們在大多數時間能正常運作。
+
+我只是不相信：任何單一系統永遠不會失效。
+
+銀行會改政策。
+
+企業會倒閉。
+
+平台會關閉。
+
+甚至國家也可能改變規則。
+
+真正重要的不是預測哪一個會出問題。
+
+而是：
+
+當其中一個失效時，你還有沒有其他選擇。
+
+Current Model
+
+  
+    欄位內容
+  
+  
+    Model NameGlobal Financial Identity
+    Core Principle建立多個可獨立運作的金融身份，不是為了追求更多金融產品，而是降低對任何單一金融系統的依賴。
+    Current Assumptions信用需要長期累積；金融身份是一種長期資產；不同司法管轄區提供不同的金融能力；國際化代表更多選擇，而不是更多帳戶。
+    Failure Cases為了收集帳戶而收集帳戶；沒有實際需求，卻維護過多金融關係；誤以為跨國金融系統可以完全消除風險；忽略不同國家的法規與合規要求。
+  
+
+Research Queue
+
+  一個人真正需要幾套金融身份？
+
+  如何降低跨國金融管理的複雜度？
+
+  金融身份是否可以像投資組合一樣配置？
+
+  全球金融身份，會成為未來的個人基礎設施嗎？
+
+信用卡不是目的。
+
+銀行也不是目的。
+
+我真正建立的，是一個不依賴單一金融系統的人。
+
+Model Lab 是一個持續更新的研究系列。每一篇文章，都只是某個模型的一個 Case Study。
+
+---

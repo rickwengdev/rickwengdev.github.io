@@ -11,7 +11,7 @@
           <p class="hero-lede">{{ t('home.hero.lede') }}</p>
           <div class="hero-actions">
             <button class="btn-primary" @click="$router.push('/experience')">{{ t('home.hero.viewCompanies') }}</button>
-            <a class="btn-secondary" href="mailto:chain.dev.rick@proton.me">{{ t('home.hero.contact') }}</a>
+            <a class="btn-secondary" href="mailto:office@theprism.ltd">{{ t('home.hero.contact') }}</a>
           </div>
           <a href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank" class="hero-appointment">
             {{ t('home.hero.schedule') }}

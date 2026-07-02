@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# AI / LLM crawlers (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://chaindevrick.github.io/sitemap.xml
+
+# LLM-readable indexes
+# https://chaindevrick.github.io/llms.txt
+# https://chaindevrick.github.io/llms-full.txt

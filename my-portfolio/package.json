@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "node scripts/generate-rss.js && node scripts/generate-sitemap.js && vite build && cp dist/index.html dist/404.html",
+    "dev": "node scripts/build-posts.js && vite",
+    "build": "node scripts/build-posts.js && node scripts/generate-rss.js && node scripts/generate-sitemap.js && node scripts/generate-llms-txt.js && vite build && node scripts/prerender-seo.js && cp dist/index.html dist/404.html",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.12",
     "vite": "^7.2.4"
   }
 }

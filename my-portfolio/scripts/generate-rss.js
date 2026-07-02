@@ -6,7 +6,7 @@ import { blogPosts } from '../src/data/posts/index.js'; // 引入你的文章資
 const siteUrl = 'https://chaindevrick.github.io';
 const author = {
   name: 'Rick',
-  email: 'chain.dev.rick@proton.me',
+  email: 'office@theprism.ltd',
   link: siteUrl,
 };
 

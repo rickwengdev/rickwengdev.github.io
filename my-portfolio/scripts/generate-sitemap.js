@@ -9,17 +9,23 @@ const staticRoutes = [
   { path: '/blog', changefreq: 'weekly', priority: '0.9' },
 ];
 
+const postPriority = (index) => {
+  if (index === 0) return '0.9';
+  if (index === 1) return '0.8';
+  return '0.7';
+};
+
 const urls = [
   ...staticRoutes.map(({ path, changefreq, priority }) => ({
     loc: `${siteUrl}${path === '/' ? '' : path}`,
     changefreq,
     priority,
   })),
-  ...blogPosts.map((post) => ({
+  ...blogPosts.map((post, index) => ({
     loc: `${siteUrl}/blog/${post.id}`,
-    lastmod: post.date,
-    changefreq: 'monthly',
-    priority: '0.7',
+    lastmod: post.modified ?? post.date,
+    changefreq: index === 0 ? 'weekly' : 'monthly',
+    priority: postPriority(index),
   })),
 ];
 

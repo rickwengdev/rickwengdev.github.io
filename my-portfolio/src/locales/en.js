@@ -9,15 +9,28 @@ export default {
       title: 'Rick — Founder & CEO',
       description:
         'Rick is Founder & CEO of Kura Finance LLC and Prism Capital LLC — building enterprises at the intersection of modern finance and frontier technology.',
+      keywords: [
+        'Rick',
+        'Founder',
+        'CEO',
+        'Kura Finance',
+        'Prism Capital',
+        'Fintech',
+        'Capital Efficiency',
+        'chaindevrick',
+      ],
     },
     experience: {
       title: 'Experience — Rick',
       description:
         'Founder & CEO of Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
+      keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Founder', 'CEO', 'Family Office'],
     },
     blog: {
       title: 'Writing — Rick',
-      description: 'Perspectives on finance, technology, and building at the frontier.',
+      description:
+        'Perspectives on finance, capital efficiency, asset structuring, Model Lab research, and building at the frontier.',
+      keywords: ['Writing', 'Blog', 'Finance', 'Model Lab', 'Capital Efficiency', 'Buy Borrow Die', 'Global Financial Identity', 'Asset Structuring'],
     },
     blogPost: {
       title: '{title} — Rick',

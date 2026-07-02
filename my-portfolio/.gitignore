@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Generated from content/posts/*.md
+src/data/posts/zh.js
+src/data/posts/en.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

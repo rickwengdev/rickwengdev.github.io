@@ -6,7 +6,7 @@
       </template>
     </n-result>
 
-    <article v-else class="article-content">
+    <article v-else class="article-content" itemscope itemtype="https://schema.org/BlogPosting">
       <n-page-header @back="$router.push('/blog')" class="post-header">
         <template #title>
           <span class="header-title">{{ t('nav.blog') }}</span>
@@ -15,9 +15,9 @@
       
       <div class="post-hero">
         <div class="emoji-large">{{ post.emoji }}</div>
-        <h1 class="post-title">{{ post.title }}</h1>
+        <h1 class="post-title" itemprop="headline">{{ post.title }}</h1>
         <div class="post-meta">
-          <span class="post-date">{{ post.date }}</span>
+          <time class="post-date" itemprop="datePublished" :datetime="post.date">{{ post.date }}</time>
           <n-space size="small">
             <n-tag v-for="tag in post.tags" :key="tag" size="small" round :bordered="false" type="primary" class="post-tag">
               {{ tag }}
@@ -28,7 +28,7 @@
 
       <n-divider style="margin: 32px 0;" />
 
-      <div class="markdown-body" v-html="post.content"></div>
+      <div class="markdown-body" itemprop="articleBody" v-html="post.content"></div>
 
       <div class="post-footer">
         <n-divider />

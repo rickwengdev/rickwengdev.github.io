@@ -10,6 +10,7 @@ const app = createApp(App)
 app.use(router)
 
 app.mount('#app')
+document.getElementById('seo-content')?.remove()
 
 const syncSeo = () => updateSeoForRoute(router.currentRoute.value, locale.value, t)
 

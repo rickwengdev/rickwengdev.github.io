@@ -9,14 +9,17 @@ export default {
       title: 'Rick — 創辦人暨執行長',
       description:
         'Rick 為 Kura Finance LLC 與 Prism Capital LLC 創辦人暨執行長，在現代金融與前沿科技的交會處建立企業。',
+      keywords: ['Rick', '創辦人', '執行長', 'Kura Finance', 'Prism Capital', '金融科技', '資本效率', 'chaindevrick'],
     },
     experience: {
       title: '經歷 — Rick',
       description: 'Kura Finance LLC 與 Prism Capital LLC 創辦人暨執行長——現代金融與前沿的自有資本。',
+      keywords: ['經歷', 'Kura Finance', 'Prism Capital', '創辦人', '執行長', '家族辦公室'],
     },
     blog: {
       title: '文章 — Rick',
-      description: '關於金融、科技與在前沿建構的觀點。',
+      description: '關於金融、資本效率、資產架構、Model Lab 研究與在前沿建構的觀點。',
+      keywords: ['文章', '金融', 'Model Lab', '資本效率', 'Buy Borrow Die', '資產架構', '全球金融身份'],
     },
     blogPost: {
       title: '{title} — Rick',

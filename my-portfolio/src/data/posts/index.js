@@ -1,9 +1,12 @@
 import zhPosts from './zh.js';
 import enPosts from './en.js';
 
+const sortByNewest = (posts) =>
+  [...posts].sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id);
+
 export function getBlogPosts(locale) {
-  return locale === 'zh' ? zhPosts : enPosts;
+  return sortByNewest(locale === 'zh' ? zhPosts : enPosts);
 }
 
-// Default export for RSS build script
-export const blogPosts = enPosts;
+export const blogPosts = sortByNewest(enPosts);
+export const zhBlogPosts = sortByNewest(zhPosts);
