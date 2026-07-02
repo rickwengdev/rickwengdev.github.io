@@ -2,13 +2,13 @@ export default {
   meta: {
     title: 'Rick — 企業家',
     description:
-      'Rick 為 Kura Finance LLC 與 Prism Capital LLC 企業家。研究並撰寫資本效率、全球金融身份、資產架構與思考框架——在 Model Lab 公開仍在演進的模型。',
+      '我反向拆解金融、科技與組織。分享模型，而非觀點。',
   },
   seo: {
     home: {
       title: 'Rick — 企業家',
       description:
-        'Rick 為 Kura Finance LLC 與 Prism Capital LLC 企業家。研究並撰寫資本效率、全球金融身份、資產架構與思考框架——在 Model Lab 公開仍在演進的模型。',
+        '我反向拆解金融、科技與組織。分享模型，而非觀點。',
       keywords: ['Rick', '企業家', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', 'Model Lab', '思考框架', 'chaindevrick'],
     },
     experience: {
@@ -39,7 +39,7 @@ export default {
     toggleMenu: '切換選單',
   },
   footer: {
-    desc: '企業家，研究並撰寫資本效率、全球金融身份、資產架構與思考框架。',
+    desc: '我反向拆解金融、科技與組織。分享模型，而非觀點。',
     email: 'Email',
     schedule: '預約通話',
   },
@@ -49,7 +49,7 @@ export default {
       titleLine1: '在',
       titleAccent: '科技前沿建立企業。',
       lede:
-        '我創立並領導現代金融與前沿科技的企業，並在 Model Lab 公開仍在演進的研究——資本效率、全球金融身份、資產架構，以及能持續修正自身的思考方法。',
+        '我反向拆解金融、科技與組織。\n分享模型，而非觀點。',
       viewCompanies: '查看公司',
       contact: '聯絡我',
       schedule: '預約對談 ↗',
@@ -155,7 +155,7 @@ export default {
     eyebrow: '經歷',
     title: '我領導的公司。',
     subtitle: '兩家企業的企業家——現代金融與前沿的自有資本。',
-    role: '企業家',
+    role: 'Founder & CEO',
     period: '2026 – 至今',
     jobs: {
       kura: {

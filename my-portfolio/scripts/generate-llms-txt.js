@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { blogPosts, zhBlogPosts } from '../src/data/posts/index.js';
-import { AUTHOR, pageUrl, extractModelLabNumber } from '../src/seo/schema.js';
+import { AUTHOR, pageUrl, extractModelLabNumber, SITE_DESCRIPTION } from '../src/seo/schema.js';
 
 function formatPostBlock(post, localeLabel) {
   const lines = [
@@ -52,7 +52,7 @@ const modelLabPosts = blogPosts
 const lines = [
   '# chaindevrick.github.io',
   '',
-  '> Rick — Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
+  `> Rick — ${SITE_DESCRIPTION}`,
   '',
   '## About',
   `- Name: ${AUTHOR.name}`,

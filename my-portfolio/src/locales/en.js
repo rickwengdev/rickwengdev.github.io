@@ -2,13 +2,13 @@ export default {
   meta: {
     title: 'Rick — Entrepreneur',
     description:
-      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
+      'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
   },
   seo: {
     home: {
       title: 'Rick — Entrepreneur',
       description:
-        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
+        'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
       keywords: [
         'Rick',
         'Entrepreneur',
@@ -52,7 +52,7 @@ export default {
     toggleMenu: 'Toggle menu',
   },
   footer: {
-    desc: 'Entrepreneur writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.',
+    desc: 'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
     email: 'Email',
     schedule: 'Schedule a call',
   },
@@ -62,7 +62,7 @@ export default {
       titleLine1: 'Enterprises at the',
       titleAccent: 'technological frontier.',
       lede:
-        'I build founder-led enterprises in modern finance — and write openly about the models behind them: capital efficiency, global financial identity, asset structuring, and thinking that keeps correcting itself.',
+        'I reverse engineer finance, technology, and organizations.\nSharing models, not opinions.',
       viewCompanies: 'View Companies',
       contact: 'Get in Touch',
       schedule: 'Schedule a conversation ↗',
@@ -187,7 +187,7 @@ export default {
     title: 'Companies I lead.',
     subtitle:
       'Entrepreneur behind two enterprises — modern finance and proprietary capital at the technological frontier.',
-    role: 'Entrepreneur',
+    role: 'Founder & CEO',
     period: '2026 – Present',
     jobs: {
       kura: {

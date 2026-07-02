@@ -12,6 +12,7 @@ import {
   buildWebsiteJsonLd,
   escapeHtml,
   pageUrl,
+  SITE_DESCRIPTION,
   wrapJsonLd,
 } from '../src/seo/schema.js';
 
@@ -23,16 +24,13 @@ const STATIC_PAGES = [
     dir: null,
     path: '/',
     title: 'Rick — Entrepreneur',
-    description:
-      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
+    description: SITE_DESCRIPTION,
     keywords: ['Rick', 'Entrepreneur', 'Kura Finance', 'Prism Capital', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring', 'Model Lab', 'Thinking Framework'],
     jsonLd: wrapJsonLd([
-      buildWebsiteJsonLd(
-        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.'
-      ),
+      buildWebsiteJsonLd(SITE_DESCRIPTION),
       buildPersonJsonLd(),
     ]),
-    body: `<h1>Rick — Entrepreneur</h1><p>Entrepreneur writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab research and writing</a>.</p>`,
+    body: `<h1>Rick — Entrepreneur</h1><p>${escapeHtml(SITE_DESCRIPTION)}</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab research and writing</a>.</p>`,
   },
   {
     dir: 'experience',

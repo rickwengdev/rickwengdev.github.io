@@ -206,6 +206,7 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   color: var(--text-secondary);
   max-width: 520px;
   margin: 0 0 32px;
+  white-space: pre-line;
 }
 
 .hero-actions {

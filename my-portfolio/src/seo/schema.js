@@ -1,11 +1,13 @@
 export const SITE_URL = 'https://chaindevrick.github.io';
 export const SITE_NAME = 'Rick';
 export const DEFAULT_IMAGE = `${SITE_URL}/avatar.jpg`;
+export const SITE_DESCRIPTION =
+  'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.';
 export const AUTHOR = {
   name: 'Rick',
   url: SITE_URL,
   email: 'office@theprism.ltd',
-  jobTitle: 'Entrepreneur',
+  jobTitle: 'Founder & CEO',
   sameAs: ['https://github.com/chaindevrick'],
 };
 
