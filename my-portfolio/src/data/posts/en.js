@@ -1,0 +1,192 @@
+export default [
+  {
+    id: 1,
+    title: 'Thinking Framework — Full Specification',
+    emoji: '◆',
+    date: '2026-07-02',
+    category: 'thoughts',
+    tags: ['Framework', 'Decision Log', 'Design Freeze'],
+    excerpt:
+      'A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.',
+    content: `
+<div class="doc-meta">
+  <p><strong>Version:</strong> v0.0.1</p>
+  <p><strong>Author / Maintainer:</strong> Rick</p>
+  <p><strong>Created:</strong> 2026-06-30</p>
+  <p><strong>Last Updated:</strong> 2026-07-02</p>
+</div>
+
+<blockquote class="doc-quote">
+  <p>"The purpose is not to be right. The purpose is to become less wrong."</p>
+  <p class="doc-quote-note">("Less wrong" originates from the LessWrong rationalist community; falsifiability from Karl Popper; calibration methods from Philip Tetlock's Good Judgment Project. No claim of originality for these components — only their combination and specification. Incremental claims see Issue #0.)</p>
+</blockquote>
+
+<hr />
+
+<h3>0. Design Goals</h3>
+<p>Does not provide answers.</p>
+<p>Provides a thinking method designed to continuously correct itself.</p>
+<p>The goal is not for everyone to reach the same answer, but for anyone in any context to build, verify, and revise their own models.</p>
+<p>What is inherited is not thinking, but thinking evolution (Thinking Evolution).</p>
+
+<hr />
+
+<h3>1. Core Principles</h3>
+
+<h4>P1. Falsifiability</h4>
+<p>Any model, framework, or even this specification itself must have failure conditions.</p>
+<p>If no evidence could prove it wrong, it is not a model — it is belief.</p>
+<p><strong>Corollary:</strong> Criteria designed to inevitably pass or fail are packaged conclusions, violating P1.</p>
+
+<h4>P2. Context First</h4>
+<p>No best answer exists outside of context.</p>
+<p>Before thinking begins, you must answer:</p>
+<ul>
+  <li>What is my current context?</li>
+  <li>What problem am I actually trying to solve?</li>
+  <li>What type of problem is this? (Descriptive / Design / Decision)</li>
+</ul>
+<p>Questions matter more than answers. Wrong questions waste every answer.</p>
+
+<h4>P3. Action Completes Thinking</h4>
+<p>Thinking is not the goal. Decisions and action are.</p>
+<p>Thinking that never enters reality for feedback can never complete verification.</p>
+<p>Thinking must have stop conditions (see S5).</p>
+<p><strong>Corollary:</strong> If the first record of a promised start never actually starts, that is the first failure to record.</p>
+
+<hr />
+
+<h3>2. Specification</h3>
+
+<h4>S1. Build a Model</h4>
+<p>A model must include:</p>
+<table class="doc-table">
+  <thead>
+    <tr><th>Element</th><th>Content</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Question</td><td>The real question</td></tr>
+    <tr><td>Assumptions</td><td>Key assumptions (distinguish assumption from fact)</td></tr>
+    <tr><td>Reasoning</td><td>Reasoning process</td></tr>
+    <tr><td>Prediction</td><td>Verifiable prediction</td></tr>
+    <tr><td>Failure Condition</td><td>What evidence would prove the model wrong</td></tr>
+  </tbody>
+</table>
+
+<h4>S2. Verify the Model (Type Split)</h4>
+<p>Models come in two types with opposite rules:</p>
+<p><strong>Description Model</strong> — describes what the world is.</p>
+<blockquote><p>Model conflicts with world → revise the model, not the world.</p></blockquote>
+<p><strong>Design Model</strong> — asserts what the world should be.</p>
+<blockquote><p>Model conflicts with world → the conflict itself is grounds for action. Revise the world.</p></blockquote>
+<p>Design models remain bound by P1: must declare under what evidence the "should" is abandoned.</p>
+
+<h4>S3. Revise the Model</h4>
+<p>Revision is not negating the past — it is updating the best current model when new information arrives.</p>
+<p>Version always exists. Final version never exists.</p>
+
+<h4>S4. A Framework Is Also a Model</h4>
+<p>Frameworks must pass the same tests as models: verifiable, falsifiable, revisable, discardable.</p>
+<p>Frameworks have no privilege. Neither do authors. <strong>An author's leniency toward their own system is the bias the system must least tolerate.</strong></p>
+
+<h4>S5. Stop Rule</h4>
+<p>Before any decision begins, stop conditions must be declared in advance and cannot be extended because you "want to think more."</p>
+<table class="doc-table">
+  <thead>
+    <tr><th>Level</th><th>Content</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Principle</td><td>Thinking must have stop conditions (P3)</td></tr>
+    <tr><td>Specification</td><td>Stop conditions must be pre-committed; no arbitrary post-hoc changes</td></tr>
+    <tr><td>Implementation</td><td>Deadline / cost cap / experiment count / information budget (one or combined)</td></tr>
+  </tbody>
+</table>
+<p><strong>Resolution Date settles on cost, not time</strong> — the correct settlement point is when decision cost begins to change.</p>
+<p><strong>All thresholds must be fixed numerically at decision time</strong> — blank thresholds defer discretion to your future self.</p>
+<p>A revision loop without stop rules is called procrastination in reality.</p>
+
+<hr />
+
+<h3>3. RFC-0001 — Compression Principle</h3>
+<p>Any new rule must prove it cannot be derived from existing rules, or it is rejected.</p>
+<p>The same principle governs three directions:</p>
+<ol>
+  <li><strong>Add:</strong> Derivable rules must not be added.</li>
+  <li><strong>Delete:</strong> When all use cases of a framework are covered by one with fewer assumptions, discard it.</li>
+  <li><strong>External:</strong> If any part of this spec contributes zero relative to known methods (see Issue #0), compress it — names included.</li>
+</ol>
+<p>The goal is not fewer words, but higher generative power.</p>
+
+<hr />
+
+<h3>4. Framework Generation Rule (Backlog — provisional)</h3>
+<p>When the same class of problem fails after all known frameworks have been applied:</p>
+<p>Analyze shared failure patterns → abstract new constraints → compress into a new framework → cross-context verification → add to library if it passes.</p>
+<p>Generation = extracting patterns from failure modes. (Full definition frozen; review after Report #1.)</p>
+
+<hr />
+
+<h3>5. Development Culture</h3>
+<ol>
+  <li>Any rule can be rejected — including those proposed by the founder.</li>
+  <li>Any merge must have reality. Logic alone is insufficient. Praise is not reality. Literature is valid reality input.</li>
+  <li>Design freeze. When the spec can produce testable hypotheses: stop designing, start verifying. Hand the next step to the world.</li>
+</ol>
+<p>The Decision Log records commitment, not opinion. Many opinions; one commitment. The Decision field must describe the action actually promised (Keep / Rename / Defer…), not inclination.</p>
+
+<hr />
+
+<h3>6. Review Gate (Pre-Merge Check)</h3>
+<p>Before any clause enters the spec, all four must pass:</p>
+<ol>
+  <li><strong>Coherent?</strong> Does not violate its own rules.</li>
+  <li><strong>Executable?</strong> Different people in similar contexts can make comparable decisions.</li>
+  <li><strong>Compressible?</strong> Cannot be derived from existing clauses.</li>
+  <li><strong>World-verifiable?</strong> External failure conditions exist.</li>
+</ol>
+<blockquote><p>Unexecutable clauses in a spec are worse than no clauses at all.</p></blockquote>
+
+<hr />
+
+<h3>7. Decision Log (Measurement Tool)</h3>
+<p>All three groups share one form; the full-spec group differs only by running the spec process before filling it in.</p>
+<table class="doc-table">
+  <thead>
+    <tr><th>Field</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Date</td><td>Decision date</td></tr>
+    <tr><td>Context</td><td>Context</td></tr>
+    <tr><td>Question</td><td>The real question</td></tr>
+    <tr><td>Assumptions</td><td>Key assumptions</td></tr>
+    <tr><td>Decision</td><td><strong>Committed action</strong> (not inclination)</td></tr>
+    <tr><td>Prediction</td><td>Verifiable prediction</td></tr>
+    <tr><td>Confidence</td><td>Confidence level (0–100%)</td></tr>
+    <tr><td>Resolution Date</td><td>Pre-fixed; anchored to cost change, not convenience</td></tr>
+    <tr><td>Resolution Criteria</td><td>Pre-fixed, with numeric thresholds</td></tr>
+    <tr><td>Outcome</td><td>Actual result</td></tr>
+    <tr><td>Calibration</td><td>Confidence vs. hit rate</td></tr>
+    <tr><td>Model Updated?</td><td>Whether and how the model was updated</td></tr>
+  </tbody>
+</table>
+<p><strong>Void rule:</strong> Resolution Date / Criteria / Threshold filled or modified after the fact voids the record.</p>
+
+<hr />
+
+<h3>Philosophy</h3>
+<p>Do not seek to be forever right. Seek the permanent ability to correct yourself.</p>
+<p>Do not inherit answers. Inherit methods.</p>
+<p>Do not ask people to believe it. Let it face the world's test.</p>
+<p>The true value of a Decision Log is not helping today's decision — it is preventing six-months-later-you from rewriting history from memory.</p>
+
+<hr />
+
+<h3>Design Freeze Declaration</h3>
+<p>From this version forward: any new design without external data support must not merge.</p>
+<p>A framework that has not passed integration testing is not wrong — it simply has not yet earned the right to call itself a framework.</p>
+<blockquote>
+  <p><strong>Signed:</strong> Rick — Author / Maintainer<br />Date: 2026-07-02</p>
+</blockquote>
+`,
+  },
+];

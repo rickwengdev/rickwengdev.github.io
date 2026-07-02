@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.bundle/
+vendor/
+
+# Build output
+dist/
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Root build artifacts (deployed via GitHub Actions)
+/index.html
+/404.html
+/assets/
+/avatar.jpg
+/logo.svg
+/robots.txt
+/rss.xml
+/sitemap.xml
+/googleb2d0648b30b88221.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
