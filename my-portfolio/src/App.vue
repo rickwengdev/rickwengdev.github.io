@@ -9,9 +9,9 @@
           
           <nav class="nav-links" :aria-label="t('nav.language')">
             <n-button text class="nav-link" @click="navigate('/')">{{ t('nav.home') }}</n-button>
-            <n-button text class="nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
             <n-button text class="nav-link" @click="navigate('/blog')">{{ t('nav.blog') }}</n-button>
-            <n-button tag="a" text class="nav-link" href="https://github.com/chaindevrick" target="_blank">
+            <n-button text class="nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
+            <n-button tag="a" text class="nav-link" href="https://github.com/rickwengdev" target="_blank">
               {{ t('nav.github') }}
             </n-button>
           </nav>
@@ -41,9 +41,9 @@
           :aria-label="t('nav.toggleMenu')"
         >
           <n-button text class="mobile-nav-link" @click="navigate('/')">{{ t('nav.home') }}</n-button>
-          <n-button text class="mobile-nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
           <n-button text class="mobile-nav-link" @click="navigate('/blog')">{{ t('nav.blog') }}</n-button>
-          <n-button tag="a" text class="mobile-nav-link" href="https://github.com/chaindevrick" target="_blank">
+          <n-button text class="mobile-nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
+          <n-button tag="a" text class="mobile-nav-link" href="https://github.com/rickwengdev" target="_blank">
             {{ t('nav.github') }}
           </n-button>
           <div class="mobile-lang">
@@ -67,7 +67,7 @@
           <div class="footer-bottom">
             <span>&copy; {{ new Date().getFullYear() }} Rick</span>
             <div class="footer-links">
-              <a href="https://github.com/chaindevrick" target="_blank">{{ t('nav.github') }}</a>
+              <a href="https://github.com/rickwengdev" target="_blank">{{ t('nav.github') }}</a>
               <a href="mailto:office@theprism.ltd">{{ t('footer.email') }}</a>
               <a href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank">{{ t('footer.schedule') }}</a>
             </div>

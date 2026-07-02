@@ -15,9 +15,15 @@
       
       <div class="post-hero">
         <div class="emoji-large">{{ post.emoji }}</div>
+        <p v-if="post.modelLabNumber" class="model-lab-label">
+          Model Lab #{{ String(post.modelLabNumber).padStart(3, '0') }}
+        </p>
         <h1 class="post-title" itemprop="headline">{{ post.title }}</h1>
         <div class="post-meta">
           <time class="post-date" itemprop="datePublished" :datetime="post.date">{{ post.date }}</time>
+          <span v-if="post.modelStatus" class="status-badge" :class="post.modelStatus">
+            {{ t(`blog.status.${post.modelStatus}`) }}
+          </span>
           <n-space size="small">
             <n-tag v-for="tag in post.tags" :key="tag" size="small" round :bordered="false" type="primary" class="post-tag">
               {{ tag }}
@@ -69,7 +75,41 @@ const post = computed(() => {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--accent);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.model-lab-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.status-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.status-badge.experimental {
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.08);
+}
+
+.status-badge.stable {
+  color: #047857;
+  background: rgba(4, 120, 87, 0.08);
+}
+
+.status-badge.deprecated {
+  color: var(--text-muted);
+  background: var(--bg-surface);
 }
 
 .post-title {

@@ -1,9 +1,11 @@
 ---
 id: 3
+modelName: "Thinking Framework"
+modelStatus: stable
 title: "Thinking Framework — Full Specification"
 emoji: "◆"
 date: 2026-07-03
-category: thoughts
+category: systems
 tags:
   - "Framework"
   - "Decision Log"

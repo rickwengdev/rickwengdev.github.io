@@ -1,9 +1,9 @@
 import fs from 'fs';
 import { Feed } from 'feed';
-import { blogPosts } from '../src/data/posts/index.js'; // 引入你的文章資料
+import { blogPosts } from '../src/data/posts/index.js';
+import { SITE_DESCRIPTION, SITE_URL } from '../src/seo/schema.js';
 
-// 設定你的網站基本資訊
-const siteUrl = 'https://chaindevrick.github.io';
+const siteUrl = SITE_URL;
 const author = {
   name: 'Rick',
   email: 'office@theprism.ltd',
@@ -11,8 +11,8 @@ const author = {
 };
 
 const feed = new Feed({
-  title: 'Rick — Writing',
-  description: 'Perspectives on finance, technology, and building at the frontier.',
+  title: 'Rick — Model Lab',
+  description: SITE_DESCRIPTION,
   id: siteUrl,
   link: siteUrl,
   language: "en",

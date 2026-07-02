@@ -1,44 +1,44 @@
-# chaindevrick.github.io
+# rickwengdev.github.io
 
 > Rick — I reverse engineer finance, technology, and organizations. Sharing models, not opinions.
 
 ## About
 - Name: Rick
 - Role: Founder & CEO
-- Website: https://chaindevrick.github.io
+- Website: https://rickwengdev.github.io
 - Email: office@theprism.ltd
-- GitHub: https://github.com/chaindevrick
+- GitHub: https://github.com/rickwengdev
 - Companies: Kura Finance LLC (https://kura-finance.com), Prism Capital LLC (https://theprism.ltd)
 
 ## Site Structure
-- Home: https://chaindevrick.github.io
-- Experience: https://chaindevrick.github.io/experience
-- Writing / Blog: https://chaindevrick.github.io/blog
-- RSS: https://chaindevrick.github.io/rss.xml
-- Sitemap: https://chaindevrick.github.io/sitemap.xml
-- Full text index: https://chaindevrick.github.io/llms-full.txt
+- Home: https://rickwengdev.github.io
+- Experience: https://rickwengdev.github.io/experience
+- Model Lab: https://rickwengdev.github.io/blog
+- RSS: https://rickwengdev.github.io/rss.xml
+- Sitemap: https://rickwengdev.github.io/sitemap.xml
+- Full text index: https://rickwengdev.github.io/llms-full.txt
 
 ## Model Lab Series
 
 Experimental research models with explicit assumptions and failure cases.
 
-- Model Lab #1: Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity (https://chaindevrick.github.io/blog/1)
-- Model Lab #2: Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study (https://chaindevrick.github.io/blog/2)
-- Model Lab #3: Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax (https://chaindevrick.github.io/blog/4)
+- Model Lab #1: Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity (https://rickwengdev.github.io/blog/1)
+- Model Lab #2: Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study (https://rickwengdev.github.io/blog/2)
+- Model Lab #3: Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax (https://rickwengdev.github.io/blog/4)
 
-## Writing (English, newest first)
+## Latest Models (English, newest first)
 
 ### Thinking Framework — Full Specification
-- URL: https://chaindevrick.github.io/blog/3
+- URL: https://rickwengdev.github.io/blog/3
 - Language: en
 - Date: 2026-07-03
-- Category: thoughts
+- Category: systems
 - Tags: Framework, Decision Log, Design Freeze
 - Summary: A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.
 - Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   ("Less wrong" originates from the LessWrong rationalist community; falsifiability from Karl Popper; calibration methods from Philip Tetlock's Good Judgment Project. No claim of originality for these components — only their combination and specification. Incremental claims see Issue #0.) 0. Design Goals D…
 
 ### Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax
-- URL: https://chaindevrick.github.io/blog/4
+- URL: https://rickwengdev.github.io/blog/4
 - Language: en
 - Date: 2026-04-21
 - Category: finance
@@ -48,7 +48,7 @@ Experimental research models with explicit assumptions and failure cases.
 - Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2026-04-21 Most people think the wealthy incorporate just to save on taxes. That is true. But incomplete. After real research, I found the greatest value of a company has never been tax — it is redefining how assets are managed. At First, I Thought It Was Just Tax I first encountered this concept while studying family offices. Then I saw ultra-high-net-worth families managing assets …
 
 ### Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study
-- URL: https://chaindevrick.github.io/blog/2
+- URL: https://rickwengdev.github.io/blog/2
 - Language: en
 - Date: 2025-03-11
 - Category: finance
@@ -58,7 +58,7 @@ Experimental research models with explicit assumptions and failure cases.
 - Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2025-03-11 Most people think Buy, Borrow, Die is a tax trick for the ultra-wealthy. After months of research, I found the real value is not tax at all. It is capital efficiency. Starting Point It started with a video. The video explained that the wealthy rarely sell assets. Instead, they pledge stocks as collateral to borrow cash, deferring capital gains tax while letting assets keep …
 
 ### Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity
-- URL: https://chaindevrick.github.io/blog/1
+- URL: https://rickwengdev.github.io/blog/1
 - Language: en
 - Date: 2024-11-05
 - Category: finance
@@ -67,19 +67,19 @@ Experimental research models with explicit assumptions and failure cases.
 - Series: Model Lab #1
 - Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2024-11-05 People often ask me: "Why get a U.S. credit card?" My usual answer: because I wanted to build a second financial identity. But later I realized the real answer is not America. It is: I do not want my life to depend on a single financial system. It Started with a Frozen Account In high school, I received funds from a problematic source and nearly all my Taiwan bank account…
 
-## Writing (Traditional Chinese, newest first)
+## Latest Models (Traditional Chinese, newest first)
 
 ### 思考框架完整規格
-- URL: https://chaindevrick.github.io/blog/3
+- URL: https://rickwengdev.github.io/blog/3
 - Language: zh-Hant
 - Date: 2026-07-03
-- Category: thoughts
+- Category: systems
 - Tags: 框架, 決策紀錄, 設計凍結
 - Summary: 一套能持續修正自身的思考方法。Version v0.0.1 — Design Freeze，傳承思考如何演化，而非答案本身。
 - Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   （"Less wrong" 源自理性主義社群 LessWrong；可證偽性源自 Karl Popper；校準方法源自 Philip Tetlock 的 Good Judgment Project。此處不宣稱原創這些組件，只宣稱其組合與規格化——增量主張見 Issue #0。） 0. 設計目標 不提供答案。 提供一套能持續修正自身的思考方法。 目的不是讓所有人得到相同答案，而是讓任何人在不同情境下，都能建立、驗證、修正自己的模型。 傳承的不是思考（Thinking），而是思考如何演化（Thinking Evolution）。 1. Core Principles P1. Falsifiabili…
 
 ### Model Lab #003｜為什麼有錢人都喜歡用公司持有資產？真正的原因，不只是節稅
-- URL: https://chaindevrick.github.io/blog/4
+- URL: https://rickwengdev.github.io/blog/4
 - Language: zh-Hant
 - Date: 2026-04-21
 - Category: finance
@@ -89,7 +89,7 @@ Experimental research models with explicit assumptions and failure cases.
 - Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2026-04-21 很多人認為，有錢人成立公司只是為了節稅。 這是真的。 但不完整。 真正研究之後，我發現，公司最大的價值從來不是節稅，而是重新定義資產的管理方式。 一開始，我也以為只是節稅 我第一次接觸這個概念，是研究家族辦公室（Family Office）時。 後來又看到許多超高資產家族，透過控股公司、信託、基金會等不同架構管理資產。 再加上身邊開始看到離婚、遺產分配、企業傳承等案例。 我開始思考： 如果所有資產都放在我個人名下，真的合理嗎？ 大部分人想到的是節稅 這也是最常見的原因。 例如：   稅務規劃（依不同國家而定）   投資收益管理   公司費用抵扣   股權規劃 這些都是成立公司的優點。 但如果只停在這裡，我覺得太可惜了。 第二個原因：風險隔離 當資產開始增加，風險也開始增加。 例如：   創業失敗   法律糾…
 
 ### Model Lab #002｜Buy, Borrow, Die 不是富人的專利——它只是資本效率的一個 Case Study
-- URL: https://chaindevrick.github.io/blog/2
+- URL: https://rickwengdev.github.io/blog/2
 - Language: zh-Hant
 - Date: 2025-03-11
 - Category: finance
@@ -99,7 +99,7 @@ Experimental research models with explicit assumptions and failure cases.
 - Preview: Category: Finance   Model Status: Experimental   Confidence: Medium   Last Updated: 2025-03-11 大部分人認為 Buy, Borrow, Die 是富豪的避稅技巧。 我研究了幾個月後，發現真正有價值的根本不是稅。 而是資本效率。 起點 一切從一支影片開始。 影片說，富豪幾乎不出售資產，而是抵押股票借款來取得現金，藉此遞延資本利得稅，讓資產持續成長。 大部分人的結論是： 「有錢人就是有錢人，這套方法不適合一般人。」 我的第一個反應不是羨慕，而是： 為什麼？ 如果有人做得到，那它就不是魔法，而是一套可以理解的機制。 先拆掉稅務的光環 先說一件很多文章不會說的事。 Buy, Borrow, Die 的稅務優勢，是美國人的。 遞延資本利得稅、死後的 step-up basis——這些只對美國稅務居民有意義。如果你是非美稅務居民，賣美股本來就不課美國資本利得稅，「Die」那一步對你完全不存在。 那這套模型對其他人就沒用了嗎？ …
 
 ### Model Lab #001｜我建立的不只是美國信用卡，而是一套全球金融身份
-- URL: https://chaindevrick.github.io/blog/1
+- URL: https://rickwengdev.github.io/blog/1
 - Language: zh-Hant
 - Date: 2024-11-05
 - Category: finance
@@ -119,10 +119,10 @@ Experimental research models with explicit assumptions and failure cases.
 Complete plain-text versions for retrieval and citation.
 
 ## Thinking Framework — Full Specification
-- URL: https://chaindevrick.github.io/blog/3
+- URL: https://rickwengdev.github.io/blog/3
 - Language: en
 - Date: 2026-07-03
-- Category: thoughts
+- Category: systems
 
 Version: v0.0.1
 
@@ -334,7 +334,7 @@ Date: 2026-07-03
 ---
 
 ## Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax
-- URL: https://chaindevrick.github.io/blog/4
+- URL: https://rickwengdev.github.io/blog/4
 - Language: en
 - Date: 2026-04-21
 - Category: finance
@@ -530,7 +530,7 @@ Model Lab is an ongoing research series. I do not share conclusions. I publish m
 ---
 
 ## Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study
-- URL: https://chaindevrick.github.io/blog/2
+- URL: https://rickwengdev.github.io/blog/2
 - Language: en
 - Date: 2025-03-11
 - Category: finance
@@ -834,7 +834,7 @@ Model Lab is an ongoing research series. Every model has versions, assumptions, 
 ---
 
 ## Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity
-- URL: https://chaindevrick.github.io/blog/1
+- URL: https://rickwengdev.github.io/blog/1
 - Language: en
 - Date: 2024-11-05
 - Category: finance
@@ -1018,10 +1018,10 @@ Model Lab is an ongoing research series. Each article is just one case study of 
 ---
 
 ## 思考框架完整規格
-- URL: https://chaindevrick.github.io/blog/3
+- URL: https://rickwengdev.github.io/blog/3
 - Language: zh-Hant
 - Date: 2026-07-03
-- Category: thoughts
+- Category: systems
 
 Version: v0.0.1
 
@@ -1233,7 +1233,7 @@ Date: 2026-07-03
 ---
 
 ## Model Lab #003｜為什麼有錢人都喜歡用公司持有資產？真正的原因，不只是節稅
-- URL: https://chaindevrick.github.io/blog/4
+- URL: https://rickwengdev.github.io/blog/4
 - Language: zh-Hant
 - Date: 2026-04-21
 - Category: finance
@@ -1431,7 +1431,7 @@ Model Lab 是一個持續更新的研究系列。我不分享結論。我公開�
 ---
 
 ## Model Lab #002｜Buy, Borrow, Die 不是富人的專利——它只是資本效率的一個 Case Study
-- URL: https://chaindevrick.github.io/blog/2
+- URL: https://rickwengdev.github.io/blog/2
 - Language: zh-Hant
 - Date: 2025-03-11
 - Category: finance
@@ -1735,7 +1735,7 @@ Model Lab 是一個持續更新的研究系列。每個模型都有版本、假�
 ---
 
 ## Model Lab #001｜我建立的不只是美國信用卡，而是一套全球金融身份
-- URL: https://chaindevrick.github.io/blog/1
+- URL: https://rickwengdev.github.io/blog/1
 - Language: zh-Hant
 - Date: 2024-11-05
 - Category: finance

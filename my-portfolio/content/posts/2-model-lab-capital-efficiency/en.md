@@ -1,5 +1,8 @@
 ---
 id: 2
+modelLabNumber: 2
+modelName: "Buy, Borrow, Die"
+modelStatus: experimental
 title: "Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study"
 emoji: "◈"
 date: 2025-03-11

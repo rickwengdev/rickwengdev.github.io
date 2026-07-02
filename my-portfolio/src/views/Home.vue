@@ -4,13 +4,23 @@
       <div class="marketing-container hero-grid">
         <div class="hero-content">
           <p class="section-eyebrow">{{ t('home.hero.eyebrow') }}</p>
-          <h1 class="hero-title">
-            <span>{{ t('home.hero.titleLine1') }}</span>
-            <span class="hero-title-accent">{{ t('home.hero.titleAccent') }}</span>
-          </h1>
+          <h1 class="hero-title">{{ t('home.hero.title') }}</h1>
           <p class="hero-lede">{{ t('home.hero.lede') }}</p>
+          <p class="hero-mission">{{ t('home.hero.mission') }}</p>
+
+          <div class="philosophy-strip">
+            <span
+              v-for="(step, index) in philosophySteps"
+              :key="step"
+              class="philosophy-step"
+            >
+              <span class="step-text">{{ step }}</span>
+              <span v-if="index < philosophySteps.length - 1" class="step-arrow" aria-hidden="true">→</span>
+            </span>
+          </div>
+
           <div class="hero-actions">
-            <button class="btn-primary" @click="$router.push('/experience')">{{ t('home.hero.viewCompanies') }}</button>
+            <button class="btn-primary" @click="$router.push('/blog')">{{ t('home.hero.exploreModels') }}</button>
             <a class="btn-secondary" href="mailto:office@theprism.ltd">{{ t('home.hero.contact') }}</a>
           </div>
           <a href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank" class="hero-appointment">
@@ -20,13 +30,7 @@
 
         <div class="hero-visual">
           <div class="avatar-frame">
-            <img :src="avatarImage" :alt="t('seo.home.title')" class="avatar-image" />
-          </div>
-          <div class="hero-stats">
-            <div v-for="stat in stats" :key="stat.label" class="stat-cell">
-              <span class="stat-value">{{ stat.value }}</span>
-              <span class="stat-label">{{ stat.label }}</span>
-            </div>
+            <img :src="avatarImage" :alt="t('home.hero.title')" class="avatar-image" />
           </div>
         </div>
       </div>
@@ -34,54 +38,50 @@
 
     <section class="section section-alt">
       <div class="marketing-container">
-        <p class="section-eyebrow">{{ t('home.experience.eyebrow') }}</p>
-        <h2 class="section-title">{{ t('home.experience.title') }}</h2>
-        <p class="section-subtitle">{{ t('home.experience.subtitle') }}</p>
+        <p class="section-eyebrow">{{ t('home.models.eyebrow') }}</p>
+        <h2 class="section-title">{{ t('home.models.title') }}</h2>
+        <p class="section-subtitle">{{ t('home.models.subtitle') }}</p>
 
-        <div class="experience-list">
-          <ExperienceCard v-for="job in experiences" :key="job.id" :job="job" />
+        <div class="model-list">
+          <ModelCard v-for="post in modelLabPosts" :key="post.id" :post="post" />
         </div>
         <div class="section-action">
-          <button class="btn-secondary" @click="$router.push('/experience')">{{ t('home.experience.seeAll') }}</button>
+          <button class="btn-secondary" @click="$router.push('/blog')">{{ t('home.models.seeAll') }}</button>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="marketing-container">
-        <p class="section-eyebrow">{{ t('home.mandate.eyebrow') }}</p>
-        <h2 class="section-title">{{ t('home.mandate.title') }}</h2>
-        <p class="section-subtitle">{{ t('home.mandate.subtitle') }}</p>
-
-        <div class="feature-grid">
-          <div v-for="item in mandate" :key="item.code" class="feature-card">
-            <div class="feature-code">{{ item.code }}</div>
-            <h3 class="feature-title">{{ item.title }}</h3>
-            <p class="feature-body">{{ item.body }}</p>
-          </div>
+      <div class="marketing-container researching-grid">
+        <div class="researching-copy">
+          <p class="section-eyebrow">{{ t('home.researching.eyebrow') }}</p>
+          <h2 class="section-title">{{ t('home.researching.title') }}</h2>
         </div>
+        <ul class="researching-list">
+          <li v-for="topic in researchingTopics" :key="topic" class="researching-item">
+            <span class="researching-check" aria-hidden="true">✓</span>
+            {{ topic }}
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="marketing-container">
-        <p class="section-eyebrow">{{ t('home.principles.eyebrow') }}</p>
-        <h2 class="section-title">{{ t('home.principles.title') }}</h2>
-
-        <div class="principles-grid">
-          <div v-for="p in principles" :key="p.title" class="principle-card">
-            <h3 class="principle-title">{{ p.title }}</h3>
-            <p class="principle-body">{{ p.body }}</p>
-          </div>
-        </div>
+    <section class="section section-alt about-section">
+      <div class="marketing-container about-inner">
+        <p class="section-eyebrow">{{ t('home.about.eyebrow') }}</p>
+        <h2 class="about-headline">
+          <span>{{ t('home.about.line1') }}</span>
+          <span class="about-accent">{{ t('home.about.line2') }}</span>
+        </h2>
+        <p class="about-body">{{ t('home.about.body') }}</p>
       </div>
     </section>
 
     <section class="section">
       <div class="marketing-container stack-section">
-        <p class="section-eyebrow">{{ t('home.portfolio.eyebrow') }}</p>
-        <h2 class="section-title">{{ t('home.portfolio.title') }}</h2>
-        <p class="section-subtitle">{{ t('home.portfolio.subtitle') }}</p>
+        <p class="section-eyebrow">{{ t('home.projects.eyebrow') }}</p>
+        <h2 class="section-title">{{ t('home.projects.title') }}</h2>
+        <p class="section-subtitle">{{ t('home.projects.subtitle') }}</p>
         <div class="entity-row">
           <a
             v-for="entity in entities"
@@ -96,26 +96,8 @@
             <span class="entity-desc">{{ entity.desc }}</span>
           </a>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="marketing-container">
-        <p class="section-eyebrow">{{ t('home.approach.eyebrow') }}</p>
-        <h2 class="section-title">{{ t('home.approach.title') }}</h2>
-
-        <div class="compare-grid">
-          <div
-            v-for="col in compareColumns"
-            :key="col.title"
-            class="compare-col"
-            :class="{ highlight: col.highlight }"
-          >
-            <h3 class="compare-title">{{ col.title }}</h3>
-            <ul class="compare-list">
-              <li v-for="item in col.items" :key="item">{{ item }}</li>
-            </ul>
-          </div>
+        <div class="section-action">
+          <button class="btn-secondary" @click="$router.push('/experience')">{{ t('home.projects.seeAll') }}</button>
         </div>
       </div>
     </section>
@@ -125,7 +107,7 @@
         <h2 class="cta-title">{{ t('home.cta.title') }}</h2>
         <p class="cta-body">{{ t('home.cta.body') }}</p>
         <div class="hero-actions">
-          <button class="btn-primary" @click="$router.push('/experience')">{{ t('home.cta.viewCompanies') }}</button>
+          <button class="btn-primary" @click="$router.push('/blog')">{{ t('home.cta.exploreModels') }}</button>
           <a class="btn-secondary" href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank">
             {{ t('home.cta.schedule') }}
           </a>
@@ -138,24 +120,16 @@
 <script setup>
 import { computed } from 'vue';
 import avatarImage from '../assets/avatar.jpg';
-import ExperienceCard from '../components/ExperienceCard.vue';
-import { getExperiences } from '../data/experience.js';
+import ModelCard from '../components/ModelCard.vue';
+import { getModelLabPosts } from '../data/posts/index.js';
 import { useI18n } from '../i18n';
 
 const { locale, t, tm } = useI18n();
 
-const experiences = computed(() => getExperiences(locale.value));
-
-const stats = computed(() => [
-  { value: '2', label: t('home.stats.companies') },
-  { value: '2026', label: t('home.stats.founded') },
-  { value: t('home.stats.global'), label: t('home.stats.ambition') },
-]);
-
-const mandate = computed(() => tm('home.mandate.items') ?? []);
-const principles = computed(() => tm('home.principles.items') ?? []);
-const entities = computed(() => tm('home.portfolio.entities') ?? []);
-const compareColumns = computed(() => tm('home.approach.columns') ?? []);
+const modelLabPosts = computed(() => getModelLabPosts(locale.value));
+const philosophySteps = computed(() => tm('home.philosophy.steps') ?? []);
+const researchingTopics = computed(() => tm('home.researching.topics') ?? []);
+const entities = computed(() => tm('home.projects.entities') ?? []);
 </script>
 
 <style scoped>
@@ -177,27 +151,19 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
 
 @media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 64px;
   }
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-size: clamp(3rem, 6vw, 4.25rem);
   font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.04em;
   margin: 0 0 24px;
   color: var(--text);
-}
-
-.hero-title span {
-  display: block;
-}
-
-.hero-title-accent {
-  color: var(--accent);
 }
 
 .hero-lede {
@@ -205,8 +171,47 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   line-height: 1.75;
   color: var(--text-secondary);
   max-width: 520px;
-  margin: 0 0 32px;
+  margin: 0 0 16px;
   white-space: pre-line;
+}
+
+.hero-mission {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 520px;
+  margin: 0 0 24px;
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+.philosophy-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 6px;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.philosophy-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.step-arrow {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 .hero-actions {
@@ -237,8 +242,8 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
 }
 
 .avatar-frame {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -251,43 +256,6 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   object-fit: cover;
 }
 
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  width: 100%;
-  max-width: 360px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.stat-cell {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 20px 12px;
-  background: var(--bg-elevated);
-}
-
-.stat-value {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  text-align: center;
-}
-
 .section {
   padding: var(--section-py) 0;
 }
@@ -298,10 +266,10 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   border-bottom: 1px solid var(--border);
 }
 
-.experience-list {
+.model-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin-top: 48px;
 }
 
@@ -310,55 +278,72 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   text-align: center;
 }
 
-.feature-grid {
+.researching-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 48px;
-}
-
-@media (min-width: 640px) {
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .feature-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.principles-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 48px;
+  gap: 32px;
+  align-items: start;
 }
 
 @media (min-width: 768px) {
-  .principles-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .researching-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
   }
 }
 
-.principle-card {
-  padding: 32px 0 0;
-  border-top: 1px solid var(--border);
+.researching-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.principle-title {
-  font-size: 1.0625rem;
-  font-weight: 600;
-  margin: 0 0 10px;
+.researching-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
   color: var(--text);
 }
 
-.principle-body {
-  font-size: 0.9375rem;
-  line-height: 1.65;
+.researching-check {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about-inner {
+  max-width: 640px;
+}
+
+.about-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+
+.about-headline span {
+  display: block;
+}
+
+.about-accent {
+  color: var(--accent);
+}
+
+.about-body {
+  font-size: 1rem;
+  line-height: 1.75;
   color: var(--text-secondary);
   margin: 0;
+  white-space: pre-line;
 }
 
 .stack-section {
@@ -426,64 +411,6 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   color: var(--text-secondary);
 }
 
-.compare-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 48px;
-}
-
-@media (min-width: 768px) {
-  .compare-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.compare-col {
-  padding: 28px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
-
-.compare-col.highlight {
-  border-color: rgba(124, 92, 252, 0.4);
-  background: var(--accent-subtle);
-}
-
-.compare-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 20px;
-  color: var(--text);
-}
-
-.compare-col.highlight .compare-title {
-  color: var(--accent);
-}
-
-.compare-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.compare-list li {
-  position: relative;
-  padding-left: 16px;
-  margin-bottom: 12px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-}
-
-.compare-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--text-muted);
-}
-
 .cta-section {
   border-top: 1px solid var(--border);
 }
@@ -520,11 +447,23 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
   }
 
   .hero-title {
-    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: clamp(2.5rem, 12vw, 3.25rem);
+  }
+
+  .hero-lede,
+  .hero-mission {
+    font-size: 1rem;
   }
 
   .hero-lede {
-    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-mission {
+    margin-bottom: 20px;
+  }
+
+  .philosophy-strip {
     margin-bottom: 24px;
   }
 
@@ -532,44 +471,17 @@ const compareColumns = computed(() => tm('home.approach.columns') ?? []);
     flex-direction: column;
   }
 
-  .hero-stats {
-    max-width: 100%;
-  }
-
-  .stat-cell {
-    padding: 16px 8px;
-  }
-
-  .stat-value {
-    font-size: 1.25rem;
-  }
-
-  .stat-label {
-    font-size: 0.625rem;
-  }
-
   .avatar-frame {
     width: 160px;
     height: 160px;
   }
 
-  .experience-list,
-  .feature-grid,
-  .principles-grid,
-  .compare-grid {
+  .model-list {
     margin-top: 32px;
-  }
-
-  .compare-col {
-    padding: 20px;
   }
 
   .entity-card {
     padding: 24px 20px;
-  }
-
-  .principle-card {
-    padding-top: 24px;
   }
 
   .section-action .btn-secondary {

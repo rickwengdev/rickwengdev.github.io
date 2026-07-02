@@ -1,5 +1,8 @@
 ---
 id: 2
+modelLabNumber: 2
+modelName: "Buy, Borrow, Die"
+modelStatus: experimental
 title: "Model Lab #002｜Buy, Borrow, Die 不是富人的專利——它只是資本效率的一個 Case Study"
 emoji: "◈"
 date: 2025-03-11

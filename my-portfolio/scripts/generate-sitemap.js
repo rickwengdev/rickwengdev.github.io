@@ -1,7 +1,8 @@
 import fs from 'fs';
 import { blogPosts } from '../src/data/posts/index.js';
+import { SITE_URL } from '../src/seo/schema.js';
 
-const siteUrl = 'https://chaindevrick.github.io';
+const siteUrl = SITE_URL;
 
 const staticRoutes = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },

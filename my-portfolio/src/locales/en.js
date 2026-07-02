@@ -1,12 +1,12 @@
 export default {
   meta: {
-    title: 'Rick — Entrepreneur',
+    title: 'Rick — Model Lab',
     description:
       'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
   },
   seo: {
     home: {
-      title: 'Rick — Entrepreneur',
+      title: 'Rick — Model Lab',
       description:
         'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
       keywords: [
@@ -19,7 +19,7 @@ export default {
         'Asset Structuring',
         'Model Lab',
         'Thinking Framework',
-        'chaindevrick',
+        'rickwengdev',
       ],
     },
     experience: {
@@ -29,10 +29,10 @@ export default {
       keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Entrepreneur', 'Family Office'],
     },
     blog: {
-      title: 'Writing — Rick',
+      title: 'Model Lab — Rick',
       description:
-        'Perspectives on finance, capital efficiency, asset structuring, Model Lab research, and building at the frontier.',
-      keywords: ['Writing', 'Blog', 'Finance', 'Model Lab', 'Capital Efficiency', 'Buy Borrow Die', 'Global Financial Identity', 'Asset Structuring'],
+        'Experimental research models on finance, systems, technology, and organizations — each with explicit assumptions and failure cases.',
+      keywords: ['Model Lab', 'Finance', 'Systems', 'Technology', 'Organizations', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring'],
     },
     blogPost: {
       title: '{title} — Rick',
@@ -44,8 +44,8 @@ export default {
   },
   nav: {
     home: 'Home',
-    experience: 'Experience',
-    blog: 'Blog',
+    experience: 'Projects',
+    blog: 'Model Lab',
     github: 'GitHub',
     contact: 'Get in Touch',
     language: 'Language',
@@ -58,127 +58,56 @@ export default {
   },
   home: {
     hero: {
-      eyebrow: 'Entrepreneur',
-      titleLine1: 'Enterprises at the',
-      titleAccent: 'technological frontier.',
+      eyebrow: 'Model Lab',
+      title: 'Rick',
       lede:
         'I reverse engineer finance, technology, and organizations.\nSharing models, not opinions.',
-      viewCompanies: 'View Companies',
+      mission:
+        'Building companies.\nDocumenting models.\nLearning in public.',
+      exploreModels: 'Explore Model Lab',
       contact: 'Get in Touch',
       schedule: 'Schedule a conversation ↗',
     },
-    stats: {
-      companies: 'Companies',
-      founded: 'Founded',
-      ambition: 'Ambition',
-      global: 'Global',
+    philosophy: {
+      steps: ['Understand', 'Deconstruct', 'Rebuild', 'Improve'],
     },
-    experience: {
-      eyebrow: 'Experience',
-      title: 'Companies I lead.',
-      subtitle:
-        'Founder-led enterprises at the intersection of modern finance and frontier technology.',
-      seeAll: 'See full experience →',
+    models: {
+      eyebrow: 'Latest Models',
+      title: 'Models in evolution.',
+      subtitle: 'Each article is a case study — with assumptions, failure cases, and versions.',
+      seeAll: 'View all models →',
     },
-    mandate: {
-      eyebrow: 'Mandate',
-      title: 'Where I operate.',
-      subtitle:
-        'Two distinct enterprises — one consumer finance platform, one institutional capital partnership.',
-      items: [
-        {
-          code: '01',
-          title: 'Modern Finance',
-          body: 'Unified accounts to save, spend, invest, earn, and move money globally — through Kura Finance LLC.',
-        },
-        {
-          code: '02',
-          title: 'Proprietary Capital',
-          body: 'Patient, concentrated deployment of balance-sheet capital to operators at the frontier — through Prism Capital LLC.',
-        },
-        {
-          code: '03',
-          title: 'Frontier Technology',
-          body: 'Programmable capital, sovereign compute, frontier protocols, and the special situations between them.',
-        },
-        {
-          code: '04',
-          title: 'Product & Brand',
-          body: 'Institutional-grade digital presence and product experiences designed for clarity, trust, and longevity.',
-        },
-        {
-          code: '05',
-          title: 'Enterprise Operations',
-          body: 'Founder-direct leadership across strategy, partnerships, compliance structure, and long-horizon execution.',
-        },
+    researching: {
+      eyebrow: 'Currently Researching',
+      title: 'What I am working on.',
+      topics: [
+        'Capital Allocation',
+        'Global Financial Identity',
+        'Organization Design',
+        'AI Infrastructure',
       ],
     },
-    principles: {
-      eyebrow: 'Principles',
-      title: 'Designed for humans.',
-      items: [
-        {
-          title: 'Patient capital',
-          body: 'Built for decades, not vintages — with conviction that outlasts market cycles and fundraising calendars.',
-        },
-        {
-          title: 'Designed for humans',
-          body: 'Whether a financial product or an institutional brand, every experience should feel intentional and clear.',
-        },
-        {
-          title: 'Global by default',
-          body: 'Borderless finance and frontier technology, without unnecessary complexity or geographic limitation.',
-        },
-      ],
+    about: {
+      eyebrow: 'About',
+      line1: "I don't collect knowledge.",
+      line2: 'I collect models.',
+      body:
+        'Every article starts with a question.\nEvery question becomes a model.\nEvery model is continuously updated.',
     },
-    portfolio: {
-      eyebrow: 'Portfolio',
-      title: 'The firms behind the work.',
-      subtitle:
-        'Each entity carries its own mandate, brand, and long-term horizon — built to outlast vintages.',
+    projects: {
+      eyebrow: 'Projects',
+      title: 'Companies I build.',
+      subtitle: 'Founder-led enterprises — modern finance and proprietary capital at the frontier.',
+      seeAll: 'View projects →',
       entities: [
         { code: 'KF', name: 'Kura Finance LLC', desc: 'Modern finance, redesigned.', url: 'https://kura-finance.com' },
         { code: 'PC', name: 'Prism Capital LLC', desc: 'Capital at the frontier.', url: 'https://theprism.ltd' },
       ],
     },
-    approach: {
-      eyebrow: 'Approach',
-      title: 'Leadership without the noise.',
-      columns: [
-        {
-          title: 'Traditional VC',
-          items: [
-            'LP-driven fundraising cycles',
-            'Portfolio announcements',
-            'Fund-life pressure',
-            'Allocator-first engagement',
-          ],
-        },
-        {
-          title: 'Corporate Incubator',
-          items: [
-            'Parent-company agenda',
-            'Slow decision-making',
-            'Brand constraints',
-            'Limited founder autonomy',
-          ],
-        },
-        {
-          title: 'Founder-Led',
-          highlight: true,
-          items: [
-            'Proprietary balance sheet',
-            'Multi-decade horizon',
-            'Direct founder engagement',
-            'Built to outlast vintages',
-          ],
-        },
-      ],
-    },
     cta: {
-      title: "Let's build at the frontier.",
-      body: 'Open to founder conversations, strategic partnerships, and select advisory engagements.',
-      viewCompanies: 'View Companies',
+      title: 'Follow the models.',
+      body: 'Open research with explicit assumptions. Found a hole? Tear it down.',
+      exploreModels: 'Explore Model Lab',
       schedule: 'Schedule a Call',
     },
   },
@@ -213,21 +142,26 @@ export default {
     },
   },
   blog: {
-    eyebrow: 'Writing',
-    title: 'Writing',
-    subtitle: 'Perspectives on finance, technology, and building at the frontier.',
+    eyebrow: 'Model Lab',
+    title: 'Model Lab',
+    subtitle: 'Experimental research models — published with assumptions, failure cases, and versions.',
     rss: 'RSS Feed',
-    back: '← Back to List',
-    notFoundTitle: 'Post Not Found',
-    notFoundDesc: 'This article might have been moved or deleted.',
-    backToBlog: 'Back to Blog',
-    empty: 'No posts found in this category.',
+    back: '← Back to Model Lab',
+    notFoundTitle: 'Model Not Found',
+    notFoundDesc: 'This model might have been moved or deleted.',
+    backToBlog: 'Back to Model Lab',
+    empty: 'No models found in this category.',
+    status: {
+      experimental: 'Experimental',
+      stable: 'Stable',
+      deprecated: 'Deprecated',
+    },
     categories: {
       all: 'All',
-      technical: 'Technical',
-      tutorial: 'Tutorial',
       finance: 'Finance',
-      thoughts: 'Thoughts',
+      systems: 'Systems',
+      technology: 'Technology',
+      organizations: 'Organizations',
     },
   },
 };

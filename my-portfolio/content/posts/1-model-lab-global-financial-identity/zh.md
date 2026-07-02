@@ -1,5 +1,8 @@
 ---
 id: 1
+modelLabNumber: 1
+modelName: "全球金融身份"
+modelStatus: experimental
 title: "Model Lab #001｜我建立的不只是美國信用卡，而是一套全球金融身份"
 emoji: "◈"
 date: 2024-11-05

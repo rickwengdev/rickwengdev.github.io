@@ -1,5 +1,8 @@
 ---
 id: 4
+modelLabNumber: 3
+modelName: "Asset Structuring"
+modelStatus: experimental
 title: "Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax"
 emoji: "◈"
 date: 2026-04-21

@@ -8,5 +8,11 @@ export function getBlogPosts(locale) {
   return sortByNewest(locale === 'zh' ? zhPosts : enPosts);
 }
 
+export function getModelLabPosts(locale) {
+  return getBlogPosts(locale)
+    .filter((post) => post.modelLabNumber)
+    .sort((a, b) => b.modelLabNumber - a.modelLabNumber);
+}
+
 export const blogPosts = sortByNewest(enPosts);
 export const zhBlogPosts = sortByNewest(zhPosts);

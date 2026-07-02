@@ -23,14 +23,14 @@ const STATIC_PAGES = [
   {
     dir: null,
     path: '/',
-    title: 'Rick — Entrepreneur',
+    title: 'Rick — Model Lab',
     description: SITE_DESCRIPTION,
     keywords: ['Rick', 'Entrepreneur', 'Kura Finance', 'Prism Capital', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring', 'Model Lab', 'Thinking Framework'],
     jsonLd: wrapJsonLd([
       buildWebsiteJsonLd(SITE_DESCRIPTION),
       buildPersonJsonLd(),
     ]),
-    body: `<h1>Rick — Entrepreneur</h1><p>${escapeHtml(SITE_DESCRIPTION)}</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab research and writing</a>.</p>`,
+    body: `<h1>Rick</h1><p>${escapeHtml(SITE_DESCRIPTION)}</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab</a>.</p>`,
   },
   {
     dir: 'experience',
@@ -51,10 +51,10 @@ const STATIC_PAGES = [
   {
     dir: 'blog',
     path: '/blog',
-    title: 'Writing — Rick',
+    title: 'Model Lab — Rick',
     description:
-      'Perspectives on finance, capital efficiency, asset structuring, global financial identity, Model Lab research, and building at the frontier.',
-    keywords: ['Writing', 'Blog', 'Finance', 'Model Lab', 'Capital Efficiency', 'Global Financial Identity'],
+      'Experimental research models on finance, systems, technology, and organizations — each with explicit assumptions and failure cases.',
+    keywords: ['Model Lab', 'Finance', 'Systems', 'Technology', 'Organizations', 'Capital Efficiency', 'Global Financial Identity'],
     jsonLd: wrapJsonLd(
       [
         buildBlogJsonLd(blogPosts),
@@ -62,11 +62,11 @@ const STATIC_PAGES = [
         buildModelLabSeriesJsonLd(blogPosts),
         buildBreadcrumbJsonLd([
           { name: 'Home', path: '/' },
-          { name: 'Writing', path: '/blog' },
+          { name: 'Model Lab', path: '/blog' },
         ]),
       ].filter(Boolean)
     ),
-    body: `<h1>Writing</h1><p>Perspectives on finance, technology, and building at the frontier.</p><ul>${blogPosts
+    body: `<h1>Model Lab</h1><p>Experimental research models on finance, systems, technology, and organizations.</p><ul>${blogPosts
       .map(
         (post) =>
           `<li><a href="${pageUrl(`/blog/${post.id}`)}">${escapeHtml(post.title)}</a> <time datetime="${post.date}">${post.date}</time></li>`
@@ -99,7 +99,7 @@ function renderPage({ title, description, path, keywords, type = 'website', arti
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#7c5cfc" />
-  <link rel="alternate" type="application/rss+xml" title="Rick — Writing" href="/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Rick — Model Lab" href="/rss.xml" />
   <link rel="alternate" type="text/plain" title="LLMs index" href="/llms.txt" />
   ${head}
   ${jsonLdScript}
@@ -148,7 +148,7 @@ for (const post of blogPosts) {
       buildBlogPostingJsonLd({ ...post, locale: 'en' }),
       buildBreadcrumbJsonLd([
         { name: 'Home', path: '/' },
-        { name: 'Writing', path: '/blog' },
+        { name: 'Model Lab', path: '/blog' },
         { name: post.title, path: postPath },
       ]),
       post.modelLabNumber ? buildModelLabSeriesJsonLd(blogPosts) : null,

@@ -23,8 +23,8 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://chaindevrick.github.io/sitemap.xml
+Sitemap: https://rickwengdev.github.io/sitemap.xml
 
 # LLM-readable indexes
-# https://chaindevrick.github.io/llms.txt
-# https://chaindevrick.github.io/llms-full.txt
+# https://rickwengdev.github.io/llms.txt
+# https://rickwengdev.github.io/llms-full.txt

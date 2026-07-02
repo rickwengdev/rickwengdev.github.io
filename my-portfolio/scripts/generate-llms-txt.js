@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { blogPosts, zhBlogPosts } from '../src/data/posts/index.js';
-import { AUTHOR, pageUrl, extractModelLabNumber, SITE_DESCRIPTION } from '../src/seo/schema.js';
+import { AUTHOR, pageUrl, extractModelLabNumber, SITE_DESCRIPTION, SITE_URL } from '../src/seo/schema.js';
 
 function formatPostBlock(post, localeLabel) {
   const lines = [
@@ -50,7 +50,7 @@ const modelLabPosts = blogPosts
   );
 
 const lines = [
-  '# chaindevrick.github.io',
+  `# ${new URL(SITE_URL).host}`,
   '',
   `> Rick — ${SITE_DESCRIPTION}`,
   '',
@@ -65,7 +65,7 @@ const lines = [
   '## Site Structure',
   `- Home: ${pageUrl('/')}`,
   `- Experience: ${pageUrl('/experience')}`,
-  `- Writing / Blog: ${pageUrl('/blog')}`,
+  `- Model Lab: ${pageUrl('/blog')}`,
   `- RSS: ${pageUrl('/rss.xml')}`,
   `- Sitemap: ${pageUrl('/sitemap.xml')}`,
   `- Full text index: ${pageUrl('/llms-full.txt')}`,
@@ -83,12 +83,12 @@ for (const post of modelLabPosts) {
 }
 lines.push('');
 
-lines.push('## Writing (English, newest first)', '');
+lines.push('## Latest Models (English, newest first)', '');
 for (const post of blogPosts) {
   lines.push(...formatPostBlock(post, 'en'));
 }
 
-lines.push('## Writing (Traditional Chinese, newest first)', '');
+lines.push('## Latest Models (Traditional Chinese, newest first)', '');
 for (const post of zhBlogPosts) {
   lines.push(...formatPostBlock(post, 'zh-Hant'));
 }

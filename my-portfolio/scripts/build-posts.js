@@ -50,6 +50,8 @@ function loadPosts(locale) {
         excerpt: data.excerpt,
         geoSummary: data.geoSummary ?? data.excerpt,
         modelLabNumber,
+        modelName: data.modelName,
+        modelStatus: data.modelStatus ?? (modelLabNumber ? 'experimental' : undefined),
         wordCount: countWords(plainText),
         content: html,
         plainText,

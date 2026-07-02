@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Rick — Writing</title>
-        <link>https://chaindevrick.github.io</link>
-        <description>Perspectives on finance, technology, and building at the frontier.</description>
-        <lastBuildDate>Thu, 02 Jul 2026 21:38:40 GMT</lastBuildDate>
+        <title>Rick — Model Lab</title>
+        <link>https://rickwengdev.github.io</link>
+        <description>I reverse engineer finance, technology, and organizations. Sharing models, not opinions.</description>
+        <lastBuildDate>Thu, 02 Jul 2026 22:05:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>en</language>
         <image>
-            <title>Rick — Writing</title>
-            <url>https://chaindevrick.github.io/avatar.jpg</url>
-            <link>https://chaindevrick.github.io</link>
+            <title>Rick — Model Lab</title>
+            <url>https://rickwengdev.github.io/avatar.jpg</url>
+            <link>https://rickwengdev.github.io</link>
         </image>
         <copyright>All rights reserved 2026, Rick</copyright>
         <item>
             <title><![CDATA[Thinking Framework — Full Specification]]></title>
-            <link>https://chaindevrick.github.io/blog/3</link>
-            <guid isPermaLink="false">https://chaindevrick.github.io/blog/3</guid>
+            <link>https://rickwengdev.github.io/blog/3</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io/blog/3</guid>
             <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.]]></description>
             <content:encoded><![CDATA[<div class="doc-meta">
@@ -202,8 +202,8 @@
         </item>
         <item>
             <title><![CDATA[Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax]]></title>
-            <link>https://chaindevrick.github.io/blog/4</link>
-            <guid isPermaLink="false">https://chaindevrick.github.io/blog/4</guid>
+            <link>https://rickwengdev.github.io/blog/4</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io/blog/4</guid>
             <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Incorporating is not just about tax. The real value of a company is how it redefines asset management — risk segregation, role separation, and letting capital outlive the founder.]]></description>
             <content:encoded><![CDATA[<div class="doc-meta">
@@ -358,8 +358,8 @@
         </item>
         <item>
             <title><![CDATA[Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study]]></title>
-            <link>https://chaindevrick.github.io/blog/2</link>
-            <guid isPermaLink="false">https://chaindevrick.github.io/blog/2</guid>
+            <link>https://rickwengdev.github.io/blog/2</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io/blog/2</guid>
             <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[The tax advantages of Buy, Borrow, Die belong to Americans. Capital efficiency belongs to everyone. This is not a tax hack — it is a liquidity management model you can actually understand.]]></description>
             <content:encoded><![CDATA[<div class="doc-meta">
@@ -592,8 +592,8 @@
         </item>
         <item>
             <title><![CDATA[Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity]]></title>
-            <link>https://chaindevrick.github.io/blog/1</link>
-            <guid isPermaLink="false">https://chaindevrick.github.io/blog/1</guid>
+            <link>https://rickwengdev.github.io/blog/1</link>
+            <guid isPermaLink="false">https://rickwengdev.github.io/blog/1</guid>
             <pubDate>Tue, 05 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[A U.S. credit card was just the entry point. What I actually built is a global financial identity that does not depend on a single system — not backup, but recoverability.]]></description>
             <content:encoded><![CDATA[<div class="doc-meta">

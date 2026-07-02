@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://chaindevrick.github.io';
+export const SITE_URL = 'https://rickwengdev.github.io';
 export const SITE_NAME = 'Rick';
 export const DEFAULT_IMAGE = `${SITE_URL}/avatar.jpg`;
 export const SITE_DESCRIPTION =
@@ -8,7 +8,7 @@ export const AUTHOR = {
   url: SITE_URL,
   email: 'office@theprism.ltd',
   jobTitle: 'Founder & CEO',
-  sameAs: ['https://github.com/chaindevrick'],
+  sameAs: ['https://github.com/rickwengdev'],
 };
 
 export function htmlToPlainText(html) {
@@ -152,7 +152,7 @@ export function buildModelLabSeriesJsonLd(posts) {
   };
 }
 
-export function buildItemListJsonLd(posts, name = 'Writing') {
+export function buildItemListJsonLd(posts, name = 'Model Lab') {
   return {
     '@type': 'ItemList',
     name,
@@ -169,8 +169,8 @@ export function buildBlogJsonLd(posts) {
   return {
     '@type': 'Blog',
     '@id': `${SITE_URL}/blog#blog`,
-    name: 'Rick — Writing',
-    description: 'Perspectives on finance, technology, capital efficiency, and building at the frontier.',
+    name: 'Rick — Model Lab',
+    description: 'Experimental research models on finance, systems, technology, and organizations.',
     url: pageUrl('/blog'),
     publisher: { '@id': `${SITE_URL}/#person` },
     blogPost: posts.map((post) => ({

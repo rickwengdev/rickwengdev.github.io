@@ -1,5 +1,8 @@
 ---
 id: 4
+modelLabNumber: 3
+modelName: "資產架構"
+modelStatus: experimental
 title: "Model Lab #003｜為什麼有錢人都喜歡用公司持有資產？真正的原因，不只是節稅"
 emoji: "◈"
 date: 2026-04-21

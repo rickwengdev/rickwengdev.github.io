@@ -1,15 +1,15 @@
 export default {
   meta: {
-    title: 'Rick — 企業家',
+    title: 'Rick — Model Lab',
     description:
       '我反向拆解金融、科技與組織。分享模型，而非觀點。',
   },
   seo: {
     home: {
-      title: 'Rick — 企業家',
+      title: 'Rick — Model Lab',
       description:
         '我反向拆解金融、科技與組織。分享模型，而非觀點。',
-      keywords: ['Rick', '企業家', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', 'Model Lab', '思考框架', 'chaindevrick'],
+      keywords: ['Rick', 'Model Lab', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', '思考框架', 'rickwengdev'],
     },
     experience: {
       title: '經歷 — Rick',
@@ -17,9 +17,9 @@ export default {
       keywords: ['經歷', 'Kura Finance', 'Prism Capital', '企業家', '家族辦公室'],
     },
     blog: {
-      title: '文章 — Rick',
-      description: '關於金融、資本效率、資產架構、Model Lab 研究與在前沿建構的觀點。',
-      keywords: ['文章', '金融', 'Model Lab', '資本效率', 'Buy Borrow Die', '資產架構', '全球金融身份'],
+      title: 'Model Lab — Rick',
+      description: '關於金融、系統、科技與組織的實驗性研究模型——每篇都附假設、失敗條件與版本。',
+      keywords: ['Model Lab', '金融', '系統', '科技', '組織', '資本效率', '全球金融身份', '資產架構'],
     },
     blogPost: {
       title: '{title} — Rick',
@@ -31,8 +31,8 @@ export default {
   },
   nav: {
     home: '首頁',
-    experience: '經歷',
-    blog: '文章',
+    experience: '專案',
+    blog: 'Model Lab',
     github: 'GitHub',
     contact: '聯絡我',
     language: '語言',
@@ -45,109 +45,56 @@ export default {
   },
   home: {
     hero: {
-      eyebrow: '企業家',
-      titleLine1: '在',
-      titleAccent: '科技前沿建立企業。',
+      eyebrow: 'Model Lab',
+      title: 'Rick',
       lede:
         '我反向拆解金融、科技與組織。\n分享模型，而非觀點。',
-      viewCompanies: '查看公司',
+      mission:
+        '建立公司。\n記錄模型。\n公開學習。',
+      exploreModels: '探索 Model Lab',
       contact: '聯絡我',
       schedule: '預約對談 ↗',
     },
-    stats: {
-      companies: '家公司',
-      founded: '創立',
-      ambition: '全球視野',
-      global: '全球',
+    philosophy: {
+      steps: ['理解', '拆解', '重建', '改進'],
     },
-    experience: {
-      eyebrow: '經歷',
-      title: '我領導的公司。',
-      subtitle: '在現代金融與前沿科技交會處的創辦人領導型企業。',
-      seeAll: '查看完整經歷 →',
+    models: {
+      eyebrow: '最新模型',
+      title: '仍在演進的模型。',
+      subtitle: '每篇文章都是一個案例——附假設、失敗條件與版本。',
+      seeAll: '查看全部模型 →',
     },
-    mandate: {
-      eyebrow: '使命',
-      title: '我的運作領域。',
-      subtitle: '兩家截然不同的企業——一家消費金融平台，一家機構資本合夥。',
-      items: [
-        {
-          code: '01',
-          title: '現代金融',
-          body: '透過 Kura Finance LLC，提供統一帳戶以儲蓄、消費、投資、增值並全球轉移資金。',
-        },
-        {
-          code: '02',
-          title: '自有資本',
-          body: '透過 Prism Capital LLC，以耐心、集中的資產負債表資本部署於前沿營運者。',
-        },
-        {
-          code: '03',
-          title: '前沿科技',
-          body: '可編程資本、主權算力、前沿協議，以及介於其間的特殊情境。',
-        },
-        {
-          code: '04',
-          title: '產品與品牌',
-          body: '為清晰、信任與長久而設計的機構級數位存在與產品體驗。',
-        },
-        {
-          code: '05',
-          title: '企業營運',
-          body: '創辦人直接領導策略、合作、合規結構與長期執行。',
-        },
+    researching: {
+      eyebrow: '目前研究',
+      title: '我正在探索的方向。',
+      topics: [
+        '資本配置',
+        '全球金融身份',
+        '組織設計',
+        'AI 基礎設施',
       ],
     },
-    principles: {
-      eyebrow: '原則',
-      title: '為人所設計。',
-      items: [
-        {
-          title: '耐心資本',
-          body: '為數十年而建，而非基金週期——信念超越市場循環與募資時程。',
-        },
-        {
-          title: '為人所設計',
-          body: '無論金融產品或機構品牌，每種體驗都應清晰而有意圖。',
-        },
-        {
-          title: '全球為本',
-          body: '無國界金融與前沿科技，不添不必要的複雜或地理限制。',
-        },
-      ],
+    about: {
+      eyebrow: '關於',
+      line1: '我不收集知識。',
+      line2: '我收集模型。',
+      body:
+        '每篇文章始於一個問題。\n每個問題變成一個模型。\n每個模型持續更新。',
     },
-    portfolio: {
-      eyebrow: '投資組合',
-      title: '工作背後的企業。',
-      subtitle: '每家實體自有使命、品牌與長期視野——建構以超越基金週期。',
+    projects: {
+      eyebrow: '專案',
+      title: '我建立的公司。',
+      subtitle: '創辦人領導的企業——現代金融與前沿的自有資本。',
+      seeAll: '查看專案 →',
       entities: [
         { code: 'KF', name: 'Kura Finance LLC', desc: '現代金融，重新設計。', url: 'https://kura-finance.com' },
         { code: 'PC', name: 'Prism Capital LLC', desc: '前沿的資本。', url: 'https://theprism.ltd' },
       ],
     },
-    approach: {
-      eyebrow: '方法',
-      title: '沒有雜訊的領導。',
-      columns: [
-        {
-          title: '傳統 VC',
-          items: ['LP 驅動的募資週期', '投資組合公告', '基金存續期壓力', '以配置者為先的互動'],
-        },
-        {
-          title: '企業孵化器',
-          items: ['母公司議程', '決策緩慢', '品牌限制', '創辦人自主性有限'],
-        },
-        {
-          title: '創辦人領導',
-          highlight: true,
-          items: ['自有資產負債表', '數十年視野', '創辦人直接參與', '建構以超越基金週期'],
-        },
-      ],
-    },
     cta: {
-      title: '在前沿一起建構。',
-      body: '開放創辦人對談、策略合作與精選顧問合作。',
-      viewCompanies: '查看公司',
+      title: '追蹤模型的演化。',
+      body: '公開研究，附明確假設。發現漏洞？歡迎拆穿。',
+      exploreModels: '探索 Model Lab',
       schedule: '預約通話',
     },
   },
@@ -179,21 +126,26 @@ export default {
     },
   },
   blog: {
-    eyebrow: '文字',
-    title: '文章',
-    subtitle: '關於金融、科技與在前沿建構的觀點。',
+    eyebrow: 'Model Lab',
+    title: 'Model Lab',
+    subtitle: '實驗性研究模型——附假設、失敗條件與版本，公開發表。',
     rss: 'RSS 訂閱',
-    back: '← 返回列表',
-    notFoundTitle: '找不到文章',
-    notFoundDesc: '這篇文章可能已移動或刪除。',
-    backToBlog: '返回文章',
-    empty: '此分類尚無文章。',
+    back: '← 返回 Model Lab',
+    notFoundTitle: '找不到模型',
+    notFoundDesc: '這個模型可能已移動或刪除。',
+    backToBlog: '返回 Model Lab',
+    empty: '此分類尚無模型。',
+    status: {
+      experimental: 'Experimental',
+      stable: 'Stable',
+      deprecated: 'Deprecated',
+    },
     categories: {
       all: '全部',
-      technical: '技術',
-      tutorial: '教學',
-      finance: '金融',
-      thoughts: '思考',
+      finance: 'Finance',
+      systems: 'Systems',
+      technology: 'Technology',
+      organizations: 'Organizations',
     },
   },
 };

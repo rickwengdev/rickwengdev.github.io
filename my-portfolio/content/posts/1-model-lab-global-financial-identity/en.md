@@ -1,5 +1,8 @@
 ---
 id: 1
+modelLabNumber: 1
+modelName: "Global Financial Identity"
+modelStatus: experimental
 title: "Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity"
 emoji: "◈"
 date: 2024-11-05
