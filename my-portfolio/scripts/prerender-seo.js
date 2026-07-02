@@ -22,25 +22,25 @@ const STATIC_PAGES = [
   {
     dir: null,
     path: '/',
-    title: 'Rick — Founder & CEO',
+    title: 'Rick — Entrepreneur',
     description:
-      'Rick is Founder & CEO of Kura Finance LLC and Prism Capital LLC — building enterprises at the intersection of modern finance and frontier technology.',
-    keywords: ['Rick', 'Founder', 'CEO', 'Kura Finance', 'Prism Capital', 'Fintech', 'Capital Efficiency'],
+      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
+    keywords: ['Rick', 'Entrepreneur', 'Kura Finance', 'Prism Capital', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring', 'Model Lab', 'Thinking Framework'],
     jsonLd: wrapJsonLd([
       buildWebsiteJsonLd(
-        'Rick is Founder & CEO of Kura Finance LLC and Prism Capital LLC — building enterprises at the intersection of modern finance and frontier technology.'
+        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.'
       ),
       buildPersonJsonLd(),
     ]),
-    body: `<h1>Rick — Founder & CEO</h1><p>Founder-led enterprises at the intersection of modern finance and frontier technology.</p><p>Writing on <a href="${pageUrl('/blog')}">capital efficiency, asset structuring, and global financial identity</a>.</p>`,
+    body: `<h1>Rick — Entrepreneur</h1><p>Entrepreneur writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab research and writing</a>.</p>`,
   },
   {
     dir: 'experience',
     path: '/experience',
     title: 'Experience — Rick',
     description:
-      'Founder & CEO of Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-    keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Founder', 'CEO'],
+      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
+    keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Entrepreneur'],
     jsonLd: wrapJsonLd([
       buildPersonJsonLd(),
       buildBreadcrumbJsonLd([
@@ -48,7 +48,7 @@ const STATIC_PAGES = [
         { name: 'Experience', path: '/experience' },
       ]),
     ]),
-    body: `<h1>Experience</h1><p>Founder & CEO of Kura Finance LLC and Prism Capital LLC.</p>`,
+    body: `<h1>Experience</h1><p>Entrepreneur behind Kura Finance LLC and Prism Capital LLC.</p>`,
   },
   {
     dir: 'blog',

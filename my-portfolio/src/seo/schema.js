@@ -5,7 +5,7 @@ export const AUTHOR = {
   name: 'Rick',
   url: SITE_URL,
   email: 'office@theprism.ltd',
-  jobTitle: 'Founder & CEO',
+  jobTitle: 'Entrepreneur',
   sameAs: ['https://github.com/chaindevrick'],
 };
 

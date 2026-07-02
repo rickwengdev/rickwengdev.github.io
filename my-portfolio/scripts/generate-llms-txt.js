@@ -52,7 +52,7 @@ const modelLabPosts = blogPosts
 const lines = [
   '# chaindevrick.github.io',
   '',
-  '> Rick — Founder & CEO of Kura Finance LLC and Prism Capital LLC. Writing on finance, capital efficiency, asset structuring, global financial identity, and frontier technology.',
+  '> Rick — Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
   '',
   '## About',
   `- Name: ${AUTHOR.name}`,

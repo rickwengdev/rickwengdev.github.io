@@ -1,20 +1,20 @@
 export default {
   meta: {
-    title: 'Rick — 創辦人暨執行長',
+    title: 'Rick — 企業家',
     description:
-      'Rick 為 Kura Finance LLC 與 Prism Capital LLC 創辦人暨執行長，在現代金融與前沿科技的交會處建立企業。',
+      'Rick 為 Kura Finance LLC 與 Prism Capital LLC 企業家。研究並撰寫資本效率、全球金融身份、資產架構與思考框架——在 Model Lab 公開仍在演進的模型。',
   },
   seo: {
     home: {
-      title: 'Rick — 創辦人暨執行長',
+      title: 'Rick — 企業家',
       description:
-        'Rick 為 Kura Finance LLC 與 Prism Capital LLC 創辦人暨執行長，在現代金融與前沿科技的交會處建立企業。',
-      keywords: ['Rick', '創辦人', '執行長', 'Kura Finance', 'Prism Capital', '金融科技', '資本效率', 'chaindevrick'],
+        'Rick 為 Kura Finance LLC 與 Prism Capital LLC 企業家。研究並撰寫資本效率、全球金融身份、資產架構與思考框架——在 Model Lab 公開仍在演進的模型。',
+      keywords: ['Rick', '企業家', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', 'Model Lab', '思考框架', 'chaindevrick'],
     },
     experience: {
       title: '經歷 — Rick',
-      description: 'Kura Finance LLC 與 Prism Capital LLC 創辦人暨執行長——現代金融與前沿的自有資本。',
-      keywords: ['經歷', 'Kura Finance', 'Prism Capital', '創辦人', '執行長', '家族辦公室'],
+      description: 'Kura Finance LLC 與 Prism Capital LLC 企業家——現代金融與前沿的自有資本。',
+      keywords: ['經歷', 'Kura Finance', 'Prism Capital', '企業家', '家族辦公室'],
     },
     blog: {
       title: '文章 — Rick',
@@ -39,17 +39,17 @@ export default {
     toggleMenu: '切換選單',
   },
   footer: {
-    desc: '創辦人暨執行長，在現代金融與前沿科技的交會處建立企業。',
+    desc: '企業家，研究並撰寫資本效率、全球金融身份、資產架構與思考框架。',
     email: 'Email',
     schedule: '預約通話',
   },
   home: {
     hero: {
-      eyebrow: '創辦人暨執行長',
+      eyebrow: '企業家',
       titleLine1: '在',
       titleAccent: '科技前沿建立企業。',
       lede:
-        '我創立並領導結合現代金融與前沿科技的企業——從統一的全球金融平台，到部署自有資本的封閉型合夥。',
+        '我創立並領導現代金融與前沿科技的企業，並在 Model Lab 公開仍在演進的研究——資本效率、全球金融身份、資產架構，以及能持續修正自身的思考方法。',
       viewCompanies: '查看公司',
       contact: '聯絡我',
       schedule: '預約對談 ↗',
@@ -154,8 +154,8 @@ export default {
   experiencePage: {
     eyebrow: '經歷',
     title: '我領導的公司。',
-    subtitle: '兩家企業的創辦人暨執行長——現代金融與前沿的自有資本。',
-    role: '創辦人暨執行長',
+    subtitle: '兩家企業的企業家——現代金融與前沿的自有資本。',
+    role: '企業家',
     period: '2026 – 至今',
     jobs: {
       kura: {

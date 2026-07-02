@@ -1,10 +1,10 @@
 # chaindevrick.github.io
 
-> Rick — Founder & CEO of Kura Finance LLC and Prism Capital LLC. Writing on finance, capital efficiency, asset structuring, global financial identity, and frontier technology.
+> Rick — Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.
 
 ## About
 - Name: Rick
-- Role: Founder & CEO
+- Role: Entrepreneur
 - Website: https://chaindevrick.github.io
 - Email: office@theprism.ltd
 - GitHub: https://github.com/chaindevrick

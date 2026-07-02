@@ -1,30 +1,32 @@
 export default {
   meta: {
-    title: 'Rick — Founder & CEO',
+    title: 'Rick — Entrepreneur',
     description:
-      'Rick is Founder & CEO of Kura Finance LLC and Prism Capital LLC — building enterprises at the intersection of modern finance and frontier technology.',
+      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
   },
   seo: {
     home: {
-      title: 'Rick — Founder & CEO',
+      title: 'Rick — Entrepreneur',
       description:
-        'Rick is Founder & CEO of Kura Finance LLC and Prism Capital LLC — building enterprises at the intersection of modern finance and frontier technology.',
+        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC. Writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks — Model Lab research in the open.',
       keywords: [
         'Rick',
-        'Founder',
-        'CEO',
+        'Entrepreneur',
         'Kura Finance',
         'Prism Capital',
-        'Fintech',
         'Capital Efficiency',
+        'Global Financial Identity',
+        'Asset Structuring',
+        'Model Lab',
+        'Thinking Framework',
         'chaindevrick',
       ],
     },
     experience: {
       title: 'Experience — Rick',
       description:
-        'Founder & CEO of Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-      keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Founder', 'CEO', 'Family Office'],
+        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
+      keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Entrepreneur', 'Family Office'],
     },
     blog: {
       title: 'Writing — Rick',
@@ -50,17 +52,17 @@ export default {
     toggleMenu: 'Toggle menu',
   },
   footer: {
-    desc: 'Founder & CEO building enterprises at the intersection of modern finance and frontier technology.',
+    desc: 'Entrepreneur writing on capital efficiency, global financial identity, asset structuring, and thinking frameworks.',
     email: 'Email',
     schedule: 'Schedule a call',
   },
   home: {
     hero: {
-      eyebrow: 'Founder & CEO',
+      eyebrow: 'Entrepreneur',
       titleLine1: 'Enterprises at the',
       titleAccent: 'technological frontier.',
       lede:
-        'I build and lead companies where modern finance meets frontier technology — from a unified global financial platform to a closed partnership deploying proprietary capital.',
+        'I build founder-led enterprises in modern finance — and write openly about the models behind them: capital efficiency, global financial identity, asset structuring, and thinking that keeps correcting itself.',
       viewCompanies: 'View Companies',
       contact: 'Get in Touch',
       schedule: 'Schedule a conversation ↗',
@@ -184,8 +186,8 @@ export default {
     eyebrow: 'Experience',
     title: 'Companies I lead.',
     subtitle:
-      'Founder & CEO of two enterprises — modern finance and proprietary capital at the technological frontier.',
-    role: 'Founder & CEO',
+      'Entrepreneur behind two enterprises — modern finance and proprietary capital at the technological frontier.',
+    role: 'Entrepreneur',
     period: '2026 – Present',
     jobs: {
       kura: {
