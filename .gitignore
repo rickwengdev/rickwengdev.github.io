@@ -1,36 +1,28 @@
-# Dependencies
-node_modules/
-.bundle/
-vendor/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Build output
-dist/
-_site/
-.jekyll-cache/
-.sass-cache/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Root build artifacts (deployed via GitHub Actions)
-/index.html
-/404.html
-/assets/
-/avatar.jpg
-/logo.svg
-/robots.txt
-/rss.xml
-/sitemap.xml
-/googleb2d0648b30b88221.html
+# Generated from content/posts/*.md
+src/data/posts/zh.js
+src/data/posts/en.js
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.local
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
