@@ -1,12 +1,15 @@
 <template>
-  <article class="experience-card">
+  <a
+    :href="job.url"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="experience-card"
+  >
     <div class="experience-header">
       <div class="experience-meta">
         <h3 class="experience-company">
-          <a :href="job.url" target="_blank" rel="noopener noreferrer" class="company-link">
-            {{ job.company }}
-            <span class="link-arrow">↗</span>
-          </a>
+          {{ job.company }}
+          <span class="link-arrow">↗</span>
         </h3>
         <p class="experience-role">{{ job.role }}</p>
       </div>
@@ -16,7 +19,7 @@
     <ul class="experience-highlights">
       <li v-for="item in job.highlights" :key="item">{{ item }}</li>
     </ul>
-  </article>
+  </a>
 </template>
 
 <script setup>
@@ -30,17 +33,24 @@ defineProps({
 
 <style scoped>
 .experience-card {
+  display: block;
   padding: 32px;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
   transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .experience-card:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-md);
+}
+
+.experience-card:hover .experience-company {
+  color: var(--accent);
 }
 
 .experience-header {
@@ -58,15 +68,8 @@ defineProps({
   font-weight: 500;
   margin: 0 0 4px;
   letter-spacing: -0.01em;
-}
-
-.company-link {
   color: var(--text);
   transition: color 0.2s;
-}
-
-.company-link:hover {
-  color: var(--accent);
 }
 
 .link-arrow {
