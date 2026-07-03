@@ -151,7 +151,7 @@ export function updateSeoForRoute(route, locale, t) {
               { name: t('nav.blog'), path: '/blog' },
               { name: post.title, path: `/blog/${post.id}` },
             ]),
-            post.modelLabNumber || extractModelLabNumber(post.title)
+            post.modelLabNumber != null || extractModelLabNumber(post.title) != null
               ? buildModelLabSeriesJsonLd(getBlogPosts(locale))
               : null,
           ].filter(Boolean)

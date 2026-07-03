@@ -1,11 +1,12 @@
 ---
 id: 3
+modelLabNumber: 0
 modelName: "思考框架"
 modelStatus: stable
-title: "思考框架完整規格"
+title: "Model Lab #000 — 思考框架"
 emoji: "◆"
 date: 2026-07-03
-category: systems
+category: framework
 tags:
   - "框架"
   - "決策紀錄"

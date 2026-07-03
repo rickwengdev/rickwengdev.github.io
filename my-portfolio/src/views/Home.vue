@@ -7,6 +7,9 @@
           <h1 class="hero-title">{{ t('home.hero.title') }}</h1>
           <p class="hero-lede">{{ t('home.hero.lede') }}</p>
           <p class="hero-mission">{{ t('home.hero.mission') }}</p>
+          <p class="hero-building">
+            {{ t('home.hero.buildingPrefix') }}<a :href="t('home.hero.buildingUrl')" target="_blank" rel="noopener noreferrer">{{ t('home.hero.buildingLink') }}</a>{{ t('home.hero.buildingSuffix') }}
+          </p>
 
           <div class="philosophy-strip">
             <span
@@ -121,12 +124,12 @@
 import { computed } from 'vue';
 import avatarImage from '../assets/avatar.jpg';
 import ModelCard from '../components/ModelCard.vue';
-import { getModelLabPosts } from '../data/posts/index.js';
+import { getModelLabCaseStudies } from '../data/posts/index.js';
 import { useI18n } from '../i18n';
 
 const { locale, t, tm } = useI18n();
 
-const modelLabPosts = computed(() => getModelLabPosts(locale.value));
+const modelLabPosts = computed(() => getModelLabCaseStudies(locale.value));
 const philosophySteps = computed(() => tm('home.philosophy.steps') ?? []);
 const researchingTopics = computed(() => tm('home.researching.topics') ?? []);
 const entities = computed(() => tm('home.projects.entities') ?? []);
@@ -180,9 +183,28 @@ const entities = computed(() => tm('home.projects.entities') ?? []);
   line-height: 1.7;
   color: var(--text);
   max-width: 520px;
-  margin: 0 0 24px;
+  margin: 0 0 12px;
   white-space: pre-line;
   font-weight: 500;
+}
+
+.hero-building {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 0 24px;
+}
+
+.hero-building a {
+  color: var(--accent);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(124, 92, 252, 0.35);
+  transition: border-color 0.2s;
+}
+
+.hero-building a:hover {
+  border-bottom-color: var(--accent);
 }
 
 .philosophy-strip {

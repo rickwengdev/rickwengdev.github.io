@@ -114,7 +114,7 @@ export function buildBlogPostingJsonLd(post) {
   };
 
   if (post.wordCount) json.wordCount = post.wordCount;
-  if (modelLabNumber) {
+  if (modelLabNumber != null) {
     json.isPartOf = {
       '@type': 'CreativeWorkSeries',
       '@id': `${SITE_URL}/#model-lab`,
@@ -129,7 +129,7 @@ export function buildBlogPostingJsonLd(post) {
 
 export function buildModelLabSeriesJsonLd(posts) {
   const modelLabPosts = posts
-    .filter((post) => extractModelLabNumber(post.title))
+    .filter((post) => post.modelLabNumber != null || extractModelLabNumber(post.title) != null)
     .sort((a, b) => (a.modelLabNumber ?? extractModelLabNumber(a.title)) - (b.modelLabNumber ?? extractModelLabNumber(b.title)));
 
   if (!modelLabPosts.length) return null;

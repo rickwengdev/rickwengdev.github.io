@@ -22,17 +22,18 @@
 
 Experimental research models with explicit assumptions and failure cases.
 
+- Model Lab #0: Model Lab #000 — Thinking Framework (https://rickwengdev.github.io/blog/3)
 - Model Lab #1: Model Lab #001 — I Did Not Just Build a U.S. Credit Card. I Built a Global Financial Identity (https://rickwengdev.github.io/blog/1)
 - Model Lab #2: Model Lab #002 — Buy, Borrow, Die Is Not Just for the Rich. It Is a Capital Efficiency Case Study (https://rickwengdev.github.io/blog/2)
 - Model Lab #3: Model Lab #003 — Why Do the Wealthy Hold Assets Through Companies? The Real Reason Is Not Just Tax (https://rickwengdev.github.io/blog/4)
 
 ## Latest Models (English, newest first)
 
-### Thinking Framework — Full Specification
+### Model Lab #000 — Thinking Framework
 - URL: https://rickwengdev.github.io/blog/3
 - Language: en
 - Date: 2026-07-03
-- Category: systems
+- Category: framework
 - Tags: Framework, Decision Log, Design Freeze
 - Summary: A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.
 - Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   ("Less wrong" originates from the LessWrong rationalist community; falsifiability from Karl Popper; calibration methods from Philip Tetlock's Good Judgment Project. No claim of originality for these components — only their combination and specification. Incremental claims see Issue #0.) 0. Design Goals D…
@@ -69,11 +70,11 @@ Experimental research models with explicit assumptions and failure cases.
 
 ## Latest Models (Traditional Chinese, newest first)
 
-### 思考框架完整規格
+### Model Lab #000 — 思考框架
 - URL: https://rickwengdev.github.io/blog/3
 - Language: zh-Hant
 - Date: 2026-07-03
-- Category: systems
+- Category: framework
 - Tags: 框架, 決策紀錄, 設計凍結
 - Summary: 一套能持續修正自身的思考方法。Version v0.0.1 — Design Freeze，傳承思考如何演化，而非答案本身。
 - Preview: Version: v0.0.1   Author / Maintainer: Rick   Created: 2026-06-30   Last Updated: 2026-07-03   "The purpose is not to be right. The purpose is to become less wrong."   （"Less wrong" 源自理性主義社群 LessWrong；可證偽性源自 Karl Popper；校準方法源自 Philip Tetlock 的 Good Judgment Project。此處不宣稱原創這些組件，只宣稱其組合與規格化——增量主張見 Issue #0。） 0. 設計目標 不提供答案。 提供一套能持續修正自身的思考方法。 目的不是讓所有人得到相同答案，而是讓任何人在不同情境下，都能建立、驗證、修正自己的模型。 傳承的不是思考（Thinking），而是思考如何演化（Thinking Evolution）。 1. Core Principles P1. Falsifiabili…
@@ -118,11 +119,11 @@ Experimental research models with explicit assumptions and failure cases.
 
 Complete plain-text versions for retrieval and citation.
 
-## Thinking Framework — Full Specification
+## Model Lab #000 — Thinking Framework
 - URL: https://rickwengdev.github.io/blog/3
 - Language: en
 - Date: 2026-07-03
-- Category: systems
+- Category: framework
 
 Version: v0.0.1
 
@@ -1017,11 +1018,11 @@ Model Lab is an ongoing research series. Each article is just one case study of 
 
 ---
 
-## 思考框架完整規格
+## Model Lab #000 — 思考框架
 - URL: https://rickwengdev.github.io/blog/3
 - Language: zh-Hant
 - Date: 2026-07-03
-- Category: systems
+- Category: framework
 
 Version: v0.0.1
 

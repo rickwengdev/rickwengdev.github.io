@@ -15,7 +15,7 @@
       
       <div class="post-hero">
         <div class="emoji-large">{{ post.emoji }}</div>
-        <p v-if="post.modelLabNumber" class="model-lab-label">
+        <p v-if="post.modelLabNumber != null" class="model-lab-label">
           Model Lab #{{ String(post.modelLabNumber).padStart(3, '0') }}
         </p>
         <h1 class="post-title" itemprop="headline">{{ post.title }}</h1>

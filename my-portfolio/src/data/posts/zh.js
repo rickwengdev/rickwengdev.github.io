@@ -58,11 +58,11 @@ export default [
   {
     "id": 3,
     "slug": "3-thinking-framework",
-    "title": "思考框架完整規格",
+    "title": "Model Lab #000 — 思考框架",
     "emoji": "◆",
     "date": "2026-07-03",
     "modified": "2026-07-03",
-    "category": "systems",
+    "category": "framework",
     "tags": [
       "框架",
       "決策紀錄",
@@ -75,7 +75,7 @@ export default [
     ],
     "excerpt": "一套能持續修正自身的思考方法。Version v0.0.1 — Design Freeze，傳承思考如何演化，而非答案本身。",
     "geoSummary": "一套能持續修正自身的思考方法。Version v0.0.1 — Design Freeze，傳承思考如何演化，而非答案本身。",
-    "modelLabNumber": null,
+    "modelLabNumber": 0,
     "modelName": "思考框架",
     "modelStatus": "stable",
     "wordCount": 289,

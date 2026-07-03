@@ -64,6 +64,10 @@ export default {
         'I reverse engineer finance, technology, and organizations.\nSharing models, not opinions.',
       mission:
         'Building companies.\nDocumenting models.\nLearning in public.',
+      buildingPrefix: 'Currently building ',
+      buildingLink: 'Kura Finance',
+      buildingSuffix: ' — self-custody financial account for LatAm.',
+      buildingUrl: 'https://kura-finance.com',
       exploreModels: 'Explore Model Lab',
       contact: 'Get in Touch',
       schedule: 'Schedule a conversation ↗',
@@ -158,6 +162,7 @@ export default {
     },
     categories: {
       all: 'All',
+      framework: 'Framework',
       finance: 'Finance',
       systems: 'Systems',
       technology: 'Technology',

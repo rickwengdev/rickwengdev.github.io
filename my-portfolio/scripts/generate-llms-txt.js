@@ -42,7 +42,7 @@ function formatFullPost(post, localeLabel) {
 }
 
 const modelLabPosts = blogPosts
-  .filter((post) => extractModelLabNumber(post.title))
+  .filter((post) => post.modelLabNumber != null || extractModelLabNumber(post.title) != null)
   .sort(
     (a, b) =>
       (a.modelLabNumber ?? extractModelLabNumber(a.title)) -

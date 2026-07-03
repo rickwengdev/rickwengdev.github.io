@@ -51,6 +51,10 @@ export default {
         '我反向拆解金融、科技與組織。\n分享模型，而非觀點。',
       mission:
         '建立公司。\n記錄模型。\n公開學習。',
+      buildingPrefix: '目前在打造 ',
+      buildingLink: 'Kura Finance',
+      buildingSuffix: ' — 面向 LatAm 的自託管金融帳戶。',
+      buildingUrl: 'https://kura-finance.com',
       exploreModels: '探索 Model Lab',
       contact: '聯絡我',
       schedule: '預約對談 ↗',
@@ -142,6 +146,7 @@ export default {
     },
     categories: {
       all: '全部',
+      framework: 'Framework',
       finance: 'Finance',
       systems: 'Systems',
       technology: 'Technology',

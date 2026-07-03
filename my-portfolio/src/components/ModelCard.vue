@@ -1,7 +1,7 @@
 <template>
   <router-link :to="`/blog/${post.id}`" class="model-card">
     <div class="model-card-top">
-      <span v-if="post.modelLabNumber" class="model-number">
+      <span v-if="post.modelLabNumber != null" class="model-number">
         Model Lab #{{ String(post.modelLabNumber).padStart(3, '0') }}
       </span>
       <span v-if="post.modelStatus" class="model-status" :class="post.modelStatus">

@@ -48,7 +48,7 @@
           <n-thing>
             <template #header>
               <div class="post-header-row">
-                <span v-if="post.modelLabNumber" class="model-lab-badge">
+                <span v-if="post.modelLabNumber != null" class="model-lab-badge">
                   Model Lab #{{ String(post.modelLabNumber).padStart(3, '0') }}
                 </span>
                 <span class="post-title-link">{{ post.modelName ?? post.title }}</span>
@@ -106,7 +106,7 @@ import { useI18n } from '../i18n';
 const router = useRouter();
 const { locale, t, tm } = useI18n();
 const selectedCategory = ref('all');
-const categoryKeys = ['all', 'finance', 'systems', 'technology', 'organizations'];
+const categoryKeys = ['all', 'framework', 'finance', 'systems', 'technology', 'organizations'];
 
 const blogPosts = computed(() => getBlogPosts(locale.value));
 const researchingTopics = computed(() => tm('home.researching.topics') ?? []);

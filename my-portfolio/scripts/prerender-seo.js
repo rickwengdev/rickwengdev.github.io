@@ -151,7 +151,7 @@ for (const post of blogPosts) {
         { name: 'Model Lab', path: '/blog' },
         { name: post.title, path: postPath },
       ]),
-      post.modelLabNumber ? buildModelLabSeriesJsonLd(blogPosts) : null,
+      post.modelLabNumber != null ? buildModelLabSeriesJsonLd(blogPosts) : null,
     ].filter(Boolean)
   );
 

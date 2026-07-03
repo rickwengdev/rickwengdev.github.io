@@ -56,11 +56,11 @@ export default [
   {
     "id": 3,
     "slug": "3-thinking-framework",
-    "title": "Thinking Framework — Full Specification",
+    "title": "Model Lab #000 — Thinking Framework",
     "emoji": "◆",
     "date": "2026-07-03",
     "modified": "2026-07-03",
-    "category": "systems",
+    "category": "framework",
     "tags": [
       "Framework",
       "Decision Log",
@@ -73,7 +73,7 @@ export default [
     ],
     "excerpt": "A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.",
     "geoSummary": "A thinking method designed to continuously correct itself. Version v0.0.1 — Design Freeze. Inherit how thinking evolves, not the answers.",
-    "modelLabNumber": null,
+    "modelLabNumber": 0,
     "modelName": "Thinking Framework",
     "modelStatus": "stable",
     "wordCount": 1006,

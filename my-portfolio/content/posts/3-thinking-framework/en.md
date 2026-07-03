@@ -1,11 +1,12 @@
 ---
 id: 3
+modelLabNumber: 0
 modelName: "Thinking Framework"
 modelStatus: stable
-title: "Thinking Framework — Full Specification"
+title: "Model Lab #000 — Thinking Framework"
 emoji: "◆"
 date: 2026-07-03
-category: systems
+category: framework
 tags:
   - "Framework"
   - "Decision Log"

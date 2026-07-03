@@ -10,8 +10,13 @@ export function getBlogPosts(locale) {
 
 export function getModelLabPosts(locale) {
   return getBlogPosts(locale)
-    .filter((post) => post.modelLabNumber)
+    .filter((post) => post.modelLabNumber != null)
     .sort((a, b) => b.modelLabNumber - a.modelLabNumber);
+}
+
+/** Case-study models (#001+); excludes meta-layer #000 from homepage highlights. */
+export function getModelLabCaseStudies(locale) {
+  return getModelLabPosts(locale).filter((post) => post.modelLabNumber > 0);
 }
 
 export const blogPosts = sortByNewest(enPosts);
