@@ -35,18 +35,18 @@ const STATIC_PAGES = [
   {
     dir: 'experience',
     path: '/experience',
-    title: 'Experience — Rick',
+    title: 'Companies — Rick',
     description:
       'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-    keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Entrepreneur'],
+    keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Entrepreneur'],
     jsonLd: wrapJsonLd([
       buildPersonJsonLd(),
       buildBreadcrumbJsonLd([
         { name: 'Home', path: '/' },
-        { name: 'Experience', path: '/experience' },
+        { name: 'Companies', path: '/experience' },
       ]),
     ]),
-    body: `<h1>Experience</h1><p>Entrepreneur behind Kura Finance LLC and Prism Capital LLC.</p>`,
+    body: `<h1>Companies</h1><p>Entrepreneur behind Kura Finance LLC and Prism Capital LLC.</p>`,
   },
   {
     dir: 'blog',

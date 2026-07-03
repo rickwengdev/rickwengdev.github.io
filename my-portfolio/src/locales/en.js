@@ -23,10 +23,10 @@ export default {
       ],
     },
     experience: {
-      title: 'Experience — Rick',
+      title: 'Companies — Rick',
       description:
         'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-      keywords: ['Experience', 'Kura Finance', 'Prism Capital', 'Entrepreneur', 'Family Office'],
+      keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Entrepreneur', 'Family Office'],
     },
     blog: {
       title: 'Model Lab — Rick',
@@ -44,7 +44,7 @@ export default {
   },
   nav: {
     home: 'Home',
-    experience: 'Projects',
+    experience: 'Companies',
     blog: 'Model Lab',
     github: 'GitHub',
     contact: 'Get in Touch',
@@ -66,7 +66,7 @@ export default {
         'Building companies.\nDocumenting models.\nLearning in public.',
       buildingPrefix: 'Currently building ',
       buildingLink: 'Kura Finance',
-      buildingSuffix: ' — self-custody financial account for LatAm.',
+      buildingSuffix: ' — self-custody financial account for the world.',
       buildingUrl: 'https://kura-finance.com',
       exploreModels: 'Explore Model Lab',
       contact: 'Get in Touch',
@@ -99,10 +99,10 @@ export default {
         'Every article starts with a question.\nEvery question becomes a model.\nEvery model is continuously updated.',
     },
     projects: {
-      eyebrow: 'Projects',
+      eyebrow: 'Companies',
       title: 'Companies I build.',
       subtitle: 'Founder-led enterprises — modern finance and proprietary capital at the frontier.',
-      seeAll: 'View projects →',
+      seeAll: 'View companies →',
       entities: [
         { code: 'KF', name: 'Kura Finance LLC', desc: 'Modern finance, redesigned.', url: 'https://kura-finance.com' },
         { code: 'PC', name: 'Prism Capital LLC', desc: 'Capital at the frontier.', url: 'https://theprism.ltd' },
@@ -116,7 +116,7 @@ export default {
     },
   },
   experiencePage: {
-    eyebrow: 'Experience',
+    eyebrow: 'Companies',
     title: 'Companies I lead.',
     subtitle:
       'Entrepreneur behind two enterprises — modern finance and proprietary capital at the technological frontier.',

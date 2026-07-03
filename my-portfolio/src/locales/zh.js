@@ -12,9 +12,9 @@ export default {
       keywords: ['Rick', 'Model Lab', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', '思考框架', 'rickwengdev'],
     },
     experience: {
-      title: '經歷 — Rick',
+      title: '企業 — Rick',
       description: 'Kura Finance LLC 與 Prism Capital LLC 企業家——現代金融與前沿的自有資本。',
-      keywords: ['經歷', 'Kura Finance', 'Prism Capital', '企業家', '家族辦公室'],
+      keywords: ['企業', 'Kura Finance', 'Prism Capital', '企業家', '家族辦公室'],
     },
     blog: {
       title: 'Model Lab — Rick',
@@ -31,7 +31,7 @@ export default {
   },
   nav: {
     home: '首頁',
-    experience: '專案',
+    experience: '企業',
     blog: 'Model Lab',
     github: 'GitHub',
     contact: '聯絡我',
@@ -53,7 +53,7 @@ export default {
         '建立公司。\n記錄模型。\n公開學習。',
       buildingPrefix: '目前在打造 ',
       buildingLink: 'Kura Finance',
-      buildingSuffix: ' — 面向 LatAm 的自託管金融帳戶。',
+      buildingSuffix: ' — 面向世界的自託管金融帳戶。',
       buildingUrl: 'https://kura-finance.com',
       exploreModels: '探索 Model Lab',
       contact: '聯絡我',
@@ -86,10 +86,10 @@ export default {
         '每篇文章始於一個問題。\n每個問題變成一個模型。\n每個模型持續更新。',
     },
     projects: {
-      eyebrow: '專案',
+      eyebrow: '企業',
       title: '我建立的公司。',
       subtitle: '創辦人領導的企業——現代金融與前沿的自有資本。',
-      seeAll: '查看專案 →',
+      seeAll: '查看企業 →',
       entities: [
         { code: 'KF', name: 'Kura Finance LLC', desc: '現代金融，重新設計。', url: 'https://kura-finance.com' },
         { code: 'PC', name: 'Prism Capital LLC', desc: '前沿的資本。', url: 'https://theprism.ltd' },
@@ -103,8 +103,8 @@ export default {
     },
   },
   experiencePage: {
-    eyebrow: '經歷',
-    title: '我領導的公司。',
+    eyebrow: '企業',
+    title: '我領導的企業。',
     subtitle: '兩家企業的企業家——現代金融與前沿的自有資本。',
     role: 'Founder & CEO',
     period: '2026 – 至今',
