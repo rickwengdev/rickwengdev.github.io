@@ -3,6 +3,18 @@ export const SITE_NAME = 'Rick';
 export const DEFAULT_IMAGE = `${SITE_URL}/avatar.jpg`;
 export const SITE_DESCRIPTION =
   'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.';
+export const SITE_GEO_SUMMARY =
+  'Rick is Founder & CEO of Kura Finance (self-custody financial account for the world) and Prism Capital. He publishes Model Lab — experimental research models on finance, systems, technology, and organizations, each with explicit assumptions, model status, and failure cases.';
+export const COMPANIES = [
+  { name: 'Kura Finance LLC', url: 'https://kura-finance.com', role: 'Self-custody financial account for the world' },
+  { name: 'Prism Capital LLC', url: 'https://theprism.ltd', role: 'Proprietary capital at the technological frontier' },
+];
+export const RESEARCH_TOPICS = [
+  'Capital Allocation',
+  'Global Financial Identity',
+  'Organization Design',
+  'AI Infrastructure',
+];
 export const AUTHOR = {
   name: 'Rick',
   url: SITE_URL,
@@ -57,7 +69,7 @@ export function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
-export function buildPersonJsonLd() {
+export function buildPersonJsonLd(description = SITE_GEO_SUMMARY) {
   return {
     '@type': 'Person',
     '@id': `${SITE_URL}/#person`,
@@ -65,12 +77,19 @@ export function buildPersonJsonLd() {
     url: AUTHOR.url,
     email: AUTHOR.email,
     jobTitle: AUTHOR.jobTitle,
+    description,
     image: DEFAULT_IMAGE,
     sameAs: AUTHOR.sameAs,
-    worksFor: [
-      { '@type': 'Organization', name: 'Kura Finance LLC', url: 'https://kura-finance.com' },
-      { '@type': 'Organization', name: 'Prism Capital LLC', url: 'https://theprism.ltd' },
+    knowsAbout: [
+      'Finance',
+      'Capital Efficiency',
+      'Global Financial Identity',
+      'Asset Structuring',
+      'Organization Design',
+      'Model Lab',
+      'Thinking Framework',
     ],
+    worksFor: COMPANIES.map(({ name, url }) => ({ '@type': 'Organization', name, url })),
   };
 }
 
@@ -97,7 +116,7 @@ export function buildBlogPostingJsonLd(post) {
     '@type': 'BlogPosting',
     '@id': `${url}#article`,
     headline: post.title,
-    description: post.excerpt,
+    description: post.geoSummary ?? post.excerpt,
     abstract: post.geoSummary ?? post.excerpt,
     articleBody: post.plainText,
     datePublished: toIsoDate(post.date),
@@ -123,6 +142,9 @@ export function buildBlogPostingJsonLd(post) {
     };
     json.genre = 'Model Lab';
   }
+
+  if (post.modelStatus) json.creativeWorkStatus = post.modelStatus;
+  if (post.modelName) json.alternativeHeadline = post.modelName;
 
   return json;
 }
@@ -202,7 +224,16 @@ export function wrapJsonLd(graph) {
   };
 }
 
-export function buildHeadTags({ title, description, path, type = 'website', image, keywords, article, noindex = false }) {
+export function buildHreflangTags(path = '/') {
+  const url = pageUrl(path);
+  return [
+    `<link rel="alternate" hreflang="x-default" href="${url}" />`,
+    `<link rel="alternate" hreflang="en" href="${url}" />`,
+    `<link rel="alternate" hreflang="zh-Hant" href="${url}" />`,
+  ];
+}
+
+export function buildHeadTags({ title, description, path, type = 'website', image, keywords, article, noindex = false, geoSummary }) {
   const url = pageUrl(path);
   const img = image || DEFAULT_IMAGE;
   const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
@@ -215,6 +246,10 @@ export function buildHeadTags({ title, description, path, type = 'website', imag
     `<meta name="author" content="${AUTHOR.name}" />`,
     keywordContent ? `<meta name="keywords" content="${escapeHtml(keywordContent)}" />` : '',
     `<link rel="canonical" href="${url}" />`,
+    ...buildHreflangTags(path),
+    geoSummary ? `<meta name="abstract" content="${escapeHtml(geoSummary)}" />` : '',
+    `<meta property="og:locale" content="en_US" />`,
+    `<meta property="og:locale:alternate" content="zh_TW" />`,
     `<meta property="og:title" content="${escapeHtml(title)}" />`,
     `<meta property="og:description" content="${escapeHtml(description)}" />`,
     `<meta property="og:type" content="${type}" />`,

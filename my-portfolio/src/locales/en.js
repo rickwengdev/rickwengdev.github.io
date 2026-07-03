@@ -2,22 +2,24 @@ export default {
   meta: {
     title: 'Rick — Model Lab',
     description:
-      'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
+      'Rick reverse engineers finance, technology, and organizations. Founder of Kura Finance & Prism Capital. Model Lab — sharing models, not opinions.',
   },
   seo: {
     home: {
       title: 'Rick — Model Lab',
       description:
-        'I reverse engineer finance, technology, and organizations. Sharing models, not opinions.',
+        'Rick reverse engineers finance, technology, and organizations. Founder of Kura Finance & Prism Capital. Model Lab — sharing models, not opinions.',
       keywords: [
         'Rick',
-        'Entrepreneur',
+        'Model Lab',
         'Kura Finance',
         'Prism Capital',
+        'Founder',
+        'Self-custody',
         'Capital Efficiency',
         'Global Financial Identity',
         'Asset Structuring',
-        'Model Lab',
+        'Buy Borrow Die',
         'Thinking Framework',
         'rickwengdev',
       ],
@@ -25,8 +27,8 @@ export default {
     experience: {
       title: 'Companies — Rick',
       description:
-        'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-      keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Entrepreneur', 'Family Office'],
+        'Founder & CEO of Kura Finance (self-custody financial account for the world) and Prism Capital — modern finance and proprietary capital at the frontier.',
+      keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Founder', 'Self-custody', 'Family Office'],
     },
     blog: {
       title: 'Model Lab — Rick',

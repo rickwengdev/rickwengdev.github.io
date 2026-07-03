@@ -3,8 +3,8 @@
     <channel>
         <title>Rick — Model Lab</title>
         <link>https://rickwengdev.github.io</link>
-        <description>I reverse engineer finance, technology, and organizations. Sharing models, not opinions.</description>
-        <lastBuildDate>Thu, 02 Jul 2026 22:09:46 GMT</lastBuildDate>
+        <description>Rick is Founder &amp; CEO of Kura Finance (self-custody financial account for the world) and Prism Capital. He publishes Model Lab — experimental research models on finance, systems, technology, and organizations, each with explicit assumptions, model status, and failure cases.</description>
+        <lastBuildDate>Fri, 03 Jul 2026 09:45:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>en</language>
@@ -15,7 +15,7 @@
         </image>
         <copyright>All rights reserved 2026, Rick</copyright>
         <item>
-            <title><![CDATA[Thinking Framework — Full Specification]]></title>
+            <title><![CDATA[Model Lab #000 — Thinking Framework]]></title>
             <link>https://rickwengdev.github.io/blog/3</link>
             <guid isPermaLink="false">https://rickwengdev.github.io/blog/3</guid>
             <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>

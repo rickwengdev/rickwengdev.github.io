@@ -11,6 +11,9 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -23,8 +26,17 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 Sitemap: https://rickwengdev.github.io/sitemap.xml
 
-# LLM-readable indexes
+# LLM-readable indexes (llms.txt standard)
 # https://rickwengdev.github.io/llms.txt
 # https://rickwengdev.github.io/llms-full.txt

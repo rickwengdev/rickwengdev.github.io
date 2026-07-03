@@ -4,6 +4,7 @@ import {
   SITE_URL,
   SITE_NAME,
   DEFAULT_IMAGE,
+  SITE_GEO_SUMMARY,
   buildPersonJsonLd,
   buildWebsiteJsonLd,
   buildBlogPostingJsonLd,
@@ -62,6 +63,17 @@ function removeJsonLd() {
 
 export { SITE_URL, SITE_NAME, DEFAULT_IMAGE, pageUrl };
 
+function upsertHreflang(hreflang, href) {
+  let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+  if (!el) {
+    el = document.createElement('link');
+    el.setAttribute('rel', 'alternate');
+    el.setAttribute('hreflang', hreflang);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('href', href);
+}
+
 export function applySeo({
   title,
   description,
@@ -72,6 +84,7 @@ export function applySeo({
   article,
   jsonLd,
   noindex = false,
+  geoSummary,
 }) {
   const url = pageUrl(path);
   const img = image || DEFAULT_IMAGE;
@@ -91,12 +104,18 @@ export function applySeo({
   upsertMeta('property', 'og:image', img);
   upsertMeta('property', 'og:site_name', SITE_NAME);
 
+  if (geoSummary) upsertMeta('name', 'abstract', geoSummary);
+  else removeMeta('name', 'abstract');
+
   upsertMeta('name', 'twitter:card', 'summary_large_image');
   upsertMeta('name', 'twitter:title', title);
   upsertMeta('name', 'twitter:description', description);
   upsertMeta('name', 'twitter:image', img);
 
   upsertLink('canonical', url);
+  upsertHreflang('x-default', url);
+  upsertHreflang('en', url);
+  upsertHreflang('zh-Hant', url);
 
   if (article) {
     upsertMeta('property', 'article:published_time', article.publishedTime);
@@ -124,6 +143,7 @@ export function applySeo({
 export function updateSeoForRoute(route, locale, t) {
   const ogLocale = locale === 'zh' ? 'zh_TW' : 'en_US';
   upsertMeta('property', 'og:locale', ogLocale);
+  upsertMeta('property', 'og:locale:alternate', locale === 'zh' ? 'en_US' : 'zh_TW');
 
   if (route.name === 'blog-post') {
     const id = parseInt(route.params.id, 10);
@@ -132,7 +152,8 @@ export function updateSeoForRoute(route, locale, t) {
     if (post) {
       applySeo({
         title: t('seo.blogPost.title', { title: post.title }),
-        description: post.excerpt,
+        description: post.geoSummary ?? post.excerpt,
+        geoSummary: post.geoSummary ?? post.excerpt,
         path: `/blog/${post.id}`,
         type: 'article',
         keywords: post.keywords ?? post.tags,
@@ -176,6 +197,7 @@ export function updateSeoForRoute(route, locale, t) {
     applySeo({
       title: t('seo.home.title'),
       description: t('seo.home.description'),
+      geoSummary: SITE_GEO_SUMMARY,
       path: route.path,
       keywords: tm('seo.home.keywords'),
       jsonLd: wrapJsonLd([

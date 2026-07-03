@@ -2,19 +2,19 @@ export default {
   meta: {
     title: 'Rick — Model Lab',
     description:
-      '我反向拆解金融、科技與組織。分享模型，而非觀點。',
+      'Rick 反向拆解金融、科技與組織。Kura Finance 與 Prism Capital 創辦人。Model Lab 公開研究模型——分享模型，而非觀點。',
   },
   seo: {
     home: {
       title: 'Rick — Model Lab',
       description:
-        '我反向拆解金融、科技與組織。分享模型，而非觀點。',
-      keywords: ['Rick', 'Model Lab', 'Kura Finance', 'Prism Capital', '資本效率', '全球金融身份', '資產架構', '思考框架', 'rickwengdev'],
+        'Rick 反向拆解金融、科技與組織。Kura Finance 與 Prism Capital 創辦人。Model Lab 公開研究模型——分享模型，而非觀點。',
+      keywords: ['Rick', 'Model Lab', 'Kura Finance', 'Prism Capital', '創辦人', '自託管', '資本效率', '全球金融身份', '資產架構', 'Buy Borrow Die', '思考框架', 'rickwengdev'],
     },
     experience: {
       title: '企業 — Rick',
-      description: 'Kura Finance LLC 與 Prism Capital LLC 企業家——現代金融與前沿的自有資本。',
-      keywords: ['企業', 'Kura Finance', 'Prism Capital', '企業家', '家族辦公室'],
+      description: 'Kura Finance（面向世界的自託管金融帳戶）與 Prism Capital 創辦人——現代金融與前沿的自有資本。',
+      keywords: ['企業', 'Kura Finance', 'Prism Capital', '創辦人', '自託管', '家族辦公室'],
     },
     blog: {
       title: 'Model Lab — Rick',

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { Feed } from 'feed';
 import { blogPosts } from '../src/data/posts/index.js';
-import { SITE_DESCRIPTION, SITE_URL } from '../src/seo/schema.js';
+import { SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL } from '../src/seo/schema.js';
 
 const siteUrl = SITE_URL;
 const author = {
@@ -12,7 +12,7 @@ const author = {
 
 const feed = new Feed({
   title: 'Rick — Model Lab',
-  description: SITE_DESCRIPTION,
+  description: SITE_GEO_SUMMARY,
   id: siteUrl,
   link: siteUrl,
   language: "en",
@@ -33,7 +33,7 @@ blogPosts.forEach((post) => {
     title: post.title,
     id: `${siteUrl}/blog/${post.id}`,
     link: `${siteUrl}/blog/${post.id}`,
-    description: post.excerpt,
+    description: post.geoSummary ?? post.excerpt,
     content: post.content,
     author: [author],
     date: new Date(post.date),

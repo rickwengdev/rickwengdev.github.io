@@ -13,6 +13,7 @@ import {
   escapeHtml,
   pageUrl,
   SITE_DESCRIPTION,
+  SITE_GEO_SUMMARY,
   wrapJsonLd,
 } from '../src/seo/schema.js';
 
@@ -24,21 +25,23 @@ const STATIC_PAGES = [
     dir: null,
     path: '/',
     title: 'Rick — Model Lab',
-    description: SITE_DESCRIPTION,
-    keywords: ['Rick', 'Entrepreneur', 'Kura Finance', 'Prism Capital', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring', 'Model Lab', 'Thinking Framework'],
+    description:
+      'Rick reverse engineers finance, technology, and organizations. Founder of Kura Finance & Prism Capital. Model Lab — sharing models, not opinions.',
+    geoSummary: SITE_GEO_SUMMARY,
+    keywords: ['Rick', 'Model Lab', 'Kura Finance', 'Prism Capital', 'Founder', 'Self-custody', 'Capital Efficiency', 'Global Financial Identity', 'Asset Structuring', 'Buy Borrow Die', 'Thinking Framework'],
     jsonLd: wrapJsonLd([
       buildWebsiteJsonLd(SITE_DESCRIPTION),
       buildPersonJsonLd(),
     ]),
-    body: `<h1>Rick</h1><p>${escapeHtml(SITE_DESCRIPTION)}</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab</a>.</p>`,
+    body: `<h1>Rick</h1><p>${escapeHtml(SITE_DESCRIPTION)}</p><p>${escapeHtml(SITE_GEO_SUMMARY)}</p><p>Currently building <a href="https://kura-finance.com">Kura Finance</a>.</p><p>Explore <a href="${pageUrl('/blog')}">Model Lab</a>.</p>`,
   },
   {
     dir: 'experience',
     path: '/experience',
     title: 'Companies — Rick',
     description:
-      'Entrepreneur behind Kura Finance LLC and Prism Capital LLC — modern finance and proprietary capital at the technological frontier.',
-    keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Entrepreneur'],
+      'Founder & CEO of Kura Finance (self-custody financial account for the world) and Prism Capital — modern finance and proprietary capital at the frontier.',
+    keywords: ['Companies', 'Kura Finance', 'Prism Capital', 'Founder', 'Self-custody'],
     jsonLd: wrapJsonLd([
       buildPersonJsonLd(),
       buildBreadcrumbJsonLd([
@@ -46,7 +49,7 @@ const STATIC_PAGES = [
         { name: 'Companies', path: '/experience' },
       ]),
     ]),
-    body: `<h1>Companies</h1><p>Entrepreneur behind Kura Finance LLC and Prism Capital LLC.</p>`,
+    body: `<h1>Companies</h1><p>Founder & CEO of <a href="https://kura-finance.com">Kura Finance</a> and <a href="https://theprism.ltd">Prism Capital</a>.</p>`,
   },
   {
     dir: 'blog',
@@ -84,10 +87,10 @@ function assetRefs(html) {
   };
 }
 
-function renderPage({ title, description, path, keywords, type = 'website', article, jsonLd, body }) {
+function renderPage({ title, description, path, keywords, type = 'website', article, jsonLd, body, geoSummary }) {
   const baseHtml = fs.readFileSync(INDEX, 'utf8');
   const assets = assetRefs(baseHtml);
-  const head = buildHeadTags({ title, description, path, type, keywords, article });
+  const head = buildHeadTags({ title, description, path, type, keywords, article, geoSummary });
   const jsonLdScript = jsonLd
     ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
     : '';
@@ -168,6 +171,7 @@ for (const post of blogPosts) {
     renderPage({
       title,
       description: post.geoSummary ?? post.excerpt,
+      geoSummary: post.geoSummary ?? post.excerpt,
       path: postPath,
       type: 'article',
       keywords: post.keywords ?? post.tags,
