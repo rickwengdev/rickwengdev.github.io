@@ -22,7 +22,7 @@ export const AUTHOR = {
   url: SITE_URL,
   email: LINKS.email,
   jobTitle: AUTHOR_INFO.jobTitle,
-  sameAs: [LINKS.github],
+  sameAs: [LINKS.orcid, LINKS.github, LINKS.linkedin],
 };
 
 export function pageUrl(path = '/') {

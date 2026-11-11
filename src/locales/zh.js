@@ -101,10 +101,8 @@ export default {
     to: '收件人',
     email: '寄送電子郵件',
     github: 'GitHub',
+    linkedin: 'LinkedIn',
     saturn: 'Saturn',
-  },
-  footer: {
-    desc: '研究語言模型與 AI 代理的實際行為，並打造讓 AI 可問責的工具。',
   },
   notFound: {
     title: '找不到此頁面。',

@@ -102,10 +102,8 @@ export default {
     to: 'To',
     email: 'Send an email',
     github: 'GitHub',
+    linkedin: 'LinkedIn',
     saturn: 'Saturn',
-  },
-  footer: {
-    desc: 'Research into how language models and AI agents actually behave, and tools that keep them accountable.',
   },
   notFound: {
     title: 'Page not found.',

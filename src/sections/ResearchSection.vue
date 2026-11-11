@@ -10,6 +10,14 @@
           <span v-for="goal in goals" :key="goal" class="goal">{{ goal }}</span>
         </dd>
       </div>
+      <div class="focus-row">
+        <dt class="focus-label">ORCID</dt>
+        <dd class="orcid">
+          <a :href="LINKS.orcid" target="_blank" rel="noopener noreferrer" class="quiet-link">
+            {{ orcidId }} <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </dd>
+      </div>
     </dl>
 
     <h3 class="sub-title" v-reveal>{{ t('research.papersTitle') }}</h3>
@@ -23,7 +31,7 @@
 import { computed } from 'vue';
 import PaperItem from '../components/PaperItem.vue';
 import PartHeader from '../components/PartHeader.vue';
-import { getPapers } from '../content/index.js';
+import { LINKS, getPapers } from '../content/index.js';
 import { useI18n } from '../i18n';
 
 defineProps({ num: { type: String, required: true } });
@@ -32,6 +40,7 @@ const { locale, t, tm } = useI18n();
 
 const papers = computed(() => getPapers(locale.value));
 const goals = computed(() => tm('research.goals') ?? []);
+const orcidId = LINKS.orcid.replace('https://orcid.org/', '');
 </script>
 
 <style scoped>
@@ -73,6 +82,15 @@ const goals = computed(() => tm('research.goals') ?? []);
   content: '·';
   margin: 0 0.55em;
   color: var(--accent);
+}
+
+.focus-row + .focus-row {
+  border-top: 1px solid var(--line);
+}
+
+.orcid {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 @media (max-width: 520px) {

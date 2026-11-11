@@ -20,6 +20,8 @@ const lines = [
   `- Website: ${pageUrl('/')}`,
   `- Email: ${AUTHOR.email}`,
   `- GitHub: ${LINKS.github}`,
+  `- LinkedIn: ${LINKS.linkedin}`,
+  `- ORCID: ${LINKS.orcid}`,
   '',
   '## Projects',
   ...getProjects('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),

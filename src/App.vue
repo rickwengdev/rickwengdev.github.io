@@ -55,21 +55,11 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/#top" class="wordmark" @click="goTo($event, 'top')">
-          <span class="wordmark-mark" aria-hidden="true">R</span>
-          <span class="wordmark-name">Rick Weng</span>
-        </a>
-        <p class="footer-desc">{{ t('footer.desc') }}</p>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a v-for="s in SECTIONS" :key="s" :href="`/#${s}`" @click="goTo($event, s)">{{ t(`nav.${s}`) }}</a>
-        <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer">Saturn</a>
-        <a :href="LINKS.github" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </nav>
-    </div>
-    <div class="container footer-bottom">
-      <span>&copy; {{ year }} {{ AUTHOR.legalName }}</span>
+      <a href="/#top" class="wordmark" @click="goTo($event, 'top')">
+        <span class="wordmark-mark" aria-hidden="true">R</span>
+        <span class="wordmark-name">Rick Weng</span>
+      </a>
+      <span class="footer-copy">&copy; {{ year }} {{ AUTHOR.legalName }}</span>
     </div>
   </footer>
 </template>
@@ -80,10 +70,11 @@ import { useRoute, useRouter } from 'vue-router';
 import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { sealed } from './envelope.js';
 import { LETTER_SECTIONS } from './sections/index.js';
-import { AUTHOR, LINKS } from './seo/schema.js';
+import { AUTHOR } from './seo/schema.js';
 import { useI18n } from './i18n';
 
-// Header links follow the letter's section order (src/sections/index.js), then contact.
+// Header links follow the letter's section order (src/sections/index.js); contact is the last section.
+// The footer is just the name and copyright: the header has the sections, the contact section the profiles.
 const NAV = LETTER_SECTIONS.map((s) => s.id);
 const SECTIONS = [...NAV, 'contact'];
 
@@ -331,48 +322,21 @@ watch(
 /* ---------- Footer ---------- */
 
 .site-footer {
-  padding: 64px 0 32px;
+  padding: 32px 0;
   border-top: 1px solid var(--line);
 }
 
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: 32px 48px;
+  gap: 12px 32px;
 }
 
-.footer-desc {
-  max-width: 26rem;
-  margin: 16px 0 0;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--ink-2);
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 12px 48px;
-  align-content: start;
-  font-size: 0.9375rem;
-}
-
-.footer-links a {
-  color: var(--ink-2);
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: var(--ink);
-}
-
-.footer-bottom {
-  margin-top: 48px;
-  padding-top: 24px;
+.footer-copy {
   font-size: 0.8125rem;
   color: var(--ink-3);
-  border-top: 1px solid var(--line);
 }
 
 @media (max-width: 860px) {

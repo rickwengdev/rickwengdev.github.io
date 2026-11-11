@@ -6,6 +6,8 @@ export const SITE_URL = 'https://rickwengdev.github.io';
 export const LINKS = {
   email: 'rick@saturn-core.com',
   github: 'https://github.com/rickwengdev',
+  linkedin: 'https://www.linkedin.com/in/rick-weng-44921a3b5',
+  orcid: 'https://orcid.org/0009-0006-4178-347X',
   saturn: 'https://saturn-core.com',
 };
 

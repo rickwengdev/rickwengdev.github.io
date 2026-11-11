@@ -10,6 +10,8 @@ Rick Weng is an independent AI security researcher and the founder of Saturn (sa
 - Website: https://rickwengdev.github.io
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
+- LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
+- ORCID: https://orcid.org/0009-0006-4178-347X
 
 ## Projects
 - Saturn (https://saturn-core.com): Founder & CEO, Sep 2026 – Present. Infrastructure for secure, accountable AI.

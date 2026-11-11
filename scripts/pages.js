@@ -72,11 +72,11 @@ export const PAGES = [
 <section id="experience"><h2>${e(en.experience.title)}</h2><ul>${workHtml(getExperience('en'))}</ul></section>
 <section id="projects"><h2>${e(en.projects.title)}</h2><ul>${workHtml(getProjects('en'))}</ul></section>
 <section id="research"><h2>${e(en.research.title)}</h2><h3>${e(en.research.papersTitle)}</h3><ul>${papersHtml}</ul>
-<h3>${e(en.research.goalsTitle)}</h3><p>${en.research.goals.map(e).join(' · ')}</p></section>
+<h3>${e(en.research.goalsTitle)}</h3><p>${en.research.goals.map(e).join(' · ')}</p><p>ORCID: <a href="${LINKS.orcid}">${LINKS.orcid.replace('https://orcid.org/', '')}</a></p></section>
 <section id="cve"><h2>${e(en.cve.title)}</h2>${cveHtml}</section>
 <section id="contributions"><h2>${e(en.contributions.title)}</h2><ul>${contributionsHtml}</ul></section>
 <p>${e(L.signoffBefore)} Rick Weng</p><p>${e(L.ps)} <a href="${LINKS.saturn}">saturn-core.com</a></p></article>
-<section id="contact"><h2>${e(en.contact.title)}</h2><p>${e(en.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.saturn}">Saturn</a></p></section>`,
+<section id="contact"><h2>${e(en.contact.title)}</h2><p>${e(en.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a> · <a href="${LINKS.saturn}">Saturn</a></p></section>`,
   },
 ];
 

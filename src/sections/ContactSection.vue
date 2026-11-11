@@ -15,6 +15,9 @@
         <a :href="LINKS.github" target="_blank" rel="noopener noreferrer" class="quiet-link">
           {{ t('contact.github') }} <span class="arrow" aria-hidden="true">↗</span>
         </a>
+        <a :href="LINKS.linkedin" target="_blank" rel="noopener noreferrer" class="quiet-link">
+          {{ t('contact.linkedin') }} <span class="arrow" aria-hidden="true">↗</span>
+        </a>
         <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer" class="quiet-link">
           {{ t('contact.saturn') }} <span class="arrow" aria-hidden="true">↗</span>
         </a>
