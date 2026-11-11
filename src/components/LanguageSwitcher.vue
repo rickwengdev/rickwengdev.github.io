@@ -1,22 +1,16 @@
 <template>
-  <div class="lang-switch" role="group" :aria-label="t('nav.language')">
-    <button
-      type="button"
-      class="lang-btn"
-      :class="{ active: locale === 'zh' }"
-      @click="setLocale('zh')"
-    >
-      中文
-    </button>
-    <button
-      type="button"
-      class="lang-btn"
-      :class="{ active: locale === 'en' }"
-      @click="setLocale('en')"
-    >
-      EN
-    </button>
-  </div>
+  <button
+    type="button"
+    class="lang-switch"
+    :aria-label="`${t('nav.language')}: ${t('nav.switchTo')}`"
+    @click="setLocale(locale === 'zh' ? 'en' : 'zh')"
+  >
+    <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+      <circle cx="10" cy="10" r="7.5" />
+      <path d="M2.5 10h15M10 2.5c2.2 2.2 3.2 4.7 3.2 7.5s-1 5.3-3.2 7.5M10 2.5C7.8 4.7 6.8 7.2 6.8 10s1 5.3 3.2 7.5" />
+    </svg>
+    <span>{{ t('nav.switchTo') }}</span>
+  </button>
 </template>
 
 <script setup>
@@ -28,34 +22,28 @@ const { locale, t, setLocale } = useI18n();
 <style scoped>
 .lang-switch {
   display: inline-flex;
-  padding: 3px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  gap: 2px;
-}
-
-.lang-btn {
-  padding: 5px 10px;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 10px;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--ink-2);
   background: transparent;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: color 0.2s, background 0.2s;
 }
 
-.lang-btn.active {
-  color: var(--text);
-  background: var(--bg);
-  box-shadow: var(--shadow-sm);
+.lang-switch:hover {
+  color: var(--ink);
+  background: var(--bg-raised);
 }
 
-.lang-btn:hover:not(.active) {
-  color: var(--text-secondary);
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.3;
 }
 </style>

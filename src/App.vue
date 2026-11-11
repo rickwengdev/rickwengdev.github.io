@@ -1,375 +1,376 @@
 <template>
-  <n-config-provider :theme="lightTheme" :theme-overrides="themeOverrides">
-    <n-global-style />
-    
-    <n-layout class="main-layout">
-      <n-layout-header bordered class="nav-header">
-        <div class="nav-inner marketing-container">
-          <div class="logo" @click="goHome">Rick</div>
-          
-          <nav class="nav-links" :aria-label="t('nav.language')">
-            <n-button text class="nav-link" @click="navigate('/')">{{ t('nav.home') }}</n-button>
-            <n-button text class="nav-link" @click="navigate('/blog')">{{ t('nav.blog') }}</n-button>
-            <n-button text class="nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
-            <n-button tag="a" text class="nav-link" href="https://github.com/rickwengdev" target="_blank">
-              {{ t('nav.github') }}
-            </n-button>
-          </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-          <div class="nav-actions">
-            <LanguageSwitcher />
-            <a href="mailto:office@theprism.ltd" class="nav-cta">{{ t('nav.contact') }}</a>
-            <button
-              class="menu-toggle"
-              type="button"
-              :aria-expanded="menuOpen"
-              aria-controls="mobile-nav"
-              :aria-label="t('nav.toggleMenu')"
-              @click="menuOpen = !menuOpen"
-            >
-              <span class="menu-bar" :class="{ open: menuOpen }"></span>
-              <span class="menu-bar" :class="{ open: menuOpen }"></span>
-              <span class="menu-bar" :class="{ open: menuOpen }"></span>
-            </button>
-          </div>
-        </div>
+  <header class="site-header" :class="{ open: menuOpen, hidden: sealed }">
+    <div class="container header-inner">
+      <a href="/#top" class="wordmark" aria-label="Rick Weng — top" @click="goTo($event, 'top')">
+        <span class="wordmark-mark" aria-hidden="true">R</span>
+        <span class="wordmark-name">Rick Weng</span>
+      </a>
 
-        <nav
-          id="mobile-nav"
-          class="mobile-nav"
-          :class="{ open: menuOpen }"
+      <nav class="nav" aria-label="Sections">
+        <a
+          v-for="s in NAV"
+          :key="s"
+          :href="`/#${s}`"
+          class="nav-link"
+          :class="{ active: active === s }"
+          @click="goTo($event, s)"
+        >{{ t(`nav.${s}`) }}</a>
+      </nav>
+
+      <div class="header-actions">
+        <LanguageSwitcher />
+        <a href="/#contact" class="btn btn-dark header-cta" @click="goTo($event, 'contact')">{{ t('nav.contact') }}</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          :aria-expanded="menuOpen"
+          aria-controls="mobile-nav"
           :aria-label="t('nav.toggleMenu')"
+          @click="menuOpen = !menuOpen"
         >
-          <n-button text class="mobile-nav-link" @click="navigate('/')">{{ t('nav.home') }}</n-button>
-          <n-button text class="mobile-nav-link" @click="navigate('/blog')">{{ t('nav.blog') }}</n-button>
-          <n-button text class="mobile-nav-link" @click="navigate('/experience')">{{ t('nav.experience') }}</n-button>
-          <n-button tag="a" text class="mobile-nav-link" href="https://github.com/rickwengdev" target="_blank">
-            {{ t('nav.github') }}
-          </n-button>
-          <div class="mobile-lang">
-            <LanguageSwitcher />
-          </div>
-          <a href="mailto:office@theprism.ltd" class="mobile-nav-cta" @click="menuOpen = false">
-            {{ t('nav.contact') }}
-          </a>
-        </nav>
-      </n-layout-header>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
 
-      <div v-if="menuOpen" class="nav-overlay" @click="menuOpen = false"></div>
+    <span class="progress" aria-hidden="true" :style="{ transform: `scaleX(${progress})` }"></span>
 
-      <n-layout-content class="content-wrapper" content-style="padding: 0;">
-        <router-view />
-      </n-layout-content>
-      
-      <n-layout-footer bordered class="footer">
-        <div class="footer-inner marketing-container">
-          <p class="footer-desc">{{ t('footer.desc') }}</p>
-          <div class="footer-bottom">
-            <span>&copy; {{ new Date().getFullYear() }} {{ AUTHOR.legalName }}</span>
-            <div class="footer-links">
-              <a href="https://github.com/rickwengdev" target="_blank">{{ t('nav.github') }}</a>
-              <a href="mailto:office@theprism.ltd">{{ t('footer.email') }}</a>
-              <a href="https://calendar.app.google/rsG6vBBtfhRBfRHc9" target="_blank">{{ t('footer.schedule') }}</a>
-            </div>
-          </div>
-        </div>
-      </n-layout-footer>
-    </n-layout>
-  </n-config-provider>
+    <nav id="mobile-nav" class="mobile-nav" :aria-label="t('nav.toggleMenu')" :hidden="!menuOpen">
+      <div class="container mobile-nav-inner">
+        <a v-for="s in NAV" :key="s" :href="`/#${s}`" class="mobile-link" @click="goTo($event, s)">{{ t(`nav.${s}`) }}</a>
+        <a href="/#contact" class="btn btn-dark mobile-cta" @click="goTo($event, 'contact')">{{ t('nav.contact') }}</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <router-view />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/#top" class="wordmark" @click="goTo($event, 'top')">
+          <span class="wordmark-mark" aria-hidden="true">R</span>
+          <span class="wordmark-name">Rick Weng</span>
+        </a>
+        <p class="footer-desc">{{ t('footer.desc') }}</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a v-for="s in SECTIONS" :key="s" :href="`/#${s}`" @click="goTo($event, s)">{{ t(`nav.${s}`) }}</a>
+        <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer">Saturn</a>
+        <a :href="LINKS.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; {{ year }} {{ AUTHOR.legalName }}</span>
+    </div>
+  </footer>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import { NConfigProvider, NGlobalStyle, NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter, NButton, lightTheme } from 'naive-ui';
-import { AUTHOR } from './seo/schema.js';
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import LanguageSwitcher from './components/LanguageSwitcher.vue';
+import { sealed } from './envelope.js';
+import { AUTHOR, LINKS } from './seo/schema.js';
 import { useI18n } from './i18n';
 
-const router = useRouter();
+const SECTIONS = ['experience', 'research', 'contributions', 'contact'];
+const NAV = SECTIONS.slice(0, 3);
+
 const route = useRoute();
-const menuOpen = ref(false);
+const router = useRouter();
 const { t } = useI18n();
+const menuOpen = ref(false);
+const active = ref('');
+const progress = ref(0);
+const year = new Date().getFullYear();
 
-const themeOverrides = {
-  common: {
-    primaryColor: '#7c5cfc',
-    primaryColorHover: '#6b4de0',
-    primaryColorPressed: '#5a3ec7',
-    bodyColor: '#ffffff',
-    cardColor: '#ffffff',
-    borderColor: 'rgba(17, 24, 39, 0.08)',
-    textColor1: '#111827',
-    textColor2: '#52566a',
-    textColor3: '#9ca3af',
-    fontFamily: "'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-    borderRadius: '8px',
-  },
+// The current section is the last one whose top has passed a third of the screen.
+const onScroll = () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.value = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+  const line = window.innerHeight * 0.35;
+  let current = '';
+  for (const id of SECTIONS) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= line) current = id;
+  }
+  active.value = current;
 };
 
-const goHome = () => {
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true });
+  router.isReady().then(() => nextTick(onScroll));
+});
+
+onBeforeUnmount(() => window.removeEventListener('scroll', onScroll));
+
+// Section links: scroll smoothly on the home page; from elsewhere, go home first.
+function goTo(event, id) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) return;
+  event.preventDefault();
   menuOpen.value = false;
-  router.push('/');
-};
+  if (route.path !== '/') {
+    router.push({ path: '/', hash: `#${id}` });
+    return;
+  }
+  if (id === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+  else document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  history.replaceState(history.state, '', `#${id}`);
+}
 
-const navigate = (path) => {
-  menuOpen.value = false;
-  router.push(path);
-};
-
-watch(() => route.path, () => {
+watch(() => route.fullPath, () => {
   menuOpen.value = false;
 });
 </script>
 
 <style scoped>
-.main-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: var(--bg);
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 300;
+  padding: 8px 14px;
+  color: var(--bg);
+  background: var(--slate);
+  border-radius: var(--radius-sm);
 }
 
-.content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.skip-link:focus {
+  top: 12px;
 }
 
-.nav-header {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 200;
-  height: auto;
-  padding: 0;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border-color: var(--border) !important;
-  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.04);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.8s var(--ease);
 }
 
-.nav-inner {
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.site-header.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-header.open {
+  border-bottom-color: var(--line);
+}
+
+.header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 40px;
   height: 64px;
-  gap: 16px;
 }
 
-.logo {
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  cursor: pointer;
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   flex-shrink: 0;
 }
 
-.nav-links {
+.wordmark-mark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--bg);
+  background: var(--slate);
+  border-radius: 7px;
+}
+
+.wordmark-name {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.nav {
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
 .nav-link {
-  font-size: 0.875rem !important;
-  color: var(--text-secondary) !important;
-  padding: 8px 4px !important;
+  position: relative;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  transition: color 0.2s;
 }
 
-.nav-link:hover {
-  color: var(--text) !important;
+/* Underline grows from the left on hover, and stays on the current section. */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1.5px;
+  background: var(--accent);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
 }
 
-.nav-actions {
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--ink);
+}
+
+
+.header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  gap: 8px;
+  margin-left: auto;
 }
 
-.nav-cta {
-  padding: 8px 18px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #fff;
-  background: var(--accent);
-  border-radius: 8px;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-
-.nav-cta:hover {
-  background: var(--accent-hover);
+.header-cta {
+  min-height: 40px;
+  padding: 8px 16px;
+  font-size: 0.9375rem;
 }
 
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 0 11px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 
 .menu-bar {
   display: block;
-  width: 18px;
-  height: 2px;
-  margin: 0 auto;
-  background: var(--text);
-  border-radius: 1px;
-  transition: transform 0.25s, opacity 0.25s;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.25s;
 }
 
-.menu-bar.open:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.open .menu-bar:nth-child(1) {
+  transform: translateY(3.75px) rotate(45deg);
 }
 
-.menu-bar.open:nth-child(2) {
-  opacity: 0;
+.open .menu-bar:nth-child(2) {
+  transform: translateY(-3.75px) rotate(-45deg);
 }
 
-.menu-bar.open:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  padding: 0 20px 20px;
-  background: rgba(255, 255, 255, 0.98);
-  border-top: 1px solid var(--border);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
-}
-
-.mobile-nav.open {
-  max-height: 420px;
-  opacity: 1;
-  padding: 12px 20px 20px;
-}
-
-.mobile-lang {
-  padding: 8px 8px 4px;
-}
-
-.mobile-nav-link {
-  width: 100%;
-  justify-content: flex-start !important;
-  font-size: 1rem !important;
-  padding: 12px 8px !important;
-  color: var(--text) !important;
-}
-
-.mobile-nav-cta {
+.mobile-nav-inner {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-  padding: 12px 18px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #fff;
-  background: var(--accent);
-  border-radius: 8px;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 24px;
 }
 
-.nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  top: 64px;
-  z-index: 150;
-  background: rgba(17, 24, 39, 0.25);
+.mobile-link {
+  padding: 14px 0;
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.footer {
-  padding: 48px 0 32px;
-  background: var(--bg);
-  border-color: var(--border) !important;
+.mobile-cta {
+  margin-top: 20px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 64px 0 32px;
+  border-top: 1px solid var(--line);
 }
 
 .footer-inner {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px 48px;
 }
 
 .footer-desc {
-  max-width: 480px;
-  margin: 0;
+  max-width: 26rem;
+  margin: 16px 0 0;
   font-size: 0.9375rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-}
-
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  font-size: 0.8125rem;
-  color: var(--text-muted);
+  line-height: 1.6;
+  color: var(--ink-2);
 }
 
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px 48px;
+  align-content: start;
+  font-size: 0.9375rem;
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: var(--ink-2);
   transition: color 0.2s;
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--ink);
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
+}
 
-  .nav-cta {
-    display: none;
-  }
-
-  .nav-actions :deep(.lang-switch) {
+@media (max-width: 860px) {
+  .nav,
+  .header-cta {
     display: none;
   }
 
   .menu-toggle {
     display: flex;
   }
+}
 
+@media (min-width: 861px) {
   .mobile-nav {
-    display: flex;
-  }
-
-  .nav-overlay {
-    display: block;
-  }
-
-  .footer {
-    padding: 36px 0 28px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    display: none;
   }
 }
 </style>

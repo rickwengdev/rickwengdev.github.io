@@ -39,4 +39,3 @@ Sitemap: https://rickwengdev.github.io/sitemap.xml
 
 # LLM-readable indexes (llms.txt standard)
 # https://rickwengdev.github.io/llms.txt
-# https://rickwengdev.github.io/llms-full.txt

@@ -1,26 +1,22 @@
-import { getBlogPosts } from '../data/posts/index.js';
+import { getPublicPapers } from '../data/papers.js';
 import { tm } from '../i18n/index.js';
 import {
-  AUTHOR,
-  SITE_URL,
   SITE_NAME,
   DEFAULT_IMAGE,
   SITE_GEO_SUMMARY,
   buildPersonJsonLd,
   buildWebsiteJsonLd,
-  buildBlogPostingJsonLd,
-  buildBlogJsonLd,
-  buildBreadcrumbJsonLd,
-  buildModelLabSeriesJsonLd,
-  buildItemListJsonLd,
+  buildPapersJsonLd,
   wrapJsonLd,
   pageUrl,
-  extractModelLabNumber,
 } from './schema.js';
 
 function upsertMeta(attr, key, content) {
-  if (!content) return;
   let el = document.querySelector(`meta[${attr}="${key}"]`);
+  if (!content) {
+    el?.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('meta');
     el.setAttribute(attr, key);
@@ -29,26 +25,22 @@ function upsertMeta(attr, key, content) {
   el.setAttribute('content', content);
 }
 
-function removeMeta(attr, key) {
-  document.querySelector(`meta[${attr}="${key}"]`)?.remove();
-}
-
-function upsertLink(rel, href, extra = {}) {
-  let el = document.querySelector(`link[rel="${rel}"]`);
+function upsertLink(selector, attrs) {
+  let el = document.querySelector(selector);
   if (!el) {
     el = document.createElement('link');
-    el.setAttribute('rel', rel);
     document.head.appendChild(el);
   }
-  el.setAttribute('href', href);
-  Object.entries(extra).forEach(([name, value]) => {
-    if (value) el.setAttribute(name, value);
-  });
+  Object.entries(attrs).forEach(([name, value]) => el.setAttribute(name, value));
 }
 
 function upsertJsonLd(data) {
   const id = 'site-json-ld';
   let el = document.getElementById(id);
+  if (!data) {
+    el?.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('script');
     el.type = 'application/ld+json';
@@ -58,192 +50,53 @@ function upsertJsonLd(data) {
   el.textContent = JSON.stringify(data);
 }
 
-function removeJsonLd() {
-  document.getElementById('site-json-ld')?.remove();
-}
-
-export { SITE_URL, SITE_NAME, DEFAULT_IMAGE, pageUrl };
-
-function upsertHreflang(hreflang, href) {
-  let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
-  if (!el) {
-    el = document.createElement('link');
-    el.setAttribute('rel', 'alternate');
-    el.setAttribute('hreflang', hreflang);
-    document.head.appendChild(el);
-  }
-  el.setAttribute('href', href);
-}
-
-export function applySeo({
-  title,
-  description,
-  path = '/',
-  type = 'website',
-  image,
-  keywords,
-  article,
-  jsonLd,
-  noindex = false,
-  geoSummary,
-}) {
+function applySeo({ title, description, path, keywords, jsonLd, noindex = false, geoSummary }) {
   const url = pageUrl(path);
-  const img = image || DEFAULT_IMAGE;
-  const keywordContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   document.title = title;
-
   upsertMeta('name', 'description', description);
   upsertMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large');
-  if (keywordContent) upsertMeta('name', 'keywords', keywordContent);
-  else removeMeta('name', 'keywords');
+  upsertMeta('name', 'keywords', Array.isArray(keywords) ? keywords.join(', ') : keywords);
+  upsertMeta('name', 'abstract', geoSummary);
 
   upsertMeta('property', 'og:title', title);
   upsertMeta('property', 'og:description', description);
-  upsertMeta('property', 'og:type', type);
+  upsertMeta('property', 'og:type', 'website');
   upsertMeta('property', 'og:url', url);
-  upsertMeta('property', 'og:image', img);
+  upsertMeta('property', 'og:image', DEFAULT_IMAGE);
   upsertMeta('property', 'og:site_name', SITE_NAME);
-
-  if (geoSummary) upsertMeta('name', 'abstract', geoSummary);
-  else removeMeta('name', 'abstract');
-
-  upsertMeta('name', 'twitter:card', 'summary_large_image');
   upsertMeta('name', 'twitter:title', title);
   upsertMeta('name', 'twitter:description', description);
-  upsertMeta('name', 'twitter:image', img);
 
-  upsertLink('canonical', url);
-  upsertHreflang('x-default', url);
-  upsertHreflang('en', url);
-  upsertHreflang('zh-Hant', url);
-
-  if (article) {
-    upsertMeta('property', 'article:published_time', article.publishedTime);
-    upsertMeta('property', 'article:modified_time', article.modifiedTime ?? article.publishedTime);
-    upsertMeta('property', 'article:author', article.author ?? AUTHOR.legalName);
-    if (article.section) upsertMeta('property', 'article:section', article.section);
-    document.querySelectorAll('meta[property="article:tag"]').forEach((el) => el.remove());
-    for (const tag of article.tags ?? []) {
-      const el = document.createElement('meta');
-      el.setAttribute('property', 'article:tag');
-      el.setAttribute('content', tag);
-      document.head.appendChild(el);
-    }
-  } else {
-    ['article:published_time', 'article:modified_time', 'article:author', 'article:section'].forEach((key) =>
-      removeMeta('property', key)
-    );
-    document.querySelectorAll('meta[property="article:tag"]').forEach((el) => el.remove());
+  upsertLink('link[rel="canonical"]', { rel: 'canonical', href: url });
+  for (const lang of ['x-default', 'en', 'zh-Hant']) {
+    upsertLink(`link[rel="alternate"][hreflang="${lang}"]`, { rel: 'alternate', hreflang: lang, href: url });
   }
 
-  if (jsonLd) upsertJsonLd(jsonLd);
-  else removeJsonLd();
+  upsertJsonLd(jsonLd);
 }
 
 export function updateSeoForRoute(route, locale, t) {
-  const ogLocale = locale === 'zh' ? 'zh_TW' : 'en_US';
-  upsertMeta('property', 'og:locale', ogLocale);
+  upsertMeta('property', 'og:locale', locale === 'zh' ? 'zh_TW' : 'en_US');
   upsertMeta('property', 'og:locale:alternate', locale === 'zh' ? 'en_US' : 'zh_TW');
 
-  if (route.name === 'blog-post') {
-    const id = parseInt(route.params.id, 10);
-    const post = getBlogPosts(locale).find((p) => p.id === id);
-
-    if (post) {
-      applySeo({
-        title: t('seo.blogPost.title', { title: post.title }),
-        description: post.geoSummary ?? post.excerpt,
-        geoSummary: post.geoSummary ?? post.excerpt,
-        path: `/blog/${post.id}`,
-        type: 'article',
-        keywords: post.keywords ?? post.tags,
-        article: {
-          publishedTime: post.date,
-          modifiedTime: post.modified ?? post.date,
-          tags: post.tags,
-          section: post.category,
-        },
-        jsonLd: wrapJsonLd(
-          [
-            buildPersonJsonLd(),
-            buildBlogPostingJsonLd({ ...post, locale }),
-            buildBreadcrumbJsonLd([
-              { name: t('nav.home'), path: '/' },
-              { name: t('nav.blog'), path: '/blog' },
-              { name: post.title, path: `/blog/${post.id}` },
-            ]),
-            post.modelLabNumber != null || extractModelLabNumber(post.title) != null
-              ? buildModelLabSeriesJsonLd(getBlogPosts(locale))
-              : null,
-          ].filter(Boolean)
-        ),
-      });
-      return;
-    }
-
-    applySeo({
-      title: t('seo.notFound.title'),
-      description: t('seo.notFound.description'),
-      path: route.path,
-      noindex: true,
-    });
-    return;
-  }
-
   const seoKey = route.meta?.seoKey || 'home';
-  const posts = getBlogPosts(locale);
+  const base = {
+    title: t(`seo.${seoKey}.title`),
+    description: t(`seo.${seoKey}.description`),
+    keywords: tm(`seo.${seoKey}.keywords`),
+    path: route.path,
+  };
 
-  if (seoKey === 'home') {
-    applySeo({
-      title: t('seo.home.title'),
-      description: t('seo.home.description'),
-      geoSummary: SITE_GEO_SUMMARY,
-      path: route.path,
-      keywords: tm('seo.home.keywords'),
-      jsonLd: wrapJsonLd([
-        buildWebsiteJsonLd(t('seo.home.description')),
-        buildPersonJsonLd(),
-      ]),
-    });
-    return;
-  }
-
-  if (seoKey === 'blog') {
-    applySeo({
-      title: t('seo.blog.title'),
-      description: t('seo.blog.description'),
-      path: route.path,
-      keywords: tm('seo.blog.keywords'),
-      jsonLd: wrapJsonLd(
-        [
-          buildBlogJsonLd(posts),
-          buildItemListJsonLd(posts),
-          buildModelLabSeriesJsonLd(posts),
-          buildBreadcrumbJsonLd([
-            { name: t('nav.home'), path: '/' },
-            { name: t('nav.blog'), path: '/blog' },
-          ]),
-        ].filter(Boolean)
-      ),
-    });
+  if (seoKey === 'notFound') {
+    applySeo({ ...base, noindex: true });
     return;
   }
 
   applySeo({
-    title: t(`seo.${seoKey}.title`),
-    description: t(`seo.${seoKey}.description`),
-    path: route.path,
-    keywords: tm(`seo.${seoKey}.keywords`),
-    jsonLd:
-      seoKey === 'experience'
-        ? wrapJsonLd([
-            buildPersonJsonLd(),
-            buildBreadcrumbJsonLd([
-              { name: t('nav.home'), path: '/' },
-              { name: t('nav.experience'), path: '/experience' },
-            ]),
-          ])
-        : undefined,
+    ...base,
+    path: '/',
+    geoSummary: SITE_GEO_SUMMARY,
+    jsonLd: wrapJsonLd([buildWebsiteJsonLd(), buildPersonJsonLd(), buildPapersJsonLd(getPublicPapers(locale))]),
   });
 }
