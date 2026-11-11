@@ -79,8 +79,8 @@ import { sealed } from './envelope.js';
 import { AUTHOR, LINKS } from './seo/schema.js';
 import { useI18n } from './i18n';
 
-const SECTIONS = ['experience', 'research', 'contributions', 'contact'];
-const NAV = SECTIONS.slice(0, 3);
+const SECTIONS = ['experience', 'projects', 'research', 'contributions', 'contact'];
+const NAV = SECTIONS.slice(0, 4);
 
 const route = useRoute();
 const router = useRouter();

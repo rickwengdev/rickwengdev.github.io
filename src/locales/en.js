@@ -26,6 +26,7 @@ export default {
   nav: {
     home: 'Home',
     experience: 'Experience',
+    projects: 'Projects',
     research: 'Research',
     contributions: 'Contributions',
     contact: 'Contact',
@@ -46,7 +47,7 @@ export default {
     paragraphs: [
       'I’m Rick Weng, an AI security researcher. My work examines how language models and AI agents actually behave: how activation steering changes them, what functional states they carry, and how to keep agents operating within the rules people set.',
       'I am also the founder of Saturn, which provides free tools for AI security: a gateway that subjects every agent tool call to policy, approval and audit, and an open-source workbench for AI research.',
-      'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my research and my open contributions. Should you wish to get in touch, a return envelope is enclosed below.',
+      'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects, my research and my open contributions. Should you wish to get in touch, a return envelope is enclosed below.',
     ],
     signoffBefore: 'Yours sincerely,',
     signoffAfter: '',
@@ -57,14 +58,30 @@ export default {
   },
   experience: {
     eyebrow: 'Experience',
-    title: 'Companies founded',
-    subtitle: 'Founder and CEO of Saturn; previously founder of Kura Finance.',
+    title: 'Experience',
     current: 'Current',
     past: 'Previous',
     visit: 'Visit site',
-    artTitle: 'Gate',
-    artMeta: '2026 · Generative, canvas',
-    jobs: {
+    items: {
+      kura: {
+        role: 'Founder & CEO',
+        period: '2026 – Sep 2026',
+        tagline: 'Modern finance, redesigned.',
+        summary: 'An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.',
+        highlights: [
+          'Defined the product vision for a unified, privacy-first global finance platform.',
+          'Established partnerships with fintech infrastructure providers across digital assets, yield and payments.',
+        ],
+      },
+    },
+  },
+  projects: {
+    eyebrow: 'Projects',
+    title: 'Current projects',
+    current: 'Active',
+    past: 'Previous',
+    visit: 'Visit site',
+    items: {
       saturn: {
         role: 'Founder & CEO',
         period: 'Sep 2026 – Present',
@@ -76,16 +93,6 @@ export default {
           'Saturn App: an open-source (Apache 2.0) desktop workbench for AI research, supporting experiment management, sample-level review, activation patching and SAE feature analysis.',
           'Credentials are held in a post-quantum vault, and audit payloads are encrypted on archival, so they remain unreadable even to the gateway itself.',
           'Both products are free, with full functionality on every account, and are funded through sponsorship.',
-        ],
-      },
-      kura: {
-        role: 'Founder & CEO',
-        period: '2026 – Sep 2026',
-        tagline: 'Modern finance, redesigned.',
-        summary: 'An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.',
-        highlights: [
-          'Defined the product vision for a unified, privacy-first global finance platform.',
-          'Established partnerships with fintech infrastructure providers across digital assets, yield and payments.',
         ],
       },
     },
@@ -106,8 +113,6 @@ export default {
       published: 'Published',
       progress: 'In progress',
     },
-    placeholderNote:
-      'This paper is under double-blind review. Its title, abstract, code and data will be published here once the review concludes.',
   },
   contributions: {
     eyebrow: 'Contributions',

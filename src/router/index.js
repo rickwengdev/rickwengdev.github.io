@@ -13,7 +13,7 @@ const routes = [
   { path: '/blog', redirect: to('#research') },
   { path: '/blog/:id', redirect: to('#research') },
   { path: '/experience', redirect: to('#experience') },
-  { path: '/projects', redirect: to('#experience') },
+  { path: '/projects', redirect: to('#projects') },
   { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { seoKey: 'notFound' } },
 ];
 

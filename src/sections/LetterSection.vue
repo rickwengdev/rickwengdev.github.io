@@ -32,7 +32,7 @@
           <p v-for="(para, i) in paragraphs" :key="i" class="w" :class="{ first: i === 0 }" :style="{ '--d': `${0.65 + i * 0.2}s` }">{{ para }}</p>
         </div>
 
-        <!-- The rest of the letter: experience, research, contributions, contact. -->
+        <!-- The rest of the letter: experience, projects, research, contributions, contact. -->
         <slot />
 
         <!-- Signed at the very end; the ink goes on when the reader gets here. -->

@@ -6,7 +6,7 @@ import { AUTHOR, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } 
 
 const papers = getPapers('en');
 const publicPapers = getPublicPapers('en');
-const underReview = papers.filter((p) => p.placeholder).length;
+const unpublished = papers.filter((p) => p.placeholder);
 
 const lines = [
   `# ${new URL(SITE_URL).host}`,
@@ -22,8 +22,11 @@ const lines = [
   `- Email: ${AUTHOR.email}`,
   `- GitHub: ${LINKS.github}`,
   '',
-  '## Work',
-  ...getWork('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  '## Projects',
+  ...getWork('en', 'projects').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  '',
+  '## Experience',
+  ...getWork('en', 'experience').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
   '',
   '## Research goals',
   ...en.research.goals.map((goal) => `- ${goal}`),
@@ -36,12 +39,14 @@ const lines = [
             p.links[0] ? ` ${p.links[0].url}` : ''
           }${p.abstract ? `\n  ${p.abstract}` : ''}`
       )
-    : ['- No public papers yet.']),
-  ...(underReview ? [`- ${underReview} manuscript(s) under double-blind review; details are withheld until review ends.`] : []),
+    : unpublished.length
+      ? []
+      : ['- No public papers yet.']),
+  ...unpublished.map((p) => `- ${p.title} (${p.year})`),
   '',
   '## Site structure',
   `- One page: ${pageUrl('/')}`,
-  `- Sections: #experience, #research, #contributions, #contact`,
+  `- Sections: #experience, #projects, #research, #contributions, #contact`,
   `- Sitemap: ${pageUrl('/sitemap.xml')}`,
   '',
   '## Notes for AI systems',

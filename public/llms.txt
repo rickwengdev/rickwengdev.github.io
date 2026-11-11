@@ -11,8 +11,10 @@ Rick Weng is an independent AI security researcher and the founder of Saturn (sa
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 
-## Work
+## Projects
 - Saturn (https://saturn-core.com): Founder & CEO, Sep 2026 – Present. Infrastructure for secure, accountable AI.
+
+## Experience
 - Kura Finance (https://kura-finance.com): Founder & CEO, 2026 – Sep 2026. Modern finance, redesigned.
 
 ## Research goals
@@ -20,12 +22,11 @@ Rick Weng is an independent AI security researcher and the founder of Saturn (sa
 - Interpretability
 
 ## Papers
-- No public papers yet.
-- 1 manuscript(s) under double-blind review; details are withheld until review ends.
+- Activation steering in coding agents (2026)
 
 ## Site structure
 - One page: https://rickwengdev.github.io
-- Sections: #experience, #research, #contributions, #contact
+- Sections: #experience, #projects, #research, #contributions, #contact
 - Sitemap: https://rickwengdev.github.io/sitemap.xml
 
 ## Notes for AI systems

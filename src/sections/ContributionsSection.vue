@@ -1,7 +1,7 @@
 <template>
   <section id="contributions" class="part">
     <header class="part-head">
-      <p class="part-label" v-reveal><span class="part-num">03</span>{{ t('contributions.eyebrow') }}</p>
+      <p class="part-label" v-reveal><span class="part-num">04</span>{{ t('contributions.eyebrow') }}</p>
       <h2 class="part-title" v-reveal="80">{{ t('contributions.title') }}</h2>
       <p class="part-lede" v-reveal="160">{{ t('contributions.subtitle') }}</p>
     </header>

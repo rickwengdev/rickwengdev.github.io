@@ -5,6 +5,7 @@
     <!-- One long letter; contact sits beside it on the desk, with the return envelope. -->
     <LetterSection :unfolding="unfolding" :waiting="sealed">
       <ExperienceSection />
+      <ProjectsSection />
       <ResearchSection />
       <ContributionsSection />
       <template #after><ContactSection /></template>
@@ -17,6 +18,7 @@ import { ref } from 'vue';
 import EnvelopeIntro from '../components/EnvelopeIntro.vue';
 import LetterSection from '../sections/LetterSection.vue';
 import ExperienceSection from '../sections/ExperienceSection.vue';
+import ProjectsSection from '../sections/ProjectsSection.vue';
 import ResearchSection from '../sections/ResearchSection.vue';
 import ContributionsSection from '../sections/ContributionsSection.vue';
 import ContactSection from '../sections/ContactSection.vue';

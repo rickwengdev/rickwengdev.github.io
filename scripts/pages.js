@@ -18,21 +18,22 @@ const e = escapeHtml;
 const papersHtml = getPapers('en')
   .map((paper) =>
     paper.placeholder
-      ? `<li>${e(paper.title)} (${paper.year}, ${e(en.papersPage.status[paper.status])}). ${e(en.papersPage.placeholderNote)}</li>`
+      ? `<li>${e(paper.title)} (${paper.year})</li>`
       : `<li><strong>${e(paper.title)}</strong> (${paper.year}${paper.venue ? `, ${e(paper.venue)}` : ''})${
           paper.abstract ? `<p>${e(paper.abstract)}</p>` : ''
         }${paper.links.map((l) => ` <a href="${e(l.url)}">${e(l.label)}</a>`).join('')}</li>`
   )
   .join('');
 
-const workHtml = getWork('en')
-  .map(
-    (job) =>
-      `<li><a href="${e(job.url)}">${e(job.name)}</a>: ${e(job.role)}, ${e(job.period)}. ${e(job.summary)}<ul>${job.highlights
-        .map((h) => `<li>${e(h)}</li>`)
-        .join('')}</ul></li>`
-  )
-  .join('');
+const workHtml = (section) =>
+  getWork('en', section)
+    .map(
+      (job) =>
+        `<li><a href="${e(job.url)}">${e(job.name)}</a>: ${e(job.role)}, ${e(job.period)}. ${e(job.summary)}<ul>${job.highlights
+          .map((h) => `<li>${e(h)}</li>`)
+          .join('')}</ul></li>`
+    )
+    .join('');
 
 const contributionsHtml = Object.values(en.contributions.items)
   .map((c) => `<li><strong>${e(c.title)}</strong> (${e(c.kind)}): ${e(c.body)}</li>`)
@@ -50,7 +51,8 @@ export const PAGES = [
     geoSummary: SITE_GEO_SUMMARY,
     jsonLd: wrapJsonLd([buildWebsiteJsonLd(), buildPersonJsonLd(), buildPapersJsonLd(getPublicPapers('en'))]),
     body: `<article id="top"><h1>Rick Weng</h1><p>${e(L.salutation)}</p>${L.paragraphs.map((p) => `<p>${e(p)}</p>`).join('')}
-<section id="experience"><h2>${e(en.experience.title)}</h2><ul>${workHtml}</ul></section>
+<section id="experience"><h2>${e(en.experience.title)}</h2><ul>${workHtml('experience')}</ul></section>
+<section id="projects"><h2>${e(en.projects.title)}</h2><ul>${workHtml('projects')}</ul></section>
 <section id="research"><h2>${e(en.research.title)}</h2><h3>${e(en.research.papersTitle)}</h3><ul>${papersHtml}</ul>
 <h3>${e(en.research.goalsTitle)}</h3><p>${en.research.goals.map(e).join(' · ')}</p></section>
 <section id="contributions"><h2>${e(en.contributions.title)}</h2><ul>${contributionsHtml}</ul></section>
@@ -69,5 +71,5 @@ export const REDIRECTS = [
   { dir: 'blog/3', to: '/#research' },
   { dir: 'blog/4', to: '/#research' },
   { dir: 'experience', to: '/#experience' },
-  { dir: 'projects', to: '/#experience' },
+  { dir: 'projects', to: '/#projects' },
 ];

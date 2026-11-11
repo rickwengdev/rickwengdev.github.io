@@ -2,7 +2,7 @@
   <article class="paper" :class="{ sealed: paper.placeholder }">
     <div class="paper-meta">
       <span class="paper-year">{{ paper.year }}</span>
-      <span class="status" :class="{ 'status-muted': paper.status === 'published' }">
+      <span v-if="!paper.placeholder" class="status" :class="{ 'status-muted': paper.status === 'published' }">
         {{ t(`papersPage.status.${paper.status}`) }}
       </span>
     </div>
@@ -18,8 +18,7 @@
         <em v-if="paper.venue">{{ paper.venue }}</em>
       </p>
 
-      <p v-if="paper.placeholder" class="paper-note">{{ t('papersPage.placeholderNote') }}</p>
-      <p v-else-if="paper.abstract && !compact" class="paper-abstract">{{ paper.abstract }}</p>
+      <p v-if="!paper.placeholder && paper.abstract && !compact" class="paper-abstract">{{ paper.abstract }}</p>
 
       <div v-if="paper.links.length" class="paper-links">
         <a
@@ -61,6 +60,20 @@ const { t } = useI18n();
 
 @media (min-width: 760px) {
   .paper {
+    grid-template-columns: 160px 1fr;
+    gap: 28px;
+  }
+}
+
+/* A paper still under review is a single line: year and topic. */
+.paper.sealed {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 760px) {
+  .paper.sealed {
     grid-template-columns: 160px 1fr;
     gap: 28px;
   }
@@ -110,17 +123,12 @@ const { t } = useI18n();
   color: var(--ink-2);
 }
 
-.paper-note,
 .paper-abstract {
   max-width: 44rem;
   margin: 12px 0 0;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: var(--ink-2);
-}
-
-.paper-note {
-  font-style: italic;
 }
 
 .paper-links {
