@@ -48,7 +48,9 @@ const { t } = useI18n();
 
 .reply.is-visible {
   transform: rotate(-1.6deg);
-  transition: transform 0.6s var(--ease), opacity 0.8s var(--ease);
+  transition:
+    transform 0.6s var(--ease),
+    opacity 0.8s var(--ease);
 }
 
 .reply.is-visible:hover {
@@ -75,14 +77,18 @@ const { t } = useI18n();
   right: 0;
   bottom: calc(100% - 1px);
   height: 58%;
-  background: var(--grain) 0 0 / 200px, #e8dfcb;
+  background:
+    var(--grain) 0 0 / 200px,
+    #e8dfcb;
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
 }
 
 /* The inside back wall. */
 .env-back {
   inset: 0;
-  background: var(--grain) 0 0 / 200px, #e3d9c3;
+  background:
+    var(--grain) 0 0 / 200px,
+    #e3d9c3;
   border-radius: 0 0 4px 4px;
 }
 
@@ -98,7 +104,9 @@ const { t } = useI18n();
   gap: 4px;
   padding: 12% 16px 0;
   text-align: center;
-  background: var(--grain) 0 0 / 200px, #fdfbf4;
+  background:
+    var(--grain) 0 0 / 200px,
+    #fdfbf4;
   border: 1px solid rgba(20, 20, 19, 0.07);
   border-radius: 3px;
   box-shadow: 0 -2px 10px -4px rgba(60, 48, 30, 0.18);
@@ -144,7 +152,9 @@ const { t } = useI18n();
 /* The front pocket, cut in a V where the flap opens. */
 .env-pocket {
   inset: 0;
-  background: var(--grain) 0 0 / 200px, #f4efe3;
+  background:
+    var(--grain) 0 0 / 200px,
+    #f4efe3;
   border-radius: 0 0 4px 4px;
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
 }

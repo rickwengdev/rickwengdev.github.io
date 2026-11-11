@@ -1,4 +1,4 @@
-import { getPublicPapers } from '../data/papers.js';
+import { getPublicPapers } from '../content/index.js';
 import { tm } from '../i18n/index.js';
 import {
   SITE_NAME,

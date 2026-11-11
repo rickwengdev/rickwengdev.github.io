@@ -24,9 +24,12 @@ Rick Weng is an independent AI security researcher and the founder of Saturn (sa
 ## Papers
 - Activation steering in coding agents (2026)
 
+## CVEs
+- No published CVEs yet.
+
 ## Site structure
 - One page: https://rickwengdev.github.io
-- Sections: #experience, #projects, #research, #contributions, #contact
+- Sections: #experience, #projects, #research, #cve, #contributions, #contact
 - Sitemap: https://rickwengdev.github.io/sitemap.xml
 
 ## Notes for AI systems

@@ -6,9 +6,12 @@ let observer;
 function show(el) {
   el.classList.add('is-visible');
   const delay = parseFloat(el.style.transitionDelay) || 0;
-  setTimeout(() => {
-    el.style.transitionDelay = '';
-  }, delay * 1000 + 1000);
+  setTimeout(
+    () => {
+      el.style.transitionDelay = '';
+    },
+    delay * 1000 + 1000
+  );
 }
 
 function getObserver() {

@@ -1,40 +1,29 @@
 // Shared by the app (src/seo/index.js) and the build scripts (scripts/*.js).
 // Keep this file free of browser-only APIs.
-import { COMPANIES } from '../data/work.js';
+import {
+  AUTHOR as AUTHOR_INFO,
+  KNOWS_ABOUT,
+  LINKS,
+  ORGANIZATIONS,
+  SITE_DESCRIPTION,
+  SITE_GEO_SUMMARY,
+  SITE_URL,
+} from '../content/index.js';
 
-export const SITE_URL = 'https://rickwengdev.github.io';
-export const SITE_NAME = 'Rick Weng';
+export { LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL };
+
+export const SITE_NAME = AUTHOR_INFO.name;
 export const DEFAULT_IMAGE = `${SITE_URL}/avatar.jpg`;
 export const THEME_COLOR = '#faf9f5';
 
-export const SITE_DESCRIPTION =
-  'Research into how language models and AI agents actually behave, and tools that keep them accountable.';
-export const SITE_GEO_SUMMARY =
-  'Rick Weng is an independent AI security researcher and the founder of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.';
-
-export const LINKS = {
-  email: 'rick@saturn-core.com',
-  github: 'https://github.com/rickwengdev',
-  saturn: 'https://saturn-core.com',
-};
-
-export const RESEARCH_TOPICS = [
-  'Activation steering',
-  'Functional states in language models',
-  'Agent oversight',
-  'Interpretability tooling',
-];
-
 export const AUTHOR = {
-  name: 'Rick Weng',
-  legalName: 'Rick Weng',
+  name: AUTHOR_INFO.name,
+  legalName: AUTHOR_INFO.name,
   url: SITE_URL,
   email: LINKS.email,
-  jobTitle: 'Founder of Saturn; independent AI security researcher',
+  jobTitle: AUTHOR_INFO.jobTitle,
   sameAs: [LINKS.github],
 };
-
-export { COMPANIES };
 
 export function pageUrl(path = '/') {
   const normalized = path.startsWith('/') ? path : `/${path}`;
@@ -42,11 +31,7 @@ export function pageUrl(path = '/') {
 }
 
 export function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+  return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 // ---------- JSON-LD ----------
@@ -62,9 +47,9 @@ export function buildPersonJsonLd(description = SITE_GEO_SUMMARY) {
     description,
     image: DEFAULT_IMAGE,
     sameAs: AUTHOR.sameAs,
-    knowsAbout: ['AI security', 'AI safety', 'Pretraining', 'Interpretability', ...RESEARCH_TOPICS],
-    founder: COMPANIES.map(({ name, url }) => ({ '@type': 'Organization', name, url })),
-    worksFor: COMPANIES.filter((c) => c.current).map(({ name, url }) => ({ '@type': 'Organization', name, url })),
+    knowsAbout: KNOWS_ABOUT,
+    founder: ORGANIZATIONS.map(({ name, url }) => ({ '@type': 'Organization', name, url })),
+    worksFor: ORGANIZATIONS.filter((c) => c.current).map(({ name, url }) => ({ '@type': 'Organization', name, url })),
   };
 }
 

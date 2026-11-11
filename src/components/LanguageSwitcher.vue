@@ -28,12 +28,16 @@ const { locale, t, setLocale } = useI18n();
   padding: 0 10px;
   font: inherit;
   font-size: 0.875rem;
+  white-space: nowrap;
+  flex-shrink: 0;
   color: var(--ink-2);
   background: transparent;
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 .lang-switch:hover {

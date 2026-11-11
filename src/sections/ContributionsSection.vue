@@ -1,10 +1,6 @@
 <template>
-  <section id="contributions" class="part">
-    <header class="part-head">
-      <p class="part-label" v-reveal><span class="part-num">04</span>{{ t('contributions.eyebrow') }}</p>
-      <h2 class="part-title" v-reveal="80">{{ t('contributions.title') }}</h2>
-      <p class="part-lede" v-reveal="160">{{ t('contributions.subtitle') }}</p>
-    </header>
+  <section class="part">
+    <PartHeader :num="num" ns="contributions" />
 
     <ul class="gifts">
       <li v-for="(item, i) in items" :key="item.id" v-reveal="i * 100">
@@ -32,24 +28,17 @@
 </template>
 
 <script setup>
+// Open tools and practices. Entries live in src/content/contributions.js.
 import { computed } from 'vue';
 import LineIcon from '../components/LineIcon.vue';
-import { LINKS } from '../seo/schema.js';
+import PartHeader from '../components/PartHeader.vue';
+import { getContributions } from '../content/index.js';
 import { useI18n } from '../i18n';
 
-const { t, tm } = useI18n();
+defineProps({ num: { type: String, required: true } });
 
-const META = {
-  app: { url: 'https://github.com/Saturn-Technology-Project/Saturn-App', icon: 'paper' },
-  mcp: { url: 'https://saturn-core.com/mcp', icon: 'gate' },
-  open: { url: null, icon: 'open' },
-  github: { url: LINKS.github, icon: 'code' },
-};
-
-const items = computed(() => {
-  const all = tm('contributions.items') ?? {};
-  return Object.keys(META).map((id) => ({ id, ...META[id], ...all[id] }));
-});
+const { locale } = useI18n();
+const items = computed(() => getContributions(locale.value));
 </script>
 
 <style scoped>

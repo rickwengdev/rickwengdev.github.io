@@ -1,7 +1,6 @@
 import fs from 'fs';
 import en from '../src/locales/en.js';
-import { getPapers, getPublicPapers } from '../src/data/papers.js';
-import { getWork } from '../src/data/work.js';
+import { getCves, getExperience, getPapers, getProjects, getPublicPapers } from '../src/content/index.js';
 import { AUTHOR, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } from '../src/seo/schema.js';
 
 const papers = getPapers('en');
@@ -23,10 +22,10 @@ const lines = [
   `- GitHub: ${LINKS.github}`,
   '',
   '## Projects',
-  ...getWork('en', 'projects').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  ...getProjects('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
   '',
   '## Experience',
-  ...getWork('en', 'experience').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  ...getExperience('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
   '',
   '## Research goals',
   ...en.research.goals.map((goal) => `- ${goal}`),
@@ -44,9 +43,19 @@ const lines = [
       : ['- No public papers yet.']),
   ...unpublished.map((p) => `- ${p.title} (${p.year})`),
   '',
+  '## CVEs',
+  ...(getCves('en').length
+    ? getCves('en').map(
+        (c) =>
+          `- ${c.id} (${c.year}, ${en.cve.severity[c.severity]}${c.cvss ? ` ${c.cvss.toFixed(1)}` : ''})${c.product ? `: ${c.product}` : ''}${
+            c.summary ? `. ${c.summary}` : ''
+          } ${c.url}`
+      )
+    : ['- No published CVEs yet.']),
+  '',
   '## Site structure',
   `- One page: ${pageUrl('/')}`,
-  `- Sections: #experience, #projects, #research, #contributions, #contact`,
+  `- Sections: #experience, #projects, #research, #cve, #contributions, #contact`,
   `- Sitemap: ${pageUrl('/sitemap.xml')}`,
   '',
   '## Notes for AI systems',

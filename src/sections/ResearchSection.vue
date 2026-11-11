@@ -1,9 +1,6 @@
 <template>
-  <section id="research" class="part">
-    <header class="part-head">
-      <p class="part-label" v-reveal><span class="part-num">03</span>{{ t('research.eyebrow') }}</p>
-      <h2 class="part-title" v-reveal="80">{{ t('research.title') }}</h2>
-    </header>
+  <section class="part">
+    <PartHeader :num="num" ns="research" />
 
     <!-- Research goals, on one line. -->
     <dl class="focus" v-reveal>
@@ -25,8 +22,11 @@
 <script setup>
 import { computed } from 'vue';
 import PaperItem from '../components/PaperItem.vue';
-import { getPapers } from '../data/papers.js';
+import PartHeader from '../components/PartHeader.vue';
+import { getPapers } from '../content/index.js';
 import { useI18n } from '../i18n';
+
+defineProps({ num: { type: String, required: true } });
 
 const { locale, t, tm } = useI18n();
 

@@ -24,9 +24,9 @@ export default {
     },
   },
   nav: {
-    home: 'Home',
     experience: 'Experience',
     projects: 'Projects',
+    cve: 'CVE',
     research: 'Research',
     contributions: 'Contributions',
     contact: 'Contact',
@@ -54,7 +54,6 @@ export default {
     ps: 'P.S. All Saturn products are free to use.',
     stamp: 'Photo of Rick Weng',
     postmark: 'RICK WENG · AI SECURITY',
-    continue: 'Continue reading',
   },
   experience: {
     eyebrow: 'Experience',
@@ -62,18 +61,6 @@ export default {
     current: 'Current',
     past: 'Previous',
     visit: 'Visit site',
-    items: {
-      kura: {
-        role: 'Founder & CEO',
-        period: '2026 – Sep 2026',
-        tagline: 'Modern finance, redesigned.',
-        summary: 'An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.',
-        highlights: [
-          'Defined the product vision for a unified, privacy-first global finance platform.',
-          'Established partnerships with fintech infrastructure providers across digital assets, yield and payments.',
-        ],
-      },
-    },
   },
   projects: {
     eyebrow: 'Projects',
@@ -81,30 +68,19 @@ export default {
     current: 'Active',
     past: 'Previous',
     visit: 'Visit site',
-    items: {
-      saturn: {
-        role: 'Founder & CEO',
-        period: 'Sep 2026 – Present',
-        tagline: 'Infrastructure for secure, accountable AI.',
-        summary:
-          'Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.',
-        highlights: [
-          'Saturn MCP: a gateway that enforces argument-level policy on every agent tool call, routes sensitive calls for human approval, and maintains a complete audit record.',
-          'Saturn App: an open-source (Apache 2.0) desktop workbench for AI research, supporting experiment management, sample-level review, activation patching and SAE feature analysis.',
-          'Credentials are held in a post-quantum vault, and audit payloads are encrypted on archival, so they remain unreadable even to the gateway itself.',
-          'Both products are free, with full functionality on every account, and are funded through sponsorship.',
-        ],
-      },
-    },
   },
   research: {
     eyebrow: 'Research',
     title: 'Understanding how AI systems actually behave.',
-    artTitle: 'Rings',
-    artMeta: '2026 · Generative, canvas',
     papersTitle: 'Papers',
     goalsTitle: 'Research goals',
     goals: ['Pretraining', 'Interpretability'],
+  },
+  cve: {
+    eyebrow: 'CVE',
+    title: 'Vulnerability disclosures',
+    empty: 'No published CVEs yet.',
+    severity: { critical: 'Critical', high: 'High', medium: 'Medium', low: 'Low' },
   },
   papersPage: {
     status: {
@@ -118,31 +94,6 @@ export default {
     eyebrow: 'Contributions',
     title: 'Open contributions',
     subtitle: 'Tools and research practices, freely available to all.',
-    items: {
-      app: {
-        title: 'Saturn App',
-        kind: 'Open source · Apache 2.0',
-        body: 'A desktop workbench for AI research: experiments are compared only when measured identically, every sample from every model can be inspected, and activation patching and SAE features are built in. Each release ships with a checksum and signed build provenance.',
-        link: 'Source on GitHub',
-      },
-      mcp: {
-        title: 'Saturn MCP',
-        kind: 'Free to use',
-        body: 'A gateway that governs what AI agents may do: every tool call is checked against versioned policy down to its arguments, sensitive calls are routed for human approval, and every decision is recorded.',
-        link: 'Learn more',
-      },
-      open: {
-        title: 'Open research',
-        kind: 'Methodology',
-        body: 'Each paper is published with its preregistration, code and raw data, including results that did not hold, so the findings can be independently verified.',
-      },
-      github: {
-        title: 'Code',
-        kind: 'GitHub',
-        body: 'Research experiments, tools, and the source code for this website.',
-        link: 'github.com/rickwengdev',
-      },
-    },
   },
   contact: {
     eyebrow: 'Contact',
@@ -155,7 +106,6 @@ export default {
   },
   footer: {
     desc: 'Research into how language models and AI agents actually behave, and tools that keep them accountable.',
-    motto: 'A secure system is a quiet one.',
   },
   notFound: {
     title: 'Page not found.',

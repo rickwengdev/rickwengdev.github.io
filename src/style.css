@@ -201,7 +201,10 @@ img {
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .btn-dark {
@@ -244,7 +247,9 @@ img {
   font-weight: 500;
   color: var(--ink);
   border-bottom: 1px solid var(--line-strong);
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .quiet-link:hover {
@@ -403,7 +408,9 @@ img {
 .reveal {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
 }
 
 .reveal.is-visible {

@@ -4,10 +4,14 @@
 
     <!-- One long letter; contact sits beside it on the desk, with the return envelope. -->
     <LetterSection :unfolding="unfolding" :waiting="sealed">
-      <ExperienceSection />
-      <ProjectsSection />
-      <ResearchSection />
-      <ContributionsSection />
+      <component
+        :is="section.component"
+        v-for="(section, i) in LETTER_SECTIONS"
+        :id="section.id"
+        :key="section.id"
+        :num="sectionNumber(i)"
+        v-bind="section.props"
+      />
       <template #after><ContactSection /></template>
     </LetterSection>
   </div>
@@ -17,11 +21,8 @@
 import { ref } from 'vue';
 import EnvelopeIntro from '../components/EnvelopeIntro.vue';
 import LetterSection from '../sections/LetterSection.vue';
-import ExperienceSection from '../sections/ExperienceSection.vue';
-import ProjectsSection from '../sections/ProjectsSection.vue';
-import ResearchSection from '../sections/ResearchSection.vue';
-import ContributionsSection from '../sections/ContributionsSection.vue';
 import ContactSection from '../sections/ContactSection.vue';
+import { LETTER_SECTIONS, sectionNumber } from '../sections/index.js';
 import { markOpened, sealed } from '../envelope.js';
 
 const unfolding = ref(false);

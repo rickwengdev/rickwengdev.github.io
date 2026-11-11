@@ -2,16 +2,16 @@
   <article class="entry">
     <!-- The company's sticker, stuck on the paper beside what I wrote about it. -->
     <a
-      v-if="LOGOS[item.id]"
+      v-if="logo"
       :href="item.url"
       target="_blank"
       rel="noopener noreferrer"
       class="sticker"
-      :class="`sticker-${item.id}`"
+      :class="{ 'sticker-circle': item.logoShape === 'circle' }"
       :aria-label="`${item.name} — ${t(`${ns}.visit`)}`"
       v-reveal="260"
     >
-      <img :src="LOGOS[item.id]" :alt="`${item.name} logo`" width="160" height="160" />
+      <img :src="logo" :alt="`${item.name} logo`" width="160" height="160" />
     </a>
 
     <p class="entry-meta" v-reveal>
@@ -36,21 +36,26 @@
 </template>
 
 <script setup>
-import saturnLogo from '../assets/logos/saturn.png';
-import kuraLogo from '../assets/logos/kura.png';
+import { computed } from 'vue';
 import { useI18n } from '../i18n';
 
 // One company or project, as written in the letter: sticker, dates, name, what it does.
-defineProps({
+const props = defineProps({
   item: { type: Object, required: true },
   // Locale namespace for the status and link labels ('experience' or 'projects').
   ns: { type: String, required: true },
 });
 
-// Company marks (images only exist in the browser build, so they live here, not in data/work.js).
-const LOGOS = { saturn: saturnLogo, kura: kuraLogo };
+// Every image in src/assets/logos, by file name. An entry picks one with `logo: 'name.png'`.
+const LOGOS = Object.fromEntries(
+  Object.entries(import.meta.glob('../assets/logos/*', { eager: true, import: 'default' })).map(([path, url]) => [
+    path.split('/').pop(),
+    url,
+  ])
+);
 
 const { t } = useI18n();
+const logo = computed(() => LOGOS[props.item.logo]);
 </script>
 
 <style scoped>
@@ -100,13 +105,13 @@ const { t } = useI18n();
   pointer-events: none;
 }
 
-.sticker-kura {
+.sticker-circle {
   --tilt: -7deg;
   padding: 10px;
   border-radius: 50%;
 }
 
-.sticker-kura img {
+.sticker-circle img {
   border-radius: 50%;
 }
 

@@ -2,52 +2,67 @@
   <section id="top" class="letter-section" :class="{ playing }">
     <div class="container">
       <div class="sheet-wrap">
-      <article class="sheet" :class="{ unfolding }">
-        <header class="sheet-head">
-          <div class="sheet-meta w" style="--d: 0.15s">
-            <p class="label">{{ t('letter.from') }}</p>
-            <p class="label"><time class="sent-at" :datetime="now.toISOString()">{{ sentAt }}</time></p>
-          </div>
-
-          <figure class="stamp stamp-drop">
-            <div class="stamp-paper">
-              <img :src="avatar" :alt="t('letter.stamp')" class="stamp-photo" width="120" height="150" />
+        <article class="sheet" :class="{ unfolding }">
+          <header class="sheet-head">
+            <div class="sheet-meta w" style="--d: 0.15s">
+              <p class="label">{{ t('letter.from') }}</p>
+              <p class="label">
+                <time class="sent-at" :datetime="now.toISOString()">{{ sentAt }}</time>
+              </p>
             </div>
-            <svg class="postmark" viewBox="0 0 120 120" aria-hidden="true">
-              <defs>
-                <path id="pm-arc" d="M60 60 m-40 0 a40 40 0 1 1 80 0 a40 40 0 1 1 -80 0" />
-              </defs>
-              <circle cx="60" cy="60" r="48" />
-              <circle cx="60" cy="60" r="31" />
-              <text><textPath href="#pm-arc" startOffset="2%">{{ t('letter.postmark') }}</textPath></text>
-              <text class="pm-year" x="60" y="64" text-anchor="middle">{{ year }}</text>
-              <path class="pm-waves" d="M100 40 q8 -6 16 0 t16 0 M100 52 q8 -6 16 0 t16 0 M100 64 q8 -6 16 0 t16 0" />
-            </svg>
-          </figure>
-        </header>
 
-        <p class="salutation w" style="--d: 0.45s">{{ t('letter.salutation') }}</p>
+            <figure class="stamp stamp-drop">
+              <div class="stamp-paper">
+                <img :src="avatar" :alt="t('letter.stamp')" class="stamp-photo" width="120" height="150" />
+              </div>
+              <svg class="postmark" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <path id="pm-arc" d="M60 60 m-40 0 a40 40 0 1 1 80 0 a40 40 0 1 1 -80 0" />
+                </defs>
+                <circle cx="60" cy="60" r="48" />
+                <circle cx="60" cy="60" r="31" />
+                <text>
+                  <textPath href="#pm-arc" startOffset="2%">{{ t('letter.postmark') }}</textPath>
+                </text>
+                <text class="pm-year" x="60" y="64" text-anchor="middle">{{ year }}</text>
+                <path class="pm-waves" d="M100 40 q8 -6 16 0 t16 0 M100 52 q8 -6 16 0 t16 0 M100 64 q8 -6 16 0 t16 0" />
+              </svg>
+            </figure>
+          </header>
 
-        <div class="body">
-          <p v-for="(para, i) in paragraphs" :key="i" class="w" :class="{ first: i === 0 }" :style="{ '--d': `${0.65 + i * 0.2}s` }">{{ para }}</p>
-        </div>
+          <p class="salutation w" style="--d: 0.45s">{{ t('letter.salutation') }}</p>
 
-        <!-- The rest of the letter: experience, projects, research, contributions, contact. -->
-        <slot />
-
-        <!-- Signed at the very end; the ink goes on when the reader gets here. -->
-        <footer class="signature" v-reveal>
-          <p v-if="t('letter.signoffBefore')" class="signoff s" style="--d: 0.15s">{{ t('letter.signoffBefore') }}</p>
-          <div class="sign-row">
-            <span class="sign-name handwrite">Rick Weng</span>
-            <span v-if="t('letter.signoffAfter')" class="signoff signoff-after s" style="--d: 1.5s">{{ t('letter.signoffAfter') }}</span>
-            <SealMark :size="44" class="sign-seal seal-press" />
+          <div class="body">
+            <p
+              v-for="(para, i) in paragraphs"
+              :key="i"
+              class="w"
+              :class="{ first: i === 0 }"
+              :style="{ '--d': `${0.65 + i * 0.2}s` }"
+            >
+              {{ para }}
+            </p>
           </div>
-          <p class="ps s" style="--d: 2.2s">{{ t('letter.ps') }}
-            <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer">saturn-core.com</a>
-          </p>
-        </footer>
-      </article>
+
+          <!-- The rest of the letter: experience, projects, research, CVEs, contributions, contact. -->
+          <slot />
+
+          <!-- Signed at the very end; the ink goes on when the reader gets here. -->
+          <footer class="signature" v-reveal>
+            <p v-if="t('letter.signoffBefore')" class="signoff s" style="--d: 0.15s">{{ t('letter.signoffBefore') }}</p>
+            <div class="sign-row">
+              <span class="sign-name handwrite">Rick Weng</span>
+              <span v-if="t('letter.signoffAfter')" class="signoff signoff-after s" style="--d: 1.5s">{{
+                t('letter.signoffAfter')
+              }}</span>
+              <SealMark :size="44" class="sign-seal seal-press" />
+            </div>
+            <p class="ps s" style="--d: 2.2s">
+              {{ t('letter.ps') }}
+              <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer">saturn-core.com</a>
+            </p>
+          </footer>
+        </article>
       </div>
 
       <!-- Things lying on the desk beside the letter. -->
@@ -109,7 +124,9 @@ onBeforeUnmount(() => clearTimeout(clock));
 /* The desk the letter lies on. */
 .letter-section {
   padding: clamp(40px, 7vw, 88px) 0 clamp(72px, 10vw, 128px);
-  background: var(--grain) 0 0 / 200px, var(--bg-raised);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--bg-raised);
 }
 
 /* The letter: a sheet of paper on the page. */
@@ -200,7 +217,9 @@ onBeforeUnmount(() => clearTimeout(clock));
 .stamp-paper {
   width: clamp(84px, 14vw, 116px);
   padding: 7px;
-  background: var(--grain) 0 0 / 200px, var(--bg-raised);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--bg-raised);
   border: 3px dotted var(--paper);
   outline: 1px solid var(--line-strong);
   outline-offset: -3px;

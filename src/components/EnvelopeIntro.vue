@@ -227,7 +227,9 @@ onBeforeUnmount(() => {
   justify-content: center;
   gap: 44px;
   padding: 24px;
-  background: var(--grain) 0 0 / 200px, var(--bg-raised);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--bg-raised);
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
@@ -280,13 +282,17 @@ onBeforeUnmount(() => {
 .env-back {
   inset: 0;
   z-index: 1;
-  background: var(--grain) 0 0 / 200px, var(--layer-3);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--layer-3);
 }
 
 .env-pocket {
   inset: 0;
   z-index: 3;
-  background: var(--grain) 0 0 / 200px, var(--layer-2);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--layer-2);
   clip-path: polygon(0 0, 50% var(--fold), 100% 0, 100% 100%, 0 100%);
 }
 
@@ -339,7 +345,9 @@ onBeforeUnmount(() => {
   top: 0;
   z-index: 4;
   height: calc(var(--fold) + 6%);
-  background: var(--grain) 0 0 / 200px, var(--layer-1);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--layer-1);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
   transform: rotateX(calc(var(--flap) * 180deg));
@@ -347,7 +355,9 @@ onBeforeUnmount(() => {
 
 .is-flap-back .env-flap {
   z-index: 0;
-  background: var(--grain) 0 0 / 200px, var(--layer-2);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--layer-2);
 }
 
 /* ---------- Letter ---------- */
@@ -363,7 +373,9 @@ onBeforeUnmount(() => {
   flex-direction: column;
   gap: 10px;
   padding: 7% 9%;
-  background: var(--grain) 0 0 / 200px, var(--paper);
+  background:
+    var(--grain) 0 0 / 200px,
+    var(--paper);
   border: 1px solid var(--line);
   transform: translateY(calc(var(--rise) * -72%));
   box-shadow: 0 -6px 18px -12px rgba(60, 48, 30, calc(var(--rise) * 0.4));
@@ -373,7 +385,9 @@ onBeforeUnmount(() => {
 .is-leaving .letter {
   transform: translateY(-80%) scale(1.12);
   box-shadow: 0 30px 60px -30px rgba(60, 48, 30, 0.35);
-  transition: transform 1s var(--ease), box-shadow 1s var(--ease);
+  transition:
+    transform 1s var(--ease),
+    box-shadow 1s var(--ease);
 }
 
 .letter-salutation {
@@ -418,7 +432,9 @@ onBeforeUnmount(() => {
 .seal-half {
   position: absolute;
   inset: 0;
-  transition: transform 0.9s var(--ease), opacity 0.9s var(--ease);
+  transition:
+    transform 0.9s var(--ease),
+    opacity 0.9s var(--ease);
 }
 
 .seal-left {

@@ -16,7 +16,8 @@
           class="nav-link"
           :class="{ active: active === s }"
           @click="goTo($event, s)"
-        >{{ t(`nav.${s}`) }}</a>
+          >{{ t(`nav.${s}`) }}</a
+        >
       </nav>
 
       <div class="header-actions">
@@ -40,7 +41,9 @@
 
     <nav id="mobile-nav" class="mobile-nav" :aria-label="t('nav.toggleMenu')" :hidden="!menuOpen">
       <div class="container mobile-nav-inner">
-        <a v-for="s in NAV" :key="s" :href="`/#${s}`" class="mobile-link" @click="goTo($event, s)">{{ t(`nav.${s}`) }}</a>
+        <a v-for="s in NAV" :key="s" :href="`/#${s}`" class="mobile-link" @click="goTo($event, s)">{{
+          t(`nav.${s}`)
+        }}</a>
         <a href="/#contact" class="btn btn-dark mobile-cta" @click="goTo($event, 'contact')">{{ t('nav.contact') }}</a>
       </div>
     </nav>
@@ -76,11 +79,13 @@ import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { sealed } from './envelope.js';
+import { LETTER_SECTIONS } from './sections/index.js';
 import { AUTHOR, LINKS } from './seo/schema.js';
 import { useI18n } from './i18n';
 
-const SECTIONS = ['experience', 'projects', 'research', 'contributions', 'contact'];
-const NAV = SECTIONS.slice(0, 4);
+// Header links follow the letter's section order (src/sections/index.js), then contact.
+const NAV = LETTER_SECTIONS.map((s) => s.id);
+const SECTIONS = [...NAV, 'contact'];
 
 const route = useRoute();
 const router = useRouter();
@@ -124,9 +129,12 @@ function goTo(event, id) {
   history.replaceState(history.state, '', `#${id}`);
 }
 
-watch(() => route.fullPath, () => {
-  menuOpen.value = false;
-});
+watch(
+  () => route.fullPath,
+  () => {
+    menuOpen.value = false;
+  }
+);
 </script>
 
 <style scoped>
@@ -217,6 +225,17 @@ watch(() => route.fullPath, () => {
   gap: 28px;
 }
 
+/* Five links: a little tighter just above the menu breakpoint. */
+@media (max-width: 1040px) {
+  .header-inner {
+    gap: 28px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+}
+
 .nav-link {
   position: relative;
   font-size: 0.9375rem;
@@ -248,7 +267,6 @@ watch(() => route.fullPath, () => {
 .nav-link.active {
   color: var(--ink);
 }
-
 
 .header-actions {
   display: flex;
