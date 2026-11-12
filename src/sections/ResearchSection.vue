@@ -1,0 +1,112 @@
+<template>
+  <section class="part">
+    <PartHeader :num="num" ns="research" />
+
+    <!-- Research goals, on one line. -->
+    <dl class="focus" v-reveal>
+      <div class="focus-row">
+        <dt class="focus-label">{{ t('research.goalsTitle') }}</dt>
+        <dd class="goals">
+          <span v-for="goal in goals" :key="goal" class="goal">{{ goal }}</span>
+        </dd>
+      </div>
+      <div class="focus-row">
+        <dt class="focus-label">ORCID</dt>
+        <dd class="orcid">
+          <a :href="LINKS.orcid" target="_blank" rel="noopener noreferrer" class="quiet-link">
+            {{ orcidId }} <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h3 class="sub-title" v-reveal>{{ t('research.papersTitle') }}</h3>
+    <div class="paper-list">
+      <PaperItem v-for="(paper, i) in papers" :key="paper.id" :paper="paper" v-reveal="100 + i * 120" />
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+import PaperItem from '../components/PaperItem.vue';
+import PartHeader from '../components/PartHeader.vue';
+import { LINKS, getPapers } from '../content/index.js';
+import { useI18n } from '../i18n';
+
+defineProps({ num: { type: String, required: true } });
+
+const { locale, t, tm } = useI18n();
+
+const papers = computed(() => getPapers(locale.value));
+const goals = computed(() => tm('research.goals') ?? []);
+const orcidId = LINKS.orcid.replace('https://orcid.org/', '');
+</script>
+
+<style scoped>
+.focus {
+  margin: 0 0 clamp(32px, 5vw, 44px);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.focus-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding: 14px 0;
+}
+
+.focus-label {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.goals {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 0;
+  margin: 0;
+}
+
+.goal {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.goal + .goal::before {
+  content: '·';
+  margin: 0 0.55em;
+  color: var(--accent);
+}
+
+.focus-row + .focus-row {
+  border-top: 1px solid var(--line);
+}
+
+.orcid {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 520px) {
+  .focus-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sub-title {
+  margin: 0 0 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+.paper-list {
+  border-bottom: 1px solid var(--line-strong);
+}
+</style>

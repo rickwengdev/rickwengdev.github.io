@@ -1,0 +1,353 @@
+/* Design tokens follow saturn-core.com: warm paper, ink, oat, terracotta. */
+:root {
+  --bg: #faf9f5;
+  --bg-raised: #f0eee6;
+  --oat: #e3dacc;
+  --slate: #141413;
+  --slate-2: #262624;
+  --ink: #141413;
+  --ink-2: #5e5d59;
+  --ink-3: #87867f;
+  --line: #e8e6dc;
+  --line-strong: #d1cfc5;
+  --accent: #d97757;
+  --accent-ink: #b85c3d;
+
+  /* Paper tones used by the envelope and the letter */
+  --paper: #fffefa;
+  --layer-1: #f0eee6;
+  --layer-2: #e9e3d6;
+  --layer-3: #e3dacc;
+
+  /* Paper texture: a fine tooth and slow tonal mottling, both generated noise
+     (no image files), layered over a paper colour. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.3 0 0 0 0 0.22 0.42 0 0 0 -0.15'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --mottle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0078125' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.48 0 0 0 0 0.3 0.3 0 0 0 -0.09'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  --sans: ui-sans-serif, system-ui, -apple-system, 'PingFang TC', 'Noto Sans TC', sans-serif;
+  --serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', Georgia, 'Noto Serif TC', serif;
+  --display: var(--serif);
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --max: 1200px;
+  --measure: 38rem;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html.is-sealed {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--oat);
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Read by screen readers and AI tools, not shown on screen. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Type ---------- */
+
+.eyebrow {
+  margin: 0 0 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+}
+
+.label {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.display {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5.6vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.display em {
+  font-style: italic;
+  color: var(--accent-ink);
+}
+
+:lang(zh-Hant) .display {
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.lede {
+  max-width: var(--measure);
+  margin: 24px 0 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* ---------- Buttons & links ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 22px;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn-dark {
+  color: var(--bg);
+  background: var(--slate);
+}
+
+.btn-dark:hover {
+  background: var(--slate-2);
+}
+
+.btn-row,
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.quiet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 2px;
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-strong);
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.quiet-link:hover {
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.quiet-link .arrow {
+  color: var(--accent);
+}
+
+/* ---------- Status chip ---------- */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.status-muted {
+  color: var(--ink-2);
+  background: var(--bg-raised);
+}
+
+.status-muted::before {
+  background: var(--ink-3);
+}
+
+/* ---------- Parts of the letter ----------
+   Every section after the opening is written on the same sheet. A soft fold
+   crease runs across the paper above each one. */
+
+.part {
+  position: relative;
+  margin-top: clamp(56px, 8vw, 88px);
+  padding-top: clamp(56px, 8vw, 88px);
+}
+
+.part::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--sheet-px, 0px));
+  right: calc(-1 * var(--sheet-px, 0px));
+  height: 18px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(20, 20, 19, 0.035) 46%,
+    rgba(20, 20, 19, 0.06) 50%,
+    rgba(255, 255, 255, 0.9) 52%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.part-head {
+  margin-bottom: clamp(32px, 5vw, 44px);
+}
+
+.part-label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+}
+
+.part-num {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.part-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 3.4vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.part-lede {
+  max-width: var(--measure);
+  margin: 14px 0 0;
+  font-size: clamp(1rem, 1.4vw, 1.0625rem);
+  line-height: 1.75;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* ---------- Reveal on scroll: a short, gentle fade ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 560px) {
+  .btn-row .btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

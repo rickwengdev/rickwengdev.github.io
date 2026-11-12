@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://rickwengdev.github.io/sitemap.xml
+
+# English: https://rickwengdev.github.io/
+# 繁體中文: https://rickwengdev.github.io/zh/
+
+# Plain-text versions for AI readers
+# Index (llms.txt standard): https://rickwengdev.github.io/llms.txt
+# Full text, both languages: https://rickwengdev.github.io/llms-full.txt
+# Markdown, English:          https://rickwengdev.github.io/index.md
+# Markdown, 繁體中文:          https://rickwengdev.github.io/index.zh.md
