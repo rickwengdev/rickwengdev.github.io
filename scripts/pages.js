@@ -20,8 +20,8 @@ const MESSAGES = { en, zh };
 
 // Lines that only the prerendered page needs.
 const STATIC_TEXT = {
-  en: { updated: 'Last updated', plain: 'Plain-text versions of this page', other: '繁體中文版' },
-  zh: { updated: '最後更新', plain: '本頁的純文字版本', other: 'English version' },
+  en: { updated: 'Last updated', plain: 'Plain-text versions of this page', other: '繁體中文版', end: '.', sep: ': ' },
+  zh: { updated: '最後更新', plain: '本頁的純文字版本', other: 'English version', end: '。', sep: '：' },
 };
 
 function homeBody(locale) {
@@ -82,7 +82,7 @@ function homeBody(locale) {
 <section id="contributions"><h2>${e(m.contributions.title)}</h2><p>${e(m.contributions.subtitle)}</p><ul>${contributionsHtml}</ul></section>
 <p>${signoff}</p><p>${e(L.ps)} <a href="${LINKS.saturn}">saturn-core.com</a></p></article>
 <section id="contact"><h2>${e(m.contact.title)}</h2><p>${e(m.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a> · <a href="${LINKS.saturn}">Saturn</a></p></section>
-<footer><p>${e(s.updated)} <time datetime="${CONTENT_UPDATED}">${CONTENT_UPDATED}</time>.</p><p><a href="${HOME_PATH[other]}" hreflang="${languageTag(other)}" lang="${languageTag(other)}">${e(s.other)}</a></p><p>${e(s.plain)}: <a href="/${MARKDOWN_FILES.en}" hreflang="en">Markdown (English)</a> · <a href="/${MARKDOWN_FILES.zh}" hreflang="zh-Hant">Markdown（繁體中文）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a></p></footer>`;
+<footer><p>${e(s.updated)} <time datetime="${CONTENT_UPDATED}">${CONTENT_UPDATED}</time>${s.end}</p><p><a href="${HOME_PATH[other]}" hreflang="${languageTag(other)}" lang="${languageTag(other)}">${e(s.other)}</a></p><p>${e(s.plain)}${s.sep}<a href="/${MARKDOWN_FILES.en}" hreflang="en">Markdown (English)</a> · <a href="/${MARKDOWN_FILES.zh}" hreflang="zh-Hant">Markdown（繁體中文）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a></p></footer>`;
 }
 
 function homePage(locale) {
