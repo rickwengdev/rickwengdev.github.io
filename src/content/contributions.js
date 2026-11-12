@@ -6,6 +6,8 @@
 //   url    optional; the whole card links here
 //   kind   small label above the title
 //   title, body
+//   software  optional; true lists it as a free software application in structured data
+//   license   optional, with `software`: URL of the licence
 
 import { LINKS } from './site.js';
 
@@ -14,6 +16,8 @@ export default [
     id: 'app',
     icon: 'paper',
     url: 'https://github.com/Saturn-Technology-Project/Saturn-App',
+    software: true,
+    license: 'https://www.apache.org/licenses/LICENSE-2.0',
     kind: { en: 'Open source · Apache 2.0', zh: '開源 · Apache 2.0' },
     title: 'Saturn App',
     body: {
@@ -25,6 +29,7 @@ export default [
     id: 'mcp',
     icon: 'gate',
     url: 'https://saturn-core.com/mcp',
+    software: true,
     kind: { en: 'Free to use', zh: '免費使用' },
     title: 'Saturn MCP',
     body: {

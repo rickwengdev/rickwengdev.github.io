@@ -8,6 +8,7 @@ import {
   SITE_DESCRIPTION,
   SITE_GEO_SUMMARY,
   SITE_URL,
+  SOFTWARE,
 } from '../content/index.js';
 
 export { LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL };
@@ -48,9 +49,65 @@ export function buildPersonJsonLd(description = SITE_GEO_SUMMARY) {
     image: DEFAULT_IMAGE,
     sameAs: AUTHOR.sameAs,
     knowsAbout: KNOWS_ABOUT,
-    founder: ORGANIZATIONS.map(({ name, url }) => ({ '@type': 'Organization', name, url })),
-    worksFor: ORGANIZATIONS.filter((c) => c.current).map(({ name, url }) => ({ '@type': 'Organization', name, url })),
+    worksFor: ORGANIZATIONS.filter((org) => org.current).map(({ id }) => ({ '@id': organizationId(id) })),
+    mainEntityOfPage: { '@id': `${SITE_URL}/#profile` },
   };
+}
+
+const organizationId = (id) => `${SITE_URL}/#org-${id}`;
+
+// One node per company or project founded; "founder" points back at the person.
+export function buildOrganizationsJsonLd() {
+  return ORGANIZATIONS.map(({ id, name, url, description }) => ({
+    '@type': 'Organization',
+    '@id': organizationId(id),
+    name,
+    url,
+    description,
+    founder: { '@id': `${SITE_URL}/#person` },
+  }));
+}
+
+// The free tools listed under contributions (entries with `software: true`).
+export function buildSoftwareJsonLd() {
+  return SOFTWARE.map(({ id, name, url, description, license }) => ({
+    '@type': 'SoftwareApplication',
+    '@id': `${SITE_URL}/#software-${id}`,
+    name,
+    url,
+    description,
+    applicationCategory: 'DeveloperApplication',
+    license,
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' },
+    creator: { '@id': `${SITE_URL}/#person` },
+  }));
+}
+
+// The page itself: a profile of the person, with the date its content last changed.
+export function buildProfilePageJsonLd(dateModified) {
+  return {
+    '@type': 'ProfilePage',
+    '@id': `${SITE_URL}/#profile`,
+    url: SITE_URL,
+    name: SITE_NAME,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    mainEntity: { '@id': `${SITE_URL}/#person` },
+    inLanguage: ['en', 'zh-Hant'],
+    dateModified: dateModified || undefined,
+  };
+}
+
+// Everything the home page says about itself, as one graph.
+export function buildSiteJsonLd({ papers = [], dateModified } = {}) {
+  return wrapJsonLd([
+    buildWebsiteJsonLd(),
+    buildProfilePageJsonLd(dateModified),
+    buildPersonJsonLd(),
+    ...buildOrganizationsJsonLd(),
+    ...buildSoftwareJsonLd(),
+    buildPapersJsonLd(papers),
+  ]);
 }
 
 export function buildWebsiteJsonLd(description = SITE_DESCRIPTION) {
@@ -69,7 +126,7 @@ export function buildPapersJsonLd(papers) {
   if (!papers.length) return null;
   return {
     '@type': 'ItemList',
-    '@id': `${SITE_URL}/papers#list`,
+    '@id': `${SITE_URL}/#papers`,
     name: 'Papers by Rick Weng',
     itemListElement: papers.map((paper, index) => ({
       '@type': 'ListItem',
@@ -108,7 +165,15 @@ export function wrapJsonLd(graph) {
 
 // ---------- Static <head> for prerendered pages ----------
 
-export function buildHeadTags({ title, description, path, keywords, noindex = false, geoSummary }) {
+// Plain-text versions of the page for AI readers; index.html lists the same links.
+const MARKDOWN_ALTERNATES = [
+  `<link rel="alternate" type="text/markdown" hreflang="en" title="Markdown (English)" href="/index.md" />`,
+  `<link rel="alternate" type="text/markdown" hreflang="zh-Hant" title="Markdown (繁體中文)" href="/index.zh.md" />`,
+  `<link rel="alternate" type="text/plain" title="LLMs index" href="/llms.txt" />`,
+  `<link rel="alternate" type="text/plain" title="LLMs full text" href="/llms-full.txt" />`,
+];
+
+export function buildHeadTags({ title, description, path, keywords, noindex = false, geoSummary, dateModified }) {
   const url = pageUrl(path);
   const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
   const keywordContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
@@ -123,6 +188,8 @@ export function buildHeadTags({ title, description, path, keywords, noindex = fa
     `<link rel="alternate" hreflang="x-default" href="${url}" />`,
     `<link rel="alternate" hreflang="en" href="${url}" />`,
     `<link rel="alternate" hreflang="zh-Hant" href="${url}" />`,
+    ...MARKDOWN_ALTERNATES,
+    dateModified ? `<meta property="og:updated_time" content="${dateModified}" />` : '',
     geoSummary ? `<meta name="abstract" content="${escapeHtml(geoSummary)}" />` : '',
     `<meta property="og:locale" content="en_US" />`,
     `<meta property="og:locale:alternate" content="zh_TW" />`,

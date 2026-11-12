@@ -8,7 +8,7 @@ Personal site of Rick Weng: one page that opens from a wax-sealed envelope into 
 npm install          # 第一次
 npm run dev          # 本機預覽，改檔案會即時更新
 npm run check        # 檢查 src/content 的資料有沒有填錯
-npm run build        # 檢查資料 → 產生 sitemap、llms.txt → 建置 → 預先產生給搜尋引擎的頁面
+npm run build        # 檢查資料 → 產生 sitemap、llms.txt、Markdown 版 → 建置 → 預先產生給搜尋引擎的頁面
 npm run format       # 用 Prettier 統一整個專案的程式碼格式
 ```
 
@@ -32,7 +32,21 @@ title: 'Saturn App',                            // 中英相同，直接寫字�
 | 開放成果                | `src/content/contributions.js` | `icon` 可用 `paper`、`gate`、`open`、`code`、`planet`                  |
 | Email、GitHub、網站描述 | `src/content/site.js`          | 也包含給搜尋引擎和 AI 讀的簡介                                         |
 
-新增一筆就是在陣列裡多加一個 `{ … }`，順序就是頁面上的順序。sitemap、llms.txt 和預先產生的頁面都會在建置時自動跟著更新。
+新增一筆就是在陣列裡多加一個 `{ … }`，順序就是頁面上的順序。sitemap、llms.txt、Markdown 版和預先產生的頁面都會在建置時自動跟著更新。
+
+## 給 AI 讀的版本
+
+建置時會從同一份資料自動產生，不需要手動維護：
+
+| 網址             | 內容                                                            |
+| ---------------- | --------------------------------------------------------------- |
+| `/llms.txt`      | 簡短索引：身分、重點事實，以及下面幾個全文檔的連結              |
+| `/index.md`      | 整頁內容的 Markdown 版（英文）                                  |
+| `/index.zh.md`   | 整頁內容的 Markdown 版（繁體中文）                              |
+| `/llms-full.txt` | 中英文全文合併成一個檔案                                        |
+| 首頁 HTML        | 不需執行 JavaScript 就能讀到的英文全文，以及 JSON-LD 結構化資料 |
+
+「最後更新」日期取自 `src/content`、`src/locales` 最後一次 commit 的日期（`scripts/content-date.js`）。
 
 ## 修改文字和版面
 
@@ -45,7 +59,7 @@ title: 'Saturn App',                            // 中英相同，直接寫字�
 | 信封動畫                             | `src/components/EnvelopeIntro.vue`                     |
 | 頁首、頁尾                           | `src/App.vue`                                          |
 
-新增一個區塊：在 `src/sections/` 新增 `.vue`（開頭用 `<PartHeader :num="num" ns="區塊名稱" />`），在 `src/sections/index.js` 加一行，再到兩個 locale 檔加上 `nav.區塊名稱` 和 `區塊名稱: { eyebrow, title }`。給搜尋引擎的版本在 `scripts/pages.js`，給 AI 讀的版本在 `scripts/generate-llms-txt.js`。
+新增一個區塊：在 `src/sections/` 新增 `.vue`（開頭用 `<PartHeader :num="num" ns="區塊名稱" />`），在 `src/sections/index.js` 加一行，再到兩個 locale 檔加上 `nav.區塊名稱` 和 `區塊名稱: { eyebrow, title }`。給搜尋引擎的版本在 `scripts/pages.js`，給 AI 讀的版本在 `scripts/markdown.js`（Markdown 全文）和 `scripts/generate-llms-txt.js`（llms.txt 索引）。
 
 ## 結構
 
@@ -57,5 +71,5 @@ src/
   components/  共用元件（信封、區塊標題、論文、經歷項目…）
   seo/         標題、描述、結構化資料
   style.css    設計變數與共用樣式
-scripts/       建置時執行：資料檢查、sitemap、llms.txt、預先產生頁面
+scripts/       建置時執行：資料檢查、sitemap、llms.txt、Markdown 版、預先產生頁面
 ```

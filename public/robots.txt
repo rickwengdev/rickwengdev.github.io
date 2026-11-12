@@ -37,5 +37,8 @@ Allow: /
 
 Sitemap: https://rickwengdev.github.io/sitemap.xml
 
-# LLM-readable indexes (llms.txt standard)
-# https://rickwengdev.github.io/llms.txt
+# Plain-text versions for AI readers
+# Index (llms.txt standard): https://rickwengdev.github.io/llms.txt
+# Full text, both languages: https://rickwengdev.github.io/llms-full.txt
+# Markdown, English:          https://rickwengdev.github.io/index.md
+# Markdown, 繁體中文:          https://rickwengdev.github.io/index.zh.md

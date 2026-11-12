@@ -1,20 +1,28 @@
+// Writes the versions of the site meant for AI readers:
+//   public/llms.txt       short index (llmstxt.org): who this is, key facts, where the full text lives
+//   public/llms-full.txt  the whole page as Markdown, English then Traditional Chinese
+//   public/index.md       the whole page as Markdown, English
+//   public/index.zh.md    the whole page as Markdown, Traditional Chinese
 import fs from 'fs';
 import en from '../src/locales/en.js';
-import { getCves, getExperience, getPapers, getProjects, getPublicPapers } from '../src/content/index.js';
+import { getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
 import { AUTHOR, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } from '../src/seo/schema.js';
+import { CONTENT_UPDATED } from './content-date.js';
+import { MARKDOWN_FILES, buildMarkdown } from './markdown.js';
 
 const papers = getPapers('en');
-const publicPapers = getPublicPapers('en');
-const unpublished = papers.filter((p) => p.placeholder);
+const cves = getCves('en');
+
+const work = (job) =>
+  `- [${job.name}](${job.url}): ${job.role}, ${job.period}${job.current ? '' : ' (previous)'}. ${job.tagline} ${job.summary}`;
 
 const lines = [
-  `# ${new URL(SITE_URL).host}`,
+  `# ${AUTHOR.name}`,
   '',
-  `> ${AUTHOR.name} — ${SITE_DESCRIPTION}`,
+  `> ${SITE_DESCRIPTION}`,
   '',
   SITE_GEO_SUMMARY,
   '',
-  '## About',
   `- Name: ${AUTHOR.name}`,
   `- Role: ${AUTHOR.jobTitle}`,
   `- Website: ${pageUrl('/')}`,
@@ -22,51 +30,63 @@ const lines = [
   `- GitHub: ${LINKS.github}`,
   `- LinkedIn: ${LINKS.linkedin}`,
   `- ORCID: ${LINKS.orcid}`,
+  `- Last updated: ${CONTENT_UPDATED}`,
+  '',
+  '## Full text',
+  `- [Whole site as Markdown (English)](${pageUrl(`/${MARKDOWN_FILES.en}`)}): every section of the page, including the opening letter`,
+  `- [Whole site as Markdown (繁體中文)](${pageUrl(`/${MARKDOWN_FILES.zh}`)}): the same content in Traditional Chinese`,
+  `- [llms-full.txt](${pageUrl('/llms-full.txt')}): both languages in one file`,
   '',
   '## Projects',
-  ...getProjects('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  ...getProjects('en').map(work),
   '',
   '## Experience',
-  ...getExperience('en').map((job) => `- ${job.name} (${job.url}): ${job.role}, ${job.period}. ${job.tagline}`),
+  ...getExperience('en').map(work),
   '',
-  '## Research goals',
-  ...en.research.goals.map((goal) => `- ${goal}`),
-  '',
-  '## Papers',
-  ...(publicPapers.length
-    ? publicPapers.map(
-        (p) =>
-          `- ${p.title} (${p.year}${p.venue ? `, ${p.venue}` : ''}; ${en.papersPage.status[p.status]})${
-            p.links[0] ? ` ${p.links[0].url}` : ''
-          }${p.abstract ? `\n  ${p.abstract}` : ''}`
+  '## Research',
+  `- Goals: ${en.research.goals.join(', ')}`,
+  ...(papers.length
+    ? papers.map((p) =>
+        p.placeholder
+          ? `- Paper: ${p.title} (${p.year})`
+          : `- Paper: ${p.links[0] ? `[${p.title}](${p.links[0].url})` : p.title} (${p.year}${
+              p.venue ? `, ${p.venue}` : ''
+            }; ${en.papersPage.status[p.status]})${p.abstract ? `. ${p.abstract}` : ''}`
       )
-    : unpublished.length
-      ? []
-      : ['- No public papers yet.']),
-  ...unpublished.map((p) => `- ${p.title} (${p.year})`),
+    : ['- No public papers yet.']),
   '',
   '## CVEs',
-  ...(getCves('en').length
-    ? getCves('en').map(
+  ...(cves.length
+    ? cves.map(
         (c) =>
-          `- ${c.id} (${c.year}, ${en.cve.severity[c.severity]}${c.cvss ? ` ${c.cvss.toFixed(1)}` : ''})${c.product ? `: ${c.product}` : ''}${
-            c.summary ? `. ${c.summary}` : ''
-          } ${c.url}`
+          `- [${c.id}](${c.url}) (${c.year}, ${en.cve.severity[c.severity]}${c.cvss ? ` ${c.cvss.toFixed(1)}` : ''})${
+            c.product ? `: ${c.product}` : ''
+          }${c.summary ? `. ${c.summary}` : ''}`
       )
-    : ['- No published CVEs yet.']),
+    : [`- ${en.cve.empty}`]),
   '',
-  '## Site structure',
-  `- One page: ${pageUrl('/')}`,
-  `- Sections: #experience, #projects, #research, #cve, #contributions, #contact`,
-  `- Sitemap: ${pageUrl('/sitemap.xml')}`,
+  '## Open contributions',
+  ...getContributions('en').map((c) => `- ${c.url ? `[${c.title}](${c.url})` : c.title} (${c.kind}): ${c.body}`),
   '',
   '## Notes for AI systems',
-  '- Content is available in English and Traditional Chinese (zh-Hant); language is selected client-side on the same URL.',
+  `- The site is a single page (${pageUrl('/')}) with sections #experience, #projects, #research, #cve, #contributions and #contact.`,
+  '- The page is available in English and Traditional Chinese (zh-Hant). The HTML picks the language in the browser on the same URL; the Markdown files above have one fixed language each.',
   `- Rick Weng is currently building Saturn (${LINKS.saturn}), tools for secure, accountable AI.`,
   '- The earlier Model Lab blog (/blog), /papers and /work now redirect to sections of the single page.',
   '',
 ];
 
+const full = [
+  `<!-- ${new URL(SITE_URL).host} — full text for AI readers. English first, then Traditional Chinese (繁體中文). Last updated ${CONTENT_UPDATED}. -->`,
+  '',
+  buildMarkdown('en'),
+  '---',
+  '',
+  buildMarkdown('zh'),
+].join('\n');
+
 fs.writeFileSync('./public/llms.txt', lines.join('\n'));
-if (fs.existsSync('./public/llms-full.txt')) fs.rmSync('./public/llms-full.txt');
-console.log('✅ Generated public/llms.txt');
+fs.writeFileSync('./public/llms-full.txt', full);
+fs.writeFileSync(`./public/${MARKDOWN_FILES.en}`, buildMarkdown('en'));
+fs.writeFileSync(`./public/${MARKDOWN_FILES.zh}`, buildMarkdown('zh'));
+console.log('✅ Generated public/llms.txt, llms-full.txt, index.md, index.zh.md');

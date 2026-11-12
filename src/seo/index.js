@@ -1,15 +1,6 @@
 import { getPublicPapers } from '../content/index.js';
 import { tm } from '../i18n/index.js';
-import {
-  SITE_NAME,
-  DEFAULT_IMAGE,
-  SITE_GEO_SUMMARY,
-  buildPersonJsonLd,
-  buildWebsiteJsonLd,
-  buildPapersJsonLd,
-  wrapJsonLd,
-  pageUrl,
-} from './schema.js';
+import { SITE_NAME, DEFAULT_IMAGE, SITE_GEO_SUMMARY, buildSiteJsonLd, pageUrl } from './schema.js';
 
 function upsertMeta(attr, key, content) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
@@ -97,6 +88,7 @@ export function updateSeoForRoute(route, locale, t) {
     ...base,
     path: '/',
     geoSummary: SITE_GEO_SUMMARY,
-    jsonLd: wrapJsonLd([buildWebsiteJsonLd(), buildPersonJsonLd(), buildPapersJsonLd(getPublicPapers(locale))]),
+    // The date is set at build time (vite.config.js) from the last content commit.
+    jsonLd: buildSiteJsonLd({ papers: getPublicPapers(locale), dateModified: import.meta.env.VITE_CONTENT_UPDATED }),
   });
 }

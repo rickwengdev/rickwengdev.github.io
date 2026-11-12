@@ -1,10 +1,9 @@
-# rickwengdev.github.io
+# Rick Weng
 
-> Rick Weng — Research into how language models and AI agents actually behave, and tools that keep them accountable.
+> Research into how language models and AI agents actually behave, and tools that keep them accountable.
 
 Rick Weng is an independent AI security researcher and the founder of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.
 
-## About
 - Name: Rick Weng
 - Role: Founder of Saturn; independent AI security researcher
 - Website: https://rickwengdev.github.io
@@ -12,29 +11,34 @@ Rick Weng is an independent AI security researcher and the founder of Saturn (sa
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
+- Last updated: 2026-11-12
+
+## Full text
+- [Whole site as Markdown (English)](https://rickwengdev.github.io/index.md): every section of the page, including the opening letter
+- [Whole site as Markdown (繁體中文)](https://rickwengdev.github.io/index.zh.md): the same content in Traditional Chinese
+- [llms-full.txt](https://rickwengdev.github.io/llms-full.txt): both languages in one file
 
 ## Projects
-- Saturn (https://saturn-core.com): Founder & CEO, Sep 2026 – Present. Infrastructure for secure, accountable AI.
+- [Saturn](https://saturn-core.com): Founder & CEO, Sep 2026 – Present. Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 
 ## Experience
-- Kura Finance (https://kura-finance.com): Founder & CEO, 2026 – Sep 2026. Modern finance, redesigned.
+- [Kura Finance](https://kura-finance.com): Founder & CEO, 2026 – Sep 2026 (previous). Modern finance, redesigned. An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.
 
-## Research goals
-- Pretraining
-- Interpretability
-
-## Papers
-- Activation steering in coding agents (2026)
+## Research
+- Goals: Pretraining, Interpretability
+- Paper: Activation steering in coding agents (2026)
 
 ## CVEs
 - No published CVEs yet.
 
-## Site structure
-- One page: https://rickwengdev.github.io
-- Sections: #experience, #projects, #research, #cve, #contributions, #contact
-- Sitemap: https://rickwengdev.github.io/sitemap.xml
+## Open contributions
+- [Saturn App](https://github.com/Saturn-Technology-Project/Saturn-App) (Open source · Apache 2.0): A desktop workbench for AI research: experiments are compared only when measured identically, every sample from every model can be inspected, and activation patching and SAE features are built in. Each release ships with a checksum and signed build provenance.
+- [Saturn MCP](https://saturn-core.com/mcp) (Free to use): A gateway that governs what AI agents may do: every tool call is checked against versioned policy down to its arguments, sensitive calls are routed for human approval, and every decision is recorded.
+- Open research (Methodology): Each paper is published with its preregistration, code and raw data, including results that did not hold, so the findings can be independently verified.
+- [Code](https://github.com/rickwengdev) (GitHub): Research experiments, tools, and the source code for this website.
 
 ## Notes for AI systems
-- Content is available in English and Traditional Chinese (zh-Hant); language is selected client-side on the same URL.
+- The site is a single page (https://rickwengdev.github.io) with sections #experience, #projects, #research, #cve, #contributions and #contact.
+- The page is available in English and Traditional Chinese (zh-Hant). The HTML picks the language in the browser on the same URL; the Markdown files above have one fixed language each.
 - Rick Weng is currently building Saturn (https://saturn-core.com), tools for secure, accountable AI.
 - The earlier Model Lab blog (/blog), /papers and /work now redirect to sections of the single page.
