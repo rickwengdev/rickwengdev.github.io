@@ -1,6 +1,6 @@
 # rickwengdev.github.io
 
-Personal site of Rick Weng: one page that opens from a wax-sealed envelope into a letter (experience, projects, research, CVEs, contributions), with contact in a reply envelope below. Vue 3 + Vite, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
+Personal site of Rick Weng (English at `/`, Traditional Chinese at `/zh/`): one page that opens from a wax-sealed envelope into a letter (experience, projects, research, CVEs, contributions), with contact in a reply envelope below. Vue 3 + Vite, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
 ## 指令
 
@@ -38,13 +38,15 @@ title: 'Saturn App',                            // 中英相同，直接寫字�
 
 建置時會從同一份資料自動產生，不需要手動維護：
 
-| 網址             | 內容                                                            |
-| ---------------- | --------------------------------------------------------------- |
-| `/llms.txt`      | 簡短索引：身分、重點事實，以及下面幾個全文檔的連結              |
-| `/index.md`      | 整頁內容的 Markdown 版（英文）                                  |
-| `/index.zh.md`   | 整頁內容的 Markdown 版（繁體中文）                              |
-| `/llms-full.txt` | 中英文全文合併成一個檔案                                        |
-| 首頁 HTML        | 不需執行 JavaScript 就能讀到的英文全文，以及 JSON-LD 結構化資料 |
+| 網址             | 內容                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| `/llms.txt`      | 簡短索引：身分、重點事實，以及下面幾個全文檔的連結                                    |
+| `/index.md`      | 整頁內容的 Markdown 版（英文）                                                        |
+| `/index.zh.md`   | 整頁內容的 Markdown 版（繁體中文）                                                    |
+| `/llms-full.txt` | 中英文全文合併成一個檔案                                                              |
+| `/`、`/zh/`      | 英文版與繁體中文版首頁；HTML 本身就有全文（不需執行 JavaScript）和 JSON-LD 結構化資料 |
+
+網址決定語言：`/` 是英文、`/zh/` 是中文。第一次造訪 `/` 時，如果瀏覽器是中文（或之前在切換鈕選過中文），會自動轉到 `/zh/`；語言切換鈕是連到另一個網址的連結。自動化瀏覽器（AI 代理、爬蟲、測試工具）會直接看到信件，不播信封動畫（`src/envelope.js`）。
 
 「最後更新」日期取自 `src/content`、`src/locales` 最後一次 commit 的日期（`scripts/content-date.js`）。
 

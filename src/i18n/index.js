@@ -1,17 +1,44 @@
 import { ref, computed } from 'vue';
 import en from '../locales/en.js';
 import zh from '../locales/zh.js';
+import { HOME_PATH, localeFromPath } from '../content/localize.js';
 
+// Each language has its own address: English at /, Traditional Chinese at /zh/.
+// The address decides the language. A reader's saved choice (or, the first time,
+// their browser language) only decides which home page `/` sends them to.
 const STORAGE_KEY = 'site-locale';
 const messages = { en, zh };
 
-const getInitialLocale = () => {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === 'en' || saved === 'zh') return saved;
-  return navigator.language?.toLowerCase().startsWith('zh') ? 'zh' : 'en';
-};
+export { HOME_PATH, localeFromPath };
 
-export const locale = ref(getInitialLocale());
+function savedLocale() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved === 'en' || saved === 'zh' ? saved : null;
+  } catch {
+    return null;
+  }
+}
+
+// The language this reader would rather read: their own choice, else the browser's.
+export function preferredLocale() {
+  return savedLocale() ?? (navigator.language?.toLowerCase().startsWith('zh') ? 'zh' : 'en');
+}
+
+// Remember an explicit choice from the language switcher.
+export function rememberLocale(next) {
+  try {
+    localStorage.setItem(STORAGE_KEY, next);
+  } catch {
+    // private mode: the choice lasts until the tab closes
+  }
+}
+
+// Pages under /zh/ are Chinese; elsewhere the router may still send `/` to /zh/
+// (see src/router/index.js), so start in the language the reader will end up in.
+const initialLocale = () => (localeFromPath(window.location.pathname) === 'zh' ? 'zh' : preferredLocale());
+
+export const locale = ref(initialLocale());
 
 const resolve = (obj, path) =>
   path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
@@ -29,7 +56,6 @@ export function t(key, params = {}) {
 export function setLocale(next) {
   if (next !== 'en' && next !== 'zh') return;
   locale.value = next;
-  localStorage.setItem(STORAGE_KEY, next);
   document.documentElement.lang = next === 'zh' ? 'zh-Hant' : 'en';
 }
 

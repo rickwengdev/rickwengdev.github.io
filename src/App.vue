@@ -3,7 +3,7 @@
 
   <header class="site-header" :class="{ open: menuOpen, hidden: sealed }">
     <div class="container header-inner">
-      <a href="/#top" class="wordmark" aria-label="Rick Weng — top" @click="goTo($event, 'top')">
+      <a :href="`${home}#top`" class="wordmark" aria-label="Rick Weng — top" @click="goTo($event, 'top')">
         <span class="wordmark-mark" aria-hidden="true">R</span>
         <span class="wordmark-name">Rick Weng</span>
       </a>
@@ -12,7 +12,7 @@
         <a
           v-for="s in NAV"
           :key="s"
-          :href="`/#${s}`"
+          :href="`${home}#${s}`"
           class="nav-link"
           :class="{ active: active === s }"
           @click="goTo($event, s)"
@@ -22,7 +22,9 @@
 
       <div class="header-actions">
         <LanguageSwitcher />
-        <a href="/#contact" class="btn btn-dark header-cta" @click="goTo($event, 'contact')">{{ t('nav.contact') }}</a>
+        <a :href="`${home}#contact`" class="btn btn-dark header-cta" @click="goTo($event, 'contact')">{{
+          t('nav.contact')
+        }}</a>
         <button
           class="menu-toggle"
           type="button"
@@ -41,10 +43,12 @@
 
     <nav id="mobile-nav" class="mobile-nav" :aria-label="t('nav.toggleMenu')" :hidden="!menuOpen">
       <div class="container mobile-nav-inner">
-        <a v-for="s in NAV" :key="s" :href="`/#${s}`" class="mobile-link" @click="goTo($event, s)">{{
+        <a v-for="s in NAV" :key="s" :href="`${home}#${s}`" class="mobile-link" @click="goTo($event, s)">{{
           t(`nav.${s}`)
         }}</a>
-        <a href="/#contact" class="btn btn-dark mobile-cta" @click="goTo($event, 'contact')">{{ t('nav.contact') }}</a>
+        <a :href="`${home}#contact`" class="btn btn-dark mobile-cta" @click="goTo($event, 'contact')">{{
+          t('nav.contact')
+        }}</a>
       </div>
     </nav>
   </header>
@@ -55,7 +59,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="/#top" class="wordmark" @click="goTo($event, 'top')">
+      <a :href="`${home}#top`" class="wordmark" @click="goTo($event, 'top')">
         <span class="wordmark-mark" aria-hidden="true">R</span>
         <span class="wordmark-name">Rick Weng</span>
       </a>
@@ -65,13 +69,13 @@
 </template>
 
 <script setup>
-import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { sealed } from './envelope.js';
 import { LETTER_SECTIONS } from './sections/index.js';
 import { AUTHOR } from './seo/schema.js';
-import { useI18n } from './i18n';
+import { HOME_PATH, useI18n } from './i18n';
 
 // Header links follow the letter's section order (src/sections/index.js); contact is the last section.
 // The footer is just the name and copyright: the header has the sections, the contact section the profiles.
@@ -80,7 +84,9 @@ const SECTIONS = [...NAV, 'contact'];
 
 const route = useRoute();
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale } = useI18n();
+// Section links stay in the current language: /#research or /zh/#research.
+const home = computed(() => HOME_PATH[locale.value]);
 const menuOpen = ref(false);
 const active = ref('');
 const progress = ref(0);
@@ -106,13 +112,13 @@ onMounted(() => {
 
 onBeforeUnmount(() => window.removeEventListener('scroll', onScroll));
 
-// Section links: scroll smoothly on the home page; from elsewhere, go home first.
+// Section links: scroll smoothly on a home page; from elsewhere, go home first.
 function goTo(event, id) {
   if (event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) return;
   event.preventDefault();
   menuOpen.value = false;
-  if (route.path !== '/') {
-    router.push({ path: '/', hash: `#${id}` });
+  if (!route.meta.locale) {
+    router.push({ path: home.value, hash: `#${id}` });
     return;
   }
   if (id === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });

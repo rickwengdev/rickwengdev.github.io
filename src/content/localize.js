@@ -15,3 +15,8 @@ export function localize(value, locale) {
 export function localizeEntry(entry, locale) {
   return Object.fromEntries(Object.entries(entry).map(([key, value]) => [key, localize(value, locale)]));
 }
+
+// The home page in each language. English is the default at `/`.
+export const HOME_PATH = { en: '/', zh: '/zh/' };
+
+export const localeFromPath = (path) => (/^\/zh(\/|$)/.test(path) ? 'zh' : 'en');

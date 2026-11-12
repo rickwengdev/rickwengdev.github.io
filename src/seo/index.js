@@ -1,6 +1,17 @@
 import { getPublicPapers } from '../content/index.js';
 import { tm } from '../i18n/index.js';
-import { SITE_NAME, DEFAULT_IMAGE, SITE_GEO_SUMMARY, buildSiteJsonLd, pageUrl } from './schema.js';
+import {
+  SITE_NAME,
+  DEFAULT_IMAGE,
+  HOME_PATH,
+  LANGUAGE_ALTERNATES,
+  SITE_SUMMARY,
+  buildSiteJsonLd,
+  pageUrl,
+} from './schema.js';
+
+// The date the content last changed, set at build time (vite.config.js) from git.
+export const CONTENT_UPDATED = import.meta.env.VITE_CONTENT_UPDATED;
 
 function upsertMeta(attr, key, content) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
@@ -60,8 +71,8 @@ function applySeo({ title, description, path, keywords, jsonLd, noindex = false,
   upsertMeta('name', 'twitter:description', description);
 
   upsertLink('link[rel="canonical"]', { rel: 'canonical', href: url });
-  for (const lang of ['x-default', 'en', 'zh-Hant']) {
-    upsertLink(`link[rel="alternate"][hreflang="${lang}"]`, { rel: 'alternate', hreflang: lang, href: url });
+  for (const { hreflang, href } of LANGUAGE_ALTERNATES) {
+    upsertLink(`link[rel="alternate"][hreflang="${hreflang}"]:not([type])`, { rel: 'alternate', hreflang, href });
   }
 
   upsertJsonLd(jsonLd);
@@ -86,9 +97,9 @@ export function updateSeoForRoute(route, locale, t) {
 
   applySeo({
     ...base,
-    path: '/',
-    geoSummary: SITE_GEO_SUMMARY,
-    // The date is set at build time (vite.config.js) from the last content commit.
-    jsonLd: buildSiteJsonLd({ papers: getPublicPapers(locale), dateModified: import.meta.env.VITE_CONTENT_UPDATED }),
+    // Each language has its own home page: / or /zh/.
+    path: HOME_PATH[locale],
+    geoSummary: SITE_SUMMARY[locale],
+    jsonLd: buildSiteJsonLd({ locale, papers: getPublicPapers(locale), dateModified: CONTENT_UPDATED }),
   });
 }

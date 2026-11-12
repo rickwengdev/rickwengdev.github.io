@@ -11,7 +11,7 @@
 - Saturn: https://saturn-core.com
 - Last updated: 2026-11-12
 - Language: English
-- Also available in: [繁體中文 (Traditional Chinese)](https://rickwengdev.github.io/index.zh.md)
+- Also available in: https://rickwengdev.github.io/zh/ · [Markdown](https://rickwengdev.github.io/index.zh.md)
 
 ## Letter
 

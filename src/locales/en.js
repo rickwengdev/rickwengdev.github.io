@@ -53,6 +53,7 @@ export default {
     signoffAfter: '',
     ps: 'P.S. All Saturn products are free to use.',
     stamp: 'Photo of Rick Weng',
+    updated: 'Last updated',
     postmark: 'RICK WENG · AI SECURITY',
   },
   experience: {

@@ -36,24 +36,19 @@ export function getCves(locale) {
 }
 
 // Every company or project I founded, for structured data.
+// `description` is a string or { en, zh }.
 export const ORGANIZATIONS = [...projects, ...experience].map(({ id, name, url, current, summary }) => ({
   id,
   name,
   url,
   current,
-  description: localize(summary, 'en'),
+  description: summary,
 }));
 
 // Contributions marked `software: true`, for structured data.
 export const SOFTWARE = contributions
   .filter((entry) => entry.software)
-  .map(({ id, title, url, body, license }) => ({
-    id,
-    name: localize(title, 'en'),
-    url,
-    description: localize(body, 'en'),
-    license,
-  }));
+  .map(({ id, title, url, body, license }) => ({ id, name: title, url, description: body, license }));
 
 // Raw lists, for the content check.
 export const RAW = { experience, projects, contributions, papers, cves };

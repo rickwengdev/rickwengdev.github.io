@@ -7,7 +7,13 @@
             <div class="sheet-meta w" style="--d: 0.15s">
               <p class="label">{{ t('letter.from') }}</p>
               <p class="label">
-                <time class="sent-at" :datetime="now.toISOString()">{{ sentAt }}</time>
+                <!-- The visitor's own clock, drawn by CSS: it is decoration, not when the
+                     letter was written, so it stays out of the text that readers and AI tools
+                     copy. The real date is the hidden "last updated" line beside it. -->
+                <span class="sent-at" :data-time="sentAt" aria-hidden="true"></span>
+                <span class="visually-hidden">
+                  {{ t('letter.updated') }} <time :datetime="CONTENT_UPDATED">{{ updatedOn }}</time>
+                </span>
               </p>
             </div>
 
@@ -76,6 +82,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import avatar from '../assets/avatar.jpg';
 import SealMark from '../components/SealMark.vue';
 import { LINKS } from '../seo/schema.js';
+import { CONTENT_UPDATED } from '../seo';
 import { useI18n } from '../i18n';
 
 const props = defineProps({
@@ -106,6 +113,13 @@ const sentAt = computed(() =>
     dateStyle: 'long',
     timeStyle: 'medium',
   }).format(now.value)
+);
+
+// When the content last changed (set at build time from git), in the reader's language.
+const updatedOn = computed(() =>
+  new Intl.DateTimeFormat(locale.value === 'zh' ? 'zh-TW' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(
+    new Date(`${CONTENT_UPDATED}T00:00:00Z`)
+  )
 );
 
 onMounted(() => {
@@ -198,6 +212,10 @@ onBeforeUnmount(() => clearTimeout(clock));
 
 .sent-at {
   font-variant-numeric: tabular-nums;
+}
+
+.sent-at::before {
+  content: attr(data-time);
 }
 
 .sheet-meta .label:first-child {

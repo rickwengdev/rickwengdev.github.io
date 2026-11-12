@@ -21,8 +21,12 @@ export const SITE_DESCRIPTION =
   'Research into how language models and AI agents actually behave, and tools that keep them accountable.';
 
 // A short paragraph for AI readers (meta abstract, structured data, llms.txt).
-export const SITE_GEO_SUMMARY =
-  'Rick Weng is an independent AI security researcher and the founder of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.';
+export const SITE_SUMMARY = {
+  en: 'Rick Weng is an independent AI security researcher and the founder of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.',
+  zh: 'Rick Weng 是獨立 AI 安全研究者，也是 Saturn（saturn-core.com）的創辦人。Saturn 提供免費的 AI 安全工具：Saturn MCP 是讓代理的每一次工具呼叫都經過政策審查、人工核准與稽核的閘道；Saturn App 是開源的 AI 研究桌面工作台。研究目標為預訓練與可解釋性；每項研究皆預先登記，並隨論文公開程式碼與資料。',
+};
+
+export const SITE_GEO_SUMMARY = SITE_SUMMARY.en;
 
 // Topics listed as "knowsAbout" in structured data. Not shown on the page.
 export const KNOWS_ABOUT = [

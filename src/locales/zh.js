@@ -52,6 +52,7 @@ export default {
     signoffAfter: '敬上',
     ps: '附註：Saturn 的所有產品皆免費提供。',
     stamp: 'Rick Weng 的照片',
+    updated: '最後更新',
     postmark: 'RICK WENG · AI SECURITY',
   },
   experience: {

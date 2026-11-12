@@ -16,10 +16,10 @@ const script = baseHtml.match(/<script type="module" crossorigin src="([^"]+)"><
 const css = baseHtml.match(/<link rel="stylesheet" crossorigin href="([^"]+)">/)?.[1];
 const fonts = baseHtml.match(/<link rel="preconnect"[\s\S]*?family=[^>]+>/)?.[0] ?? '';
 
-function renderPage({ path: pagePath, seo, geoSummary, lastmod, jsonLd, body }) {
-  const head = buildHeadTags({ ...seo, path: pagePath, geoSummary, dateModified: lastmod });
+function renderPage({ path: pagePath, locale, lang, seo, geoSummary, lastmod, jsonLd, body }) {
+  const head = buildHeadTags({ ...seo, path: pagePath, geoSummary, dateModified: lastmod, locale });
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />

@@ -6,7 +6,7 @@
 import fs from 'fs';
 import en from '../src/locales/en.js';
 import { getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
-import { AUTHOR, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } from '../src/seo/schema.js';
+import { AUTHOR, HOME_PATH, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } from '../src/seo/schema.js';
 import { CONTENT_UPDATED } from './content-date.js';
 import { MARKDOWN_FILES, buildMarkdown } from './markdown.js';
 
@@ -25,7 +25,7 @@ const lines = [
   '',
   `- Name: ${AUTHOR.name}`,
   `- Role: ${AUTHOR.jobTitle}`,
-  `- Website: ${pageUrl('/')}`,
+  `- Website: ${pageUrl('/')} (English) · ${pageUrl(HOME_PATH.zh)} (繁體中文)`,
   `- Email: ${AUTHOR.email}`,
   `- GitHub: ${LINKS.github}`,
   `- LinkedIn: ${LINKS.linkedin}`,
@@ -69,8 +69,9 @@ const lines = [
   ...getContributions('en').map((c) => `- ${c.url ? `[${c.title}](${c.url})` : c.title} (${c.kind}): ${c.body}`),
   '',
   '## Notes for AI systems',
-  `- The site is a single page (${pageUrl('/')}) with sections #experience, #projects, #research, #cve, #contributions and #contact.`,
-  '- The page is available in English and Traditional Chinese (zh-Hant). The HTML picks the language in the browser on the same URL; the Markdown files above have one fixed language each.',
+  `- The site is a single page with sections #experience, #projects, #research, #cve, #contributions and #contact, in English at ${pageUrl('/')} and in Traditional Chinese (zh-Hant) at ${pageUrl(HOME_PATH.zh)}. Both have the full text in their HTML, readable without JavaScript.`,
+  `- Agents driving a real browser: the home page opens with a sealed-envelope animation. Open ${pageUrl('/')}#top (or ${pageUrl(HOME_PATH.zh)}#top) to go straight to the letter; it is also skipped automatically for automated browsers.`,
+  '- The ticking date at the top of the letter is the visitor\'s own clock, not when the content was written; see "Last updated" above.',
   `- Rick Weng is currently building Saturn (${LINKS.saturn}), tools for secure, accountable AI.`,
   '- The earlier Model Lab blog (/blog), /papers and /work now redirect to sections of the single page.',
   '',

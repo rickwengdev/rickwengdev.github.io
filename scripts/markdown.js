@@ -4,7 +4,7 @@
 import en from '../src/locales/en.js';
 import zh from '../src/locales/zh.js';
 import { getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
-import { AUTHOR, LINKS, SITE_DESCRIPTION, pageUrl } from '../src/seo/schema.js';
+import { AUTHOR, HOME_PATH, LINKS, SITE_DESCRIPTION, pageUrl } from '../src/seo/schema.js';
 import { CONTENT_UPDATED } from './content-date.js';
 
 export const MARKDOWN_FILES = { en: 'index.md', zh: 'index.zh.md' };
@@ -82,7 +82,7 @@ export function buildMarkdown(locale = 'en') {
     `> ${l.intro}`,
     '',
     ...(locale === 'en' ? [`- ${l.role}${l.sep}${AUTHOR.jobTitle}`] : []),
-    `- ${l.website}${l.sep}${pageUrl('/')}`,
+    `- ${l.website}${l.sep}${pageUrl(HOME_PATH[locale])}`,
     `- ${l.email}${l.sep}${LINKS.email}`,
     `- GitHub: ${LINKS.github}`,
     `- LinkedIn: ${LINKS.linkedin}`,
@@ -90,7 +90,7 @@ export function buildMarkdown(locale = 'en') {
     `- Saturn: ${LINKS.saturn}`,
     `- ${l.updated}${l.sep}${CONTENT_UPDATED}`,
     `- ${l.language}${l.sep}${l.languageName}`,
-    `- ${l.other}${l.sep}[${l.otherName}](${pageUrl(`/${MARKDOWN_FILES[other]}`)})`,
+    `- ${l.other}${l.sep}${pageUrl(HOME_PATH[other])} · [Markdown](${pageUrl(`/${MARKDOWN_FILES[other]}`)})`,
     '',
     `## ${l.letter}`,
     '',
