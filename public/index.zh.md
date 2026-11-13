@@ -1,6 +1,6 @@
 # Rick Weng
 
-> Rick Weng 是 AI 安全研究者暨 Saturn 創辦人，研究目標為預訓練與可解釋性；Saturn 提供免費的 AI 安全工具。
+> Rick Weng 是 AI 安全研究者，也是 Saturn 的創建者暨主要維護者，研究目標為預訓練與可解釋性；Saturn 提供免費的 AI 安全工具。
 
 - 網站：https://rickwengdev.github.io/zh/
 - 電子郵件：rick@saturn-core.com
@@ -8,7 +8,7 @@
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- 最後更新：2026-11-12
+- 最後更新：2026-11-13
 - 語言：繁體中文
 - 其他語言版本：https://rickwengdev.github.io · [Markdown](https://rickwengdev.github.io/index.md)
 
@@ -17,8 +17,6 @@
 To you,
 
 我是 Rick Weng，從事 AI 安全研究。我的研究聚焦於語言模型與 AI 代理的實際行為：激活操控如何改變模型、模型內部存在哪些功能狀態，以及如何確保代理在既定規則內運作。
-
-我同時創辦並經營 Saturn，提供免費的 AI 安全工具：一套讓代理的每一次工具呼叫都經過政策審查、人工核准與稽核的閘道，以及一個開源的 AI 研究工作台。
 
 我的每項研究都在取得資料前完成預先登記，只與公平的對照組比較，未成立的結果也一併公開。以下依序介紹我創辦的公司、專案、研究工作與開放成果；如需聯繫，回郵信封附在本信下方。
 

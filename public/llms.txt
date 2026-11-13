@@ -2,16 +2,16 @@
 
 > Research into how language models and AI agents actually behave, and tools that keep them accountable.
 
-Rick Weng is an independent AI security researcher and the founder of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.
+Rick Weng is an independent AI security researcher and the creator and lead maintainer of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.
 
 - Name: Rick Weng
-- Role: Founder of Saturn; independent AI security researcher
+- Role: Creator & Lead Maintainer of Saturn; independent AI security researcher
 - Website: https://rickwengdev.github.io (English) · https://rickwengdev.github.io/zh/ (繁體中文)
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
-- Last updated: 2026-11-12
+- Last updated: 2026-11-13
 
 ## Full text
 - [Whole site as Markdown (English)](https://rickwengdev.github.io/index.md): every section of the page, including the opening letter
