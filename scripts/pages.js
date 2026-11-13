@@ -81,7 +81,7 @@ function homeBody(locale) {
 <section id="cve"><h2>${e(m.cve.title)}</h2>${cveHtml}</section>
 <section id="contributions"><h2>${e(m.contributions.title)}</h2><p>${e(m.contributions.subtitle)}</p><ul>${contributionsHtml}</ul></section>
 <p>${signoff}</p><p>${e(L.ps)} <a href="${LINKS.saturn}">saturn-core.com</a></p></article>
-<section id="contact"><h2>${e(m.contact.title)}</h2><p>${e(m.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a> · <a href="${LINKS.saturn}">Saturn</a></p></section>
+<section id="contact"><h2>${e(m.contact.title)}</h2><p>${e(m.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a></p></section>
 <footer><p>${e(s.updated)} <time datetime="${CONTENT_UPDATED}">${CONTENT_UPDATED}</time>${s.end}</p><p><a href="${HOME_PATH[other]}" hreflang="${languageTag(other)}" lang="${languageTag(other)}">${e(s.other)}</a></p><p>${e(s.plain)}${s.sep}<a href="/${MARKDOWN_FILES.en}" hreflang="en">Markdown (English)</a> · <a href="/${MARKDOWN_FILES.zh}" hreflang="zh-Hant">Markdown（繁體中文）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a></p></footer>`;
 }
 

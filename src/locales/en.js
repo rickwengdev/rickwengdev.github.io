@@ -1,9 +1,9 @@
 export default {
   seo: {
     home: {
-      title: 'Rick Weng — AI Security Researcher, Founder of Saturn',
+      title: 'Rick Weng — AI Security Researcher',
       description:
-        'Rick Weng is an AI security researcher and the founder of Saturn, working on pretraining and interpretability. Saturn provides free tools for AI security.',
+        'Rick Weng is an AI security researcher working on pretraining and interpretability, examining how language models and AI agents actually behave.',
       keywords: [
         'Rick Weng',
         'AI security',
@@ -46,7 +46,6 @@ export default {
     salutation: 'To you,',
     paragraphs: [
       'I’m Rick Weng, an AI security researcher. My work examines how language models and AI agents actually behave: how activation steering changes them, what functional states they carry, and how to keep agents operating within the rules people set.',
-      'I am also the founder of Saturn, which provides free tools for AI security: a gateway that subjects every agent tool call to policy, approval and audit, and an open-source workbench for AI research.',
       'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects, my research and my open contributions. Should you wish to get in touch, a return envelope is enclosed below.',
     ],
     signoffBefore: 'Yours sincerely,',
@@ -99,12 +98,11 @@ export default {
   contact: {
     eyebrow: 'Contact',
     title: 'Get in touch.',
-    body: 'I welcome enquiries about research collaboration, specific papers or Saturn. Every message is read personally.',
+    body: 'I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.',
     to: 'To',
     email: 'Send an email',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    saturn: 'Saturn',
   },
   notFound: {
     title: 'Page not found.',

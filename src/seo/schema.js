@@ -65,15 +65,15 @@ export function buildPersonJsonLd(locale = 'en') {
   };
 }
 
-// One node per company or project founded; "founder" points back at the person.
+// One node per company or project; "founder" points back at the person only where I founded it.
 export function buildOrganizationsJsonLd(locale = 'en') {
-  return ORGANIZATIONS.map(({ id, name, url, description }) => ({
+  return ORGANIZATIONS.map(({ id, name, url, founded, description }) => ({
     '@type': 'Organization',
     '@id': organizationId(id),
     name,
     url,
     description: localize(description, locale),
-    founder: { '@id': PERSON_ID },
+    ...(founded && { founder: { '@id': PERSON_ID } }),
   }));
 }
 

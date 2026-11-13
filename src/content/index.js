@@ -35,13 +35,14 @@ export function getCves(locale) {
   }));
 }
 
-// Every company or project I founded, for structured data.
-// `description` is a string or { en, zh }.
-export const ORGANIZATIONS = [...projects, ...experience].map(({ id, name, url, current, summary }) => ({
+// Every company or project listed, for structured data.
+// `description` is a string or { en, zh }; `founded` is true when the role names me as founder.
+export const ORGANIZATIONS = [...projects, ...experience].map(({ id, name, url, current, role, summary }) => ({
   id,
   name,
   url,
   current,
+  founded: /\bfounder\b/i.test(typeof role === 'string' ? role : (role?.en ?? '')),
   description: summary,
 }));
 

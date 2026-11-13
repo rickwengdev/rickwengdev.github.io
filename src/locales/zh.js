@@ -1,9 +1,8 @@
 export default {
   seo: {
     home: {
-      title: 'Rick Weng — AI 安全研究者・Saturn 創辦人',
-      description:
-        'Rick Weng 是 AI 安全研究者暨 Saturn 創辦人，研究目標為預訓練與可解釋性；Saturn 提供免費的 AI 安全工具。',
+      title: 'Rick Weng — AI 安全研究者',
+      description: 'Rick Weng 是 AI 安全研究者，研究目標為預訓練與可解釋性，探究語言模型與 AI 代理的實際行為。',
       keywords: [
         'Rick Weng',
         'AI 安全',
@@ -45,7 +44,6 @@ export default {
     salutation: 'To you,',
     paragraphs: [
       '我是 Rick Weng，從事 AI 安全研究。我的研究聚焦於語言模型與 AI 代理的實際行為：激活操控如何改變模型、模型內部存在哪些功能狀態，以及如何確保代理在既定規則內運作。',
-      '我同時創辦並經營 Saturn，提供免費的 AI 安全工具：一套讓代理的每一次工具呼叫都經過政策審查、人工核准與稽核的閘道，以及一個開源的 AI 研究工作台。',
       '我的每項研究都在取得資料前完成預先登記，只與公平的對照組比較，未成立的結果也一併公開。以下依序介紹我創辦的公司、專案、研究工作與開放成果；如需聯繫，回郵信封附在本信下方。',
     ],
     signoffBefore: '',
@@ -98,12 +96,11 @@ export default {
   contact: {
     eyebrow: '聯繫我',
     title: '期待您的來信。',
-    body: '歡迎就研究合作、論文內容或 Saturn 相關事宜與我聯繫，每封來信我都會親自閱讀。',
+    body: '歡迎就研究合作、論文內容或相關專案與我聯繫，每封來信我都會親自閱讀。',
     to: '收件人',
     email: '寄送電子郵件',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    saturn: 'Saturn',
   },
   notFound: {
     title: '找不到此頁面。',
