@@ -1,9 +1,8 @@
 export default {
   seo: {
     home: {
-      title: 'Rick Weng — AI 安全研究者・Saturn 創建者暨主要維護者',
-      description:
-        'Rick Weng 是 AI 安全研究者，也是 Saturn 的創建者暨主要維護者，研究目標為預訓練與可解釋性；Saturn 提供免費的 AI 安全工具。',
+      title: 'Rick Weng — AI 安全研究者',
+      description: 'Rick Weng 是 AI 安全研究者，研究目標為預訓練與可解釋性，探究語言模型與 AI 代理的實際行為。',
       keywords: [
         'Rick Weng',
         'AI 安全',

@@ -1,9 +1,9 @@
 export default {
   seo: {
     home: {
-      title: 'Rick Weng — AI Security Researcher, Creator & Lead Maintainer of Saturn',
+      title: 'Rick Weng — AI Security Researcher',
       description:
-        'Rick Weng is an AI security researcher and the creator and lead maintainer of Saturn, working on pretraining and interpretability. Saturn provides free tools for AI security.',
+        'Rick Weng is an AI security researcher working on pretraining and interpretability, examining how language models and AI agents actually behave.',
       keywords: [
         'Rick Weng',
         'AI security',

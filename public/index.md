@@ -2,7 +2,7 @@
 
 > Research into how language models and AI agents actually behave, and tools that keep them accountable.
 
-- Role: Creator & Lead Maintainer of Saturn; independent AI security researcher
+- Role: Independent AI security researcher
 - Website: https://rickwengdev.github.io
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev

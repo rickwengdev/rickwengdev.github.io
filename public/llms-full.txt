@@ -4,7 +4,7 @@
 
 > Research into how language models and AI agents actually behave, and tools that keep them accountable.
 
-- Role: Creator & Lead Maintainer of Saturn; independent AI security researcher
+- Role: Independent AI security researcher
 - Website: https://rickwengdev.github.io
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
@@ -107,7 +107,7 @@ I welcome enquiries about research collaboration, specific papers or Saturn. Eve
 
 # Rick Weng
 
-> Rick Weng 是 AI 安全研究者，也是 Saturn 的創建者暨主要維護者，研究目標為預訓練與可解釋性；Saturn 提供免費的 AI 安全工具。
+> Rick Weng 是 AI 安全研究者，研究目標為預訓練與可解釋性，探究語言模型與 AI 代理的實際行為。
 
 - 網站：https://rickwengdev.github.io/zh/
 - 電子郵件：rick@saturn-core.com

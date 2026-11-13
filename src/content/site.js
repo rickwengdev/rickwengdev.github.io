@@ -13,7 +13,7 @@ export const LINKS = {
 
 export const AUTHOR = {
   name: 'Rick Weng',
-  jobTitle: 'Creator & Lead Maintainer of Saturn; independent AI security researcher',
+  jobTitle: 'Independent AI security researcher',
 };
 
 // One line, used as the site description in structured data and llms.txt.
@@ -22,8 +22,8 @@ export const SITE_DESCRIPTION =
 
 // A short paragraph for AI readers (meta abstract, structured data, llms.txt).
 export const SITE_SUMMARY = {
-  en: 'Rick Weng is an independent AI security researcher and the creator and lead maintainer of Saturn (saturn-core.com), which provides free tools for secure, accountable AI: Saturn MCP, a gateway that subjects agent tool calls to policy, approval and audit, and Saturn App, an open-source desktop workbench for AI research. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.',
-  zh: 'Rick Weng 是獨立 AI 安全研究者，也是 Saturn（saturn-core.com）的創建者暨主要維護者。Saturn 提供免費的 AI 安全工具：Saturn MCP 是讓代理的每一次工具呼叫都經過政策審查、人工核准與稽核的閘道；Saturn App 是開源的 AI 研究桌面工作台。研究目標為預訓練與可解釋性；每項研究皆預先登記，並隨論文公開程式碼與資料。',
+  en: 'Rick Weng is an independent AI security researcher whose work examines how language models and AI agents actually behave. The research goals are pretraining and interpretability; every study is preregistered, with code and data released alongside the paper.',
+  zh: 'Rick Weng 是獨立 AI 安全研究者，研究聚焦於語言模型與 AI 代理的實際行為。研究目標為預訓練與可解釋性；每項研究皆預先登記，並隨論文公開程式碼與資料。',
 };
 
 export const SITE_GEO_SUMMARY = SITE_SUMMARY.en;
