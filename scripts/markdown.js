@@ -140,7 +140,6 @@ export function buildMarkdown(locale = 'en') {
     `- ${l.email}${l.sep}${LINKS.email}`,
     `- GitHub: ${LINKS.github}`,
     `- LinkedIn: ${LINKS.linkedin}`,
-    `- Saturn: ${LINKS.saturn}`,
     '',
   ].join('\n');
 }

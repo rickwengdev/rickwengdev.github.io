@@ -103,7 +103,6 @@ export default {
     email: 'Send an email',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    saturn: 'Saturn',
   },
   notFound: {
     title: 'Page not found.',

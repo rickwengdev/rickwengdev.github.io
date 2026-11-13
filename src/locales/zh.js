@@ -101,7 +101,6 @@ export default {
     email: '寄送電子郵件',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    saturn: 'Saturn',
   },
   notFound: {
     title: '找不到此頁面。',

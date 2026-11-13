@@ -99,4 +99,3 @@ I welcome enquiries about research collaboration, specific papers or Saturn. Eve
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
-- Saturn: https://saturn-core.com

@@ -98,4 +98,3 @@ AI 研究桌面工作台：僅比較以相同方法量測的實驗，可逐筆�
 - 電子郵件：rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
-- Saturn: https://saturn-core.com
