@@ -17,7 +17,7 @@ export default [
     url: 'https://saturn-core.com',
     logo: 'saturn.png',
     current: true,
-    role: { en: 'Founder & CEO', zh: '創辦人暨執行長' },
+    role: { en: 'Creator & Lead Maintainer', zh: '創建者暨主要維護者' },
     period: { en: 'Sep 2026 – Present', zh: '2026 年 9 月 – 至今' },
     tagline: { en: 'Infrastructure for secure, accountable AI.', zh: '為 AI 打造安全、可問責的基礎工具。' },
     summary: {

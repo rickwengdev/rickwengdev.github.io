@@ -42,7 +42,7 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 
 ### [Saturn](https://saturn-core.com)
 
-Founder & CEO · Sep 2026 – Present · Active
+Creator & Lead Maintainer · Sep 2026 – Present · Active
 
 Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 

@@ -44,7 +44,7 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 
 ### [Saturn](https://saturn-core.com)
 
-Founder & CEO · Sep 2026 – Present · Active
+Creator & Lead Maintainer · Sep 2026 – Present · Active
 
 Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 
@@ -150,7 +150,7 @@ Rick Weng 敬上
 
 ### [Saturn](https://saturn-core.com)
 
-創辦人暨執行長 · 2026 年 9 月 – 至今 · 進行中
+創建者暨主要維護者 · 2026 年 9 月 – 至今 · 進行中
 
 為 AI 打造安全、可問責的基礎工具。 Saturn 專注於 AI 安全，致力於確保 AI 代理的行為符合既定規則，並讓使用者在部署模型之前，充分理解模型的實際行為。
 
