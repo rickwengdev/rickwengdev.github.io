@@ -98,7 +98,7 @@ export default {
   contact: {
     eyebrow: 'Contact',
     title: 'Get in touch.',
-    body: 'I welcome enquiries about research collaboration, specific papers or Saturn. Every message is read personally.',
+    body: 'I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.',
     to: 'To',
     email: 'Send an email',
     github: 'GitHub',

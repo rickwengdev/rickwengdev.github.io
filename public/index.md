@@ -94,7 +94,7 @@ Research experiments, tools, and the source code for this website.
 
 ## Contact
 
-I welcome enquiries about research collaboration, specific papers or Saturn. Every message is read personally.
+I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.
 
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev

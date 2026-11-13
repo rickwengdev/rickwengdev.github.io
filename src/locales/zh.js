@@ -96,7 +96,7 @@ export default {
   contact: {
     eyebrow: '聯繫我',
     title: '期待您的來信。',
-    body: '歡迎就研究合作、論文內容或 Saturn 相關事宜與我聯繫，每封來信我都會親自閱讀。',
+    body: '歡迎就研究合作、論文內容或相關專案與我聯繫，每封來信我都會親自閱讀。',
     to: '收件人',
     email: '寄送電子郵件',
     github: 'GitHub',

@@ -96,7 +96,7 @@ Research experiments, tools, and the source code for this website.
 
 ## Contact
 
-I welcome enquiries about research collaboration, specific papers or Saturn. Every message is read personally.
+I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.
 
 - Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
@@ -199,7 +199,7 @@ AI 研究桌面工作台：僅比較以相同方法量測的實驗，可逐筆�
 
 ## 聯繫我
 
-歡迎就研究合作、論文內容或 Saturn 相關事宜與我聯繫，每封來信我都會親自閱讀。
+歡迎就研究合作、論文內容或相關專案與我聯繫，每封來信我都會親自閱讀。
 
 - 電子郵件：rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
