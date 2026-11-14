@@ -9,7 +9,7 @@ export default [
     logo: 'kura.png',
     logoShape: 'circle',
     current: false,
-    role: { en: 'Founder & Solo product engineer', zh: '創辦人暨獨立產品工程師' },
+    role: { en: 'Founder & Solo Product Engineer', zh: '創辦人暨獨立產品工程師' },
     period: { en: '2026 – Sep 2026', zh: '2026 – 2026 年 9 月' },
     tagline: { en: 'Modern finance, redesigned.', zh: '重新設計現代金融服務。' },
     summary: {

@@ -29,7 +29,7 @@ P.S. All Saturn products are free to use. https://saturn-core.com
 
 ### [Kura Finance](https://kura-finance.com)
 
-Founder & Solo product engineer · 2026 – Sep 2026 · Previous
+Founder & Solo Product Engineer · 2026 – Sep 2026 · Previous
 
 Modern finance, redesigned. An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.
 
