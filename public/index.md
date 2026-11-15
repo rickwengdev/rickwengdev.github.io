@@ -19,7 +19,7 @@ To you,
 
 I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.
 
-Every study is preregistered and reported in full, including results that did not hold. Below are my companies, projects and research; should you wish to write, a return envelope is enclosed.
+Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research; should you wish to write, a return envelope is enclosed.
 
 Yours sincerely, Rick Weng
 
