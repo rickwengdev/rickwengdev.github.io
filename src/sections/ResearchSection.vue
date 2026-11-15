@@ -20,10 +20,12 @@
       </div>
     </dl>
 
-    <h3 class="sub-title" v-reveal>{{ t('research.papersTitle') }}</h3>
-    <div class="paper-list">
-      <PaperItem v-for="(paper, i) in papers" :key="paper.id" :paper="paper" v-reveal="100 + i * 120" />
-    </div>
+    <template v-if="papers.length">
+      <h3 class="sub-title" v-reveal>{{ t('research.papersTitle') }}</h3>
+      <div class="paper-list">
+        <PaperItem v-for="(paper, i) in papers" :key="paper.id" :paper="paper" v-reveal="100 + i * 120" />
+      </div>
+    </template>
   </section>
 </template>
 

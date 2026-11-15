@@ -28,15 +28,4 @@
 //   ],
 // },
 
-export default [
-  {
-    id: 'agent-steering-2026',
-    year: 2026,
-    status: 'review',
-    placeholder: true,
-    title: {
-      en: 'Activation steering in coding agents',
-      zh: '程式代理中的激活操控',
-    },
-  },
-];
+export default [];

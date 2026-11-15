@@ -8,7 +8,7 @@
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- 最後更新：2026-11-13
+- 最後更新：2026-11-15
 - 語言：繁體中文
 - 其他語言版本：https://rickwengdev.github.io · [Markdown](https://rickwengdev.github.io/index.md)
 
@@ -28,7 +28,7 @@ Rick Weng 敬上
 
 ### [Kura Finance](https://kura-finance.com)
 
-創辦人暨執行長 · 2026 – 2026 年 9 月 · 過往
+創辦人暨獨立產品工程師 · 2026 – 2026 年 9 月 · 過往
 
 重新設計現代金融服務。 一站式金融平台：以單一帳戶完成儲蓄、消費、投資、收益與跨境轉帳。
 
@@ -54,14 +54,6 @@ Rick Weng 敬上
 
 - 預訓練
 - 可解釋性
-
-### 論文
-
-- 程式代理中的激活操控 (2026)
-
-## 漏洞揭露
-
-目前尚無公開的 CVE。
 
 ## 開放成果
 

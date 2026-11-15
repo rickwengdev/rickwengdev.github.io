@@ -9,7 +9,7 @@
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- Last updated: 2026-11-13
+- Last updated: 2026-11-15
 - Language: English
 - Also available in: https://rickwengdev.github.io/zh/ · [Markdown](https://rickwengdev.github.io/index.zh.md)
 
@@ -55,14 +55,6 @@ Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuri
 
 - Pretraining
 - Interpretability
-
-### Papers
-
-- Activation steering in coding agents (2026)
-
-## Vulnerability disclosures
-
-No published CVEs yet.
 
 ## Open contributions
 
