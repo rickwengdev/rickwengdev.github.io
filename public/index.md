@@ -36,11 +36,11 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 - Defined the product vision for a unified, privacy-first global finance platform.
 - Established partnerships with fintech infrastructure providers across digital assets, yield and payments.
 
-## Current projects
+## Projects
 
 ### [Saturn](https://saturn-core.com)
 
-Creator & Lead Maintainer · Sep 2026 – Present · Active
+Creator & Lead Maintainer · Sep 2026 – Present · Paused
 
 Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 

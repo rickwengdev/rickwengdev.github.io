@@ -13,6 +13,9 @@ import { localize, localizeEntry } from './localize.js';
 export { localize };
 export * from './site.js';
 
+// 'current', 'paused' or 'past': picks the badge label (`<section>.<status>` in the locales).
+export const workStatus = (entry) => (entry.current ? (entry.paused ? 'paused' : 'current') : 'past');
+
 export const getExperience = (locale) => experience.map((entry) => localizeEntry(entry, locale));
 
 export const getProjects = (locale) => projects.map((entry) => localizeEntry(entry, locale));

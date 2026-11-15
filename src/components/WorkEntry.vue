@@ -15,8 +15,8 @@
     </a>
 
     <p class="entry-meta" v-reveal>
-      <span class="status" :class="{ 'status-muted': !item.current }">
-        {{ item.current ? t(`${ns}.current`) : t(`${ns}.past`) }}
+      <span class="status" :class="{ 'status-muted': workStatus(item) !== 'current' }">
+        {{ t(`${ns}.${workStatus(item)}`) }}
       </span>
       <span>{{ item.period }} · {{ item.role }}</span>
     </p>
@@ -38,6 +38,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useI18n } from '../i18n';
+import { workStatus } from '../content/index.js';
 
 // One company or project, as written in the letter: sticker, dates, name, what it does.
 const props = defineProps({

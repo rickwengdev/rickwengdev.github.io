@@ -38,11 +38,11 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 - Defined the product vision for a unified, privacy-first global finance platform.
 - Established partnerships with fintech infrastructure providers across digital assets, yield and payments.
 
-## Current projects
+## Projects
 
 ### [Saturn](https://saturn-core.com)
 
-Creator & Lead Maintainer · Sep 2026 – Present · Active
+Creator & Lead Maintainer · Sep 2026 – Present · Paused
 
 Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 
@@ -105,11 +105,11 @@ Rick Weng 敬上
 - 主導產品願景，打造以隱私為優先、整合全球服務的金融平台。
 - 與金融科技基礎設施夥伴建立合作，涵蓋數位資產、收益與支付服務。
 
-## 目前的專案
+## 專案
 
 ### [Saturn](https://saturn-core.com)
 
-創建者暨主要維護者 · 2026 年 9 月 – 至今 · 進行中
+創建者暨主要維護者 · 2026 年 9 月 – 至今 · 暫停中
 
 為 AI 打造安全、可問責的基礎工具。 Saturn 專注於 AI 安全，致力於確保 AI 代理的行為符合既定規則，並讓使用者在部署模型之前，充分理解模型的實際行為。
 

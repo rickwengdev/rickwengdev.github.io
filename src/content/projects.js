@@ -1,4 +1,4 @@
-// Projects section: what I am building now, newest first.
+// Projects section: newest first.
 //
 // Fields (text is a string or { en, zh }):
 //   id          unique, lowercase
@@ -7,6 +7,7 @@
 //   logo        optional file name in src/assets/logos/ (e.g. 'saturn.png')
 //   logoShape   optional: 'rounded' (default) or 'circle'
 //   current     true shows the "Active" / "Current" badge, false "Previous"
+//   paused      optional; with `current: true`, shows "Paused" instead of "Active"
 //   role, period, tagline, summary
 //   highlights  { en: [...], zh: [...] }, one line each
 
@@ -17,6 +18,7 @@ export default [
     url: 'https://saturn-core.com',
     logo: 'saturn.png',
     current: true,
+    paused: true,
     role: { en: 'Creator & Lead Maintainer', zh: '創建者暨主要維護者' },
     period: { en: 'Sep 2026 – Present', zh: '2026 年 9 月 – 至今' },
     tagline: { en: 'Infrastructure for secure, accountable AI.', zh: '為 AI 打造安全、可問責的基礎工具。' },

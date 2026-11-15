@@ -3,7 +3,7 @@
 // (scripts/generate-llms-txt.js), so they always match the page.
 import en from '../src/locales/en.js';
 import zh from '../src/locales/zh.js';
-import { getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
+import { workStatus, getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
 import { AUTHOR, HOME_PATH, LINKS, SITE_DESCRIPTION, pageUrl } from '../src/seo/schema.js';
 import { CONTENT_UPDATED } from './content-date.js';
 
@@ -42,7 +42,7 @@ function workMarkdown(entries, section) {
   return entries.flatMap((job) => [
     `### [${job.name}](${job.url})`,
     '',
-    `${job.role} · ${job.period} · ${job.current ? section.current : section.past}`,
+    `${job.role} · ${job.period} · ${section[workStatus(job)]}`,
     '',
     `${job.tagline} ${job.summary}`,
     '',
