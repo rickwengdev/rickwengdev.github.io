@@ -10,7 +10,7 @@ export default [
     logoShape: 'circle',
     current: false,
     role: { en: 'Founder & Solo Product Engineer', zh: '創辦人暨獨立產品工程師' },
-    period: { en: '2026 – Sep 2026', zh: '2026 – 2026 年 9 月' },
+    period: { en: 'Jan 2026 – Sep 2026', zh: '2026 年 1 月 – 2026 年 9 月' },
     tagline: { en: 'Modern finance, redesigned.', zh: '重新設計現代金融服務。' },
     summary: {
       en: 'An integrated finance platform: a single account to save, spend, invest, earn yield and transfer funds worldwide.',
