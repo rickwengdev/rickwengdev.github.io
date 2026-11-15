@@ -7,6 +7,7 @@ import cves from './cves.js';
 import experience from './experience.js';
 import papers from './papers.js';
 import projects from './projects.js';
+import software from './software.js';
 import { localize, localizeEntry } from './localize.js';
 
 export { localize };
@@ -46,10 +47,8 @@ export const ORGANIZATIONS = [...projects, ...experience].map(({ id, name, url, 
   description: summary,
 }));
 
-// Contributions marked `software: true`, for structured data.
-export const SOFTWARE = contributions
-  .filter((entry) => entry.software)
-  .map(({ id, title, url, body, license }) => ({ id, name: title, url, description: body, license }));
+// Free software, for structured data (src/content/software.js).
+export const SOFTWARE = software;
 
 // Raw lists, for the content check.
-export const RAW = { experience, projects, contributions, papers, cves };
+export const RAW = { experience, projects, contributions, papers, cves, software };

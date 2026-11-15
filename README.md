@@ -29,7 +29,8 @@ title: 'Saturn App',                            // 中英相同，直接寫字�
 | 經歷（Kura Finance）    | `src/content/experience.js`    | 和專案相同格式                                                         |
 | 論文                    | `src/content/papers.js`        | 審查中用 `placeholder: true`，只顯示年份和主題                         |
 | CVE                     | `src/content/cves.js`          | 空的時候整個區塊和導覽連結都不顯示；連結不填會自動指向 NVD             |
-| 開放成果                | `src/content/contributions.js` | `icon` 可用 `paper`、`gate`、`open`、`code`、`planet`                  |
+| 開放成果（已合併的 PR） | `src/content/contributions.js` | 空的時候整個區塊和導覽連結都不顯示；`icon` 可用 `code` 等              |
+| 結構化資料中的軟體      | `src/content/software.js`      | 只給搜尋引擎看（SoftwareApplication），不會顯示在頁面上                |
 | Email、GitHub、網站描述 | `src/content/site.js`          | 也包含給搜尋引擎和 AI 讀的簡介                                         |
 
 新增一筆就是在陣列裡多加一個 `{ … }`，順序就是頁面上的順序。sitemap、llms.txt、Markdown 版和預先產生的頁面都會在建置時自動跟著更新。

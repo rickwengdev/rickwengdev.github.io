@@ -72,6 +72,10 @@ check('contributions.js', RAW.contributions, {
   oneOf: { icon: ICONS },
 });
 
+check('software.js', RAW.software, {
+  required: ['id', 'name', 'url', 'description'],
+});
+
 check('papers.js', RAW.papers, {
   required: ['id', 'year', 'status', 'title'],
   oneOf: { status: ['review', 'preprint', 'published', 'progress'] },
