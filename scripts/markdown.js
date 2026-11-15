@@ -117,10 +117,7 @@ export function buildMarkdown(locale = 'en') {
     ...(papers.length
       ? [`### ${m.research.papersTitle}`, '', ...papers.flatMap((paper) => paperMarkdown(paper, m)), '']
       : []),
-    `## ${m.cve.title}`,
-    '',
-    ...(cves.length ? cves.map((cve) => cveMarkdown(cve, m)) : [m.cve.empty]),
-    '',
+    ...(cves.length ? [`## ${m.cve.title}`, '', ...cves.map((cve) => cveMarkdown(cve, m)), ''] : []),
     `## ${m.contributions.title}`,
     '',
     m.contributions.subtitle,

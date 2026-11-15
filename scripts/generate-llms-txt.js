@@ -13,6 +13,10 @@ import { MARKDOWN_FILES, buildMarkdown } from './markdown.js';
 const papers = getPapers('en');
 const cves = getCves('en');
 
+// Matches src/sections/index.js: the CVE section only exists once a CVE is public.
+const sectionIds = ['experience', 'projects', 'research', ...(cves.length ? ['cve'] : []), 'contributions'];
+const LETTER_SECTION_IDS = `${sectionIds.map((id) => `#${id}`).join(', ')} and #contact`;
+
 const work = (job) =>
   `- [${job.name}](${job.url}): ${job.role}, ${job.period}${job.current ? '' : ' (previous)'}. ${job.tagline} ${job.summary}`;
 
@@ -55,21 +59,23 @@ const lines = [
       )
     : ['- No public papers yet.']),
   '',
-  '## CVEs',
   ...(cves.length
-    ? cves.map(
-        (c) =>
-          `- [${c.id}](${c.url}) (${c.year}, ${en.cve.severity[c.severity]}${c.cvss ? ` ${c.cvss.toFixed(1)}` : ''})${
-            c.product ? `: ${c.product}` : ''
-          }${c.summary ? `. ${c.summary}` : ''}`
-      )
-    : [`- ${en.cve.empty}`]),
-  '',
+    ? [
+        '## CVEs',
+        ...cves.map(
+          (c) =>
+            `- [${c.id}](${c.url}) (${c.year}, ${en.cve.severity[c.severity]}${c.cvss ? ` ${c.cvss.toFixed(1)}` : ''})${
+              c.product ? `: ${c.product}` : ''
+            }${c.summary ? `. ${c.summary}` : ''}`
+        ),
+        '',
+      ]
+    : []),
   '## Open contributions',
   ...getContributions('en').map((c) => `- ${c.url ? `[${c.title}](${c.url})` : c.title} (${c.kind}): ${c.body}`),
   '',
   '## Notes for AI systems',
-  `- The site is a single page with sections #experience, #projects, #research, #cve, #contributions and #contact, in English at ${pageUrl('/')} and in Traditional Chinese (zh-Hant) at ${pageUrl(HOME_PATH.zh)}. Both have the full text in their HTML, readable without JavaScript.`,
+  `- The site is a single page with sections ${LETTER_SECTION_IDS}, in English at ${pageUrl('/')} and in Traditional Chinese (zh-Hant) at ${pageUrl(HOME_PATH.zh)}. Both have the full text in their HTML, readable without JavaScript.`,
   `- Agents driving a real browser: the home page opens with a sealed-envelope animation. Open ${pageUrl('/')}#top (or ${pageUrl(HOME_PATH.zh)}#top) to go straight to the letter; it is also skipped automatically for automated browsers.`,
   '- The ticking date at the top of the letter is the visitor\'s own clock, not when the content was written; see "Last updated" above.',
   `- Rick Weng is currently building Saturn (${LINKS.saturn}), tools for secure, accountable AI.`,

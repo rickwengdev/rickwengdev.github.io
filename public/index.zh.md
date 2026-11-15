@@ -8,7 +8,7 @@
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- 最後更新：2026-11-14
+- 最後更新：2026-11-15
 - 語言：繁體中文
 - 其他語言版本：https://rickwengdev.github.io · [Markdown](https://rickwengdev.github.io/index.md)
 
@@ -54,10 +54,6 @@ Rick Weng 敬上
 
 - 預訓練
 - 可解釋性
-
-## 漏洞揭露
-
-目前尚無公開的 CVE。
 
 ## 開放成果
 
