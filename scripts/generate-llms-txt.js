@@ -23,6 +23,7 @@ const sectionIds = [
   ...(contributions.length ? ['contributions'] : []),
 ];
 const LETTER_SECTION_IDS = `${sectionIds.map((id) => `#${id}`).join(', ')} and #contact`;
+// While closed to messages (no email in src/content/site.js), #contact only holds profile links.
 
 const work = (job) =>
   `- [${job.name}](${job.url}): ${job.role}, ${job.period}${{ current: '', paused: ' (paused)', past: ' (previous)' }[workStatus(job)]}. ${job.tagline} ${job.summary}`;

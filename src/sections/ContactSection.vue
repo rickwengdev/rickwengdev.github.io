@@ -1,14 +1,17 @@
 <template>
   <!-- Contact lives off the letter, on the desk, with the return envelope. -->
   <section id="contact" class="contact">
-    <ReplyEnvelope />
+    <!-- While CONTACT_OPEN is false (no email in src/content/site.js), only the profile links show. -->
+    <ReplyEnvelope v-if="CONTACT_OPEN" />
 
     <div class="contact-text">
-      <p class="eyebrow" v-reveal>{{ t('contact.eyebrow') }}</p>
-      <h2 class="contact-title" v-reveal="80">{{ t('contact.title') }}</h2>
-      <p class="contact-body" v-reveal="160">{{ t('contact.body') }}</p>
+      <template v-if="CONTACT_OPEN">
+        <p class="eyebrow" v-reveal>{{ t('contact.eyebrow') }}</p>
+        <h2 class="contact-title" v-reveal="80">{{ t('contact.title') }}</h2>
+        <p class="contact-body" v-reveal="160">{{ t('contact.body') }}</p>
+      </template>
 
-      <div v-if="LINKS.email" class="btn-row" v-reveal="240">
+      <div v-if="CONTACT_OPEN" class="btn-row" v-reveal="240">
         <a :href="`mailto:${LINKS.email}`" class="btn btn-dark">{{ t('contact.email') }}</a>
       </div>
       <div class="link-row" v-reveal="320">
@@ -25,6 +28,7 @@
 
 <script setup>
 import ReplyEnvelope from '../components/ReplyEnvelope.vue';
+import { CONTACT_OPEN } from '../content/index.js';
 import { LINKS } from '../seo/schema.js';
 import { useI18n } from '../i18n';
 

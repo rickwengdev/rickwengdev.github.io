@@ -3,7 +3,15 @@
 // (scripts/generate-llms-txt.js), so they always match the page.
 import en from '../src/locales/en.js';
 import zh from '../src/locales/zh.js';
-import { workStatus, getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
+import {
+  CONTACT_OPEN,
+  workStatus,
+  getContributions,
+  getCves,
+  getExperience,
+  getPapers,
+  getProjects,
+} from '../src/content/index.js';
 import { AUTHOR, HOME_PATH, LINKS, SITE_DESCRIPTION, pageUrl } from '../src/seo/schema.js';
 import { CONTENT_UPDATED } from './content-date.js';
 
@@ -135,13 +143,18 @@ export function buildMarkdown(locale = 'en') {
           ]),
         ]
       : []),
-    `## ${m.contact.eyebrow}`,
-    '',
-    m.contact.body,
-    '',
-    ...(LINKS.email ? [`- ${l.email}${l.sep}${LINKS.email}`] : []),
-    `- GitHub: ${LINKS.github}`,
-    `- LinkedIn: ${LINKS.linkedin}`,
-    '',
+    // Closed to messages: GitHub and LinkedIn are already listed at the top.
+    ...(CONTACT_OPEN
+      ? [
+          `## ${m.contact.eyebrow}`,
+          '',
+          m.contact.body,
+          '',
+          `- ${l.email}${l.sep}${LINKS.email}`,
+          `- GitHub: ${LINKS.github}`,
+          `- LinkedIn: ${LINKS.linkedin}`,
+          '',
+        ]
+      : []),
   ].join('\n');
 }

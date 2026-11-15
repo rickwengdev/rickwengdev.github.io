@@ -22,9 +22,13 @@
 
       <div class="header-actions">
         <LanguageSwitcher />
-        <a :href="`${home}#contact`" class="btn btn-dark header-cta" @click="goTo($event, 'contact')">{{
-          t('nav.contact')
-        }}</a>
+        <a
+          v-if="CONTACT_OPEN"
+          :href="`${home}#contact`"
+          class="btn btn-dark header-cta"
+          @click="goTo($event, 'contact')"
+          >{{ t('nav.contact') }}</a
+        >
         <button
           class="menu-toggle"
           type="button"
@@ -46,9 +50,13 @@
         <a v-for="s in NAV" :key="s" :href="`${home}#${s}`" class="mobile-link" @click="goTo($event, s)">{{
           t(`nav.${s}`)
         }}</a>
-        <a :href="`${home}#contact`" class="btn btn-dark mobile-cta" @click="goTo($event, 'contact')">{{
-          t('nav.contact')
-        }}</a>
+        <a
+          v-if="CONTACT_OPEN"
+          :href="`${home}#contact`"
+          class="btn btn-dark mobile-cta"
+          @click="goTo($event, 'contact')"
+          >{{ t('nav.contact') }}</a
+        >
       </div>
     </nav>
   </header>
@@ -73,6 +81,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { sealed } from './envelope.js';
+import { CONTACT_OPEN } from './content/index.js';
 import { LETTER_SECTIONS } from './sections/index.js';
 import { AUTHOR } from './seo/schema.js';
 import { HOME_PATH, useI18n } from './i18n';

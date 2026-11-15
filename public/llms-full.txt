@@ -20,7 +20,7 @@ To you,
 
 I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.
 
-Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research; should you wish to write, a return envelope is enclosed.
+Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research.
 
 Yours sincerely, Rick Weng
 
@@ -57,13 +57,6 @@ Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuri
 - Pretraining
 - Interpretability
 
-## Contact
-
-I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.
-
-- GitHub: https://github.com/rickwengdev
-- LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
-
 ---
 
 # Rick Weng
@@ -85,7 +78,7 @@ To you,
 
 我是 Rick Weng，從事 AI 安全研究，探究語言模型與 AI 代理的實際行為，以及如何讓它們在既定規則內運作。
 
-每項研究皆預先登記並完整公開，未成立的結果也不例外。以下是我的經歷、專案與研究；如需聯繫，回郵信封附在信末。
+每項研究皆預先登記並完整公開，未成立的結果也不例外。以下是我的經歷、專案與研究。
 
 Rick Weng 敬上
 
@@ -121,10 +114,3 @@ Rick Weng 敬上
 
 - 預訓練
 - 可解釋性
-
-## 聯繫我
-
-歡迎就研究合作、論文內容或相關專案與我聯繫，每封來信我都會親自閱讀。
-
-- GitHub: https://github.com/rickwengdev
-- LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5

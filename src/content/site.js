@@ -4,14 +4,20 @@
 export const SITE_URL = 'https://rickwengdev.github.io';
 
 export const LINKS = {
-  // Contact email. Left empty, the address is hidden everywhere (page, structured
-  // data, Markdown, llms.txt) and the reply envelope links to LinkedIn instead.
+  // Contact email. Left empty, the site is closed to messages: the address, the
+  // reply envelope, the invitation to write and the header's Contact button are
+  // all left out, and only the GitHub and LinkedIn links remain at the bottom.
+  // When adding it back, also restore the letter's closing sentence in
+  // src/locales/*.js ("should you wish to write, a return envelope is enclosed").
   email: '',
   github: 'https://github.com/rickwengdev',
   linkedin: 'https://www.linkedin.com/in/rick-weng-44921a3b5',
   orcid: 'https://orcid.org/0009-0006-4178-347X',
   saturn: 'https://saturn-core.com',
 };
+
+// Whether the site invites messages (see `email` above).
+export const CONTACT_OPEN = Boolean(LINKS.email);
 
 export const AUTHOR = {
   name: 'Rick Weng',
