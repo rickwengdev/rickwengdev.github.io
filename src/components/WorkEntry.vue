@@ -18,7 +18,6 @@
       <span class="status" :class="{ 'status-muted': workStatus(item) !== 'current' }">
         {{ t(`${ns}.${workStatus(item)}`) }}
       </span>
-      <span>{{ item.period }} · {{ item.role }}</span>
     </p>
 
     <h3 class="entry-name" v-reveal="60">
@@ -26,6 +25,9 @@
         {{ item.name }} <span class="arrow" aria-hidden="true">↗</span>
       </a>
     </h3>
+    <p class="entry-role" v-reveal="90">
+      <span>{{ item.role }}&nbsp;·</span> <span>{{ item.period }}</span>
+    </p>
     <p class="entry-tagline" v-reveal="120">{{ item.tagline }}</p>
     <p class="entry-summary" v-reveal="180">{{ item.summary }}</p>
 
@@ -154,6 +156,17 @@ const logo = computed(() => LOGOS[props.item.logo]);
 
 .entry-meta .status {
   margin-right: 4px;
+}
+
+.entry-role {
+  margin: 0 0 12px;
+  font-size: 0.875rem;
+  color: var(--ink-3);
+}
+
+/* Wrap only between the role and the period; the dot stays with the role. */
+.entry-role span {
+  white-space: nowrap;
 }
 
 .entry-name {
