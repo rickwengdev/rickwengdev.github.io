@@ -19,7 +19,7 @@ To you,
 
 I’m Rick Weng, an AI security researcher. My work examines how language models and AI agents actually behave: how activation steering changes them, what functional states they carry, and how to keep agents operating within the rules people set.
 
-Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects, my research and my open contributions. Should you wish to get in touch, a return envelope is enclosed below.
+Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects and my research. Should you wish to get in touch, a return envelope is enclosed below.
 
 Yours sincerely, Rick Weng
 
@@ -55,34 +55,6 @@ Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuri
 
 - Pretraining
 - Interpretability
-
-## Open contributions
-
-Tools and research practices, freely available to all.
-
-### [Saturn App](https://github.com/Saturn-Technology-Project/Saturn-App)
-
-*Open source · Apache 2.0*
-
-A desktop workbench for AI research: experiments are compared only when measured identically, every sample from every model can be inspected, and activation patching and SAE features are built in. Each release ships with a checksum and signed build provenance.
-
-### [Saturn MCP](https://saturn-core.com/mcp)
-
-*Free to use*
-
-A gateway that governs what AI agents may do: every tool call is checked against versioned policy down to its arguments, sensitive calls are routed for human approval, and every decision is recorded.
-
-### Open research
-
-*Methodology*
-
-Each paper is published with its preregistration, code and raw data, including results that did not hold, so the findings can be independently verified.
-
-### [Code](https://github.com/rickwengdev)
-
-*GitHub*
-
-Research experiments, tools, and the source code for this website.
 
 ## Contact
 

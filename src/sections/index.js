@@ -2,7 +2,7 @@
 // header navigation follow this list, so reordering or adding a section only
 // happens here. `id` is the #anchor; its nav label is `nav.<id>` in the locales.
 // Contact sits outside the letter and is added to the nav separately.
-// The CVE section is left out entirely while there are no public CVEs.
+// The CVE and contributions sections are left out entirely while their lists are empty.
 
 import { RAW } from '../content/index.js';
 import ContributionsSection from './ContributionsSection.vue';
@@ -16,7 +16,8 @@ export const LETTER_SECTIONS = [
   { id: 'research', component: ResearchSection },
   // Shown only once src/content/cves.js has at least one public CVE.
   ...(RAW.cves.length ? [{ id: 'cve', component: CveSection }] : []),
-  { id: 'contributions', component: ContributionsSection },
+  // Shown only once src/content/contributions.js has at least one entry.
+  ...(RAW.contributions.length ? [{ id: 'contributions', component: ContributionsSection }] : []),
 ];
 
 export const sectionNumber = (index) => String(index + 1).padStart(2, '0');

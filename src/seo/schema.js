@@ -77,7 +77,7 @@ export function buildOrganizationsJsonLd(locale = 'en') {
   }));
 }
 
-// The free tools listed under contributions (entries with `software: true`).
+// Free software (src/content/software.js).
 export function buildSoftwareJsonLd(locale = 'en') {
   return SOFTWARE.map(({ id, name, url, description, license }) => ({
     '@type': 'SoftwareApplication',

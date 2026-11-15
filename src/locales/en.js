@@ -46,7 +46,7 @@ export default {
     salutation: 'To you,',
     paragraphs: [
       'I’m Rick Weng, an AI security researcher. My work examines how language models and AI agents actually behave: how activation steering changes them, what functional states they carry, and how to keep agents operating within the rules people set.',
-      'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects, my research and my open contributions. Should you wish to get in touch, a return envelope is enclosed below.',
+      'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects and my research. Should you wish to get in touch, a return envelope is enclosed below.',
     ],
     signoffBefore: 'Yours sincerely,',
     signoffAfter: '',
@@ -93,7 +93,7 @@ export default {
   contributions: {
     eyebrow: 'Contributions',
     title: 'Open contributions',
-    subtitle: 'Tools and research practices, freely available to all.',
+    subtitle: 'Pull requests merged into other open-source projects.',
   },
   contact: {
     eyebrow: 'Contact',
