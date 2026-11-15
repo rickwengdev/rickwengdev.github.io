@@ -36,7 +36,7 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 - Defined the product vision for a unified, privacy-first global finance platform.
 - Established partnerships with fintech infrastructure providers across digital assets, yield and payments.
 
-## Current projects
+## Projects
 
 ### [Saturn](https://saturn-core.com)
 

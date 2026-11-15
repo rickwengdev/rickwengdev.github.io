@@ -65,7 +65,7 @@ export default {
   },
   projects: {
     eyebrow: 'Projects',
-    title: 'Current projects',
+    title: 'Projects',
     current: 'Active',
     paused: 'Paused',
     past: 'Previous',

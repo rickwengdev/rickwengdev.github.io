@@ -1,4 +1,4 @@
-// Projects section: what I am building now, newest first.
+// Projects section: newest first.
 //
 // Fields (text is a string or { en, zh }):
 //   id          unique, lowercase

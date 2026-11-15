@@ -63,7 +63,7 @@ export default {
   },
   projects: {
     eyebrow: '專案',
-    title: '目前的專案',
+    title: '專案',
     current: '進行中',
     paused: '暫停中',
     past: '過往',

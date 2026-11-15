@@ -89,7 +89,7 @@ const lines = [
   `- The site is a single page with sections ${LETTER_SECTION_IDS}, in English at ${pageUrl('/')} and in Traditional Chinese (zh-Hant) at ${pageUrl(HOME_PATH.zh)}. Both have the full text in their HTML, readable without JavaScript.`,
   `- Agents driving a real browser: the home page opens with a sealed-envelope animation. Open ${pageUrl('/')}#top (or ${pageUrl(HOME_PATH.zh)}#top) to go straight to the letter; it is also skipped automatically for automated browsers.`,
   '- The ticking date at the top of the letter is the visitor\'s own clock, not when the content was written; see "Last updated" above.',
-  `- Saturn (${LINKS.saturn}), tools for secure, accountable AI, is paused while Rick Weng focuses full-time on deep learning foundations and mechanistic interpretability research.`,
+  `- Saturn (${LINKS.saturn}), tools for secure, accountable AI, is paused while Rick Weng focuses full-time on learning how pretraining and interpretability work at the implementation level.`,
   '- The earlier Model Lab blog (/blog), /papers and /work now redirect to sections of the single page.',
   '',
 ];
