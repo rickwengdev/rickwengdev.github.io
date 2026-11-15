@@ -5,7 +5,7 @@
 //   public/index.zh.md    the whole page as Markdown, Traditional Chinese
 import fs from 'fs';
 import en from '../src/locales/en.js';
-import { getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
+import { workStatus, getContributions, getCves, getExperience, getPapers, getProjects } from '../src/content/index.js';
 import { AUTHOR, HOME_PATH, LINKS, SITE_DESCRIPTION, SITE_GEO_SUMMARY, SITE_URL, pageUrl } from '../src/seo/schema.js';
 import { CONTENT_UPDATED } from './content-date.js';
 import { MARKDOWN_FILES, buildMarkdown } from './markdown.js';
@@ -25,7 +25,7 @@ const sectionIds = [
 const LETTER_SECTION_IDS = `${sectionIds.map((id) => `#${id}`).join(', ')} and #contact`;
 
 const work = (job) =>
-  `- [${job.name}](${job.url}): ${job.role}, ${job.period}${job.current ? '' : ' (previous)'}. ${job.tagline} ${job.summary}`;
+  `- [${job.name}](${job.url}): ${job.role}, ${job.period}${{ current: '', paused: ' (paused)', past: ' (previous)' }[workStatus(job)]}. ${job.tagline} ${job.summary}`;
 
 const lines = [
   `# ${AUTHOR.name}`,
@@ -89,7 +89,7 @@ const lines = [
   `- The site is a single page with sections ${LETTER_SECTION_IDS}, in English at ${pageUrl('/')} and in Traditional Chinese (zh-Hant) at ${pageUrl(HOME_PATH.zh)}. Both have the full text in their HTML, readable without JavaScript.`,
   `- Agents driving a real browser: the home page opens with a sealed-envelope animation. Open ${pageUrl('/')}#top (or ${pageUrl(HOME_PATH.zh)}#top) to go straight to the letter; it is also skipped automatically for automated browsers.`,
   '- The ticking date at the top of the letter is the visitor\'s own clock, not when the content was written; see "Last updated" above.',
-  `- Rick Weng is currently building Saturn (${LINKS.saturn}), tools for secure, accountable AI.`,
+  `- Saturn (${LINKS.saturn}), tools for secure, accountable AI, is paused while Rick Weng focuses full-time on deep learning foundations and mechanistic interpretability research.`,
   '- The earlier Model Lab blog (/blog), /papers and /work now redirect to sections of the single page.',
   '',
 ];
