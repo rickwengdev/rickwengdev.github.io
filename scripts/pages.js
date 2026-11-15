@@ -76,7 +76,7 @@ function homeBody(locale) {
   return `<article id="top"><h1>Rick Weng</h1><p>${e(L.salutation)}</p>${L.paragraphs.map((p) => `<p>${e(p)}</p>`).join('')}
 <section id="experience"><h2>${e(m.experience.title)}</h2><ul>${workHtml(getExperience(locale))}</ul></section>
 <section id="projects"><h2>${e(m.projects.title)}</h2><ul>${workHtml(getProjects(locale))}</ul></section>
-<section id="research"><h2>${e(m.research.title)}</h2><h3>${e(m.research.papersTitle)}</h3><ul>${papersHtml}</ul>
+<section id="research"><h2>${e(m.research.title)}</h2>${papersHtml ? `<h3>${e(m.research.papersTitle)}</h3><ul>${papersHtml}</ul>` : ''}
 <h3>${e(m.research.goalsTitle)}</h3><p>${m.research.goals.map(e).join(' · ')}</p><p>ORCID: <a href="${LINKS.orcid}">${LINKS.orcid.replace('https://orcid.org/', '')}</a></p></section>
 <section id="cve"><h2>${e(m.cve.title)}</h2>${cveHtml}</section>
 <section id="contributions"><h2>${e(m.contributions.title)}</h2><p>${e(m.contributions.subtitle)}</p><ul>${contributionsHtml}</ul></section>

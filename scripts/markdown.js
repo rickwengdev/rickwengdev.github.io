@@ -74,6 +74,7 @@ export function buildMarkdown(locale = 'en') {
   const l = LABELS[locale];
   const other = locale === 'zh' ? 'en' : 'zh';
   const cves = getCves(locale);
+  const papers = getPapers(locale);
   const signoff = [m.letter.signoffBefore, AUTHOR.name, m.letter.signoffAfter].filter(Boolean).join(' ');
 
   return [
@@ -113,10 +114,9 @@ export function buildMarkdown(locale = 'en') {
     '',
     ...m.research.goals.map((goal) => `- ${goal}`),
     '',
-    `### ${m.research.papersTitle}`,
-    '',
-    ...getPapers(locale).flatMap((paper) => paperMarkdown(paper, m)),
-    '',
+    ...(papers.length
+      ? [`### ${m.research.papersTitle}`, '', ...papers.flatMap((paper) => paperMarkdown(paper, m)), '']
+      : []),
     `## ${m.cve.title}`,
     '',
     ...(cves.length ? cves.map((cve) => cveMarkdown(cve, m)) : [m.cve.empty]),
