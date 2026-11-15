@@ -3,7 +3,6 @@
 > Rick Weng 是 AI 安全研究者，研究目標為預訓練與可解釋性，探究語言模型與 AI 代理的實際行為。
 
 - 網站：https://rickwengdev.github.io/zh/
-- 電子郵件：rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
@@ -59,6 +58,5 @@ Rick Weng 敬上
 
 歡迎就研究合作、論文內容或相關專案與我聯繫，每封來信我都會親自閱讀。
 
-- 電子郵件：rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5

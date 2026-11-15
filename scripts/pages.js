@@ -80,7 +80,7 @@ function homeBody(locale) {
 <h3>${e(m.research.goalsTitle)}</h3><p>${m.research.goals.map(e).join(' · ')}</p><p>ORCID: <a href="${LINKS.orcid}">${LINKS.orcid.replace('https://orcid.org/', '')}</a></p></section>
 ${cves.length ? `<section id="cve"><h2>${e(m.cve.title)}</h2>${cveHtml}</section>\n` : ''}${contributionsHtml ? `<section id="contributions"><h2>${e(m.contributions.title)}</h2><p>${e(m.contributions.subtitle)}</p><ul>${contributionsHtml}</ul></section>\n` : ''}
 <p>${signoff}</p><p>${e(L.ps)} <a href="${LINKS.saturn}">saturn-core.com</a></p></article>
-<section id="contact"><h2>${e(m.contact.title)}</h2><p>${e(m.contact.body)}</p><p><a href="mailto:${LINKS.email}">${LINKS.email}</a> · <a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a></p></section>
+<section id="contact"><h2>${e(m.contact.title)}</h2><p>${e(m.contact.body)}</p><p>${LINKS.email ? `<a href="mailto:${LINKS.email}">${LINKS.email}</a> · ` : ''}<a href="${LINKS.github}">GitHub</a> · <a href="${LINKS.linkedin}">LinkedIn</a></p></section>
 <footer><p>${e(s.updated)} <time datetime="${CONTENT_UPDATED}">${CONTENT_UPDATED}</time>${s.end}</p><p><a href="${HOME_PATH[other]}" hreflang="${languageTag(other)}" lang="${languageTag(other)}">${e(s.other)}</a></p><p>${e(s.plain)}${s.sep}<a href="/${MARKDOWN_FILES.en}" hreflang="en">Markdown (English)</a> · <a href="/${MARKDOWN_FILES.zh}" hreflang="zh-Hant">Markdown（繁體中文）</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a></p></footer>`;
 }
 

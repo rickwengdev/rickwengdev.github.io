@@ -4,7 +4,9 @@
 export const SITE_URL = 'https://rickwengdev.github.io';
 
 export const LINKS = {
-  email: 'rick@saturn-core.com',
+  // Contact email. Left empty, the address is hidden everywhere (page, structured
+  // data, Markdown, llms.txt) and the reply envelope links to LinkedIn instead.
+  email: '',
   github: 'https://github.com/rickwengdev',
   linkedin: 'https://www.linkedin.com/in/rick-weng-44921a3b5',
   orcid: 'https://orcid.org/0009-0006-4178-347X',

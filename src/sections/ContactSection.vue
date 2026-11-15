@@ -8,7 +8,7 @@
       <h2 class="contact-title" v-reveal="80">{{ t('contact.title') }}</h2>
       <p class="contact-body" v-reveal="160">{{ t('contact.body') }}</p>
 
-      <div class="btn-row" v-reveal="240">
+      <div v-if="LINKS.email" class="btn-row" v-reveal="240">
         <a :href="`mailto:${LINKS.email}`" class="btn btn-dark">{{ t('contact.email') }}</a>
       </div>
       <div class="link-row" v-reveal="320">

@@ -1,7 +1,15 @@
 <template>
   <!-- An open return envelope on the desk, flap up, with an addressed reply
        card standing out of it. -->
-  <a :href="`mailto:${LINKS.email}`" class="reply" v-reveal="120" :aria-label="`${t('contact.email')}: ${LINKS.email}`">
+  <!-- Without an email address, the envelope is addressed to the name and links to LinkedIn. -->
+  <a
+    :href="LINKS.email ? `mailto:${LINKS.email}` : LINKS.linkedin"
+    :target="LINKS.email ? undefined : '_blank'"
+    :rel="LINKS.email ? undefined : 'noopener noreferrer'"
+    class="reply"
+    v-reveal="120"
+    :aria-label="LINKS.email ? `${t('contact.email')}: ${LINKS.email}` : t('contact.linkedin')"
+  >
     <span class="env">
       <span class="env-flap" aria-hidden="true"></span>
       <span class="env-back" aria-hidden="true"></span>
@@ -9,7 +17,7 @@
       <span class="env-card">
         <span class="card-stamp" aria-hidden="true"><SealMark :size="30" /></span>
         <span class="card-to">{{ t('contact.to') }}</span>
-        <span class="card-email">{{ LINKS.email }}</span>
+        <span class="card-email">{{ LINKS.email || AUTHOR.name }}</span>
         <span class="card-rule" aria-hidden="true"></span>
       </span>
 
@@ -25,7 +33,7 @@
 
 <script setup>
 import SealMark from './SealMark.vue';
-import { LINKS } from '../seo/schema.js';
+import { AUTHOR, LINKS } from '../seo/schema.js';
 import { useI18n } from '../i18n';
 
 const { t } = useI18n();

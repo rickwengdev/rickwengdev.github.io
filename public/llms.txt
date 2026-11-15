@@ -7,7 +7,6 @@ Rick Weng is an independent AI security researcher whose work examines how langu
 - Name: Rick Weng
 - Role: Independent AI security researcher
 - Website: https://rickwengdev.github.io (English) · https://rickwengdev.github.io/zh/ (繁體中文)
-- Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X

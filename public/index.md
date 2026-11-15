@@ -4,7 +4,6 @@
 
 - Role: Independent AI security researcher
 - Website: https://rickwengdev.github.io
-- Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
@@ -60,6 +59,5 @@ Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuri
 
 I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.
 
-- Email: rick@saturn-core.com
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5

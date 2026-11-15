@@ -24,7 +24,7 @@ export const AUTHOR = {
   name: AUTHOR_INFO.name,
   legalName: AUTHOR_INFO.name,
   url: SITE_URL,
-  email: LINKS.email,
+  email: LINKS.email || undefined,
   jobTitle: AUTHOR_INFO.jobTitle,
   sameAs: [LINKS.orcid, LINKS.github, LINKS.linkedin],
 };

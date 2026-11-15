@@ -37,7 +37,7 @@ const lines = [
   `- Name: ${AUTHOR.name}`,
   `- Role: ${AUTHOR.jobTitle}`,
   `- Website: ${pageUrl('/')} (English) · ${pageUrl(HOME_PATH.zh)} (繁體中文)`,
-  `- Email: ${AUTHOR.email}`,
+  ...(AUTHOR.email ? [`- Email: ${AUTHOR.email}`] : []),
   `- GitHub: ${LINKS.github}`,
   `- LinkedIn: ${LINKS.linkedin}`,
   `- ORCID: ${LINKS.orcid}`,
