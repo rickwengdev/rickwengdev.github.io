@@ -45,8 +45,8 @@ export default {
     from: 'From the desk of Rick Weng',
     salutation: 'To you,',
     paragraphs: [
-      'I’m Rick Weng, an AI security researcher. My work examines how language models and AI agents actually behave: how activation steering changes them, what functional states they carry, and how to keep agents operating within the rules people set.',
-      'Every study I run is preregistered before any data are collected, compared only against fair controls, and reported in full, including results that did not hold. What follows covers the companies I have founded, my projects and my research. Should you wish to get in touch, a return envelope is enclosed below.',
+      'I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.',
+      'Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research; should you wish to write, a return envelope is enclosed.',
     ],
     signoffBefore: 'Yours sincerely,',
     signoffAfter: '',
