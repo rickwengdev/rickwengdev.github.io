@@ -1,0 +1,108 @@
+export default {
+  seo: {
+    home: {
+      title: 'Rick Weng — AI Security Researcher',
+      description:
+        'Rick Weng is an AI security researcher working on pretraining and interpretability, examining how language models and AI agents actually behave.',
+      keywords: [
+        'Rick Weng',
+        'AI security',
+        'AI safety',
+        'Activation steering',
+        'Pretraining',
+        'Interpretability',
+        'Language models',
+        'AI agents',
+        'Saturn',
+        'Saturn MCP',
+        'Saturn App',
+      ],
+    },
+    notFound: {
+      title: 'Page not found — Rick Weng',
+      description: 'The requested page could not be found.',
+    },
+  },
+  nav: {
+    experience: 'Experience',
+    projects: 'Projects',
+    cve: 'CVE',
+    research: 'Research',
+    contributions: 'Contributions',
+    contact: 'Contact',
+    language: 'Language',
+    switchTo: '中文',
+    toggleMenu: 'Menu',
+  },
+  envelope: {
+    open: 'Break the seal to read the letter',
+    skip: 'Skip',
+    scroll: 'Scroll down to open the letter',
+    to: 'From',
+    from: 'Rick Weng',
+  },
+  letter: {
+    from: 'From the desk of Rick Weng',
+    salutation: 'To you,',
+    paragraphs: [
+      'I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.',
+      'Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research.',
+    ],
+    signoffBefore: 'Yours sincerely,',
+    signoffAfter: '',
+    ps: 'P.S. All Saturn products are free to use.',
+    stamp: 'Photo of Rick Weng',
+    updated: 'Last updated',
+    postmark: 'RICK WENG · AI SECURITY',
+  },
+  experience: {
+    eyebrow: 'Experience',
+    title: 'Experience',
+    visit: 'Visit site',
+  },
+  projects: {
+    eyebrow: 'Projects',
+    title: 'Projects',
+    visit: 'Visit site',
+  },
+  research: {
+    eyebrow: 'Research',
+    title: 'Understanding how AI systems actually behave.',
+    papersTitle: 'Papers',
+    goalsTitle: 'Research goals',
+    goals: ['Pretraining', 'Interpretability'],
+  },
+  cve: {
+    eyebrow: 'CVE',
+    title: 'Vulnerability disclosures',
+    empty: 'No published CVEs yet.',
+    severity: { critical: 'Critical', high: 'High', medium: 'Medium', low: 'Low' },
+  },
+  papersPage: {
+    status: {
+      review: 'Under double-blind review',
+      preprint: 'Preprint',
+      published: 'Published',
+      progress: 'In progress',
+    },
+  },
+  contributions: {
+    eyebrow: 'Contributions',
+    title: 'Open contributions',
+    subtitle: 'Pull requests merged into other open-source projects.',
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Get in touch.',
+    body: 'I welcome enquiries about research collaboration, specific papers or my projects. Every message is read personally.',
+    to: 'To',
+    email: 'Send an email',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+  },
+  notFound: {
+    title: 'Page not found.',
+    body: 'The page you requested does not exist or has been moved.',
+    back: 'Return home',
+  },
+};

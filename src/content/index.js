@@ -1,0 +1,57 @@
+// Everything the page lists, in the visitor's language.
+// Edit the data in the files next to this one; this file only reads them.
+// Shared by the app and the build scripts, so no browser-only APIs here.
+
+import contributions from './contributions.js';
+import cves from './cves.js';
+import experience from './experience.js';
+import papers from './papers.js';
+import projects from './projects.js';
+import software from './software.js';
+import { localize, localizeEntry } from './localize.js';
+
+export { localize };
+export * from './site.js';
+
+// 'current', 'paused' or 'past': picks the badge label (`<section>.<status>` in the locales).
+export const workStatus = (entry) => (entry.current ? (entry.paused ? 'paused' : 'current') : 'past');
+
+export const getExperience = (locale) => experience.map((entry) => localizeEntry(entry, locale));
+
+export const getProjects = (locale) => projects.map((entry) => localizeEntry(entry, locale));
+
+export const getContributions = (locale) => contributions.map((entry) => localizeEntry(entry, locale));
+
+export function getPapers(locale) {
+  return papers.map((paper) => ({
+    ...localizeEntry(paper, locale),
+    links: (paper.links ?? []).map((link) => ({ ...link, label: localize(link.label, locale) })),
+  }));
+}
+
+// Papers that may appear in structured data and llms.txt.
+export const getPublicPapers = (locale = 'en') => getPapers(locale).filter((paper) => !paper.placeholder);
+
+export function getCves(locale) {
+  return cves.map((cve) => ({
+    ...localizeEntry(cve, locale),
+    url: cve.url ?? `https://nvd.nist.gov/vuln/detail/${cve.id}`,
+  }));
+}
+
+// Every company or project listed, for structured data.
+// `description` is a string or { en, zh }; `founded` is true when the role names me as founder.
+export const ORGANIZATIONS = [...projects, ...experience].map(({ id, name, url, current, role, summary }) => ({
+  id,
+  name,
+  url,
+  current,
+  founded: /\bfounder\b/i.test(typeof role === 'string' ? role : (role?.en ?? '')),
+  description: summary,
+}));
+
+// Free software, for structured data (src/content/software.js).
+export const SOFTWARE = software;
+
+// Raw lists, for the content check.
+export const RAW = { experience, projects, contributions, papers, cves, software };
