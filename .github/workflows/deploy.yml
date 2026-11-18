@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          # Full history, so scripts/content-date.js can find the last commit
+          # that touched the content (a shallow clone only sees the tip).
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

@@ -10,8 +10,11 @@ import {
   pageUrl,
 } from './schema.js';
 
-// The date the content last changed, set at build time (vite.config.js) from git.
+// When the content last changed, set at build time (vite.config.js) from git:
+// the calendar date (YYYY-MM-DD) for display, and the full ISO 8601 datetime
+// with offset for structured data.
 export const CONTENT_UPDATED = import.meta.env.VITE_CONTENT_UPDATED;
+export const CONTENT_UPDATED_AT = import.meta.env.VITE_CONTENT_UPDATED_AT;
 
 function upsertMeta(attr, key, content) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
@@ -100,6 +103,6 @@ export function updateSeoForRoute(route, locale, t) {
     // Each language has its own home page: / or /zh/.
     path: HOME_PATH[locale],
     geoSummary: SITE_SUMMARY[locale],
-    jsonLd: buildSiteJsonLd({ locale, papers: getPublicPapers(locale), dateModified: CONTENT_UPDATED }),
+    jsonLd: buildSiteJsonLd({ locale, papers: getPublicPapers(locale), dateModified: CONTENT_UPDATED_AT }),
   });
 }

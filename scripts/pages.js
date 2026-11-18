@@ -13,7 +13,7 @@ import {
   getPublicPapers,
 } from '../src/content/index.js';
 import { HOME_PATH, LINKS, SITE_SUMMARY, buildSiteJsonLd, escapeHtml, languageTag } from '../src/seo/schema.js';
-import { CONTENT_UPDATED } from './content-date.js';
+import { CONTENT_UPDATED, CONTENT_UPDATED_AT } from './content-date.js';
 import { MARKDOWN_FILES } from './markdown.js';
 
 const e = escapeHtml;
@@ -96,7 +96,8 @@ function homePage(locale) {
     seo: MESSAGES[locale].seo.home,
     geoSummary: SITE_SUMMARY[locale],
     lastmod: CONTENT_UPDATED,
-    jsonLd: buildSiteJsonLd({ locale, papers: getPublicPapers(locale), dateModified: CONTENT_UPDATED }),
+    updatedAt: CONTENT_UPDATED_AT,
+    jsonLd: buildSiteJsonLd({ locale, papers: getPublicPapers(locale), dateModified: CONTENT_UPDATED_AT }),
     body: homeBody(locale),
   };
 }

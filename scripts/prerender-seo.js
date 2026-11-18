@@ -16,8 +16,8 @@ const script = baseHtml.match(/<script type="module" crossorigin src="([^"]+)"><
 const css = baseHtml.match(/<link rel="stylesheet" crossorigin href="([^"]+)">/)?.[1];
 const fonts = baseHtml.match(/<link rel="preconnect"[\s\S]*?family=[^>]+>/)?.[0] ?? '';
 
-function renderPage({ path: pagePath, locale, lang, seo, geoSummary, lastmod, jsonLd, body }) {
-  const head = buildHeadTags({ ...seo, path: pagePath, geoSummary, dateModified: lastmod, locale });
+function renderPage({ path: pagePath, locale, lang, seo, geoSummary, updatedAt, jsonLd, body }) {
+  const head = buildHeadTags({ ...seo, path: pagePath, geoSummary, dateModified: updatedAt, locale });
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
