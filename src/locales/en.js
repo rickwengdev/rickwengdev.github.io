@@ -59,11 +59,15 @@ export default {
     eyebrow: 'Experience',
     title: 'Experience',
     visit: 'Visit site',
+    more: 'Highlights',
+    less: 'Hide',
   },
   projects: {
     eyebrow: 'Projects',
     title: 'Projects',
     visit: 'Visit site',
+    more: 'Highlights',
+    less: 'Hide',
   },
   research: {
     eyebrow: 'Research',
