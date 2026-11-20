@@ -290,6 +290,14 @@ img {
   color: var(--accent-ink);
 }
 
+/* The eyebrow standing in as the heading keeps the eyebrow's look. */
+.part-label-only {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
 .part-num {
   font-family: var(--serif);
   font-weight: 400;

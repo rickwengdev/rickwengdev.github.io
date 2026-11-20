@@ -1,10 +1,11 @@
 <template>
   <header class="part-head">
-    <p class="part-label" v-reveal>
+    <!-- Without a title, the eyebrow is the section's heading. -->
+    <component :is="showTitle ? 'p' : 'h2'" class="part-label" :class="{ 'part-label-only': !showTitle }" v-reveal>
       <span class="part-num">{{ num }}</span
       >{{ t(`${ns}.eyebrow`) }}
-    </p>
-    <h2 class="part-title" v-reveal="80">{{ t(`${ns}.title`) }}</h2>
+    </component>
+    <h2 v-if="showTitle" class="part-title" v-reveal="80">{{ t(`${ns}.title`) }}</h2>
     <p v-if="lede" class="part-lede" v-reveal="160">{{ lede }}</p>
   </header>
 </template>
@@ -18,6 +19,8 @@ import { useI18n } from '../i18n';
 const props = defineProps({
   num: { type: String, required: true },
   ns: { type: String, required: true },
+  // false drops the large serif title and keeps only the numbered eyebrow.
+  showTitle: { type: Boolean, default: true },
 });
 
 const { t, tm } = useI18n();
