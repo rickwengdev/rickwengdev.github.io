@@ -56,8 +56,12 @@ const work = {
   required: ['id', 'name', 'url', 'role', 'period', 'tagline', 'summary'],
   oneOf: { logoShape: ['rounded', 'circle'] },
   extra(entry, fail) {
-    if (entry.logo && !fs.existsSync(new URL(entry.logo, LOGO_DIR)))
+    // A logo is either a file in src/assets/logos/ or an https:// address.
+    if (entry.logo && /^[a-z]+:/i.test(entry.logo)) {
+      if (!entry.logo.startsWith('https://')) fail(`logo "${entry.logo}" should start with https://`);
+    } else if (entry.logo && !fs.existsSync(new URL(entry.logo, LOGO_DIR))) {
       fail(`logo "${entry.logo}" is not in src/assets/logos/`);
+    }
     if (entry.highlights && !Array.isArray(entry.highlights) && !isLocalized(entry.highlights)) {
       fail('"highlights" should be a list or { en: [...], zh: [...] }');
     }

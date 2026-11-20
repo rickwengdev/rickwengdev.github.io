@@ -20,12 +20,12 @@ npm run format       # 用 Prettier 統一整個專案的程式碼格式
 
 ```js
 title: { en: 'Open research', zh: '開放研究' },  // 中英不同
-title: 'Saturn App',                            // 中英相同，直接寫字串
+title: 'Eisoptric App',                         // 中英相同，直接寫字串
 ```
 
 | 要改什麼                | 檔案                           | 說明                                                                   |
 | ----------------------- | ------------------------------ | ---------------------------------------------------------------------- |
-| 專案（Saturn）          | `src/content/projects.js`      | 欄位說明在檔案開頭；Logo 放進 `src/assets/logos/`，再填 `logo: '檔名'` |
+| 專案（Eisoptric）       | `src/content/projects.js`      | 欄位說明在檔案開頭；Logo 放進 `src/assets/logos/`，再填 `logo: '檔名'` |
 | 經歷（Kura Finance）    | `src/content/experience.js`    | 和專案相同格式                                                         |
 | 論文                    | `src/content/papers.js`        | 審查中用 `placeholder: true`，只顯示年份和主題                         |
 | CVE                     | `src/content/cves.js`          | 空的時候整個區塊和導覽連結都不顯示；連結不填會自動指向 NVD             |

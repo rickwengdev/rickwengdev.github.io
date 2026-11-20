@@ -11,9 +11,9 @@ export default {
         '激活操控',
         '語言模型',
         'AI 代理',
-        'Saturn',
-        'Saturn MCP',
-        'Saturn App',
+        'Eisoptric',
+        'Eisoptric MCP',
+        'Eisoptric App',
       ],
     },
     notFound: {
@@ -44,11 +44,9 @@ export default {
     salutation: 'To you,',
     paragraphs: [
       '我是 Rick Weng，從事 AI 安全研究，探究語言模型與 AI 代理的實際行為，以及如何讓它們在既定規則內運作。',
-      '每項研究皆預先登記並完整公開，未成立的結果也不例外。以下是我的經歷、專案與研究。',
     ],
     signoffBefore: '',
     signoffAfter: '敬上',
-    ps: '附註：Saturn 的所有產品皆免費提供。',
     stamp: 'Rick Weng 的照片',
     updated: '最後更新',
     postmark: 'RICK WENG · AI SECURITY',
@@ -69,7 +67,6 @@ export default {
   },
   research: {
     eyebrow: '研究',
-    title: '探究 AI 系統的實際行為。',
     papersTitle: '論文',
     goalsTitle: '研究目標',
     goals: ['預訓練', '可解釋性'],

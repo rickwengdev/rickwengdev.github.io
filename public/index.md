@@ -7,7 +7,7 @@
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
-- Saturn: https://saturn-core.com
+- Eisoptric: https://eisoptric.com
 - Last updated: 2026-11-20
 - Language: English
 - Also available in: https://rickwengdev.github.io/zh/ · [Markdown](https://rickwengdev.github.io/index.zh.md)
@@ -18,11 +18,7 @@ To you,
 
 I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.
 
-Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research.
-
 Yours sincerely, Rick Weng
-
-P.S. All Saturn products are free to use. https://saturn-core.com
 
 ## Experience
 
@@ -37,18 +33,18 @@ Modern finance, redesigned. An integrated finance platform: a single account to 
 
 ## Projects
 
-### [Saturn](https://saturn-core.com)
+### [Eisoptric](https://eisoptric.com)
 
 Creator & Lead Maintainer · Sep 2026 – Present
 
-Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
+Infrastructure for secure, accountable AI. Eisoptric focuses on AI security: ensuring that agents operate within the rules people set, and giving teams a clear view of how models actually behave before they rely on them.
 
-- Saturn MCP: a gateway that enforces argument-level policy on every agent tool call, routes sensitive calls for human approval, and maintains a complete audit record.
-- Saturn App: an open-source (Apache 2.0) desktop workbench for AI research, supporting experiment management, sample-level review, activation patching and SAE feature analysis.
+- Eisoptric MCP: a gateway that enforces argument-level policy on every agent tool call, routes sensitive calls for human approval, and maintains a complete audit record.
+- Eisoptric App: an open-source (Apache 2.0) desktop workbench for AI research, supporting experiment management, sample-level review, activation patching and SAE feature analysis.
 - Credentials are held in a post-quantum vault, and audit payloads are encrypted on archival, so they remain unreadable even to the gateway itself.
 - Both products are free, with full functionality on every account, and are funded through sponsorship.
 
-## Research: Understanding how AI systems actually behave.
+## Research
 
 ### Research goals
 

@@ -10,7 +10,7 @@
 export default [
   {
     id: 'app',
-    name: 'Saturn App',
+    name: 'Eisoptric App',
     url: 'https://github.com/Saturn-Technology-Project/Saturn-App',
     license: 'https://www.apache.org/licenses/LICENSE-2.0',
     description: {
@@ -20,8 +20,8 @@ export default [
   },
   {
     id: 'mcp',
-    name: 'Saturn MCP',
-    url: 'https://saturn-core.com/mcp',
+    name: 'Eisoptric MCP',
+    url: 'https://eisoptric.com/mcp',
     description: {
       en: 'A gateway that governs what AI agents may do: every tool call is checked against versioned policy down to its arguments, sensitive calls are routed for human approval, and every decision is recorded.',
       zh: '管理 AI 代理權限的閘道：依版本化政策對每一次工具呼叫進行參數層級的檢查，敏感操作交由人工核准，所有決策皆完整記錄。',

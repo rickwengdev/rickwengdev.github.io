@@ -2,7 +2,7 @@
   <article class="entry">
     <!-- The company's sticker, stuck on the paper beside its name. -->
     <a
-      v-if="logo"
+      v-if="logo && !broken"
       :href="item.url"
       target="_blank"
       rel="noopener noreferrer"
@@ -11,7 +11,15 @@
       :aria-label="`${item.name} — ${t(`${ns}.visit`)}`"
       v-reveal="160"
     >
-      <img :src="logo" :alt="`${item.name} logo`" width="96" height="96" />
+      <img
+        :src="logo"
+        :alt="`${item.name} logo`"
+        width="96"
+        height="96"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        @error="broken = true"
+      />
     </a>
 
     <div class="entry-head">
@@ -43,7 +51,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from '../i18n';
 
 // One company or project, as written in the letter: sticker, dates, name, what it does.
@@ -62,7 +70,10 @@ const LOGOS = Object.fromEntries(
 );
 
 const { t } = useI18n();
-const logo = computed(() => LOGOS[props.item.logo]);
+// An image from another site can go missing; hide the sticker rather than show a broken one.
+const broken = ref(false);
+// A full https:// address is used as is; anything else is looked up in src/assets/logos.
+const logo = computed(() => (/^https:\/\//.test(props.item.logo ?? '') ? props.item.logo : LOGOS[props.item.logo]));
 </script>
 
 <style scoped>

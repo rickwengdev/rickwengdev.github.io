@@ -1,6 +1,6 @@
 <template>
   <section class="part">
-    <PartHeader :num="num" ns="research" />
+    <PartHeader :num="num" ns="research" :show-title="false" />
 
     <!-- Research goals, on one line. -->
     <dl class="focus" v-reveal>

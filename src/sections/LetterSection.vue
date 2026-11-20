@@ -63,10 +63,6 @@
               }}</span>
               <SealMark :size="44" class="sign-seal seal-press" />
             </div>
-            <p class="ps s" style="--d: 2.2s">
-              {{ t('letter.ps') }}
-              <a :href="LINKS.saturn" target="_blank" rel="noopener noreferrer">saturn-core.com</a>
-            </p>
           </footer>
         </article>
       </div>
@@ -81,7 +77,6 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import avatar from '../assets/avatar.jpg';
 import SealMark from '../components/SealMark.vue';
-import { LINKS } from '../seo/schema.js';
 import { CONTENT_UPDATED } from '../seo';
 import { useI18n } from '../i18n';
 
@@ -342,26 +337,6 @@ onBeforeUnmount(() => clearTimeout(clock));
 
 .sign-seal {
   transform: rotate(-8deg);
-}
-
-.ps {
-  margin: 32px 0 0;
-  padding-top: 20px;
-  font-size: 0.875rem;
-  color: var(--ink-3);
-  border-top: 1px solid var(--line);
-}
-
-.ps a {
-  white-space: nowrap;
-  font-weight: 500;
-  color: var(--accent-ink);
-  border-bottom: 1px solid var(--line-strong);
-  transition: border-color 0.2s;
-}
-
-.ps a:hover {
-  border-bottom-color: var(--accent);
 }
 
 /* Right after the envelope opens, the sheet settles into place. */

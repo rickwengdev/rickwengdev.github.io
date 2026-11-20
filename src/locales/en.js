@@ -13,9 +13,9 @@ export default {
         'Interpretability',
         'Language models',
         'AI agents',
-        'Saturn',
-        'Saturn MCP',
-        'Saturn App',
+        'Eisoptric',
+        'Eisoptric MCP',
+        'Eisoptric App',
       ],
     },
     notFound: {
@@ -46,11 +46,9 @@ export default {
     salutation: 'To you,',
     paragraphs: [
       'I’m Rick Weng, an AI security researcher. I study how language models and AI agents actually behave, and how to keep them within the rules people set.',
-      'Every study is preregistered and reported in full, including results that did not hold. Below are my experience, projects and research.',
     ],
     signoffBefore: 'Yours sincerely,',
     signoffAfter: '',
-    ps: 'P.S. All Saturn products are free to use.',
     stamp: 'Photo of Rick Weng',
     updated: 'Last updated',
     postmark: 'RICK WENG · AI SECURITY',
@@ -71,7 +69,6 @@ export default {
   },
   research: {
     eyebrow: 'Research',
-    title: 'Understanding how AI systems actually behave.',
     papersTitle: 'Papers',
     goalsTitle: 'Research goals',
     goals: ['Pretraining', 'Interpretability'],
