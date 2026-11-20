@@ -1,6 +1,6 @@
 <template>
   <section class="part">
-    <PartHeader :num="num" :ns="kind" />
+    <PartHeader :num="num" :ns="kind" :show-title="false" />
     <WorkEntry v-for="item in items" :key="item.id" :item="item" :ns="kind" />
   </section>
 </template>
