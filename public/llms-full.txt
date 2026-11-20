@@ -1,4 +1,4 @@
-<!-- rickwengdev.github.io — full text for AI readers. English first, then Traditional Chinese (繁體中文). Last updated 2026-11-16. -->
+<!-- rickwengdev.github.io — full text for AI readers. English first, then Traditional Chinese (繁體中文). Last updated 2026-11-20. -->
 
 # Rick Weng
 
@@ -10,7 +10,7 @@
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- Last updated: 2026-11-16
+- Last updated: 2026-11-20
 - Language: English
 - Also available in: https://rickwengdev.github.io/zh/ · [Markdown](https://rickwengdev.github.io/index.zh.md)
 
@@ -68,7 +68,7 @@ Infrastructure for secure, accountable AI. Saturn focuses on AI security: ensuri
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
 - Saturn: https://saturn-core.com
-- 最後更新：2026-11-16
+- 最後更新：2026-11-20
 - 語言：繁體中文
 - 其他語言版本：https://rickwengdev.github.io · [Markdown](https://rickwengdev.github.io/index.md)
 
