@@ -57,11 +57,15 @@ export default {
     eyebrow: '經歷',
     title: '經歷',
     visit: '前往網站',
+    more: '重點',
+    less: '收起',
   },
   projects: {
     eyebrow: '專案',
     title: '專案',
     visit: '前往網站',
+    more: '重點',
+    less: '收起',
   },
   research: {
     eyebrow: '研究',
