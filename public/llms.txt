@@ -10,7 +10,7 @@ Rick Weng is an independent AI security researcher whose work examines how langu
 - GitHub: https://github.com/rickwengdev
 - LinkedIn: https://www.linkedin.com/in/rick-weng-44921a3b5
 - ORCID: https://orcid.org/0009-0006-4178-347X
-- Last updated: 2026-11-16
+- Last updated: 2026-11-20
 
 ## Full text
 - [Whole site as Markdown (English)](https://rickwengdev.github.io/index.md): every section of the page, including the opening letter
